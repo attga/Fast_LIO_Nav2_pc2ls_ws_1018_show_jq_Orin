@@ -1,0 +1,8 @@
+imu_measurements:
+  ros__parameters:
+    input_topic: /imu/data_raw
+    output_topic: /imu/measurements
+    expected_frame: gyro_link
+    # 标准差采用保守初始值，尚未完成传感器标定。
+    angular_velocity_stddev: 0.05  # 单位 rad/s。
+    linear_acceleration_stddev: 1.0  # 单位 m/s²。

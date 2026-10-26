@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ml_bringup</name>
+  <version>0.0.0</version>
+  <description>MID360 localization bringup: dual EKF, NDT, SC startup initialization, IMU adapter and RViz; includes mapping launch files.</description>
+  <maintainer email="jackie@example.com">jackie</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+  <test_depend>ament_cmake_pytest</test_depend>
+  <exec_depend>fast_lio</exec_depend>
+  <exec_depend>ml_relocalization</exec_depend>
+  <exec_depend>ml_ndt_localization</exec_depend>
+  <exec_depend>ml_localization_manager</exec_depend>
+  <exec_depend>robot_localization</exec_depend>
+  <exec_depend>livox_ros_driver2</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>ros2launch</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

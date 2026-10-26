@@ -1,0 +1,87 @@
+NDT 替换版构建与启动（2026-09-29）
+================================
+命令在目标 Linux 机器、包含 map_jeck/ 和 src/ 的工作区根目录执行。
+本地 Windows 尚未执行 ROS 构建/回放；必须先构建成功，再启动。
+
+1. 本次替换部署
+---------------
+# 先停止 Nav2、定位和同类驱动。本次删除了旧定位包，不建议直接覆盖旧目录。
+# 推荐把交付的 map_jeck/ 和 src/ 放入新的干净工作区，保留旧工作区作为备份。
+# 打开新终端，source 车上实际 ROS 和外部依赖环境，不要 source 旧工作区的 install。
+# 当前日志中的车载 ROS 为 Humble：
+source /opt/ros/humble/setup.bash
+# 如 Livox/GTSAM 等依赖由其他工作区提供，再 source 它们实际的 setup.bash。
+# 在新工作区根目录先全量构建，包含底盘、雷达及 Yesense 等包：
+colcon build --symlink-install --executor sequential \
+  --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
+source install/setup.bash
+# 后续在这个已完成干净构建的工作区更新定位代码，才使用下面的选择构建：
+# 新增依赖包括 ament_cmake_python、xacro、robot_state_publisher、OpenMP。
+# 缺依赖时先检查 rosdep 输出，并安装对应 ROS 发行版的软件包。
+colcon build --symlink-install --executor sequential \
+  --packages-select fast_lio ml_scan_context ml_ndt_localization ml_relocalization \
+    ml_localization_manager sc_pgo ml_bringup my_nav2_config \
+  --cmake-clean-cache --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
+source install/setup.bash
+colcon test --executor sequential \
+  --packages-select fast_lio ml_ndt_localization ml_relocalization ml_localization_manager sc_pgo ml_bringup \
+  --event-handlers console_direct+ --return-code-on-test-failure
+colcon test-result --verbose
+
+# 全新机器不能直接 source 不存在的 install/setup.bash。
+# 先 source /opt/ros/<实际发行版>/setup.bash，以及原车已有的 Livox/GTSAM 等依赖环境；
+# 完成驱动部署与全量 colcon build。上面的选择构建适用于已经部署过驱动的原工作区。
+# build/install/log 是目标机构建产物，不需要从开发电脑交付。
+
+2. 日常启动：Nav2 必须分开
+-------------------------
+# 终端 1：底盘 + MID360s + Yesense + NDT 定位（默认）
+bash src/start_robot.sh
+# 可选：bash src/start_robot.sh rviz:=true
+# 默认保留 3.5 秒硬件预热；这不是硬件就绪检测。
+# can0、雷达网络、串口和权限沿用原车设置；脚本不自动调整网络。
+# 日志：logs/localization/localization_<时间>.log
+
+# 初始化时车辆保持静止，从 Manager 日志确认进入 NORMAL_TRACKING。
+# 监测状态话题时还应看到 startup_complete=1。
+# 也可在终端 1 启动前，于已 source 环境的监测终端运行：
+# ros2 topic echo /ml_localization/manager_state
+# 状态话题仅变化时发布，启动后才订阅可能要等下一次状态变化，不能把无输出当作未完成。
+
+# 终端 2：定位就绪后，单独启动 Nav2
+bash src/start_nav2.sh
+# 使用 map_jeck/map.yaml 和 keepout_mask.yaml 绝对路径。
+# 日志：logs/nav2/nav2_<时间>.log
+# 不自动发送导航目标；building2building 航点任务继续单独运行。
+# 停止时先 Ctrl+C 退出 Nav2，再退出驱动/定位。
+
+3. 单独定位入口（驱动或 bag 已在其他终端运行）
+--------------------------------------------
+source install/setup.bash
+ros2 launch ml_bringup localization.launch.py \
+  map_directory:="$PWD/src/ml_bringup/map" \
+  use_sim_time:=false enable_yesense:=true rviz:=false
+
+# bag 回放用这个入口，不用会启动实车驱动的 start_robot.sh。
+# 必须 use_sim_time:=true，另一个终端 ros2 bag play /实际/bag/目录 --clock。
+# 确认该 bag 属于旧车安装后，可增加：
+# robot_mounts_file:="$PWD/src/ml_bringup/config/robot/old_vehicle_mounts.yaml"
+# 仅恢复雷达未旋转且其余安装相同，可增加 lidar_mount_yaw:=0.0。
+# 默认 rear_axle.yaml 为当前雷达左转 90°、未知平移为零的配置。
+# 外参不是实测标定；先核验 base_link 下车前物体为 +X、车左为 +Y。
+# 倒带、更换地图或安装配置后，应重启整套定位。
+
+4. 常见检查
+-----------
+ros2 pkg executables ml_bringup
+# 应包含 imu_measurements.py；安装显式使用 755 权限，修改脚本后需重新构建 ml_bringup。
+ros2 topic hz /cloud_registered_body
+ros2 topic echo /ml_localization/status_diagnostic
+# NDT 位姿 /ml_localization/ndt_pose。
+# NDT 不发布 map/odom 动态 TF，只有两个 EKF 分别发布对应边。
+# 构建失败、定位未完成或 TF 异常时不要继续下发导航目标。
+
+更新部署注意：请完整替换旧 src，勿仅覆盖拷贝而保留已移除的 ml_icp_localization、legacy_icp 和旧配置。
+建议在干净工作区构建；复用旧工作区时，停止节点后将旧 build/install/log 移到工作区外备份，
+在新终端 source 实际 ROS 和外部依赖环境，再全量 colcon build --symlink-install --executor sequential。
+不要 source 已移走的旧 install/setup.bash。旧构建产物可能保留已删除的可执行文件。

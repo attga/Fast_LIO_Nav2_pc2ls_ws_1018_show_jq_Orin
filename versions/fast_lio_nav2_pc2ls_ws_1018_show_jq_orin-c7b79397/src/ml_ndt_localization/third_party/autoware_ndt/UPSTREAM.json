@@ -1,0 +1,78 @@
+{
+  "repository": "https://github.com/autowarefoundation/autoware_core",
+  "commit": "16045061a9c10da468b60e190b8fab02110fa501",
+  "package": "localization/autoware_ndt_scan_matcher",
+  "source_modifications": false,
+  "licenses": [
+    "Apache-2.0",
+    "BSD-2-Clause",
+    "BSD-3-Clause"
+  ],
+  "files": [
+    {
+      "path": "include/autoware/ndt_scan_matcher/ndt_omp/multigrid_ndt_omp.h",
+      "upstream_path": "localization/autoware_ndt_scan_matcher/include/autoware/ndt_scan_matcher/ndt_omp/multigrid_ndt_omp.h",
+      "sha256": "4525a2c486a49b230af481ca24214842b19d209ba9dc077be86b4463190513ad"
+    },
+    {
+      "path": "include/autoware/ndt_scan_matcher/ndt_omp/multi_voxel_grid_covariance_omp.h",
+      "upstream_path": "localization/autoware_ndt_scan_matcher/include/autoware/ndt_scan_matcher/ndt_omp/multi_voxel_grid_covariance_omp.h",
+      "sha256": "87020b89db4e6ec7c7b91838ea3eb288f93c26ac53f7a73d09242023c57fb10e"
+    },
+    {
+      "path": "include/autoware/ndt_scan_matcher/ndt_omp/ndt_struct.hpp",
+      "upstream_path": "localization/autoware_ndt_scan_matcher/include/autoware/ndt_scan_matcher/ndt_omp/ndt_struct.hpp",
+      "sha256": "01d329d3ff82cb017db589687e5d68d6988d3e823e3cf75f40d1b50980ffdd42"
+    },
+    {
+      "path": "src/ndt_omp/multigrid_ndt_omp.cpp",
+      "upstream_path": "localization/autoware_ndt_scan_matcher/src/ndt_omp/multigrid_ndt_omp.cpp",
+      "sha256": "a65dd1995577bee4e42340988979177e4b7c9af04ac27a716ca935b15bc0a9a4"
+    },
+    {
+      "path": "src/ndt_omp/multigrid_ndt_omp_impl.hpp",
+      "upstream_path": "localization/autoware_ndt_scan_matcher/src/ndt_omp/multigrid_ndt_omp_impl.hpp",
+      "sha256": "04ed7c17a8c2b201b8de93c070fb317f00fdf15585a06c125d9cd1173e1810e8"
+    },
+    {
+      "path": "src/ndt_omp/multi_voxel_grid_covariance_omp.cpp",
+      "upstream_path": "localization/autoware_ndt_scan_matcher/src/ndt_omp/multi_voxel_grid_covariance_omp.cpp",
+      "sha256": "51d6a8739834d31899305dc7eedda6cd84071c8f67724c55804362cbf748e4a1"
+    },
+    {
+      "path": "src/ndt_omp/multi_voxel_grid_covariance_omp_impl.hpp",
+      "upstream_path": "localization/autoware_ndt_scan_matcher/src/ndt_omp/multi_voxel_grid_covariance_omp_impl.hpp",
+      "sha256": "7614c259dc5fa6874ea8c1f27947d6065ae7a87d3006363386d0388a23e15a90"
+    },
+    {
+      "path": "LICENSE",
+      "upstream_path": "localization/autoware_ndt_scan_matcher/include/autoware/ndt_scan_matcher/ndt_omp/LICENSE",
+      "sha256": "172a504623673649686be924520b29fb8b27bcd9dec9c9805aef5a8d81f891be"
+    },
+    {
+      "path": "LICENSE.Apache-2.0",
+      "upstream_path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "NOTICE",
+      "upstream_path": "NOTICE",
+      "sha256": "b0eb08a8a894d43bdbbd27b523a1053728a5fe41c2373a109fdc6bdd36ab2074"
+    },
+    {
+      "path": "README.upstream.md",
+      "upstream_path": "localization/autoware_ndt_scan_matcher/include/autoware/ndt_scan_matcher/ndt_omp/README.md",
+      "sha256": "404da1af4be655ae9ea65f504351122839077708f67769430e991f8eada959e2"
+    },
+    {
+      "path": "include/autoware/ndt_scan_matcher/ndt_omp/estimate_covariance.hpp",
+      "upstream_path": "localization/autoware_ndt_scan_matcher/include/autoware/ndt_scan_matcher/ndt_omp/estimate_covariance.hpp",
+      "sha256": "2309956662f8f22630e79e1c2016f75b20d14b872f79228b144e1485c1162f3d"
+    },
+    {
+      "path": "src/ndt_omp/estimate_covariance.cpp",
+      "upstream_path": "localization/autoware_ndt_scan_matcher/src/ndt_omp/estimate_covariance.cpp",
+      "sha256": "38077f1e0a7c0447565552b6d27217b7a8197b9bb55bf3740532047bf89c557c"
+    }
+  ]
+}

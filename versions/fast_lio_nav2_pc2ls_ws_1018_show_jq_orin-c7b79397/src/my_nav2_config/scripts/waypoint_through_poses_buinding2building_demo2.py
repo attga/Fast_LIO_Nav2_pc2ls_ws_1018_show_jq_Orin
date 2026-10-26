@@ -1,0 +1,182 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Patrol the recorded LaoShan closed loop with NavigateThroughPoses.
+
+The 20.574 m lap is extracted from odom_global_20261013_174006.log by
+laoShan/extract_loop_waypoints.py. Nine map-frame poses have nominal 2.4 m spacing, adjusted at bends;
+after the last pose, each patrol lap returns to pose 0.
+The coordinates and yaw are used as map-frame base_link goals.
+"""
+
+import math
+import time
+
+import rclpy
+from rclpy.node import Node
+from nav2_simple_commander.robot_navigator import BasicNavigator, TaskResult
+from geometry_msgs.msg import PoseStamped
+
+
+# Point 0 is the expected starting location and the goal ending each lap.
+LOOP_CHECKPOINTS = [
+    (-15.255, -31.399,   36.59, "loop_wp_001"),
+    (-13.332, -30.017,   36.85, "loop_wp_002"),
+    (-12.705, -27.981,  102.46, "loop_wp_003"),
+    (-13.264, -26.405,  108.73, "loop_wp_004"),
+    (-14.587, -24.647, -162.88, "loop_wp_005"),
+    (-16.460, -25.949, -150.68, "loop_wp_006"),
+    (-18.398, -27.344, -118.22, "loop_wp_007"),
+    (-18.131, -29.655,  -78.55, "loop_wp_008"),
+    (-17.244, -31.511,  -26.11, "loop_wp_009"),
+]
+
+
+def make_pose(navigator: BasicNavigator,
+              x: float, y: float, yaw_deg: float) -> PoseStamped:
+    pose = PoseStamped()
+    pose.header.frame_id = "map"
+    pose.header.stamp = navigator.get_clock().now().to_msg()
+    pose.pose.position.x = x
+    pose.pose.position.y = y
+    pose.pose.position.z = 0.0
+    yaw = math.radians(yaw_deg)
+    pose.pose.orientation.z = math.sin(yaw / 2.0)
+    pose.pose.orientation.w = math.cos(yaw / 2.0)
+    return pose
+
+
+class ThroughPosesPatrol(Node):
+    """NavigateThroughPoses sparse-checkpoint patrol controller."""
+
+    def __init__(self):
+        super().__init__("through_poses_patrol")
+
+        self.declare_parameter("end_dwell",   5.0)
+        self.declare_parameter("max_loops",   0)
+        self.declare_parameter("nav_timeout", 6000.0)
+
+        self.end_dwell   = self.get_parameter("end_dwell").value
+        self.max_loops   = self.get_parameter("max_loops").value
+        self.nav_timeout = self.get_parameter("nav_timeout").value
+
+        self.navigator = BasicNavigator()
+        self._log_checkpoints()
+
+    # ------------------------------------------------------------------
+    def _log_checkpoints(self):
+        sep = "=" * 64
+        self.get_logger().info(
+            f"\n{sep}\n"
+            f"  NavigateThroughPoses Closed-Loop Patrol\n"
+            f"  Loop checkpoints : {len(LOOP_CHECKPOINTS)}\n"
+            f"  End dwell        : {self.end_dwell:.1f} s\n"
+            f"  Nav timeout      : {self.nav_timeout:.0f} s\n"
+            f"  Max loops        : {'infinite' if self.max_loops == 0 else self.max_loops}\n"
+            f"{sep}"
+        )
+        for i, (x, y, yaw_deg, label) in enumerate(LOOP_CHECKPOINTS):
+            self.get_logger().info(
+                f"  LOOP CP-{i+1:02d}: ({x:8.3f}, {y:8.3f})"
+                f"  yaw={yaw_deg:7.1f}  [{label}]")
+
+    # ------------------------------------------------------------------
+    def _navigate_through(self, poses: list, leg: str) -> tuple:
+        """Send checkpoints via NavigateThroughPoses and return (success, remaining_count)."""
+        self.get_logger().info(
+            f"[{leg}] Sending {len(poses)} checkpoints -> goThroughPoses")
+        self.navigator.goThroughPoses(poses)
+
+        t0 = time.time()
+        last_remaining = len(poses)
+        
+        while not self.navigator.isTaskComplete():
+            elapsed = time.time() - t0
+            if elapsed > self.nav_timeout:
+                self.get_logger().error(f"[{leg}] Timeout after {self.nav_timeout:.0f}s - cancelling")
+                self.navigator.cancelTask()
+                return False, last_remaining
+                
+            fb = self.navigator.getFeedback()
+            if fb:
+                try:
+                    last_remaining = fb.number_of_poses_remaining
+                    self.get_logger().info(
+                        f"[{leg}] poses_remaining={last_remaining}"
+                        f"  dist={fb.distance_remaining:.1f}m",
+                        throttle_duration_sec=5.0)
+                except AttributeError:
+                    pass
+            time.sleep(0.2)
+
+        result = self.navigator.getResult()
+        if result == TaskResult.SUCCEEDED:
+            self.get_logger().info(f"[{leg}] SUCCESS")
+            return True, 0
+        elif result == TaskResult.CANCELED:
+            self.get_logger().warn(f"[{leg}] CANCELED")
+            return False, last_remaining
+        else:
+            self.get_logger().error(f"[{leg}] FAILED (result={result})")
+            return False, last_remaining
+
+    # ------------------------------------------------------------------
+    def run_patrol(self):
+        self.get_logger().info("Waiting for Nav2 (bt_navigator)...")
+        self.navigator._waitForNodeToActivate("bt_navigator")
+        self.get_logger().info("Nav2 active. Starting closed-loop patrol.")
+
+        loop = 0
+        while rclpy.ok():
+            loop += 1
+            if self.max_loops > 0 and loop > self.max_loops:
+                self.get_logger().info(f"Completed {self.max_loops} loops. Done.")
+                break
+            self.get_logger().info(f"Loop #{loop} start")
+
+            # Start near point 0, visit points 1..N-1, then return to point 0.
+            route = LOOP_CHECKPOINTS[1:] + LOOP_CHECKPOINTS[:1]
+            remaining = [
+                make_pose(self.navigator, x, y, yaw_deg)
+                for x, y, yaw_deg, _ in route
+            ]
+
+            completed = False
+            while remaining and rclpy.ok():
+                success, left = self._navigate_through(remaining, "loop")
+                if success:
+                    completed = True
+                    break
+                if 0 < left <= len(remaining):
+                    self.get_logger().error(
+                        f"Loop failed with {left} points left. Wait 5s and resume...")
+                    time.sleep(5.0)
+                    remaining = remaining[-left:]
+                else:
+                    self.get_logger().error(
+                        f"Loop failed with invalid remaining count {left}. Ending patrol.")
+                    break
+
+            if not completed:
+                self.get_logger().error(f"Loop #{loop} did not complete. Ending patrol.")
+                break
+
+            self.get_logger().info(f"Loop #{loop} complete. Dwelling {self.end_dwell:.0f}s")
+            time.sleep(self.end_dwell)
+
+        self.get_logger().info("Patrol ended.")
+
+# ---------------------------------------------------------------------------
+def main():
+    rclpy.init()
+    node = ThroughPosesPatrol()
+    try:
+        node.run_patrol()
+    except KeyboardInterrupt:
+        node.get_logger().info("Interrupted by user")
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
+
+if __name__ == "__main__":
+    main()

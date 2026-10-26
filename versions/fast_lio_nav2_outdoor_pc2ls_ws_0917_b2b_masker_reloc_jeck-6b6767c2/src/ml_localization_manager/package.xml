@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ml_localization_manager</name>
+  <version>0.0.0</version>
+  <description>
+    Localization Manager (state machine node, ml_localization_manager):
+    monitors the ICP node health (/ml_localization/status), drives SC
+    relocalization (/trigger_relocalization, served by ml_relocalization/relocalization_node)
+    on cold start or LOST, validates reloc results (state / odom-sync / jump
+    gates) and publishes only validated poses as /ml_localization/reloc_pose to
+    the Global EKF, or performs optional startup-only set_pose initialization,
+    then calls /ml_localization/start_tracking after confirming EKF agreement.
+    Optional init_pose parameter injects an initial map pose on the first valid
+    EKF odometry (reloc first wins). No ScanContext in this package.
+  </description>
+  <maintainer email="jackie@example.com">jackie</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>robot_localization</depend>
+  <depend>eigen</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

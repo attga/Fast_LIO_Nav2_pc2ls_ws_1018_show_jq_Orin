@@ -1,0 +1,7 @@
+image: /home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0912_b2b_masker_lio/maps/lio_sam_map/0912bp/map_edited_cleaned.pgm
+resolution: 0.05
+origin: [-68.213730, -108.572270, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.25
+mode: trinary

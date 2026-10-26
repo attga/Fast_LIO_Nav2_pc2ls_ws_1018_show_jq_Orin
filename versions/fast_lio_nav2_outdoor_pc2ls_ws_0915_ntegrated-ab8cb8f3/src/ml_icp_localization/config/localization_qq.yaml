@@ -1,0 +1,46 @@
+ml_icp_localization_node:
+  ros__parameters:
+    # 输入点云位于 base_link，TF 提供扫描时刻的 T_map_base。
+    input_cloud_topic: /cloud_registered_body
+    map_frame: map
+    base_frame: base_link
+
+    registration_backend: fast_gicp
+    registration_threads: 2  # FastGICP 配准线程数。
+    icp_rate: 2.0  # 尝试处理频率，单位 Hz。
+    icp_ds: 0.4  # 扫描点云与常驻地图的体素尺寸，单位 m。
+
+    # 质量门限：fitness 为最近邻距离平方的均值，单位 m²。
+    correspondence_distance: 0.4  # 配准对应距离与评分统计范围，单位 m。
+    fitness_threshold: 0.3  # 评分上限，单位 m²，不代表位置误差小于 0.3 m。
+    inlier_fraction_threshold: 0.4  # 最近邻距离小于 1 m 的点占比，取值范围 [0,1]。
+    max_translation_jump: 2.0  # 配准结果相对预测位置的偏差上限，单位 m。
+    max_yaw_jump: 15.0  # 配准结果相对预测航向的偏差上限，单位度。
+
+    # 以下两个参数沿用历史名称，实际含义为标准差。
+    # 位置标准差：sigma_pos = max(pose_covariance, covariance_fitness_scale * fitness)。
+    # 姿态标准差：sigma_ori = max(orientation_covariance, covariance_fitness_scale_ori * fitness)。
+    # 发布的对角线方差分别为 sigma_pos²（m²）和 sigma_ori²（rad²）。
+    # 以下数值与原 C++ 默认值一致，尚未完成标定。
+    pose_covariance: 0.3  # 单位 m。
+    orientation_covariance: 0.05  # 单位 rad。
+    covariance_fitness_scale: 3.0  # 将评分（m²）转换为位置标准差（m）的系数，单位 1/m。
+    covariance_fitness_scale_ori: 0.5  # 将评分转换为姿态标准差的系数，单位 rad/m²。
+
+    enter_lost_on_failure: true
+    pause_on_lost: false  # 处于 LOST 时仍继续匹配新扫描。
+    # 连续配准拒绝次数（接受一帧即清零），不负责触发 SC；TF 超时丢弃不计入。
+    failure_count_before_relocalization: 30
+
+    submap_strategy: window
+    submap_size: 200.0  # XY 窗口完整边长，单位 m；不裁剪 z 方向。
+    # 边界裕量，单位 m；到任一窗口边界的距离不大于该值时更新。
+    # 200/2 - 80 = 20 m：相对中心沿任一 XY 轴移动达到 20 m 时更新。
+    submap_update_margin: 80.0
+    submap_halfwidth: 60  # 仅用于 keyframes 策略：前后关键帧索引半宽，不是米；window 策略忽略。
+
+    tf_wait_timeout: 1.0  # 选入待处理槽后允许等待 TF 的时长，使用单调时钟，单位 s。
+    scan_timeout: 2.0  # 状态报告使用的输入与处理时效门限，使用 ROS 时间，单位 s。
+    # 正式入口 localization.launch.py 强制设为 true，覆盖此处配置。
+    # Manager 初始化全局 EKF 并确认输出后，调用 start_tracking 放行。
+    wait_for_initialization: true

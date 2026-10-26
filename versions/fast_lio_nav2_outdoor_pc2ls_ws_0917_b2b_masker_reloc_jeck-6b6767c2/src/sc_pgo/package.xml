@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>sc_pgo</name>
+  <version>0.0.0</version>
+
+  <description>
+    SC-PGO pose-graph optimization backend for FAST-LIO2 + PGO pipeline
+    (distance-based loop detection + GICP verification + ground z constraint
+    + GNSS XY factor, GTSAM iSAM2). 
+    upstream compatibility.
+  </description>
+
+  <maintainer email="qintonguav@gmail.com">qintong</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>pcl_conversions</depend>
+  <depend>ml_scan_context</depend>
+  <depend>libpcl-all-dev</depend>
+
+  <exec_depend>ml_relocalization</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

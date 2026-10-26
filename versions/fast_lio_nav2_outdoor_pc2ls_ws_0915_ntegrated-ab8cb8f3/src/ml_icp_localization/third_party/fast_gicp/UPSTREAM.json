@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/koide3/fast_gicp",
+  "commit": "0e7ec1441c99f7be453db2ea216d5de029387417",
+  "license": "BSD-3-Clause",
+  "source_modifications": false,
+  "sha256": {
+    "LICENSE": "62091f5ee5b6cf36ea37faae5db95b8679c14e1b071911af0be7abc72c461c9c",
+    "include/fast_gicp/gicp/fast_gicp.hpp": "cfbad9a261fd382c19fd8dd8436abf78fa6b222c78f8069f48388afffd163db8",
+    "include/fast_gicp/gicp/lsq_registration.hpp": "305992c609c743ebe06dacf777ca96a5bf37e04f8d8494f659a9f6aee8070b92",
+    "include/fast_gicp/gicp/gicp_settings.hpp": "47e9d0f57c505751205ffbc7c655e5244429f172b18944cb2cae79f99f5d9238",
+    "include/fast_gicp/gicp/impl/fast_gicp_impl.hpp": "382fa40c57a4e8ce0846cbfe276e52fd917b5fe524dabd79002de90b924c11ee",
+    "include/fast_gicp/gicp/impl/lsq_registration_impl.hpp": "8989a9fa44f83fc5be7f1872e4431379a369ee3f9a33317e80bbf8e3b7b16203",
+    "include/fast_gicp/so3/so3.hpp": "c54cc85c64e42dd95803a9b897bd252ffadd0dc2401027c9f9ec6f533b37d37e",
+    "src/fast_gicp/gicp/fast_gicp.cpp": "2096bcd0c14fb9d68f00404446020374bd9908c2b0259fe07de64e4d1e5e0c5e",
+    "src/fast_gicp/gicp/lsq_registration.cpp": "b283512eeaab7822576fda9bb057f0201860453ab6c2af021da190cbeb4507f8"
+  }
+}

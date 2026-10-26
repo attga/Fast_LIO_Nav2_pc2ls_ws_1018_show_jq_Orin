@@ -1,0 +1,22 @@
+# Generated ROS/colcon files and local runtime data
+build/
+install/
+log/
+logs/
+Log/
+__pycache__/
+.pytest_cache/
+.cache/
+*.py[cod]
+*.o
+*.obj
+*.log
+*.bag
+*.db3
+*.mcap
+# Local credentials
+.env
+.env.*
+!.env.example
+id_rsa
+id_ed25519

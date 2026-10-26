@@ -1,0 +1,54 @@
+<!--
+  Customized Behavior Tree for NavigateThroughPoses
+  Removed Spin and BackUp recovery behaviors for safe crowd navigation.
+  Only uses Wait and ClearCostmap.
+-->
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <RecoveryNode number_of_retries="6" name="NavigateRecovery">
+      <PipelineSequence name="NavigateWithReplanning">
+        <RateController hz="1.0">
+          <RecoveryNode number_of_retries="1" name="ComputePathThroughPoses">
+            <Sequence name="PruningAndPlanningSequence">
+              <!-- 核心修复 1：每一秒无条件执行航点剔除，保持黑板 goals 始终实时有效，绝不积累已驶过的历史航点 -->
+              <!-- 半径设为 3.0m：最小航点间距为 7.19m，3.0m 保证绝不误剔除下一航点，同时覆盖整条走廊宽度 -->
+              <RemovePassedGoals input_goals="{goals}" output_goals="{goals}" radius="3.0"/>
+              
+              <!-- 核心修复 2：条件 Fallback：路径有效则直接成功，规划器彻底休眠；仅当前方受阻时才触发全局重规划 -->
+              <Fallback name="FallbackComputePathThroughPoses">
+                <!-- 分支 1：截取前方15米局部路径并校验有效性。若畅通无阻，直接返回成功，全局规划器休眠，彻底消除起点跳变与打舵摇摆 -->
+                <Sequence name="CheckPathValidity">
+                  <TruncatePathLocal input_path="{path}" output_path="{remaining_path}" distance_forward="15.0" distance_backward="0.0"/>
+                  <!-- 修复 3：server_timeout 放宽至 500ms，避免 CPU 抖动引发偶发误报超时 -->
+                  <IsPathValid path="{remaining_path}" server_timeout="500"/>
+                </Sequence>
+                <!-- 分支 2：仅当前方15米路径被新障碍物阻断（或初始启动 path 为空）时，才触发全局重规划大绕行 -->
+                <Sequence name="ReplanningPipeline">
+                  <ComputePathThroughPoses goals="{goals}" path="{path}" planner_id="GridBased"/>
+                  <SmoothPath smoother_id="simple_smoother" unsmoothed_path="{path}" smoothed_path="{path}" check_for_collisions="false"/>
+                </Sequence>
+              </Fallback>
+            </Sequence>
+            <ClearEntireCostmap name="ClearGlobalCostmap-Context" service_name="global_costmap/clear_entirely_global_costmap"/>
+          </RecoveryNode>
+        </RateController>
+        <RecoveryNode number_of_retries="1" name="FollowPath">
+          <FollowPath path="{path}" controller_id="FollowPath"/>
+          <ClearEntireCostmap name="ClearLocalCostmap-Context" service_name="local_costmap/clear_entirely_local_costmap"/>
+        </RecoveryNode>
+      </PipelineSequence>
+      
+      <ReactiveFallback name="RecoveryFallback">
+        <GoalUpdated/>
+        <RoundRobin name="RecoveryActions">
+          <Sequence name="ClearingActions">
+            <ClearEntireCostmap name="ClearLocalCostmap-Subtree" service_name="local_costmap/clear_entirely_local_costmap"/>
+            <ClearEntireCostmap name="ClearGlobalCostmap-Subtree" service_name="global_costmap/clear_entirely_global_costmap"/>
+          </Sequence>
+          <!-- 原本这里的 Spin 和 BackUp 已被删除，只保留原地等待 5 秒 -->
+          <Wait wait_duration="5"/>
+        </RoundRobin>
+      </ReactiveFallback>
+    </RecoveryNode>
+  </BehaviorTree>
+</root>

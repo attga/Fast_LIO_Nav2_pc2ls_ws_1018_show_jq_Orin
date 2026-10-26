@@ -1,0 +1,134 @@
+/**:
+  ros__parameters:
+
+    # Topics
+    pointCloudTopic: "livox/lidar"                   # Point cloud data
+    imuTopic: "livox/imu"                         # IMU data
+    odomTopic: "odometry/imu"                    # IMU pre-preintegration odometry, same frequency as IMU
+    gpsTopic: "odometry/gpsz"                    # GPS odometry topic from navsat, see module_navsat.launch file
+
+    # Frames
+    lidarFrame: "livox_frame"
+    baselinkFrame: "base_link"
+    odometryFrame: "odom"
+    mapFrame: "map"
+
+    # Nav2 receives a reliable /odom stream with pose identical to odom->base_link TF.
+    # Set nav2_odom_topic to "" if another node already owns /odom.
+    nav2_odom_topic: "odom"
+    # 1012_bag contains 50 Hz wheel_odom (child_frame_id=body, X forward).
+    # Fresh wheel linear.x suppresses false reverse speed while stopped.
+    # Set topic to "" to use pose-only speed on platforms without wheel odometry.
+    nav2_wheel_odom_topic: "wheel_odom"
+    nav2_wheel_twist_frame: "body"
+    nav2_wheel_twist_timeout: 0.1         # s
+    nav2_pose_filter_time_constant: 0.04   # s; handles scan-anchor pose corrections
+    nav2_velocity_window: 0.25            # s; regression over local odom poses
+    nav2_velocity_time_constant: 0.08     # s; additional twist smoothing
+    nav2_max_linear_speed: 1.2           # m/s; tune to measured robot limit
+    nav2_max_angular_speed: 2.0          # rad/s
+    nav2_max_linear_accel: 2.5           # m/s^2; match Nav2 smoother only if chassis can actually reach it
+    nav2_max_angular_accel: 3.5          # rad/s^2; avoids clipping valid CLOSED_LOOP feedback
+    nav2_linear_deadband: 0.02           # m/s
+    nav2_angular_deadband: 0.03          # rad/s
+
+    # GPS Settings
+    useImuHeadingInitialization: false           # if using GPS data, set to "true"
+    useGpsElevation: false                       # if GPS elevation is bad, set to "false"
+    gpsCovThreshold: 2.0                         # m^2, threshold for using GPS data
+    poseCovThreshold: 25.0                       # m^2, threshold for using GPS data
+
+    # Export settings
+    savePCD: true                               # https://github.com/TixiaoShan/LIO-SAM/issues/3
+    savePCDDirectory: "/home/syj/5/LIO-SAM_MID360_ROS2_PKG/src/LIO-SAM_MID360_ROS2/map/"         # in your home folder, starts and ends with "/". Warning: the code deletes "LOAM" folder then recreates it. See "mapOptimization" for implementation
+
+    # Sensor Settings
+    sensor: livox                               # lidar sensor type, either 'velodyne', 'ouster' or 'livox'
+    N_SCAN: 4                                   # number of lidar channels (i.e., Velodyne/Ouster: 16, 32, 64, 128, Livox Horizon: 6)
+    Horizon_SCAN: 6000                            # lidar horizontal resolution (Velodyne:1800, Ouster:512,1024,2048, Livox Horizon: 4000)
+    downsampleRate: 1                            # default: 1. Downsample your data if too many
+    # points. i.e., 16 = 64 / 4, 16 = 16 / 1
+    lidarMinRange: 0.2                           # default: 1.0, minimum lidar range to be used
+    lidarMaxRange: 70.0                          # MID360 effective range: 70m (expanded from 40m for better features)
+
+    # IMU Settings
+    imuAccNoise: 3.9939570888238808e-03
+    imuGyrNoise: 1.5636343949698187e-03
+    imuAccBiasN: 2.0e-03                      # was 6.4e-05: near-zero bias random-walk locked the accel
+                                              # bias, so the Mid360's mg-level bias (8mg~0.08m/s^2 = ~4.7deg
+                                              # equivalent tilt) could not be absorbed -> read as pitch drift
+    imuGyrBiasN: 5.0e-04                      # was 3.6e-05
+
+    imuGravity: 9.80511
+    imuRPYWeight: 0.5                         # was 0.01/0.02: far too weak. scan-to-map roll/pitch is
+                                              # degenerate here and drifts (pose.txt: pitch ran to -5.8deg,
+                                              # Z climbed 14m). imuConverter now supplies a true gravity
+                                              # ref, so weight roll/pitch strongly toward it to hold level.
+
+    # extrinsicTrans:  [ 0.011,  0.02329,  -0.04412 ] # lidar2Imu
+    extrinsicTrans:  [ 0.0,  0.0,  0.0 ] # lidar2Imu
+    extrinsicRot:    [1.0,  0.0,  0.0,
+                       0.0,  1.0,  0.0,
+                       0.0,  0.0, 1.0 ]
+    extrinsicRPY: [1.0, 0.0, 0.0,
+                  0.0, 1.0, 0.0,
+                  0.0, 0.0, 1.0]
+
+
+
+
+    # LOAM feature threshold
+    edgeThreshold: 1.0
+    surfThreshold: 0.1
+    edgeFeatureMinValidNum: 10
+    surfFeatureMinValidNum: 100
+
+    # voxel filter paprams
+    odometrySurfLeafSize: 0.2                     # default: 0.4 - outdoor, 0.2 - indoor
+    mappingCornerLeafSize: 0.1                    # default: 0.2 - outdoor, 0.1 - indoor
+    mappingSurfLeafSize: 0.2                      # default: 0.4 - outdoor, 0.2 - indoor
+
+    # robot motion constraint (in case you are using a 2D robot)
+    z_tollerance: 0.0                           # meters, 平地场景抑制 Z 漂移 (1012_bag 实测单调漂 3.05m); 保留 1m 内真实起伏
+    rotation_tollerance: 0.15                   # radians (~8.6deg), 钳制 roll/pitch 瞬时跳变 (实测达 ±5.8deg)
+
+    # CPU Params
+    numberOfCores: 4                              # number of cores for mapping optimization
+    mappingProcessInterval: 0.15                  # seconds, regulate mapping frequency (keep 0.15 for MID360 10Hz scan)
+
+    # Surrounding map
+    surroundingkeyframeAddingDistThreshold: 1.0   # meters, regulate keyframe adding threshold (increased 1→2 to reduce redundant keyframes)
+    surroundingkeyframeAddingAngleThreshold: 0.1  # radians, regulate keyframe adding threshold
+    surroundingKeyframeDensity: 2.0               # meters, downsample surrounding keyframe poses
+    surroundingKeyframeSearchRadius: 80.0         # meters, within n meters scan-to-map optimization (increased 50→80 for better map coverage)
+    # (when loop closure disabled)
+
+    # Loop closure吗
+    loopClosureEnableFlag: true
+    loopClosureFrequency: 2.0                     # Hz, regulate loop closure constraint add frequency (increased 1→2 for faster correction)
+    surroundingKeyframeSize: 50                   # submap size (when loop closure enabled)
+    historyKeyframeSearchRadius: 20.0             # meters, key frame that is within n meters from
+    # current pose will be considerd for loop closure (increased 15→20 for wider RS loop search)
+    historyKeyframeSearchTimeDiff: 30.0           # seconds, key frame that is n seconds older will be
+    # considered for loop closure
+    historyKeyframeSearchNum: 30                  # number of history key frames will be fused into a
+    # submap for loop closure (increased 25→30 for richer ICP target cloud)
+    historyKeyframeFitnessScore: 0.25             # icp threshold, tightened 0.3→0.25 to reject bad loops
+
+    # Visualization
+    globalMapVisualizationSearchRadius: 1000.0    # meters, global map visualization radius
+    globalMapVisualizationPoseDensity: 10.0       # meters, global map visualization keyframe density
+    globalMapVisualizationLeafSize: 1.0           # meters, global map visualization cloud density
+
+    
+
+    mapDataDir: ""                               # 地图文件目录路径 (留空则自动检索功能包 data/ 目录)
+    scDistThres: 0.15                            # Scan Context 粗定位距离门限 (0.15 为严格高置信度门限)
+    scNumCandidates: 10                          # Scan Context 树检索返回的最邻近候选帧数
+    scNumRing: 20                                # 极坐标环数 (Range Rings，禁止随意修改，必须与建图一致)
+    scNumSector: 60                              # 方位角扇区数 (Azimuth Sectors，禁止随意修改，必须与建图一致)
+    scMaxRadius: 80.0                            # Scan Context 描述子最大空间搜索半径 (单位: 米)
+    scLidarHeight: 2.0                            # 激光雷达离地安装基准高度 (保持 2.0，区分真实地面与空白区域)
+    autoRelocOnce: true                          # 是否仅在启动时完成一次粗定位后自动锁定退出
+    submapHalfSize: 60.0                         # 局部子图裁剪半长 (单位: 米，裁剪半径 60m 减少 43% KD-Tree 规模，专为 Jetson NX 提速)
+    submapUpdateThresh: 30.0                     # 触发局部子图重新裁剪的车体移动距离门限 (单位: 米)

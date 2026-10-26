@@ -1,0 +1,451 @@
+[controller_server-3] [INFO] [1785984770.248314484] [local_costmap.local_costmap]: start
+[pointcloud_to_laserscan_node-1] [INFO] [1785984770.257699246] [pointcloud_to_laserscan]: Got a subscriber to laserscan, starting pointcloud subscriber
+[controller_server-3] [WARN] [1785984770.349606720] [controller_server]: Parameter controller_server.verbose not found
+[controller_server-3] [INFO] [1785984770.352495583] [controller_server]: Optimizer reset
+[controller_server-3] [INFO] [1785984770.352857326] [MPPIController]: Activated MPPI Controller: FollowPath
+[controller_server-3] [INFO] [1785984770.352905809] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1785984770.462853272] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[lifecycle_manager-9] [INFO] [1785984770.462950236] [lifecycle_manager_navigation]: Activating planner_server
+[planner_server-4] [INFO] [1785984770.464066573] [planner_server]: Activating
+[planner_server-4] [INFO] [1785984770.464162705] [global_costmap.global_costmap]: Activating
+[planner_server-4] [INFO] [1785984770.464186578] [global_costmap.global_costmap]: Checking transform
+[planner_server-4] [INFO] [1785984770.464366554] [global_costmap.global_costmap]: start
+[planner_server-4] [INFO] [1785984771.666522275] [planner_server]: Activating plugin GridBased of type SmacPlanner2D
+[planner_server-4] [INFO] [1785984771.668454327] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1785984771.774615032] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[lifecycle_manager-9] [INFO] [1785984771.774715484] [lifecycle_manager_navigation]: Activating behavior_server
+[behavior_server-5] [INFO] [1785984771.775229619] [behavior_server]: Activating
+[behavior_server-5] [INFO] [1785984771.775299414] [behavior_server]: Activating spin
+[behavior_server-5] [INFO] [1785984771.775323319] [behavior_server]: Activating backup
+[behavior_server-5] [INFO] [1785984771.775343288] [behavior_server]: Activating drive_on_heading
+[behavior_server-5] [INFO] [1785984771.775358008] [behavior_server]: Activating wait
+[behavior_server-5] [INFO] [1785984771.775377785] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1785984771.881343953] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[lifecycle_manager-9] [INFO] [1785984771.881468470] [lifecycle_manager_navigation]: Activating bt_navigator
+[bt_navigator-6] [INFO] [1785984771.881986989] [bt_navigator]: Activating
+[bt_navigator-6] [INFO] [1785984771.958489629] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1785984772.065091472] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-9] [INFO] [1785984772.065182132] [lifecycle_manager_navigation]: Activating waypoint_follower
+[waypoint_follower-7] [INFO] [1785984772.065763341] [waypoint_follower]: Activating
+[waypoint_follower-7] [INFO] [1785984772.065848657] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1785984772.172788306] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[lifecycle_manager-9] [INFO] [1785984772.172883734] [lifecycle_manager_navigation]: Activating velocity_smoother
+[velocity_smoother-8] [INFO] [1785984772.173393485] [velocity_smoother]: Activating
+[velocity_smoother-8] [INFO] [1785984772.173509330] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1785984772.280564088] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[lifecycle_manager-9] [INFO] [1785984772.280644187] [lifecycle_manager_navigation]: Managed nodes are active
+[lifecycle_manager-9] [INFO] [1785984772.280663164] [lifecycle_manager_navigation]: Creating bond timer...
+[bt_navigator-6] [INFO] [1785984948.626934792] [bt_navigator]: Begin navigating from current location (1.91, 1.74) to (2.11, 4.92)
+[controller_server-3] [INFO] [1785984948.651265476] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [WARN] [1785984948.651476909] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded general_goal_checker . This warning will appear once.
+[controller_server-3] [INFO] [1785984948.655944905] [controller_server]: Optimizer reset
+[controller_server-3] [INFO] [1785984949.751638467] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785984950.520417930] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[bt_navigator-6] [WARN] [1785984950.723010359] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785984950.751715979] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984951.751623363] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984952.851649143] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984953.851633889] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984954.851643556] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984955.951638683] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984956.951641900] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984957.951640021] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984959.051635471] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984960.051634087] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984961.051638742] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984961.564848051] [controller_server]: Reached the goal!
+[bt_navigator-6] [INFO] [1785984961.600178009] [bt_navigator]: Goal succeeded
+[bt_navigator-6] [INFO] [1785984961.604965409] [bt_navigator]: Begin navigating from current location (1.89, 5.02) to (2.15, 7.42)
+[controller_server-3] [INFO] [1785984961.627787708] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785984962.728988423] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984963.728941311] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785984964.538158504] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785984964.728991507] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984965.829000592] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984966.828994257] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984967.828975944] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984968.928984651] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984969.928941137] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785984970.562625775] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785984970.928984050] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984972.029050907] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984973.028987175] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984974.028977710] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984975.028983149] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984975.241081789] [controller_server]: Reached the goal!
+[bt_navigator-6] [INFO] [1785984975.276306395] [bt_navigator]: Goal succeeded
+[bt_navigator-6] [INFO] [1785984975.281655450] [bt_navigator]: Begin navigating from current location (2.04, 7.66) to (2.19, 9.92)
+[controller_server-3] [INFO] [1785984975.302523073] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785984976.403883897] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785984976.525393125] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785984977.403886213] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984978.403886473] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984979.503894606] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984980.509727989] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984981.503882765] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984982.503888049] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984983.603882226] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984984.603886118] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984985.603883729] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984986.703882296] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984987.703886707] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984988.703886567] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984989.803886323] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785984990.516359325] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785984990.803887927] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984991.803884242] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984992.803939912] [controller_server]: Passing new path to controller.
+[controller_server-3] [ERROR] [1785984993.304016578] [controller_server]: Failed to make progress
+[controller_server-3] [WARN] [1785984993.304170569] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785984993.315843086] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785984993.317101730] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785984993.829581918] [controller_server]: Reached the goal!
+[controller_server-3] [INFO] [1785984993.830158774] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785984993.841896446] [controller_server]: Reached the goal!
+[bt_navigator-6] [INFO] [1785984993.885705276] [bt_navigator]: Goal succeeded
+[bt_navigator-6] [INFO] [1785984993.901963424] [bt_navigator]: Begin navigating from current location (2.21, 9.91) to (2.23, 12.42)
+[controller_server-3] [INFO] [1785984993.923017963] [controller_server]: Received a goal, begin computing control effort.
+[bt_navigator-6] [WARN] [1785984994.786465538] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785984995.023209908] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984996.023211119] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984997.023210818] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984998.123208520] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785984999.123210284] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985000.123207112] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985001.223208468] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985002.223207360] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985003.223208900] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985004.223200609] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985005.323208363] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985006.035188109] [controller_server]: Reached the goal!
+[bt_navigator-6] [INFO] [1785985006.072290384] [bt_navigator]: Goal succeeded
+[bt_navigator-6] [INFO] [1785985011.080760363] [bt_navigator]: Begin navigating from current location (2.14, 12.76) to (2.19, 9.92)
+[controller_server-3] [INFO] [1785985011.101854165] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785985011.104250040] [controller_server]: Optimizer reset
+[controller_server-3] [INFO] [1785985012.202360732] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785985012.683508924] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785985013.202361974] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985014.202365993] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985015.302363713] [controller_server]: Passing new path to controller.
+[controller_server-3] [ERROR] [1785985016.102492625] [controller_server]: Failed to make progress
+[controller_server-3] [WARN] [1785985016.102668664] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985016.121491747] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785985016.124308120] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785985016.324483416] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985017.324490900] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985018.324491849] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985019.424495744] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985020.424494085] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985021.424487555] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985022.524483905] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985023.524488784] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985024.524491544] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985025.524482231] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985026.036702671] [controller_server]: Reached the goal!
+[bt_navigator-6] [INFO] [1785985026.071202177] [bt_navigator]: Goal succeeded
+[bt_navigator-6] [INFO] [1785985026.077524198] [bt_navigator]: Begin navigating from current location (2.21, 9.90) to (2.15, 7.42)
+[controller_server-3] [INFO] [1785985026.098353347] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785985027.198527203] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985028.198528080] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985029.198591641] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985030.298531671] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985031.298529742] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985032.298526781] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985033.398535174] [controller_server]: Passing new path to controller.
+[planner_server-4] [WARN] [1785985034.319461959] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-4] [WARN] [1785985034.319557387] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.15, 7.42)
+[planner_server-4] [WARN] [1785985034.319580556] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-4] [INFO] [1785985034.338292976] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-3] [INFO] [1785985034.798534789] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985035.798533244] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785985036.798533196] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785985037.749947392] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[planner_server-4] [WARN] [1785985037.800207898] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-4] [WARN] [1785985037.800295293] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.15, 7.42)
+[planner_server-4] [WARN] [1785985037.800317758] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985037.804688210] [controller_server]: Optimizer reset
+[controller_server-3] [INFO] [1785985037.809896521] [controller_server]: Optimizer reset
+[controller_server-3] [ERROR] [1785985037.810076049] [controller_server]: Optimizer fail to compute path
+[controller_server-3] [WARN] [1785985037.810335003] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[planner_server-4] [INFO] [1785985037.818068538] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-3] [INFO] [1785985037.828062583] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785985037.829585174] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [ERROR] [1785985037.829752316] [controller_server]: Invalid path, Path is empty.
+[controller_server-3] [WARN] [1785985037.830039464] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[bt_navigator-6] [ERROR] [1785985037.868745541] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for compute_path_to_pose in node halt!
+[controller_server-3] [INFO] [1785985037.869082867] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-4] [INFO] [1785985037.869572519] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[bt_navigator-6] [WARN] [1785985037.872533217] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[planner_server-4] [WARN] [1785985038.714221792] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-4] [WARN] [1785985038.714344453] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.15, 7.42)
+[planner_server-4] [WARN] [1785985038.714374791] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-4] [INFO] [1785985038.743059238] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-3] [INFO] [1785985039.703579941] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785985039.705740030] [controller_server]: Optimizer reset
+[controller_server-3] [INFO] [1785985040.510551682] [controller_server]: Optimizer reset
+[controller_server-3] [INFO] [1785985040.535768049] [controller_server]: Optimizer reset
+[controller_server-3] [ERROR] [1785985040.535922744] [controller_server]: Optimizer fail to compute path
+[controller_server-3] [WARN] [1785985040.536034652] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [WARN] [1785985040.538866833] [local_costmap.local_costmap]: Sensor origin at (-12.72, -2.95) is out of map bounds (-18.05, -5.30) to (-13.07, -0.32). The costmap cannot raytrace for it.
+[controller_server-3] [INFO] [1785985040.552997560] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785985040.573494373] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [ERROR] [1785985040.644304941] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985040.644470676] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-5] [INFO] [1785985040.664133470] [behavior_server]: Running spin
+[behavior_server-5] [INFO] [1785985040.664385865] [behavior_server]: Turning 1.57 for spin behavior.
+[behavior_server-5] [ERROR] [1785985040.764938395] [behavior_server]: Pose Goes Off Grid.
+[behavior_server-5] [WARN] [1785985040.765198470] [behavior_server]: Collision Ahead - Exiting Spin
+[behavior_server-5] [WARN] [1785985040.765236327] [behavior_server]: spin failed
+[behavior_server-5] [WARN] [1785985040.765261832] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[behavior_server-5] [INFO] [1785985040.794963441] [behavior_server]: Running wait
+[controller_server-3] [WARN] [1785985044.038825988] [local_costmap.local_costmap]: Sensor origin at (-51.21, 2.11) is out of map bounds (-57.25, 0.05) to (-52.28, 5.03). The costmap cannot raytrace for it.
+[behavior_server-5] [INFO] [1785985045.795271255] [behavior_server]: wait completed successfully
+[controller_server-3] [INFO] [1785985046.324413981] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785985046.327316597] [controller_server]: Optimizer reset
+[controller_server-3] [ERROR] [1785985046.327555167] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985046.327700421] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985046.343072798] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785985046.345725707] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [ERROR] [1785985046.446118674] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985046.446267641] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-5] [INFO] [1785985046.464453318] [behavior_server]: Running backup
+[behavior_server-5] [INFO] [1785985046.464712784] [behavior_server]: DriveOnHeading: no acceleration or deceleration limits set
+[behavior_server-5] [INFO] [1785985046.665271126] [behavior_server]: backup completed successfully
+[controller_server-3] [WARN] [1785985046.738836140] [local_costmap.local_costmap]: Sensor origin at (-84.77, 7.33) is out of map bounds (-89.85, 5.20) to (-84.88, 10.18). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985047.492647252] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985047.492842076] [global_costmap.global_costmap]: Sensor origin at (20.92, -84.92) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [INFO] [1785985047.504423257] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785985047.506972290] [controller_server]: Optimizer reset
+[controller_server-3] [ERROR] [1785985047.507295375] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985047.507422837] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985047.523108155] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785985047.529969845] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [ERROR] [1785985047.540381538] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985047.540542761] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985047.553014442] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-4] [INFO] [1785985047.553859885] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-3] [WARN] [1785985047.638834105] [local_costmap.local_costmap]: Sensor origin at (-98.63, 9.73) is out of map bounds (-103.90, 7.70) to (-98.93, 12.68). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985047.738846864] [local_costmap.local_costmap]: Sensor origin at (-98.63, 9.73) is out of map bounds (-103.90, 7.70) to (-98.93, 12.68). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985047.838843334] [local_costmap.local_costmap]: Sensor origin at (-98.63, 9.73) is out of map bounds (-103.90, 7.70) to (-98.93, 12.68). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985047.940486817] [local_costmap.local_costmap]: Sensor origin at (-102.83, 10.49) is out of map bounds (-108.10, 8.50) to (-103.13, 13.48). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985048.038821778] [local_costmap.local_costmap]: Sensor origin at (-102.83, 10.49) is out of map bounds (-108.10, 8.50) to (-103.13, 13.48). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985048.138833897] [local_costmap.local_costmap]: Sensor origin at (-102.83, 10.49) is out of map bounds (-108.10, 8.50) to (-103.13, 13.48). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985048.238846303] [local_costmap.local_costmap]: Sensor origin at (-102.83, 10.49) is out of map bounds (-108.10, 8.50) to (-103.13, 13.48). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985048.338804371] [local_costmap.local_costmap]: Sensor origin at (-107.02, 11.24) is out of map bounds (-113.80, 9.50) to (-108.83, 14.48). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985048.438833290] [local_costmap.local_costmap]: Sensor origin at (-107.02, 11.24) is out of map bounds (-113.80, 9.50) to (-108.83, 14.48). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985048.464608464] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985048.464681843] [global_costmap.global_costmap]: Sensor origin at (23.64, -96.14) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985049.687730921] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985049.687764139] [planner_server]: Planner loop missed its desired rate of 0.5000 Hz. Current loop rate is 0.4700 Hz
+[planner_server-4] [WARN] [1785985049.687812397] [global_costmap.global_costmap]: Sensor origin at (27.64, -113.46) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [INFO] [1785985049.704730053] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785985049.709047575] [controller_server]: Optimizer reset
+[controller_server-3] [ERROR] [1785985049.710310379] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985049.711287955] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985049.723132059] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785985049.726705230] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [WARN] [1785985049.738836770] [local_costmap.local_costmap]: Sensor origin at (-124.16, 14.53) is out of map bounds (-130.40, 12.75) to (-125.43, 17.73). The costmap cannot raytrace for it.
+[controller_server-3] [ERROR] [1785985049.747186041] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985049.747413795] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-5] [INFO] [1785985049.763527706] [behavior_server]: Running spin
+[behavior_server-5] [INFO] [1785985049.763713890] [behavior_server]: Turning 1.57 for spin behavior.
+[behavior_server-5] [WARN] [1785985049.864154729] [behavior_server]: Collision Ahead - Exiting Spin
+[behavior_server-5] [WARN] [1785985049.864222188] [behavior_server]: spin failed
+[behavior_server-5] [WARN] [1785985049.864242957] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[behavior_server-5] [INFO] [1785985049.893162899] [behavior_server]: Running wait
+[planner_server-4] [WARN] [1785985050.464611640] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985050.464684123] [global_costmap.global_costmap]: Sensor origin at (30.43, -125.85) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985051.464615778] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985051.464684677] [global_costmap.global_costmap]: Sensor origin at (32.92, -137.32) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985052.464621541] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985052.464697032] [global_costmap.global_costmap]: Sensor origin at (34.85, -146.75) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985053.464635905] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985053.464712965] [global_costmap.global_costmap]: Sensor origin at (37.59, -160.52) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985054.464613718] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985054.464689113] [global_costmap.global_costmap]: Sensor origin at (39.97, -172.44) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[behavior_server-5] [INFO] [1785985054.893511970] [behavior_server]: wait completed successfully
+[planner_server-4] [WARN] [1785985055.947992302] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985055.948064753] [global_costmap.global_costmap]: Sensor origin at (42.57, -186.39) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [INFO] [1785985055.964287244] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785985055.967088959] [controller_server]: Optimizer reset
+[controller_server-3] [ERROR] [1785985055.967309448] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985055.967426221] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985055.983205590] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785985055.986118862] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [ERROR] [1785985056.046548515] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985056.046739179] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-5] [INFO] [1785985056.063321333] [behavior_server]: Running backup
+[behavior_server-5] [ERROR] [1785985056.063597952] [behavior_server]: Pose Goes Off Grid.
+[behavior_server-5] [WARN] [1785985056.063761831] [behavior_server]: Collision Ahead - Exiting DriveOnHeading
+[behavior_server-5] [WARN] [1785985056.063791080] [behavior_server]: backup failed
+[behavior_server-5] [WARN] [1785985056.063811049] [behavior_server]: [backup] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985056.072901215] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-4] [INFO] [1785985056.073473399] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-3] [WARN] [1785985056.138836055] [local_costmap.local_costmap]: Sensor origin at (-197.95, 30.84) is out of map bounds (-204.00, 29.10) to (-199.03, 34.08). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985056.238834503] [local_costmap.local_costmap]: Sensor origin at (-197.95, 30.84) is out of map bounds (-204.00, 29.10) to (-199.03, 34.08). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985056.338823767] [local_costmap.local_costmap]: Sensor origin at (-197.95, 30.84) is out of map bounds (-204.00, 29.10) to (-199.03, 34.08). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985056.438862665] [local_costmap.local_costmap]: Sensor origin at (-197.95, 30.84) is out of map bounds (-204.00, 29.10) to (-199.03, 34.08). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985056.464628972] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985056.464693295] [global_costmap.global_costmap]: Sensor origin at (43.03, -188.88) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985057.693293351] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985057.693378155] [global_costmap.global_costmap]: Sensor origin at (46.76, -210.23) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [INFO] [1785985057.714475406] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785985057.716773037] [controller_server]: Optimizer reset
+[controller_server-3] [ERROR] [1785985057.716972085] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985057.717088410] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985057.735490350] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785985057.738182173] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [ERROR] [1785985057.748700269] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985057.750258190] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[bt_navigator-6] [WARN] [1785985057.772651238] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+[bt_navigator-6] [ERROR] [1785985057.772963635] [bt_navigator]: Goal failed
+[planner_server-4] [WARN] [1785985058.464628103] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985058.464696906] [global_costmap.global_costmap]: Sensor origin at (48.39, -219.80) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985059.464616602] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985059.464685501] [global_costmap.global_costmap]: Sensor origin at (49.89, -229.01) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985059.638843700] [local_costmap.local_costmap]: Sensor origin at (-239.78, 41.75) is out of map bounds (-245.35, 40.15) to (-240.38, 45.12). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985059.738867203] [local_costmap.local_costmap]: Sensor origin at (-239.78, 41.75) is out of map bounds (-245.35, 40.15) to (-240.38, 45.12). The costmap cannot raytrace for it.
+[bt_navigator-6] [INFO] [1785985059.805698462] [bt_navigator]: Begin navigating from current location (50.97, -236.63) to (2.15, 7.42)
+[planner_server-4] [WARN] [1785985060.820073271] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985060.820153178] [global_costmap.global_costmap]: Sensor origin at (52.39, -246.06) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [INFO] [1785985060.837575654] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785985060.840263349] [controller_server]: Optimizer reset
+[controller_server-3] [ERROR] [1785985060.840475005] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985060.840586082] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985060.856317896] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785985060.858962229] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [ERROR] [1785985060.948989225] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985060.949146543] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-5] [INFO] [1785985060.966604221] [behavior_server]: Running spin
+[behavior_server-5] [INFO] [1785985060.966740866] [behavior_server]: Turning 1.57 for spin behavior.
+[behavior_server-5] [ERROR] [1785985061.266997396] [behavior_server]: Pose Goes Off Grid.
+[behavior_server-5] [WARN] [1785985061.267229726] [behavior_server]: Collision Ahead - Exiting Spin
+[behavior_server-5] [WARN] [1785985061.267258527] [behavior_server]: spin failed
+[behavior_server-5] [WARN] [1785985061.267277568] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[behavior_server-5] [INFO] [1785985061.296343370] [behavior_server]: Running wait
+[planner_server-4] [WARN] [1785985061.464602028] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985061.464680495] [global_costmap.global_costmap]: Sensor origin at (53.30, -252.21) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985062.464624236] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985062.464700783] [global_costmap.global_costmap]: Sensor origin at (54.40, -260.14) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985062.638823009] [local_costmap.local_costmap]: Sensor origin at (-268.13, 49.93) is out of map bounds (-273.50, 48.25) to (-268.52, 53.22). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985062.738834414] [local_costmap.local_costmap]: Sensor origin at (-268.13, 49.93) is out of map bounds (-273.50, 48.25) to (-268.52, 53.22). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985062.838819897] [local_costmap.local_costmap]: Sensor origin at (-268.13, 49.93) is out of map bounds (-273.50, 48.25) to (-268.52, 53.22). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985063.464612452] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985063.464686215] [global_costmap.global_costmap]: Sensor origin at (56.27, -273.75) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985064.438825427] [local_costmap.local_costmap]: Sensor origin at (-285.10, 55.08) is out of map bounds (-290.65, 53.45) to (-285.67, 58.42). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985064.464668152] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985064.464765884] [global_costmap.global_costmap]: Sensor origin at (57.57, -283.32) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985065.438820094] [local_costmap.local_costmap]: Sensor origin at (-295.61, 58.36) is out of map bounds (-301.30, 56.80) to (-296.32, 61.77). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985065.464631810] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985065.464702148] [global_costmap.global_costmap]: Sensor origin at (59.00, -294.66) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[behavior_server-5] [INFO] [1785985066.296577970] [behavior_server]: wait completed successfully
+[bt_navigator-6] [WARN] [1785985066.517985108] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[planner_server-4] [WARN] [1785985067.362795471] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985067.362885843] [global_costmap.global_costmap]: Sensor origin at (61.89, -320.05) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [INFO] [1785985067.377609647] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785985067.385333453] [controller_server]: Optimizer reset
+[controller_server-3] [ERROR] [1785985067.387261500] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985067.387582697] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985067.406403629] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785985067.408135925] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [ERROR] [1785985067.439698756] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985067.439866859] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-5] [INFO] [1785985067.456705406] [behavior_server]: Running backup
+[planner_server-4] [WARN] [1785985067.464596226] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985067.464652709] [global_costmap.global_costmap]: Sensor origin at (62.02, -321.26) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[behavior_server-5] [INFO] [1785985067.557403300] [behavior_server]: backup completed successfully
+[planner_server-4] [WARN] [1785985068.622368037] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985068.622453544] [global_costmap.global_costmap]: Sensor origin at (63.25, -333.67) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [INFO] [1785985068.637630167] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785985068.640083100] [controller_server]: Optimizer reset
+[controller_server-3] [ERROR] [1785985068.640281028] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985068.640372552] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985068.656335191] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785985068.657907992] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [ERROR] [1785985068.748404410] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985068.748579265] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985068.766424381] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-4] [INFO] [1785985068.767762004] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-4] [WARN] [1785985069.464598442] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985069.464669133] [global_costmap.global_costmap]: Sensor origin at (63.81, -340.22) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985069.938850384] [local_costmap.local_costmap]: Sensor origin at (-345.65, 75.20) is out of map bounds (-350.85, 73.70) to (-345.87, 78.67). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985070.744930530] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985070.745014693] [global_costmap.global_costmap]: Sensor origin at (64.86, -352.31) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [INFO] [1785985070.757786065] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785985070.763825225] [controller_server]: Optimizer reset
+[controller_server-3] [ERROR] [1785985070.764086548] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985070.764285532] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985070.776302441] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785985070.777916011] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [ERROR] [1785985070.848952366] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985070.849131061] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-5] [INFO] [1785985070.866658564] [behavior_server]: Running spin
+[behavior_server-5] [INFO] [1785985070.866811435] [behavior_server]: Turning 1.57 for spin behavior.
+[behavior_server-5] [ERROR] [1785985070.967077725] [behavior_server]: Pose Goes Off Grid.
+[behavior_server-5] [WARN] [1785985070.967374729] [behavior_server]: Collision Ahead - Exiting Spin
+[behavior_server-5] [WARN] [1785985070.967404394] [behavior_server]: spin failed
+[behavior_server-5] [WARN] [1785985070.967423243] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[behavior_server-5] [INFO] [1785985070.996506388] [behavior_server]: Running wait
+[planner_server-4] [WARN] [1785985071.464638713] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985071.464725308] [global_costmap.global_costmap]: Sensor origin at (65.45, -359.76) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985072.464619061] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985072.464687863] [global_costmap.global_costmap]: Sensor origin at (65.68, -362.71) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985072.538827384] [local_costmap.local_costmap]: Sensor origin at (-362.12, 81.21) is out of map bounds (-369.35, 80.30) to (-364.37, 85.27). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985073.464637868] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985073.464719407] [global_costmap.global_costmap]: Sensor origin at (66.17, -370.80) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985073.638832563] [local_costmap.local_costmap]: Sensor origin at (-370.83, 84.46) is out of map bounds (-377.40, 83.10) to (-372.42, 88.07). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985074.464620122] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985074.464764096] [global_costmap.global_costmap]: Sensor origin at (66.89, -379.95) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[bt_navigator-6] [WARN] [1785985074.518679107] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[planner_server-4] [WARN] [1785985075.464647141] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985075.464732040] [global_costmap.global_costmap]: Sensor origin at (67.40, -388.10) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[behavior_server-5] [INFO] [1785985075.996733691] [behavior_server]: wait completed successfully
+[controller_server-3] [WARN] [1785985076.138824603] [local_costmap.local_costmap]: Sensor origin at (-387.94, 91.13) is out of map bounds (-392.95, 89.65) to (-387.97, 94.62). The costmap cannot raytrace for it.
+[controller_server-3] [WARN] [1785985076.238826014] [local_costmap.local_costmap]: Sensor origin at (-387.94, 91.13) is out of map bounds (-392.95, 89.65) to (-387.97, 94.62). The costmap cannot raytrace for it.
+[planner_server-4] [WARN] [1785985077.178414032] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985077.178491955] [global_costmap.global_costmap]: Sensor origin at (68.04, -398.68) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+[controller_server-3] [INFO] [1785985077.197578177] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785985077.200331922] [controller_server]: Optimizer reset
+[controller_server-3] [ERROR] [1785985077.200546843] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985077.200653535] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985077.216312769] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785985077.217837376] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [ERROR] [1785985077.248262687] [controller_server]: Resulting plan has 0 poses in it.
+[controller_server-3] [WARN] [1785985077.248430597] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-5] [INFO] [1785985077.266459304] [behavior_server]: Running backup
+[behavior_server-5] [ERROR] [1785985077.266752884] [behavior_server]: Pose Goes Off Grid.
+[behavior_server-5] [WARN] [1785985077.266949084] [behavior_server]: Collision Ahead - Exiting DriveOnHeading
+[behavior_server-5] [WARN] [1785985077.266972893] [behavior_server]: backup failed
+[behavior_server-5] [WARN] [1785985077.266990686] [behavior_server]: [backup] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785985077.296118056] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-4] [INFO] [1785985077.296586555] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-4] [WARN] [1785985077.464636771] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-4] [WARN] [1785985077.464703525] [global_costmap.global_costmap]: Sensor origin at (68.11, -400.12) is out of map bounds (-96.34, -76.92) to (38.18, 65.21). The costmap cannot raytrace for it.
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[velocity_smoother-8] [INFO] [1785985077.923778308] [rclcpp]: signal_handler(signum=2)
+[velocity_smoother-8] [INFO] [1785985077.923980172] [velocity_smoother]: Running Nav2 LifecycleNode rcl preshutdown (velocity_smoother)
+[velocity_smoother-8] [INFO] [1785985077.924092529] [velocity_smoother]: Deactivating
+[waypoint_follower-7] [INFO] [1785985077.923781124] [rclcpp]: signal_handler(signum=2)
+[lifecycle_manager-9] [INFO] [1785985077.923778372] [rclcpp]: signal_handler(signum=2)
+[behavior_server-5] [INFO] [1785985077.923789093] [rclcpp]: signal_handler(signum=2)
+[map_server-2] [INFO] [1785985077.923809541] [rclcpp]: signal_handler(signum=2)
+[controller_server-3] [INFO] [1785985077.923872200] [rclcpp]: signal_handler(signum=2)
+[controller_server-3] [INFO] [1785985077.923978668] [controller_server]: Running Nav2 LifecycleNode rcl preshutdown (controller_server)
+[controller_server-3] [INFO] [1785985077.924093297] [controller_server]: Deactivating
+[controller_server-3] [INFO] [1785985077.924134579] [MPPIController]: Deactivated MPPI Controller: FollowPath
+[planner_server-4] [INFO] [1785985077.923873704] [rclcpp]: signal_handler(signum=2)
+[planner_server-4] [INFO] [1785985077.923984493] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[planner_server-4] [INFO] [1785985077.924093201] [planner_server]: Deactivating
+[planner_server-4] [WARN] [1785985077.924121970] [planner_server]: [compute_path_to_pose] [ActionServer] Requested to deactivate server but goal is still executing. Should check if action server is running before deactivating.
+[velocity_smoother-8] [INFO] [1785985077.924128499] [velocity_smoother]: Destroying bond (velocity_smoother) to lifecycle manager.
+[velocity_smoother-8] [INFO] [1785985077.934549918] [velocity_smoother]: Cleaning up
+[velocity_smoother-8] [INFO] [1785985077.934655938] [velocity_smoother]: Destroying bond (velocity_smoother) to lifecycle manager.
+[velocity_smoother-8] [INFO] [1785985077.941204558] [velocity_smoother]: Destroying
+[waypoint_follower-7] [INFO] [1785985077.924630183] [waypoint_follower]: Running Nav2 LifecycleNode rcl preshutdown (waypoint_follower)
+[waypoint_follower-7] [INFO] [1785985077.924716139] [waypoint_follower]: Deactivating
+[waypoint_follower-7] [INFO] [1785985077.924736715] [waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.
+[waypoint_follower-7] [INFO] [1785985077.935483940] [waypoint_follower]: Cleaning up
+[waypoint_follower-7] [INFO] [1785985077.948861256] [waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.
+[waypoint_follower-7] [INFO] [1785985077.964121338] [waypoint_follower]: Destroying
+[lifecycle_manager-9] [INFO] [1785985077.924446240] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
+[lifecycle_manager-9] [INFO] [1785985077.924519523] [lifecycle_manager_navigation]: Terminating bond timer...

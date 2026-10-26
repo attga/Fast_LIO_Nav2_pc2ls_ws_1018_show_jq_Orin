@@ -1,0 +1,1167 @@
+[INFO] [launch]: All log files can be found below /home/nvidia/.ros/log/2026-09-07-14-57-11-512002-nvidia-desktop-45009
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [ekf_node-1]: process started with pid [45026]
+[INFO] [pointcloud_to_laserscan_node-2]: process started with pid [45028]
+[INFO] [map_server-3]: process started with pid [45030]
+[INFO] [controller_server-4]: process started with pid [45032]
+[INFO] [planner_server-5]: process started with pid [45034]
+[INFO] [behavior_server-6]: process started with pid [45036]
+[INFO] [bt_navigator-7]: process started with pid [45039]
+[INFO] [waypoint_follower-8]: process started with pid [45045]
+[INFO] [velocity_smoother-9]: process started with pid [45080]
+[INFO] [lifecycle_manager-10]: process started with pid [45084]
+[planner_server-5] [INFO] [1788764232.065057187] [planner_server]: 
+[planner_server-5] 	planner_server lifecycle node launched. 
+[planner_server-5] 	Waiting on external lifecycle transitions to activate
+[planner_server-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-5] [INFO] [1788764232.068445380] [planner_server]: Creating
+[planner_server-5] [INFO] [1788764232.077261297] [global_costmap.global_costmap]: 
+[planner_server-5] 	global_costmap lifecycle node launched. 
+[planner_server-5] 	Waiting on external lifecycle transitions to activate
+[planner_server-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-5] [INFO] [1788764232.078351931] [global_costmap.global_costmap]: Creating Costmap
+[waypoint_follower-8] [INFO] [1788764232.417024275] [waypoint_follower]: 
+[waypoint_follower-8] 	waypoint_follower lifecycle node launched. 
+[waypoint_follower-8] 	Waiting on external lifecycle transitions to activate
+[waypoint_follower-8] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[waypoint_follower-8] [INFO] [1788764232.417977911] [waypoint_follower]: Creating
+[controller_server-4] [INFO] [1788764232.451149279] [controller_server]: 
+[controller_server-4] 	controller_server lifecycle node launched. 
+[controller_server-4] 	Waiting on external lifecycle transitions to activate
+[controller_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-4] [INFO] [1788764232.489907226] [controller_server]: Creating controller server
+[map_server-3] [INFO] [1788764232.499465604] [map_server]: 
+[map_server-3] 	map_server lifecycle node launched. 
+[map_server-3] 	Waiting on external lifecycle transitions to activate
+[map_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[map_server-3] [INFO] [1788764232.500039834] [map_server]: Creating
+[lifecycle_manager-10] [INFO] [1788764232.629383836] [lifecycle_manager_navigation]: Creating
+[behavior_server-6] [INFO] [1788764232.633548601] [behavior_server]: 
+[behavior_server-6] 	behavior_server lifecycle node launched. 
+[behavior_server-6] 	Waiting on external lifecycle transitions to activate
+[behavior_server-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-4] [INFO] [1788764232.686778169] [local_costmap.local_costmap]: 
+[controller_server-4] 	local_costmap lifecycle node launched. 
+[controller_server-4] 	Waiting on external lifecycle transitions to activate
+[controller_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-4] [INFO] [1788764232.688402198] [local_costmap.local_costmap]: Creating Costmap
+[lifecycle_manager-10] [INFO] [1788764232.719634229] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[bt_navigator-7] [INFO] [1788764232.724663604] [bt_navigator]: 
+[bt_navigator-7] 	bt_navigator lifecycle node launched. 
+[bt_navigator-7] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[velocity_smoother-9] [INFO] [1788764232.724829754] [velocity_smoother]: 
+[velocity_smoother-9] 	velocity_smoother lifecycle node launched. 
+[velocity_smoother-9] 	Waiting on external lifecycle transitions to activate
+[velocity_smoother-9] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-7] [INFO] [1788764232.726132747] [bt_navigator]: Creating
+[lifecycle_manager-10] [INFO] [1788764233.432204943] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-10] [INFO] [1788764233.432310707] [lifecycle_manager_navigation]: [34m[1mConfiguring map_server[0m[0m
+[map_server-3] [INFO] [1788764233.432893193] [map_server]: Configuring
+[map_server-3] [INFO] [1788764233.433011437] [map_io]: Loading yaml file: maps/nva2_map_outdoor/num12around_map.yaml
+[map_server-3] [INFO] [1788764233.433405820] [map_io]: resolution: 0.05
+[map_server-3] [INFO] [1788764233.433424381] [map_io]: origin[0]: -97.8321
+[map_server-3] [INFO] [1788764233.433431581] [map_io]: origin[1]: -81.1063
+[map_server-3] [INFO] [1788764233.433437053] [map_io]: origin[2]: 0
+[map_server-3] [INFO] [1788764233.433442270] [map_io]: free_thresh: 0.25
+[map_server-3] [INFO] [1788764233.433447230] [map_io]: occupied_thresh: 0.65
+[map_server-3] [INFO] [1788764233.433453438] [map_io]: mode: trinary
+[map_server-3] [INFO] [1788764233.433460126] [map_io]: negate: 0
+[map_server-3] [INFO] [1788764233.433746889] [map_io]: Loading image_file: maps/nva2_map_outdoor/num12around_map.pgm
+[map_server-3] [INFO] [1788764234.507507951] [map_io]: Read map maps/nva2_map_outdoor/num12around_map.pgm: 2704 X 2947 map @ 0.05 m/cell
+[lifecycle_manager-10] [INFO] [1788764234.523673171] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[controller_server-4] [INFO] [1788764234.524135748] [controller_server]: Configuring controller interface
+[controller_server-4] [INFO] [1788764234.524437071] [controller_server]: getting goal checker plugins..
+[controller_server-4] [INFO] [1788764234.524549460] [controller_server]: Controller frequency set to 10.0000Hz
+[controller_server-4] [INFO] [1788764234.524604054] [local_costmap.local_costmap]: Configuring
+[controller_server-4] [INFO] [1788764234.532865070] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[controller_server-4] [INFO] [1788764234.539552171] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[pointcloud_to_laserscan_node-2] [INFO] [1788764234.546596213] [pointcloud_to_laserscan]: Got a subscriber to laserscan, starting pointcloud subscriber
+[pointcloud_to_laserscan_node-2] [INFO] [1788764234.548851979] [pointcloud_to_laserscan]: No subscribers to laserscan, shutting down pointcloud subscriber
+[controller_server-4] [INFO] [1788764234.548956655] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[controller_server-4] [INFO] [1788764234.549024113] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[controller_server-4] [INFO] [1788764234.551372074] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[controller_server-4] [INFO] [1788764234.567485515] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[controller_server-4] [INFO] [1788764234.568791804] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[controller_server-4] [INFO] [1788764234.569649789] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[controller_server-4] [INFO] [1788764234.571017041] [controller_server]: Created controller : FollowPath of type nav2_mppi_controller::MPPIController
+[controller_server-4] [INFO] [1788764234.573854492] [controller_server]: Controller period is equal to model dt. Control sequence shifting is ON
+[controller_server-4] [INFO] [1788764234.576333722] [controller_server]: ConstraintCritic instantiated with 1 power and 4.000000 weight.
+[controller_server-4] [INFO] [1788764234.576486783] [controller_server]: Critic loaded : mppi::critics::ConstraintCritic
+[controller_server-4] [INFO] [1788764234.578022585] [controller_server]: InflationCostCritic instantiated with 1 power and 253.000000 / 0.031496 weights. Critic will collision check based on footprint cost.
+[controller_server-4] [INFO] [1788764234.578153630] [controller_server]: Critic loaded : mppi::critics::CostCritic
+[controller_server-4] [INFO] [1788764234.578863833] [controller_server]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[controller_server-4] [INFO] [1788764234.578908219] [controller_server]: Critic loaded : mppi::critics::GoalCritic
+[controller_server-4] [INFO] [1788764234.579289801] [controller_server]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, and 0.500000 angular threshold.
+[controller_server-4] [INFO] [1788764234.579321931] [controller_server]: Critic loaded : mppi::critics::GoalAngleCritic
+[controller_server-4] [INFO] [1788764234.580140298] [controller_server]: ReferenceTrajectoryCritic instantiated with 1 power and 5.000000 weight
+[controller_server-4] [INFO] [1788764234.580172939] [controller_server]: Critic loaded : mppi::critics::PathAlignCritic
+[controller_server-4] [INFO] [1788764234.580570682] [controller_server]: Critic loaded : mppi::critics::PathFollowCritic
+[controller_server-4] [INFO] [1788764234.581153616] [controller_server]: PathAngleCritic instantiated with 1 power and 2.000000 weight. Reversing allowed.
+[controller_server-4] [INFO] [1788764234.581189329] [controller_server]: Critic loaded : mppi::critics::PathAngleCritic
+[controller_server-4] [INFO] [1788764234.581545983] [controller_server]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[controller_server-4] [INFO] [1788764234.581571872] [controller_server]: Critic loaded : mppi::critics::PreferForwardCritic
+[controller_server-4] [INFO] [1788764234.584314727] [controller_server]: Optimizer reset
+[controller_server-4] [INFO] [1788764234.588480325] [MPPIController]: Configured MPPI Controller: FollowPath
+[controller_server-4] [INFO] [1788764234.588537543] [controller_server]: Controller Server has FollowPath  controllers available.
+[lifecycle_manager-10] [INFO] [1788764234.598292184] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[planner_server-5] [INFO] [1788764234.598781354] [planner_server]: Configuring
+[planner_server-5] [INFO] [1788764234.598883374] [global_costmap.global_costmap]: Configuring
+[planner_server-5] [INFO] [1788764234.611877530] [global_costmap.global_costmap]: Using plugin "static_layer"
+[planner_server-5] [INFO] [1788764234.620893678] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[planner_server-5] [INFO] [1788764234.625719909] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[planner_server-5] [INFO] [1788764234.625798376] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-5] [INFO] [1788764234.629379343] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[pointcloud_to_laserscan_node-2] [INFO] [1788764234.638481927] [pointcloud_to_laserscan]: Got a subscriber to laserscan, starting pointcloud subscriber
+[pointcloud_to_laserscan_node-2] [INFO] [1788764234.641003847] [pointcloud_to_laserscan]: No subscribers to laserscan, shutting down pointcloud subscriber
+[planner_server-5] [INFO] [1788764234.641585309] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-5] [INFO] [1788764234.641637183] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-5] [INFO] [1788764234.644144158] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-5] [INFO] [1788764234.672093726] [planner_server]: Created global planner plugin GridBased of type nav2_smac_planner/SmacPlanner2D
+[planner_server-5] [INFO] [1788764234.672222371] [planner_server]: Configuring GridBased of type SmacPlanner2D
+[planner_server-5] [INFO] [1788764234.675865677] [planner_server]: Configured plugin GridBased of type SmacPlanner2D with tolerance 0.50, maximum iterations 1000000, max on approach iterations 1000, and allowing unknown traversal.
+[planner_server-5] [INFO] [1788764234.675942672] [planner_server]: Planner Server has GridBased  planners available.
+[lifecycle_manager-10] [INFO] [1788764234.697902478] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[behavior_server-6] [INFO] [1788764234.702642049] [behavior_server]: Configuring
+[behavior_server-6] [INFO] [1788764234.736788844] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
+[behavior_server-6] [INFO] [1788764234.738097982] [behavior_server]: Configuring spin
+[behavior_server-6] [INFO] [1788764234.774759080] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
+[behavior_server-6] [INFO] [1788764234.776041336] [behavior_server]: Configuring backup
+[behavior_server-6] [INFO] [1788764234.794210439] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
+[behavior_server-6] [INFO] [1788764234.795789635] [behavior_server]: Configuring drive_on_heading
+[behavior_server-6] [INFO] [1788764234.812036489] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
+[behavior_server-6] [INFO] [1788764234.813283353] [behavior_server]: Configuring wait
+[lifecycle_manager-10] [INFO] [1788764234.825972152] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-7] [INFO] [1788764234.826484492] [bt_navigator]: Configuring
+[lifecycle_manager-10] [INFO] [1788764235.018087608] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[waypoint_follower-8] [INFO] [1788764235.018547625] [waypoint_follower]: Configuring
+[waypoint_follower-8] [INFO] [1788764235.078511139] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[waypoint_follower-8] [INFO] [1788764235.081091684] [waypoint_follower]: Waypoint pause duration is set to zero, disabling task executor plugin.
+[lifecycle_manager-10] [INFO] [1788764235.081879810] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[velocity_smoother-9] [INFO] [1788764235.082321171] [velocity_smoother]: Configuring velocity smoother
+[lifecycle_manager-10] [INFO] [1788764235.099612384] [lifecycle_manager_navigation]: [34m[1mActivating map_server[0m[0m
+[map_server-3] [INFO] [1788764235.100060369] [map_server]: Activating
+[map_server-3] [INFO] [1788764235.106059443] [map_server]: Creating bond (map_server) to lifecycle manager.
+[planner_server-5] [INFO] [1788764235.130997794] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 2704 X 2947 at 0.050000 m/pix
+[lifecycle_manager-10] [INFO] [1788764235.232363063] [lifecycle_manager_navigation]: Server map_server connected with bond.
+[lifecycle_manager-10] [INFO] [1788764235.232446170] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[controller_server-4] [INFO] [1788764235.233001839] [controller_server]: Activating
+[controller_server-4] [INFO] [1788764235.233179990] [local_costmap.local_costmap]: Activating
+[controller_server-4] [INFO] [1788764235.233210327] [local_costmap.local_costmap]: Checking transform
+[controller_server-4] [INFO] [1788764235.233459937] [local_costmap.local_costmap]: start
+[controller_server-4] [WARN] [1788764235.334866872] [controller_server]: Parameter controller_server.verbose not found
+[pointcloud_to_laserscan_node-2] [INFO] [1788764235.335554258] [pointcloud_to_laserscan]: Got a subscriber to laserscan, starting pointcloud subscriber
+[controller_server-4] [INFO] [1788764235.336381777] [controller_server]: Optimizer reset
+[controller_server-4] [INFO] [1788764235.336706462] [MPPIController]: Activated MPPI Controller: FollowPath
+[controller_server-4] [INFO] [1788764235.336747487] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[lifecycle_manager-10] [INFO] [1788764235.442340053] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[lifecycle_manager-10] [INFO] [1788764235.442417304] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[planner_server-5] [INFO] [1788764235.442837159] [planner_server]: Activating
+[planner_server-5] [INFO] [1788764235.442912778] [global_costmap.global_costmap]: Activating
+[planner_server-5] [INFO] [1788764235.442938283] [global_costmap.global_costmap]: Checking transform
+[planner_server-5] [INFO] [1788764235.443361019] [global_costmap.global_costmap]: start
+[planner_server-5] [DEBUG] [1788764236.443717202] [nav2_costmap_2d]: Updating area x: [0, 2704] y: [0, 2947]
+[planner_server-5] [INFO] [1788764236.594874365] [planner_server]: Activating plugin GridBased of type SmacPlanner2D
+[planner_server-5] [INFO] [1788764236.596558556] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[lifecycle_manager-10] [INFO] [1788764236.701837955] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[lifecycle_manager-10] [INFO] [1788764236.701984392] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[behavior_server-6] [INFO] [1788764236.702562750] [behavior_server]: Activating
+[behavior_server-6] [INFO] [1788764236.702625793] [behavior_server]: Activating spin
+[behavior_server-6] [INFO] [1788764236.702649026] [behavior_server]: Activating backup
+[behavior_server-6] [INFO] [1788764236.702664738] [behavior_server]: Activating drive_on_heading
+[behavior_server-6] [INFO] [1788764236.702679715] [behavior_server]: Activating wait
+[behavior_server-6] [INFO] [1788764236.702700932] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[lifecycle_manager-10] [INFO] [1788764236.809505380] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[lifecycle_manager-10] [INFO] [1788764236.809658634] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[bt_navigator-7] [INFO] [1788764236.810111547] [bt_navigator]: Activating
+[bt_navigator-7] [INFO] [1788764236.889231206] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-10] [INFO] [1788764236.996391859] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-10] [INFO] [1788764236.996484695] [lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+[waypoint_follower-8] [INFO] [1788764236.998239545] [waypoint_follower]: Activating
+[waypoint_follower-8] [INFO] [1788764236.998331197] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[lifecycle_manager-10] [INFO] [1788764237.113663708] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[lifecycle_manager-10] [INFO] [1788764237.113754975] [lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+[velocity_smoother-9] [INFO] [1788764237.114264819] [velocity_smoother]: Activating
+[velocity_smoother-9] [INFO] [1788764237.114373655] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[lifecycle_manager-10] [INFO] [1788764237.218823131] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[lifecycle_manager-10] [INFO] [1788764237.218907454] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-10] [INFO] [1788764237.218927327] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[planner_server-5] [DEBUG] [1788764237.443552601] [nav2_costmap_2d]: Updating area x: [0, 2704] y: [0, 2947]
+[planner_server-5] [DEBUG] [1788764238.443540394] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764239.443528320] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764240.443556668] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764241.443562939] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764242.443549181] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764243.443540837] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764244.443537169] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1363, 1394]
+[planner_server-5] [DEBUG] [1788764245.443550243] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764246.443548696] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764247.443549811] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764248.443549042] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764249.443544950] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764250.443553823] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1363, 1394]
+[planner_server-5] [DEBUG] [1788764251.443556141] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764252.443547872] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764253.443555992] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764254.443544181] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764255.443554295] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1395]
+[planner_server-5] [DEBUG] [1788764256.443547039] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1395]
+[planner_server-5] [DEBUG] [1788764257.443623246] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1395]
+[planner_server-5] [DEBUG] [1788764258.443568958] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1363, 1395]
+[planner_server-5] [DEBUG] [1788764259.443726843] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1363, 1395]
+[planner_server-5] [DEBUG] [1788764260.443560882] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1363, 1394]
+[planner_server-5] [DEBUG] [1788764261.443550644] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1394]
+[planner_server-5] [DEBUG] [1788764262.443557148] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1394]
+[planner_server-5] [DEBUG] [1788764263.443549865] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1394]
+[planner_server-5] [DEBUG] [1788764264.443543579] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764265.443545556] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764266.443539762] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1363, 1394]
+[planner_server-5] [DEBUG] [1788764267.443544887] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764268.443539936] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764269.443542800] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764270.443546214] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764271.443545218] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764272.443559460] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764273.443549676] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764274.443538233] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764275.443541645] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764276.443541832] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764277.443559881] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764278.443540175] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764279.443542813] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764280.443549169] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764281.443563595] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764282.443555532] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1394]
+[planner_server-5] [DEBUG] [1788764283.443565747] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1395]
+[planner_server-5] [DEBUG] [1788764284.443544673] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1395]
+[planner_server-5] [DEBUG] [1788764285.443556214] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1395]
+[planner_server-5] [DEBUG] [1788764286.443555409] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1394]
+[planner_server-5] [DEBUG] [1788764287.443554515] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1394]
+[planner_server-5] [DEBUG] [1788764288.443551644] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1394]
+[planner_server-5] [DEBUG] [1788764289.443554156] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764290.443547746] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764291.443552960] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764292.443556805] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1393]
+[planner_server-5] [DEBUG] [1788764293.443543793] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1395]
+[planner_server-5] [DEBUG] [1788764294.443543620] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1395]
+[planner_server-5] [DEBUG] [1788764295.443546398] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1395]
+[planner_server-5] [DEBUG] [1788764296.443500061] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1393]
+[planner_server-5] [DEBUG] [1788764297.443521383] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764298.443570713] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764299.443550767] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764300.443540942] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764301.443564373] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764302.443550562] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764303.443544343] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764304.443547668] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1394]
+[planner_server-5] [DEBUG] [1788764305.443548568] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764306.443554821] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1393]
+[planner_server-5] [DEBUG] [1788764307.443549977] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764308.443556821] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764309.443562296] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1395]
+[planner_server-5] [DEBUG] [1788764310.443551876] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1395]
+[planner_server-5] [DEBUG] [1788764311.443564759] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1395]
+[planner_server-5] [DEBUG] [1788764312.443570483] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1363, 1394]
+[planner_server-5] [DEBUG] [1788764313.443554102] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764314.443551809] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764315.443555989] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764316.443553041] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764317.443548117] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1363, 1394]
+[planner_server-5] [DEBUG] [1788764318.443558785] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1363, 1395]
+[planner_server-5] [DEBUG] [1788764319.443555254] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1363, 1395]
+[planner_server-5] [DEBUG] [1788764320.443566643] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1363, 1395]
+[planner_server-5] [DEBUG] [1788764321.443562393] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1395]
+[planner_server-5] [DEBUG] [1788764322.443548966] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764323.443591006] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764324.443541915] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764325.443599972] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764326.443562163] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764327.443635182] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764328.443559277] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764329.443555511] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764330.443569899] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764331.443555014] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1362, 1394]
+[planner_server-5] [DEBUG] [1788764332.443590252] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1363, 1394]
+[planner_server-5] [DEBUG] [1788764333.443555737] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1362, 1394]
+[bt_navigator-7] [INFO] [1788764334.274010867] [bt_navigator]: Begin navigating from current location through 26 poses to (-58.31, -3.81)
+[controller_server-4] [INFO] [1788764334.317199686] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-4] [WARN] [1788764334.317313386] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded general_goal_checker . This warning will appear once.
+[controller_server-4] [INFO] [1788764334.319676190] [controller_server]: Optimizer reset
+[planner_server-5] [DEBUG] [1788764334.443558896] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1362, 1393]
+[controller_server-4] [WARN] [1788764335.137273891] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764335.443551759] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1362, 1398]
+[controller_server-4] [INFO] [1788764335.500792913] [controller_server]: Passing new path to controller.
+[controller_server-4] [INFO] [1788764336.437352158] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764336.443499766] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1366, 1405]
+[controller_server-4] [WARN] [1788764337.087026179] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764337.445628403] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1370, 1415]
+[controller_server-4] [INFO] [1788764337.505749784] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764338.443540805] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1376, 1423]
+[controller_server-4] [INFO] [1788764338.587112288] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764339.103890403] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764339.443494728] [nav2_costmap_2d]: Updating area x: [1981, 2013] y: [1385, 1428]
+[controller_server-4] [INFO] [1788764339.656263265] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764340.443555511] [nav2_costmap_2d]: Updating area x: [1981, 2013] y: [1393, 1436]
+[controller_server-4] [INFO] [1788764340.703968086] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764341.071709933] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764341.443545646] [nav2_costmap_2d]: Updating area x: [1981, 2013] y: [1400, 1444]
+[controller_server-4] [INFO] [1788764341.749637226] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764342.443545582] [nav2_costmap_2d]: Updating area x: [1981, 2013] y: [1407, 1452]
+[controller_server-4] [INFO] [1788764342.771795373] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764343.089528025] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764343.443556473] [nav2_costmap_2d]: Updating area x: [1980, 2013] y: [1414, 1460]
+[controller_server-4] [INFO] [1788764343.851653632] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764344.443546091] [nav2_costmap_2d]: Updating area x: [1980, 2012] y: [1423, 1468]
+[controller_server-4] [WARN] [1788764345.120440820] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764345.120539223] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764345.443553256] [nav2_costmap_2d]: Updating area x: [1980, 2012] y: [1431, 1476]
+[controller_server-4] [INFO] [1788764345.911858746] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764346.443582191] [nav2_costmap_2d]: Updating area x: [1980, 2012] y: [1438, 1485]
+[controller_server-4] [INFO] [1788764346.922770484] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764347.191157826] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764347.443644321] [nav2_costmap_2d]: Updating area x: [1979, 2012] y: [1447, 1493]
+[controller_server-4] [INFO] [1788764348.091353728] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764348.443568280] [nav2_costmap_2d]: Updating area x: [1979, 2013] y: [1455, 1501]
+[bt_navigator-7] [WARN] [1788764348.935948372] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764349.190781404] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764349.190901856] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764349.443548698] [nav2_costmap_2d]: Updating area x: [1979, 2014] y: [1464, 1506]
+[controller_server-4] [INFO] [1788764350.090875119] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764350.443535495] [nav2_costmap_2d]: Updating area x: [1981, 2014] y: [1471, 1513]
+[controller_server-4] [WARN] [1788764351.201006255] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764351.201096626] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764351.443545982] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1478, 1522]
+[controller_server-4] [INFO] [1788764352.201082584] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764352.443545694] [nav2_costmap_2d]: Updating area x: [1982, 2015] y: [1483, 1530]
+[controller_server-4] [WARN] [1788764353.099943619] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764353.308518791] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764353.443539144] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1493, 1537]
+[controller_server-4] [INFO] [1788764354.300022742] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764354.443550972] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1501, 1545]
+[bt_navigator-7] [WARN] [1788764354.915390699] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764355.109582771] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764355.350527509] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764355.443548058] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1509, 1554]
+[controller_server-4] [INFO] [1788764356.409665063] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764356.443557026] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1516, 1562]
+[bt_navigator-7] [WARN] [1788764356.904472737] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764357.085888452] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764357.443551220] [nav2_costmap_2d]: Updating area x: [1981, 2013] y: [1524, 1568]
+[controller_server-4] [INFO] [1788764357.513497459] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764358.444073986] [nav2_costmap_2d]: Updating area x: [1981, 2014] y: [1532, 1576]
+[controller_server-4] [INFO] [1788764358.485969233] [controller_server]: Passing new path to controller.
+[bt_navigator-7] [WARN] [1788764358.874549419] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764359.032559867] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764359.443559734] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1540, 1582]
+[controller_server-4] [INFO] [1788764359.585971526] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764360.443539494] [nav2_costmap_2d]: Updating area x: [1982, 2015] y: [1546, 1589]
+[controller_server-4] [INFO] [1788764360.585964275] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764361.045207886] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764361.443550113] [nav2_costmap_2d]: Updating area x: [1981, 2015] y: [1553, 1596]
+[controller_server-4] [INFO] [1788764361.745286686] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764362.443540837] [nav2_costmap_2d]: Updating area x: [1979, 2014] y: [1559, 1604]
+[controller_server-4] [INFO] [1788764362.745293468] [controller_server]: Passing new path to controller.
+[bt_navigator-7] [WARN] [1788764362.897148842] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764363.055066344] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764363.443559220] [nav2_costmap_2d]: Updating area x: [1978, 2012] y: [1567, 1611]
+[controller_server-4] [INFO] [1788764363.755148986] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764364.443537037] [nav2_costmap_2d]: Updating area x: [1978, 2012] y: [1574, 1621]
+[controller_server-4] [INFO] [1788764364.855159025] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764365.046577808] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764365.443542097] [nav2_costmap_2d]: Updating area x: [1978, 2014] y: [1582, 1628]
+[controller_server-4] [INFO] [1788764365.855152107] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764366.443560479] [nav2_costmap_2d]: Updating area x: [1981, 2015] y: [1590, 1634]
+[controller_server-4] [WARN] [1788764367.035233088] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764367.035337283] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764367.443586488] [nav2_costmap_2d]: Updating area x: [1982, 2015] y: [1598, 1644]
+[controller_server-4] [INFO] [1788764368.035317198] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764368.443557370] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1605, 1652]
+[controller_server-4] [WARN] [1788764369.068292566] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764369.068402522] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764369.443558088] [nav2_costmap_2d]: Updating area x: [1981, 2013] y: [1612, 1659]
+[controller_server-4] [INFO] [1788764370.068364824] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764370.443608001] [nav2_costmap_2d]: Updating area x: [1981, 2014] y: [1622, 1667]
+[controller_server-4] [WARN] [1788764371.069831190] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764371.174754325] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764371.443545986] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1630, 1674]
+[controller_server-4] [INFO] [1788764372.169907745] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764372.443666675] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1637, 1681]
+[bt_navigator-7] [WARN] [1788764372.887103448] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764373.027782499] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764373.248274503] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764373.443545575] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1644, 1687]
+[controller_server-4] [INFO] [1788764374.327877087] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764374.443580234] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1651, 1695]
+[controller_server-4] [WARN] [1788764375.035186083] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764375.400144579] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764375.443588184] [nav2_costmap_2d]: Updating area x: [1982, 2015] y: [1659, 1704]
+[controller_server-4] [INFO] [1788764376.435266962] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764376.443561775] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1666, 1712]
+[controller_server-4] [WARN] [1788764377.072509649] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764377.443545618] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1673, 1717]
+[controller_server-4] [INFO] [1788764377.511005245] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764378.446782863] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1683, 1725]
+[controller_server-4] [INFO] [1788764378.472591108] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764379.114848659] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764379.443532088] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1689, 1734]
+[controller_server-4] [INFO] [1788764379.605778130] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764380.443554460] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1695, 1741]
+[controller_server-4] [INFO] [1788764380.614934061] [controller_server]: Passing new path to controller.
+[bt_navigator-7] [WARN] [1788764380.711554139] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[bt_navigator-7] [WARN] [1788764380.714387324] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[bt_navigator-7] [WARN] [1788764380.904212004] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764381.092725950] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764381.443553419] [nav2_costmap_2d]: Updating area x: [1981, 2014] y: [1704, 1748]
+[controller_server-4] [INFO] [1788764381.749089802] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764382.443551301] [nav2_costmap_2d]: Updating area x: [1981, 2013] y: [1712, 1755]
+[controller_server-4] [INFO] [1788764382.698518362] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764383.097759095] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764383.443544586] [nav2_costmap_2d]: Updating area x: [1981, 2013] y: [1720, 1765]
+[controller_server-4] [INFO] [1788764383.756140173] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764384.443548506] [nav2_costmap_2d]: Updating area x: [1981, 2013] y: [1726, 1773]
+[controller_server-4] [INFO] [1788764384.797846120] [controller_server]: Passing new path to controller.
+[bt_navigator-7] [WARN] [1788764384.914687970] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764385.076091085] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764385.443551989] [nav2_costmap_2d]: Updating area x: [1981, 2014] y: [1734, 1778]
+[controller_server-4] [INFO] [1788764385.876177072] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764386.443556860] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1743, 1785]
+[controller_server-4] [WARN] [1788764387.130375761] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764387.130476372] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764387.443549741] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1749, 1793]
+[controller_server-4] [INFO] [1788764388.030457061] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764388.443541578] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1756, 1800]
+[controller_server-4] [WARN] [1788764389.070173983] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764389.070266787] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764389.443545523] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1764, 1811]
+[controller_server-4] [INFO] [1788764390.070251645] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764390.443560199] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1771, 1817]
+[controller_server-4] [WARN] [1788764391.043098696] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764391.170256848] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764391.443551878] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1779, 1825]
+[controller_server-4] [INFO] [1788764392.170251360] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764392.443551728] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1788, 1832]
+[controller_server-4] [WARN] [1788764393.048533458] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764393.297686888] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764393.443535110] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1796, 1838]
+[controller_server-4] [INFO] [1788764394.348615151] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764394.443550696] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1803, 1845]
+[controller_server-4] [WARN] [1788764395.031425548] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764395.348611870] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764395.443552597] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1809, 1852]
+[planner_server-5] [DEBUG] [1788764396.443551726] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1816, 1860]
+[controller_server-4] [INFO] [1788764396.448609978] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764397.026460690] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764397.443555795] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1823, 1865]
+[controller_server-4] [INFO] [1788764397.454826705] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764398.443547426] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1831, 1873]
+[controller_server-4] [INFO] [1788764398.526540639] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764399.104896271] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764399.443551582] [nav2_costmap_2d]: Updating area x: [1982, 2014] y: [1836, 1884]
+[controller_server-4] [INFO] [1788764399.557371182] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764400.443534950] [nav2_costmap_2d]: Updating area x: [1981, 2013] y: [1843, 1892]
+[controller_server-4] [INFO] [1788764400.604975647] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764401.075694428] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764401.443563770] [nav2_costmap_2d]: Updating area x: [1981, 2014] y: [1852, 1898]
+[controller_server-4] [INFO] [1788764401.653058058] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764402.443559481] [nav2_costmap_2d]: Updating area x: [1983, 2014] y: [1862, 1906]
+[controller_server-4] [INFO] [1788764402.675774661] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764403.063506394] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764403.443561541] [nav2_costmap_2d]: Updating area x: [1981, 2014] y: [1869, 1914]
+[controller_server-4] [INFO] [1788764403.763585347] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764404.443547451] [nav2_costmap_2d]: Updating area x: [1981, 2013] y: [1876, 1922]
+[controller_server-4] [INFO] [1788764404.863595493] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764405.058246290] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [WARN] [1788764405.103118908] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764405.443554879] [nav2_costmap_2d]: Updating area x: [1981, 2015] y: [1884, 1930]
+[controller_server-4] [INFO] [1788764405.863586112] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764406.443549422] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1892, 1938]
+[controller_server-4] [INFO] [1788764406.871431215] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764407.032712175] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764407.443550473] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1900, 1946]
+[controller_server-4] [INFO] [1788764407.963591301] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764408.443548080] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1907, 1954]
+[controller_server-4] [WARN] [1788764409.081144249] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764409.081243868] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764409.443549636] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1915, 1960]
+[controller_server-4] [INFO] [1788764410.081225506] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764410.443555748] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1924, 1968]
+[controller_server-4] [WARN] [1788764411.080188306] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764411.187474155] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764411.443548431] [nav2_costmap_2d]: Updating area x: [1983, 2015] y: [1931, 1975]
+[controller_server-4] [INFO] [1788764412.180275382] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764412.443552328] [nav2_costmap_2d]: Updating area x: [1984, 2015] y: [1938, 1984]
+[controller_server-4] [WARN] [1788764413.102326341] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764413.250043207] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764413.443554604] [nav2_costmap_2d]: Updating area x: [1984, 2016] y: [1946, 1992]
+[controller_server-4] [INFO] [1788764414.302403770] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764414.443542300] [nav2_costmap_2d]: Updating area x: [1983, 2016] y: [1954, 2001]
+[controller_server-4] [WARN] [1788764415.110260170] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764415.352807093] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764415.443546521] [nav2_costmap_2d]: Updating area x: [1977, 2016] y: [1963, 2008]
+[controller_server-4] [INFO] [1788764416.410336137] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764416.443559043] [nav2_costmap_2d]: Updating area x: [1974, 2012] y: [1970, 2016]
+[controller_server-4] [WARN] [1788764417.041455829] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764417.410338432] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764417.443554265] [nav2_costmap_2d]: Updating area x: [1971, 2009] y: [1979, 2023]
+[planner_server-5] [DEBUG] [1788764418.443557852] [nav2_costmap_2d]: Updating area x: [1968, 2006] y: [1984, 2031]
+[controller_server-4] [INFO] [1788764418.510338648] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764419.102607893] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [WARN] [1788764419.110443995] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764419.443542602] [nav2_costmap_2d]: Updating area x: [1966, 2002] y: [1992, 2037]
+[controller_server-4] [INFO] [1788764419.510332358] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764420.443583495] [nav2_costmap_2d]: Updating area x: [1962, 2001] y: [2000, 2045]
+[controller_server-4] [INFO] [1788764420.610337298] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764421.028157516] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764421.443573231] [nav2_costmap_2d]: Updating area x: [1956, 1997] y: [2008, 2051]
+[controller_server-4] [INFO] [1788764421.628209228] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764422.443551203] [nav2_costmap_2d]: Updating area x: [1952, 1992] y: [2013, 2057]
+[controller_server-4] [INFO] [1788764422.728233836] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764423.119915275] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764423.443619590] [nav2_costmap_2d]: Updating area x: [1948, 1987] y: [2020, 2064]
+[controller_server-4] [INFO] [1788764423.719998773] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764424.443587411] [nav2_costmap_2d]: Updating area x: [1945, 1982] y: [2027, 2072]
+[controller_server-4] [INFO] [1788764424.820003496] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764425.048440816] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764425.443548269] [nav2_costmap_2d]: Updating area x: [1940, 1980] y: [2034, 2078]
+[controller_server-4] [INFO] [1788764425.848522547] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764426.443624727] [nav2_costmap_2d]: Updating area x: [1934, 1976] y: [2040, 2083]
+[controller_server-4] [INFO] [1788764426.948527449] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764427.106768499] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764427.443548329] [nav2_costmap_2d]: Updating area x: [1927, 1971] y: [2048, 2088]
+[controller_server-4] [INFO] [1788764427.948527875] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764428.443556202] [nav2_costmap_2d]: Updating area x: [1921, 1964] y: [2053, 2094]
+[bt_navigator-7] [WARN] [1788764428.900802022] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[bt_navigator-7] [WARN] [1788764428.907416546] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764429.067317934] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764429.067417809] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764429.443547128] [nav2_costmap_2d]: Updating area x: [1916, 1957] y: [2058, 2099]
+[controller_server-4] [INFO] [1788764430.064923456] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764430.443550867] [nav2_costmap_2d]: Updating area x: [1909, 1952] y: [2063, 2104]
+[controller_server-4] [WARN] [1788764431.015734092] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764431.067396514] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764431.443563644] [nav2_costmap_2d]: Updating area x: [1902, 1946] y: [2069, 2110]
+[controller_server-4] [INFO] [1788764432.167400025] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764432.443549680] [nav2_costmap_2d]: Updating area x: [1895, 1940] y: [2074, 2116]
+[controller_server-4] [WARN] [1788764433.000622142] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764433.167397472] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764433.443562355] [nav2_costmap_2d]: Updating area x: [1889, 1934] y: [2079, 2121]
+[controller_server-4] [INFO] [1788764434.267404812] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764434.443559490] [nav2_costmap_2d]: Updating area x: [1883, 1926] y: [2085, 2126]
+[controller_server-4] [WARN] [1788764435.023996418] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764435.267400939] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764435.443560894] [nav2_costmap_2d]: Updating area x: [1877, 1920] y: [2090, 2131]
+[controller_server-4] [INFO] [1788764436.367400843] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764436.443556648] [nav2_costmap_2d]: Updating area x: [1870, 1913] y: [2096, 2134]
+[controller_server-4] [WARN] [1788764437.069067495] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764437.408564343] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764437.443541438] [nav2_costmap_2d]: Updating area x: [1862, 1907] y: [2100, 2134]
+[controller_server-4] [INFO] [1788764438.369148898] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764438.443544162] [nav2_costmap_2d]: Updating area x: [1854, 1900] y: [2101, 2135]
+[controller_server-4] [WARN] [1788764439.087876728] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764439.405014744] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764439.443552883] [nav2_costmap_2d]: Updating area x: [1847, 1892] y: [2102, 2135]
+[planner_server-5] [DEBUG] [1788764440.443557266] [nav2_costmap_2d]: Updating area x: [1838, 1885] y: [2103, 2136]
+[controller_server-4] [INFO] [1788764440.487958638] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764441.087784237] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764441.443545917] [nav2_costmap_2d]: Updating area x: [1831, 1876] y: [2103, 2136]
+[controller_server-4] [INFO] [1788764441.511262012] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764442.443554551] [nav2_costmap_2d]: Updating area x: [1824, 1868] y: [2104, 2136]
+[controller_server-4] [INFO] [1788764442.587853494] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764443.039641156] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764443.443549469] [nav2_costmap_2d]: Updating area x: [1813, 1860] y: [2104, 2136]
+[controller_server-4] [INFO] [1788764443.668153654] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764444.443547729] [nav2_costmap_2d]: Updating area x: [1805, 1853] y: [2104, 2136]
+[controller_server-4] [INFO] [1788764444.639782045] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764445.010463654] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764445.443536402] [nav2_costmap_2d]: Updating area x: [1798, 1844] y: [2104, 2137]
+[controller_server-4] [INFO] [1788764445.739726363] [controller_server]: Passing new path to controller.
+[bt_navigator-7] [WARN] [1788764446.155208417] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[planner_server-5] [DEBUG] [1788764446.443566242] [nav2_costmap_2d]: Updating area x: [1793, 1835] y: [2104, 2138]
+[controller_server-4] [INFO] [1788764446.739756838] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764447.018485194] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [WARN] [1788764447.049234207] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764447.443549502] [nav2_costmap_2d]: Updating area x: [1788, 1827] y: [2104, 2140]
+[controller_server-4] [INFO] [1788764447.739722716] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764448.443553480] [nav2_costmap_2d]: Updating area x: [1784, 1824] y: [2105, 2143]
+[controller_server-4] [INFO] [1788764448.839726750] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764449.086232049] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764449.443545536] [nav2_costmap_2d]: Updating area x: [1779, 1819] y: [2108, 2150]
+[controller_server-4] [INFO] [1788764449.839723086] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764450.443553478] [nav2_costmap_2d]: Updating area x: [1773, 1815] y: [2113, 2155]
+[controller_server-4] [WARN] [1788764451.130445348] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764451.130546951] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764451.443554457] [nav2_costmap_2d]: Updating area x: [1768, 1809] y: [2118, 2155]
+[controller_server-4] [INFO] [1788764452.001290295] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764452.443563098] [nav2_costmap_2d]: Updating area x: [1760, 1804] y: [2122, 2155]
+[controller_server-4] [WARN] [1788764453.170810476] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764453.170914896] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764453.443548520] [nav2_costmap_2d]: Updating area x: [1751, 1796] y: [2120, 2155]
+[controller_server-4] [INFO] [1788764454.061262883] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764454.443511875] [nav2_costmap_2d]: Updating area x: [1744, 1790] y: [2120, 2153]
+[bt_navigator-7] [WARN] [1788764454.705469208] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764455.079394087] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764455.079490538] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764455.443552175] [nav2_costmap_2d]: Updating area x: [1737, 1781] y: [2118, 2152]
+[controller_server-4] [INFO] [1788764456.167762518] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764456.443547079] [nav2_costmap_2d]: Updating area x: [1729, 1774] y: [2117, 2151]
+[controller_server-4] [WARN] [1788764457.038429684] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764457.143302816] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764457.443542477] [nav2_costmap_2d]: Updating area x: [1721, 1767] y: [2116, 2149]
+[controller_server-4] [INFO] [1788764458.210987426] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764458.443561282] [nav2_costmap_2d]: Updating area x: [1714, 1759] y: [2114, 2148]
+[bt_navigator-7] [WARN] [1788764458.704830125] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764459.098860306] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764459.308647012] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764459.443541635] [nav2_costmap_2d]: Updating area x: [1706, 1751] y: [2113, 2147]
+[controller_server-4] [INFO] [1788764460.298944793] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764460.443553395] [nav2_costmap_2d]: Updating area x: [1698, 1743] y: [2112, 2146]
+[controller_server-4] [WARN] [1788764461.106887443] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764461.347929307] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764461.443554610] [nav2_costmap_2d]: Updating area x: [1691, 1736] y: [2112, 2145]
+[controller_server-4] [INFO] [1788764462.406966162] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764462.443548349] [nav2_costmap_2d]: Updating area x: [1683, 1727] y: [2113, 2145]
+[controller_server-4] [WARN] [1788764463.038574223] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764463.443554008] [nav2_costmap_2d]: Updating area x: [1674, 1719] y: [2113, 2144]
+[controller_server-4] [INFO] [1788764463.460444832] [controller_server]: Passing new path to controller.
+[controller_server-4] [INFO] [1788764464.438656993] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764464.443537408] [nav2_costmap_2d]: Updating area x: [1666, 1712] y: [2112, 2144]
+[controller_server-4] [WARN] [1788764465.008321825] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764465.443552855] [nav2_costmap_2d]: Updating area x: [1659, 1704] y: [2112, 2144]
+[controller_server-4] [INFO] [1788764465.538650549] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764466.443543900] [nav2_costmap_2d]: Updating area x: [1651, 1695] y: [2111, 2144]
+[controller_server-4] [INFO] [1788764466.538653144] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764467.072007428] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764467.443557071] [nav2_costmap_2d]: Updating area x: [1642, 1688] y: [2111, 2143]
+[controller_server-4] [INFO] [1788764467.657112446] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764468.443547024] [nav2_costmap_2d]: Updating area x: [1634, 1680] y: [2111, 2143]
+[controller_server-4] [INFO] [1788764468.572107979] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764469.016859007] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764469.443547552] [nav2_costmap_2d]: Updating area x: [1627, 1672] y: [2110, 2142]
+[controller_server-4] [INFO] [1788764469.672171090] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764470.443549822] [nav2_costmap_2d]: Updating area x: [1619, 1664] y: [2110, 2142]
+[controller_server-4] [INFO] [1788764470.672151211] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764471.105224402] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764471.443574764] [nav2_costmap_2d]: Updating area x: [1610, 1656] y: [2109, 2141]
+[controller_server-4] [INFO] [1788764471.776375280] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764472.443562566] [nav2_costmap_2d]: Updating area x: [1604, 1649] y: [2108, 2142]
+[controller_server-4] [INFO] [1788764472.805302610] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764473.130780001] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764473.443551343] [nav2_costmap_2d]: Updating area x: [1598, 1640] y: [2108, 2144]
+[controller_server-4] [INFO] [1788764473.804042284] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764474.443536615] [nav2_costmap_2d]: Updating area x: [1594, 1634] y: [2108, 2146]
+[controller_server-4] [INFO] [1788764474.930836625] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764475.058218648] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764475.443552654] [nav2_costmap_2d]: Updating area x: [1587, 1629] y: [2111, 2150]
+[controller_server-4] [INFO] [1788764475.930878641] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764476.443547843] [nav2_costmap_2d]: Updating area x: [1586, 1624] y: [2117, 2157]
+[controller_server-4] [WARN] [1788764477.079778393] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764477.079883004] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764477.443541446] [nav2_costmap_2d]: Updating area x: [1585, 1621] y: [2120, 2164]
+[controller_server-4] [INFO] [1788764478.062179319] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764478.443569401] [nav2_costmap_2d]: Updating area x: [1581, 1621] y: [2127, 2166]
+[controller_server-4] [WARN] [1788764479.129681544] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764479.129790284] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764479.443587419] [nav2_costmap_2d]: Updating area x: [1574, 1614] y: [2132, 2167]
+[controller_server-4] [INFO] [1788764480.106308649] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764480.443597707] [nav2_costmap_2d]: Updating area x: [1569, 1611] y: [2128, 2167]
+[controller_server-4] [WARN] [1788764481.048241848] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764481.152738955] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764481.443551112] [nav2_costmap_2d]: Updating area x: [1563, 1604] y: [2126, 2163]
+[controller_server-4] [INFO] [1788764482.248320943] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764482.443544341] [nav2_costmap_2d]: Updating area x: [1556, 1598] y: [2125, 2158]
+[controller_server-4] [WARN] [1788764483.077582178] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764483.296898544] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764483.443543409] [nav2_costmap_2d]: Updating area x: [1547, 1592] y: [2125, 2158]
+[controller_server-4] [INFO] [1788764484.269372644] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764484.443565821] [nav2_costmap_2d]: Updating area x: [1540, 1585] y: [2123, 2158]
+[controller_server-4] [WARN] [1788764485.086756764] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764485.300969085] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764485.443583031] [nav2_costmap_2d]: Updating area x: [1531, 1578] y: [2123, 2156]
+[controller_server-4] [INFO] [1788764486.386836025] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764486.443584416] [nav2_costmap_2d]: Updating area x: [1523, 1569] y: [2122, 2156]
+[controller_server-4] [WARN] [1788764487.047748831] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764487.361763946] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764487.443775422] [nav2_costmap_2d]: Updating area x: [1516, 1561] y: [2119, 2155]
+[planner_server-5] [DEBUG] [1788764488.443544317] [nav2_costmap_2d]: Updating area x: [1508, 1553] y: [2119, 2152]
+[controller_server-4] [INFO] [1788764488.447832935] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764489.005317906] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764489.443542802] [nav2_costmap_2d]: Updating area x: [1499, 1545] y: [2118, 2151]
+[controller_server-4] [INFO] [1788764489.447833725] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764490.443556887] [nav2_costmap_2d]: Updating area x: [1491, 1538] y: [2117, 2151]
+[controller_server-4] [INFO] [1788764490.547829780] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764491.013511457] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764491.443546443] [nav2_costmap_2d]: Updating area x: [1485, 1530] y: [2117, 2150]
+[controller_server-4] [INFO] [1788764491.547833350] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764492.443534413] [nav2_costmap_2d]: Updating area x: [1476, 1521] y: [2116, 2149]
+[controller_server-4] [INFO] [1788764492.647824534] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764493.028322368] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764493.443540607] [nav2_costmap_2d]: Updating area x: [1468, 1514] y: [2115, 2148]
+[controller_server-4] [INFO] [1788764493.647830469] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764494.443560385] [nav2_costmap_2d]: Updating area x: [1460, 1506] y: [2115, 2147]
+[controller_server-4] [INFO] [1788764494.647824258] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764495.079228898] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764495.443542417] [nav2_costmap_2d]: Updating area x: [1450, 1497] y: [2114, 2146]
+[controller_server-4] [INFO] [1788764495.751543057] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764496.443568433] [nav2_costmap_2d]: Updating area x: [1442, 1489] y: [2114, 2146]
+[controller_server-4] [INFO] [1788764496.779307718] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764497.102610922] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764497.443551840] [nav2_costmap_2d]: Updating area x: [1435, 1480] y: [2114, 2146]
+[controller_server-4] [INFO] [1788764497.902692868] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764498.443557438] [nav2_costmap_2d]: Updating area x: [1426, 1472] y: [2114, 2147]
+[controller_server-4] [WARN] [1788764499.145294136] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764499.145390012] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764499.443565228] [nav2_costmap_2d]: Updating area x: [1418, 1463] y: [2115, 2147]
+[controller_server-4] [INFO] [1788764499.945375864] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764500.443555465] [nav2_costmap_2d]: Updating area x: [1410, 1456] y: [2115, 2146]
+[controller_server-4] [WARN] [1788764501.126619926] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764501.126725881] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764501.443566357] [nav2_costmap_2d]: Updating area x: [1402, 1448] y: [2115, 2147]
+[controller_server-4] [INFO] [1788764502.014903777] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764502.443543440] [nav2_costmap_2d]: Updating area x: [1394, 1440] y: [2115, 2147]
+[controller_server-4] [WARN] [1788764503.168978322] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764503.169076629] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764503.443562364] [nav2_costmap_2d]: Updating area x: [1385, 1431] y: [2114, 2147]
+[controller_server-4] [INFO] [1788764504.161410751] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764504.443549014] [nav2_costmap_2d]: Updating area x: [1377, 1423] y: [2114, 2148]
+[controller_server-4] [WARN] [1788764505.111612887] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764505.220036638] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764505.443541600] [nav2_costmap_2d]: Updating area x: [1370, 1414] y: [2115, 2148]
+[controller_server-4] [INFO] [1788764506.211689841] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764506.443561883] [nav2_costmap_2d]: Updating area x: [1362, 1407] y: [2116, 2148]
+[controller_server-4] [WARN] [1788764507.080015637] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764507.302047809] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764507.443558372] [nav2_costmap_2d]: Updating area x: [1353, 1398] y: [2114, 2148]
+[controller_server-4] [INFO] [1788764508.280088576] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764508.443575773] [nav2_costmap_2d]: Updating area x: [1345, 1391] y: [2114, 2146]
+[controller_server-4] [WARN] [1788764509.113395915] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764509.357355146] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764509.443546789] [nav2_costmap_2d]: Updating area x: [1335, 1383] y: [2114, 2147]
+[controller_server-4] [INFO] [1788764510.413477184] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764510.443554430] [nav2_costmap_2d]: Updating area x: [1328, 1374] y: [2115, 2148]
+[controller_server-4] [WARN] [1788764511.088610081] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764511.404189921] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764511.443557734] [nav2_costmap_2d]: Updating area x: [1322, 1365] y: [2114, 2148]
+[planner_server-5] [DEBUG] [1788764512.443559678] [nav2_costmap_2d]: Updating area x: [1317, 1358] y: [2114, 2146]
+[controller_server-4] [INFO] [1788764512.488699578] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764513.133429117] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764513.443566950] [nav2_costmap_2d]: Updating area x: [1312, 1351] y: [2113, 2146]
+[controller_server-4] [INFO] [1788764513.565641680] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764514.443561437] [nav2_costmap_2d]: Updating area x: [1308, 1346] y: [2113, 2147]
+[controller_server-4] [INFO] [1788764514.533513224] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764515.176077457] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764515.443547620] [nav2_costmap_2d]: Updating area x: [1304, 1342] y: [2113, 2148]
+[controller_server-4] [INFO] [1788764515.617384759] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764516.443555259] [nav2_costmap_2d]: Updating area x: [1303, 1340] y: [2113, 2148]
+[controller_server-4] [INFO] [1788764516.676120373] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764517.115346512] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764517.443618532] [nav2_costmap_2d]: Updating area x: [1302, 1338] y: [2112, 2148]
+[controller_server-4] [INFO] [1788764517.671808047] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764518.443540761] [nav2_costmap_2d]: Updating area x: [1302, 1334] y: [2107, 2144]
+[controller_server-4] [INFO] [1788764518.718091103] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764519.145034726] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[bt_navigator-7] [WARN] [1788764519.345652223] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[planner_server-5] [DEBUG] [1788764519.443573473] [nav2_costmap_2d]: Updating area x: [1301, 1337] y: [2099, 2140]
+[controller_server-4] [INFO] [1788764519.776793895] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764520.443554967] [nav2_costmap_2d]: Updating area x: [1297, 1337] y: [2097, 2135]
+[controller_server-4] [INFO] [1788764520.845113774] [controller_server]: Passing new path to controller.
+[bt_navigator-7] [WARN] [1788764520.938334712] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764521.172274476] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764521.443564254] [nav2_costmap_2d]: Updating area x: [1286, 1330] y: [2096, 2131]
+[controller_server-4] [INFO] [1788764521.868451538] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764522.443541749] [nav2_costmap_2d]: Updating area x: [1279, 1326] y: [2096, 2136]
+[controller_server-4] [INFO] [1788764522.872350462] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764523.148255323] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764523.443557340] [nav2_costmap_2d]: Updating area x: [1277, 1318] y: [2100, 2141]
+[controller_server-4] [INFO] [1788764523.948340419] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764524.443553555] [nav2_costmap_2d]: Updating area x: [1271, 1313] y: [2105, 2146]
+[controller_server-4] [WARN] [1788764525.182670851] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764525.182786823] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764525.443576988] [nav2_costmap_2d]: Updating area x: [1263, 1307] y: [2111, 2147]
+[controller_server-4] [INFO] [1788764526.074656458] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764526.443540658] [nav2_costmap_2d]: Updating area x: [1254, 1301] y: [2114, 2148]
+[controller_server-4] [WARN] [1788764527.085135746] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764527.086436428] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764527.443575707] [nav2_costmap_2d]: Updating area x: [1248, 1293] y: [2114, 2151]
+[controller_server-4] [INFO] [1788764528.085215075] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764528.443636693] [nav2_costmap_2d]: Updating area x: [1241, 1285] y: [2118, 2152]
+[controller_server-4] [WARN] [1788764529.151077327] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764529.151178674] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764529.443572188] [nav2_costmap_2d]: Updating area x: [1234, 1278] y: [2120, 2152]
+[controller_server-4] [INFO] [1788764530.251154272] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764530.443540499] [nav2_costmap_2d]: Updating area x: [1225, 1270] y: [2119, 2152]
+[controller_server-4] [WARN] [1788764531.091151545] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764531.199182790] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764531.443565085] [nav2_costmap_2d]: Updating area x: [1216, 1262] y: [2119, 2151]
+[controller_server-4] [INFO] [1788764532.291236664] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764532.443555414] [nav2_costmap_2d]: Updating area x: [1207, 1255] y: [2118, 2151]
+[controller_server-4] [WARN] [1788764533.134591359] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764533.351655250] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764533.443565601] [nav2_costmap_2d]: Updating area x: [1199, 1247] y: [2118, 2150]
+[controller_server-4] [INFO] [1788764534.334674040] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764534.443555195] [nav2_costmap_2d]: Updating area x: [1190, 1236] y: [2118, 2151]
+[bt_navigator-7] [WARN] [1788764534.906054839] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764535.105770435] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764535.443554437] [nav2_costmap_2d]: Updating area x: [1178, 1227] y: [2118, 2151]
+[controller_server-4] [INFO] [1788764535.459950537] [controller_server]: Passing new path to controller.
+[controller_server-4] [INFO] [1788764536.405846047] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764536.443561313] [nav2_costmap_2d]: Updating area x: [1172, 1221] y: [2118, 2152]
+[controller_server-4] [WARN] [1788764537.144978437] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764537.443606094] [nav2_costmap_2d]: Updating area x: [1168, 1212] y: [2119, 2152]
+[controller_server-4] [INFO] [1788764537.459311036] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764538.443573801] [nav2_costmap_2d]: Updating area x: [1160, 1201] y: [2118, 2152]
+[controller_server-4] [INFO] [1788764538.545058493] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764539.137468556] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764539.443546326] [nav2_costmap_2d]: Updating area x: [1149, 1197] y: [2117, 2151]
+[controller_server-4] [INFO] [1788764539.568461735] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764540.443568916] [nav2_costmap_2d]: Updating area x: [1141, 1190] y: [2116, 2150]
+[controller_server-4] [INFO] [1788764540.637546043] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764541.132193436] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764541.443557762] [nav2_costmap_2d]: Updating area x: [1134, 1181] y: [2114, 2148]
+[controller_server-4] [INFO] [1788764541.672480878] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764542.443565441] [nav2_costmap_2d]: Updating area x: [1125, 1171] y: [2113, 2147]
+[controller_server-4] [INFO] [1788764542.733524195] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764543.215364322] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764543.443540912] [nav2_costmap_2d]: Updating area x: [1119, 1163] y: [2112, 2145]
+[controller_server-4] [INFO] [1788764543.774238314] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764544.443553969] [nav2_costmap_2d]: Updating area x: [1110, 1155] y: [2112, 2144]
+[controller_server-4] [INFO] [1788764544.815446768] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764545.177758625] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764545.443566082] [nav2_costmap_2d]: Updating area x: [1099, 1146] y: [2112, 2145]
+[controller_server-4] [INFO] [1788764545.864700898] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764546.443562724] [nav2_costmap_2d]: Updating area x: [1091, 1140] y: [2113, 2145]
+[controller_server-4] [WARN] [1788764547.206514657] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764547.206621861] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764547.443548598] [nav2_costmap_2d]: Updating area x: [1083, 1130] y: [2113, 2145]
+[controller_server-4] [INFO] [1788764547.905168891] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764548.443551578] [nav2_costmap_2d]: Updating area x: [1074, 1121] y: [2113, 2146]
+[controller_server-4] [WARN] [1788764549.239303745] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764549.239403332] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764549.443609520] [nav2_costmap_2d]: Updating area x: [1067, 1113] y: [2112, 2146]
+[controller_server-4] [INFO] [1788764550.008756010] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764550.443564052] [nav2_costmap_2d]: Updating area x: [1059, 1103] y: [2112, 2149]
+[controller_server-4] [WARN] [1788764551.155290597] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764551.157401222] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764551.443533770] [nav2_costmap_2d]: Updating area x: [1053, 1095] y: [2115, 2152]
+[controller_server-4] [INFO] [1788764552.055364483] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764552.443551442] [nav2_costmap_2d]: Updating area x: [1045, 1090] y: [2118, 2154]
+[controller_server-4] [WARN] [1788764553.236016226] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764553.236663287] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764553.443561738] [nav2_costmap_2d]: Updating area x: [1038, 1082] y: [2121, 2154]
+[controller_server-4] [INFO] [1788764554.236102130] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764554.443540563] [nav2_costmap_2d]: Updating area x: [1029, 1075] y: [2121, 2154]
+[controller_server-4] [WARN] [1788764555.206332944] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764555.206538166] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764555.443547182] [nav2_costmap_2d]: Updating area x: [1020, 1066] y: [2121, 2153]
+[controller_server-4] [INFO] [1788764556.306412043] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764556.443575354] [nav2_costmap_2d]: Updating area x: [1012, 1059] y: [2120, 2153]
+[bt_navigator-7] [WARN] [1788764556.947414116] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764557.209494177] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764557.318325629] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764557.443913538] [nav2_costmap_2d]: Updating area x: [1004, 1049] y: [2120, 2152]
+[controller_server-4] [INFO] [1788764558.309566300] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764558.443571781] [nav2_costmap_2d]: Updating area x: [995, 1042] y: [2119, 2152]
+[controller_server-4] [WARN] [1788764559.119309089] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764559.355045059] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764559.443555619] [nav2_costmap_2d]: Updating area x: [985, 1032] y: [2119, 2152]
+[controller_server-4] [INFO] [1788764560.419388996] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764560.443637014] [nav2_costmap_2d]: Updating area x: [977, 1025] y: [2119, 2153]
+[controller_server-4] [WARN] [1788764561.168231436] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764561.443569398] [nav2_costmap_2d]: Updating area x: [973, 1016] y: [2120, 2154]
+[controller_server-4] [INFO] [1788764561.502370232] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764562.445023477] [nav2_costmap_2d]: Updating area x: [965, 1008] y: [2118, 2154]
+[controller_server-4] [INFO] [1788764562.468307400] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764563.109200259] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764563.443541579] [nav2_costmap_2d]: Updating area x: [958, 1002] y: [2111, 2154]
+[controller_server-4] [INFO] [1788764563.569795674] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764564.443563138] [nav2_costmap_2d]: Updating area x: [952, 996] y: [2107, 2148]
+[controller_server-4] [INFO] [1788764564.609278166] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764565.178637778] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764565.443523335] [nav2_costmap_2d]: Updating area x: [946, 989] y: [2107, 2143]
+[controller_server-4] [INFO] [1788764565.612460445] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764566.443546720] [nav2_costmap_2d]: Updating area x: [937, 983] y: [2105, 2140]
+[controller_server-4] [INFO] [1788764566.678722840] [controller_server]: Passing new path to controller.
+[bt_navigator-7] [WARN] [1788764566.936155075] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764567.193739887] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764567.443613355] [nav2_costmap_2d]: Updating area x: [929, 975] y: [2103, 2138]
+[controller_server-4] [INFO] [1788764567.655532752] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764568.443545892] [nav2_costmap_2d]: Updating area x: [922, 968] y: [2101, 2136]
+[controller_server-4] [INFO] [1788764568.694522751] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764569.156799590] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764569.443581906] [nav2_costmap_2d]: Updating area x: [917, 960] y: [2098, 2136]
+[controller_server-4] [INFO] [1788764569.804355023] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764570.443608785] [nav2_costmap_2d]: Updating area x: [913, 952] y: [2091, 2133]
+[controller_server-4] [INFO] [1788764570.856882273] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764571.077209119] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764571.443569663] [nav2_costmap_2d]: Updating area x: [908, 948] y: [2085, 2127]
+[controller_server-4] [INFO] [1788764571.858444859] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764572.443574752] [nav2_costmap_2d]: Updating area x: [902, 944] y: [2079, 2122]
+[controller_server-4] [WARN] [1788764573.172087760] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764573.173375640] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764573.443577907] [nav2_costmap_2d]: Updating area x: [896, 939] y: [2074, 2116]
+[controller_server-4] [INFO] [1788764573.867416823] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764574.443568407] [nav2_costmap_2d]: Updating area x: [889, 933] y: [2071, 2110]
+[planner_server-5] [WARN] [1788764574.875163173] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-5] [WARN] [1788764574.875261416] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (-55.20, 22.00)
+[planner_server-5] [WARN] [1788764574.875288297] [planner_server]: [compute_path_through_poses] [ActionServer] Aborting handle.
+[behavior_server-6] [INFO] [1788764574.895252785] [behavior_server]: Running wait
+[controller_server-4] [WARN] [1788764575.140746155] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764575.443572621] [nav2_costmap_2d]: Updating area x: [881, 926] y: [2068, 2105]
+[planner_server-5] [DEBUG] [1788764576.443553332] [nav2_costmap_2d]: Updating area x: [873, 920] y: [2065, 2102]
+[controller_server-4] [WARN] [1788764577.183086094] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764577.443561677] [nav2_costmap_2d]: Updating area x: [868, 911] y: [2062, 2100]
+[behavior_server-6] [INFO] [1788764577.895516668] [behavior_server]: wait completed successfully
+[controller_server-4] [INFO] [1788764577.961415436] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764578.443586649] [nav2_costmap_2d]: Updating area x: [861, 904] y: [2056, 2097]
+[controller_server-4] [WARN] [1788764579.192091250] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764579.192278360] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764579.443568373] [nav2_costmap_2d]: Updating area x: [854, 897] y: [2051, 2092]
+[controller_server-4] [INFO] [1788764580.061438253] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764580.443566083] [nav2_costmap_2d]: Updating area x: [848, 892] y: [2046, 2087]
+[controller_server-4] [WARN] [1788764581.172608912] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764581.172701267] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764581.443576708] [nav2_costmap_2d]: Updating area x: [844, 885] y: [2039, 2081]
+[controller_server-4] [INFO] [1788764582.170116730] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764582.443570806] [nav2_costmap_2d]: Updating area x: [840, 880] y: [2032, 2076]
+[controller_server-4] [WARN] [1788764583.182287960] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764583.182390811] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764583.443567098] [nav2_costmap_2d]: Updating area x: [835, 875] y: [2026, 2070]
+[controller_server-4] [INFO] [1788764584.258915428] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764584.443568623] [nav2_costmap_2d]: Updating area x: [830, 870] y: [2020, 2064]
+[controller_server-4] [WARN] [1788764585.201668528] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764585.201774291] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764585.443568727] [nav2_costmap_2d]: Updating area x: [825, 865] y: [2015, 2056]
+[controller_server-4] [INFO] [1788764586.298271587] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764586.443526896] [nav2_costmap_2d]: Updating area x: [821, 861] y: [2008, 2051]
+[controller_server-4] [WARN] [1788764587.263456869] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764587.263559912] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764587.443567325] [nav2_costmap_2d]: Updating area x: [817, 856] y: [2003, 2045]
+[controller_server-4] [INFO] [1788764588.360848337] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764588.443565658] [nav2_costmap_2d]: Updating area x: [815, 852] y: [1995, 2039]
+[bt_navigator-7] [WARN] [1788764588.935168452] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764589.175355946] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764589.405955977] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764589.443565898] [nav2_costmap_2d]: Updating area x: [811, 849] y: [1987, 2031]
+[controller_server-4] [INFO] [1788764590.375438628] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764590.443557643] [nav2_costmap_2d]: Updating area x: [809, 846] y: [1981, 2026]
+[controller_server-4] [WARN] [1788764591.175064734] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764591.394825930] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764591.444387225] [nav2_costmap_2d]: Updating area x: [809, 842] y: [1975, 2018]
+[planner_server-5] [DEBUG] [1788764592.443569542] [nav2_costmap_2d]: Updating area x: [809, 841] y: [1966, 2011]
+[controller_server-4] [INFO] [1788764592.471993548] [controller_server]: Passing new path to controller.
+[bt_navigator-7] [WARN] [1788764592.707087307] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[bt_navigator-7] [WARN] [1788764592.931817709] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764593.163905198] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764593.443578974] [nav2_costmap_2d]: Updating area x: [808, 841] y: [1958, 2003]
+[controller_server-4] [INFO] [1788764593.498366539] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764594.443579144] [nav2_costmap_2d]: Updating area x: [807, 840] y: [1950, 1996]
+[controller_server-4] [INFO] [1788764594.463991929] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764595.205296782] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764595.443572804] [nav2_costmap_2d]: Updating area x: [807, 840] y: [1942, 1987]
+[controller_server-4] [INFO] [1788764595.549586542] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764596.443567987] [nav2_costmap_2d]: Updating area x: [806, 839] y: [1933, 1980]
+[controller_server-4] [INFO] [1788764596.605375589] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764597.229075642] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764597.443534611] [nav2_costmap_2d]: Updating area x: [806, 839] y: [1927, 1971]
+[controller_server-4] [INFO] [1788764597.563080759] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764598.443540390] [nav2_costmap_2d]: Updating area x: [804, 839] y: [1917, 1963]
+[controller_server-4] [INFO] [1788764598.629160555] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764599.167117078] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764599.443564556] [nav2_costmap_2d]: Updating area x: [800, 839] y: [1909, 1954]
+[controller_server-4] [INFO] [1788764599.607024586] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764600.443552516] [nav2_costmap_2d]: Updating area x: [793, 835] y: [1905, 1948]
+[controller_server-4] [INFO] [1788764600.667220908] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764601.232315427] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764601.443585487] [nav2_costmap_2d]: Updating area x: [787, 830] y: [1903, 1940]
+[controller_server-4] [INFO] [1788764601.669910789] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764602.443588780] [nav2_costmap_2d]: Updating area x: [780, 824] y: [1902, 1936]
+[controller_server-4] [INFO] [1788764602.732661624] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764603.132898847] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764603.443659645] [nav2_costmap_2d]: Updating area x: [780, 815] y: [1902, 1936]
+[controller_server-4] [INFO] [1788764603.775026606] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764604.443562843] [nav2_costmap_2d]: Updating area x: [779, 814] y: [1903, 1939]
+[controller_server-4] [INFO] [1788764604.832979568] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764605.229870021] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764605.443546094] [nav2_costmap_2d]: Updating area x: [778, 814] y: [1904, 1939]
+[controller_server-4] [INFO] [1788764605.878116445] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764606.443562517] [nav2_costmap_2d]: Updating area x: [775, 811] y: [1900, 1937]
+[bt_navigator-7] [WARN] [1788764606.917769940] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764607.130449562] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764607.131567292] [controller_server]: Passing new path to controller.
+[controller_server-4] [ERROR] [1788764607.236968226] [controller_server]: Failed to make progress
+[controller_server-4] [WARN] [1788764607.237174024] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-6] [INFO] [1788764607.254933317] [behavior_server]: Running wait
+[planner_server-5] [DEBUG] [1788764607.443571406] [nav2_costmap_2d]: Updating area x: [775, 812] y: [1899, 1935]
+[planner_server-5] [DEBUG] [1788764608.443556505] [nav2_costmap_2d]: Updating area x: [779, 813] y: [1897, 1931]
+[behavior_server-6] [INFO] [1788764609.255189819] [behavior_server]: wait completed successfully
+[controller_server-4] [INFO] [1788764609.285127497] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-4] [INFO] [1788764609.287373709] [controller_server]: Optimizer reset
+[planner_server-5] [DEBUG] [1788764609.443537943] [nav2_costmap_2d]: Updating area x: [778, 813] y: [1897, 1931]
+[controller_server-4] [INFO] [1788764609.986318694] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764610.443557384] [nav2_costmap_2d]: Updating area x: [778, 812] y: [1897, 1932]
+[bt_navigator-7] [WARN] [1788764610.942529917] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764611.205686644] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764611.205786231] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764611.443536426] [nav2_costmap_2d]: Updating area x: [779, 818] y: [1899, 1934]
+[controller_server-4] [INFO] [1788764612.100732924] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764612.443589922] [nav2_costmap_2d]: Updating area x: [783, 822] y: [1897, 1934]
+[controller_server-4] [WARN] [1788764613.192143102] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764613.192243553] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764613.443539785] [nav2_costmap_2d]: Updating area x: [788, 825] y: [1890, 1931]
+[controller_server-4] [INFO] [1788764614.067440567] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764614.443545444] [nav2_costmap_2d]: Updating area x: [788, 825] y: [1887, 1926]
+[controller_server-4] [WARN] [1788764615.227858056] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764615.227954059] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764615.443547570] [nav2_costmap_2d]: Updating area x: [788, 821] y: [1886, 1920]
+[controller_server-4] [INFO] [1788764616.205228990] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764616.443551475] [nav2_costmap_2d]: Updating area x: [787, 820] y: [1886, 1919]
+[controller_server-4] [WARN] [1788764617.228192716] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764617.228291535] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764617.443548742] [nav2_costmap_2d]: Updating area x: [784, 820] y: [1885, 1920]
+[controller_server-4] [INFO] [1788764618.309441936] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764618.443566253] [nav2_costmap_2d]: Updating area x: [781, 819] y: [1885, 1920]
+[controller_server-4] [WARN] [1788764619.307731960] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764619.307832827] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764619.443581350] [nav2_costmap_2d]: Updating area x: [779, 815] y: [1878, 1919]
+[controller_server-4] [INFO] [1788764620.301948438] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764620.443550865] [nav2_costmap_2d]: Updating area x: [779, 819] y: [1872, 1914]
+[controller_server-4] [WARN] [1788764621.148202927] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764621.358576775] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764621.443553712] [nav2_costmap_2d]: Updating area x: [784, 824] y: [1868, 1907]
+[controller_server-4] [INFO] [1788764622.348287235] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764622.443563138] [nav2_costmap_2d]: Updating area x: [789, 827] y: [1862, 1903]
+[controller_server-4] [WARN] [1788764623.178502848] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764623.398705691] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764623.443551398] [nav2_costmap_2d]: Updating area x: [793, 828] y: [1855, 1897]
+[planner_server-5] [DEBUG] [1788764624.443603295] [nav2_costmap_2d]: Updating area x: [795, 829] y: [1848, 1892]
+[controller_server-4] [INFO] [1788764624.478595679] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764625.240950917] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764625.443563464] [nav2_costmap_2d]: Updating area x: [796, 831] y: [1839, 1884]
+[controller_server-4] [INFO] [1788764625.454650871] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764626.443599815] [nav2_costmap_2d]: Updating area x: [798, 832] y: [1832, 1877]
+[controller_server-4] [INFO] [1788764626.541039266] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764627.121515847] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764627.443611031] [nav2_costmap_2d]: Updating area x: [799, 833] y: [1825, 1868]
+[controller_server-4] [INFO] [1788764627.562773793] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764628.443549081] [nav2_costmap_2d]: Updating area x: [800, 834] y: [1818, 1862]
+[controller_server-4] [INFO] [1788764628.521596938] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764629.191029752] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764629.443548144] [nav2_costmap_2d]: Updating area x: [801, 835] y: [1808, 1853]
+[controller_server-4] [INFO] [1788764629.611277389] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764630.443555706] [nav2_costmap_2d]: Updating area x: [803, 836] y: [1800, 1848]
+[controller_server-4] [INFO] [1788764630.591115733] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764631.170898343] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764631.443549686] [nav2_costmap_2d]: Updating area x: [804, 836] y: [1794, 1839]
+[controller_server-4] [INFO] [1788764631.609218289] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764632.443547878] [nav2_costmap_2d]: Updating area x: [804, 837] y: [1786, 1830]
+[controller_server-4] [INFO] [1788764632.670997506] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764633.170924290] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764633.443590283] [nav2_costmap_2d]: Updating area x: [805, 838] y: [1780, 1822]
+[controller_server-4] [INFO] [1788764633.714769895] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764634.443561472] [nav2_costmap_2d]: Updating area x: [806, 838] y: [1772, 1816]
+[controller_server-4] [INFO] [1788764634.771015189] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764635.220862374] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764635.443538633] [nav2_costmap_2d]: Updating area x: [806, 838] y: [1766, 1808]
+[controller_server-4] [INFO] [1788764635.764952804] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764636.443530054] [nav2_costmap_2d]: Updating area x: [807, 838] y: [1758, 1801]
+[controller_server-4] [INFO] [1788764636.821093299] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764637.212186004] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764637.443568119] [nav2_costmap_2d]: Updating area x: [807, 840] y: [1750, 1793]
+[controller_server-4] [INFO] [1788764637.861849702] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764638.443563930] [nav2_costmap_2d]: Updating area x: [808, 840] y: [1743, 1787]
+[controller_server-4] [WARN] [1788764639.170537106] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764639.170636469] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764639.443539568] [nav2_costmap_2d]: Updating area x: [808, 840] y: [1736, 1778]
+[controller_server-4] [INFO] [1788764639.848546022] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764640.443561979] [nav2_costmap_2d]: Updating area x: [808, 839] y: [1729, 1772]
+[controller_server-4] [WARN] [1788764641.144460371] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764641.144552182] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764641.443551576] [nav2_costmap_2d]: Updating area x: [808, 839] y: [1720, 1764]
+[controller_server-4] [INFO] [1788764642.002919191] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764642.443554345] [nav2_costmap_2d]: Updating area x: [808, 840] y: [1713, 1758]
+[controller_server-4] [WARN] [1788764643.153285784] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764643.153380699] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764643.443584814] [nav2_costmap_2d]: Updating area x: [808, 840] y: [1706, 1750]
+[controller_server-4] [INFO] [1788764644.014173903] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764644.443561702] [nav2_costmap_2d]: Updating area x: [808, 840] y: [1698, 1742]
+[controller_server-4] [WARN] [1788764645.202674344] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764645.203831243] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764645.443557361] [nav2_costmap_2d]: Updating area x: [808, 840] y: [1691, 1734]
+[controller_server-4] [INFO] [1788764646.070760256] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764646.443549679] [nav2_costmap_2d]: Updating area x: [807, 840] y: [1682, 1728]
+[controller_server-4] [WARN] [1788764647.202165392] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764647.202264371] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764647.443551809] [nav2_costmap_2d]: Updating area x: [807, 840] y: [1675, 1720]
+[controller_server-4] [INFO] [1788764648.202253723] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764648.443563623] [nav2_costmap_2d]: Updating area x: [805, 840] y: [1668, 1713]
+[controller_server-4] [WARN] [1788764649.223896574] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764649.224123109] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764649.443553729] [nav2_costmap_2d]: Updating area x: [805, 840] y: [1662, 1703]
+[controller_server-4] [INFO] [1788764650.206716205] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764650.443565038] [nav2_costmap_2d]: Updating area x: [807, 842] y: [1655, 1698]
+[controller_server-4] [WARN] [1788764651.125586907] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764651.232744249] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764651.443553102] [nav2_costmap_2d]: Updating area x: [803, 842] y: [1648, 1691]
+[controller_server-4] [INFO] [1788764652.225658717] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764652.443564483] [nav2_costmap_2d]: Updating area x: [799, 838] y: [1641, 1685]
+[controller_server-4] [WARN] [1788764653.210572549] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764653.318215184] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764653.443833618] [nav2_costmap_2d]: Updating area x: [797, 834] y: [1634, 1678]
+[controller_server-4] [INFO] [1788764654.310657676] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764654.443701418] [nav2_costmap_2d]: Updating area x: [796, 830] y: [1626, 1672]
+[controller_server-4] [WARN] [1788764655.222683135] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [INFO] [1788764655.332987382] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764655.443551733] [nav2_costmap_2d]: Updating area x: [796, 828] y: [1619, 1663]
+[controller_server-4] [INFO] [1788764656.414661275] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764656.443571673] [nav2_costmap_2d]: Updating area x: [796, 828] y: [1611, 1656]
+[controller_server-4] [WARN] [1788764657.156628943] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764657.443573935] [nav2_costmap_2d]: Updating area x: [797, 829] y: [1602, 1647]
+[controller_server-4] [INFO] [1788764657.497958435] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764658.443571930] [nav2_costmap_2d]: Updating area x: [797, 829] y: [1594, 1641]
+[controller_server-4] [INFO] [1788764658.456770915] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764659.201085578] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764659.443572344] [nav2_costmap_2d]: Updating area x: [797, 829] y: [1586, 1632]
+[controller_server-4] [INFO] [1788764659.553345914] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764660.443543114] [nav2_costmap_2d]: Updating area x: [796, 829] y: [1578, 1624]
+[controller_server-4] [INFO] [1788764660.501168379] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764661.223799755] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764661.443587601] [nav2_costmap_2d]: Updating area x: [796, 829] y: [1569, 1614]
+[controller_server-4] [INFO] [1788764661.563757765] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764662.443548938] [nav2_costmap_2d]: Updating area x: [795, 830] y: [1560, 1608]
+[controller_server-4] [INFO] [1788764662.623883385] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764663.196371178] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764663.443549144] [nav2_costmap_2d]: Updating area x: [790, 830] y: [1552, 1598]
+[controller_server-4] [INFO] [1788764663.652863585] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764664.443573082] [nav2_costmap_2d]: Updating area x: [785, 826] y: [1546, 1591]
+[controller_server-4] [INFO] [1788764664.596450709] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764665.190467992] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764665.443648210] [nav2_costmap_2d]: Updating area x: [781, 821] y: [1540, 1583]
+[controller_server-4] [INFO] [1788764665.755311188] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764666.443707678] [nav2_costmap_2d]: Updating area x: [778, 816] y: [1535, 1577]
+[controller_server-4] [INFO] [1788764666.692880414] [controller_server]: Passing new path to controller.
+[controller_server-4] [INFO] [1788764667.185198346] [controller_server]: Reached the goal!
+[bt_navigator-7] [INFO] [1788764667.224492823] [bt_navigator]: Goal succeeded
+[planner_server-5] [DEBUG] [1788764667.443564759] [nav2_costmap_2d]: Updating area x: [777, 813] y: [1531, 1570]
+[planner_server-5] [DEBUG] [1788764668.443545865] [nav2_costmap_2d]: Updating area x: [777, 812] y: [1531, 1567]
+[planner_server-5] [DEBUG] [1788764669.443549711] [nav2_costmap_2d]: Updating area x: [776, 812] y: [1531, 1567]
+[planner_server-5] [DEBUG] [1788764670.443551721] [nav2_costmap_2d]: Updating area x: [776, 812] y: [1531, 1567]
+[planner_server-5] [DEBUG] [1788764671.443544406] [nav2_costmap_2d]: Updating area x: [776, 812] y: [1531, 1567]
+[bt_navigator-7] [INFO] [1788764672.267175957] [bt_navigator]: Begin navigating from current location through 26 poses to (2.08, -12.26)
+[controller_server-4] [INFO] [1788764672.309080941] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-4] [INFO] [1788764672.310385172] [controller_server]: Optimizer reset
+[planner_server-5] [DEBUG] [1788764672.443592954] [nav2_costmap_2d]: Updating area x: [776, 812] y: [1531, 1567]
+[controller_server-4] [WARN] [1788764673.210464543] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764673.443601328] [nav2_costmap_2d]: Updating area x: [776, 812] y: [1531, 1567]
+[controller_server-4] [INFO] [1788764673.451123567] [controller_server]: Passing new path to controller.
+[controller_server-4] [INFO] [1788764674.410544361] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764674.443538201] [nav2_costmap_2d]: Updating area x: [776, 813] y: [1531, 1567]
+[bt_navigator-7] [WARN] [1788764674.899338784] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-4] [WARN] [1788764675.169739770] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[planner_server-5] [DEBUG] [1788764675.443556952] [nav2_costmap_2d]: Updating area x: [778, 814] y: [1531, 1567]
+[controller_server-4] [INFO] [1788764675.484100135] [controller_server]: Passing new path to controller.
+[planner_server-5] [DEBUG] [1788764676.443558059] [nav2_costmap_2d]: Updating area x: [779, 814] y: [1532, 1566]
+[controller_server-4] [INFO] [1788764676.532851993] [controller_server]: Passing new path to controller.
+[controller_server-4] [WARN] [1788764677.136675178] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-4] [ERROR] [1788764677.347427291] [controller_server]: Failed to make progress
+[controller_server-4] [WARN] [1788764677.347599936] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-6] [INFO] [1788764677.367867958] [behavior_server]: Running wait
+[planner_server-5] [DEBUG] [1788764677.443545042] [nav2_costmap_2d]: Updating area x: [779, 814] y: [1532, 1566]

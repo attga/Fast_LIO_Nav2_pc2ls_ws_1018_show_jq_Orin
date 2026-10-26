@@ -1,0 +1,434 @@
+nvidia@nvidia-desktop:~/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810$ ros2 launch fast_lio_loc lio_localization.launch.py map_pcd:=/home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810/maps/LOAM_twice/cloudGlobal.pcd use_sim_time:=false
+[INFO] [launch]: All log files can be found below /home/nvidia/.ros/log/2026-08-12-10-21-45-657969-nvidia-desktop-26966
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: [lio_localization] 先验地图: /home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810/maps/LOAM_twice/cloudGlobal.pcd
+[INFO] [launch.user]: [lio_localization] use_sim_time = false
+[INFO] [static_transform_publisher-1]: process started with pid [26967]
+[INFO] [static_transform_publisher-2]: process started with pid [26969]
+[INFO] [fastlio_mapping-3]: process started with pid [26971]
+[static_transform_publisher-2] [WARN] [1786501305.759986770] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-1] [WARN] [1786501305.760017907] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-1] [INFO] [1786501305.783486422] [static_tf_body_to_base]: Spinning until stopped - publishing transform
+[static_transform_publisher-1] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-1] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-1] from 'body' to 'base_link'
+[static_transform_publisher-2] [INFO] [1786501305.789303437] [static_tf_base_to_lidar]: Spinning until stopped - publishing transform
+[static_transform_publisher-2] translation: ('0.000000', '0.000000', '0.100000')
+[static_transform_publisher-2] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-2] from 'base_link' to 'livox_frame'
+[fastlio_mapping-3] [INFO] [1786501305.861102377] [fast_lio_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-3] Multi thread started 
+[fastlio_mapping-3] ~~~~/home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810/src/FAST_LIO_SLAM/FAST_LIO_ROS2/ file opened
+[fastlio_mapping-3] [INFO] [1786501305.871401605] [fast_lio_mapping]: Node init finished.
+[INFO] [rviz2-4]: process started with pid [27001]
+[fastlio_mapping-3] IMU Initial Done
+[fastlio_mapping-3] [WARN] [1786501306.880876143] [fast_lio_mapping]: No point, skip this scan!
+[fastlio_mapping-3] 
+[fastlio_mapping-3] [INFO] [1786501306.981825985] [fast_lio_mapping]: Initialize the map kdtree
+[rviz2-4] [INFO] [1786501307.327493445] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-4] [INFO] [1786501307.327807440] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-4] [INFO] [1786501307.360385028] [rviz2]: Stereo is NOT SUPPORTED
+[INFO] [launch.user]: [lio_localization] 启动全局 ICP 重定位节点...
+[INFO] [global_localization_ros2.py-5]: process started with pid [27017]
+[global_localization_ros2.py-5] /usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+[global_localization_ros2.py-5]   warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+[global_localization_ros2.py-5] [INFO] [1786501310.460365405] [fast_lio_localization]: [FileLog] Log saved to: /home/nvidia/Fast_LIO_Localization_ws/logs/localization_20260812_102150.log
+[global_localization_ros2.py-5] [INFO] [1786501310.472719846] [fast_lio_localization]: ✅ ScanContext Database loaded from /home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810/maps/LOAM_twice/sc_database_indoor_0812.pkl
+[global_localization_ros2.py-5] [INFO] [1786501310.490226989] [fast_lio_localization]: Loading map: /home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810/maps/LOAM_twice/cloudGlobal.pcd
+[global_localization_ros2.py-5] [INFO] [1786501311.491060129] [fast_lio_localization]: Map loaded: 5068 points (downsampled)
+[global_localization_ros2.py-5] [INFO] [1786501311.491689209] [fast_lio_localization]: ✅ FPFH precomputation removed. Using ScanContext instead.
+[global_localization_ros2.py-5] [INFO] [1786501311.492334736] [fast_lio_localization]: [WarmStart] Warm start disabled (enable_warm_start=false), directly using RANSAC for global relocalization
+[global_localization_ros2.py-5] [INFO] [1786501311.492871140] [fast_lio_localization]: [YawCalib] ✅ Manual Yaw offset set: -155.72°
+[global_localization_ros2.py-5]   → Yaw filtering will be active from first cold start, no need to wait for auto-calibration
+[global_localization_ros2.py-5] [INFO] [1786501311.493373335] [fast_lio_localization]: FastLIO Localization node started, waiting for initial pose /initialpose ...
+[global_localization_ros2.py-5] [INFO] [1786501311.493874665] [fast_lio_localization]:   If no /initialpose is sent, ICP will be performed directly with identity as initial value when the first frame arrives.
+[global_localization_ros2.py-5] [INFO] [1786501311.501674186] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786501311.505528184] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786501311.791046585] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.3838, 0.3838, 0.3646
+[global_localization_ros2.py-5] [INFO] [1786501311.792327016] [fast_lio_localization]: [YAW-DEBUG] Expected: -66.3°. Candidates: 90.0°, 120.0°, -156.0°
+[global_localization_ros2.py-5] [WARN] [1786501311.794385524] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=90.0° | expected=-66.3° | diff=156.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786501311.795883116] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=120.0° | expected=-66.3° | diff=173.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786501311.796652520] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-156.0° | expected=-66.3° | diff=89.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786501311.797246302] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786501311.797997306] [fast_lio_localization]:   Yaw filter rejected all candidates (1/5). Waiting for next frame...
+[global_localization_ros2.py-5] [INFO] [1786501311.806230858] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786501311.806817600] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786501312.072159479] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.4070, 0.3829, 0.3813
+[global_localization_ros2.py-5] [INFO] [1786501312.075428271] [fast_lio_localization]: [YAW-DEBUG] Expected: -66.3°. Candidates: -156.0°, -150.0°, 90.0°
+[global_localization_ros2.py-5] [WARN] [1786501312.076448533] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-156.0° | expected=-66.3° | diff=89.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786501312.077163600] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-150.0° | expected=-66.3° | diff=83.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786501312.077859657] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=90.0° | expected=-66.3° | diff=156.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786501312.080560333] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786501312.081355659] [fast_lio_localization]:   Yaw filter rejected all candidates (2/5). Waiting for next frame...
+[global_localization_ros2.py-5] [INFO] [1786501312.087090015] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786501312.087667764] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786501312.361574697] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.4280, 0.4146, 0.4135
+[global_localization_ros2.py-5] [INFO] [1786501312.362793591] [fast_lio_localization]: [YAW-DEBUG] Expected: -66.3°. Candidates: 114.0°, -156.0°, 114.0°
+[global_localization_ros2.py-5] [WARN] [1786501312.366060303] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=114.0° | expected=-66.3° | diff=179.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786501312.366849741] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-156.0° | expected=-66.3° | diff=89.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786501312.367579368] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=114.0° | expected=-66.3° | diff=179.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786501312.368231552] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786501312.371595772] [fast_lio_localization]:   Yaw filter rejected all candidates (3/5). Waiting for next frame...
+[global_localization_ros2.py-5] [INFO] [1786501312.376980707] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786501312.377587994] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786501312.681198074] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.4014, 0.3604, 0.3510
+[global_localization_ros2.py-5] [INFO] [1786501312.682560108] [fast_lio_localization]: [YAW-DEBUG] Expected: -66.3°. Candidates: -156.0°, -174.0°, -102.0°
+[global_localization_ros2.py-5] [WARN] [1786501312.686547424] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-156.0° | expected=-66.3° | diff=89.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786501312.687433729] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-174.0° | expected=-66.3° | diff=107.7° > 45.0°
+[global_localization_ros2.py-5] [INFO] [1786501312.688116858] [fast_lio_localization]: [YawFilter] KEEP   candidate Yaw=-102.0° | expected=-66.3° | diff=35.7°
+[global_localization_ros2.py-5] [INFO] [1786501312.691166859] [fast_lio_localization]: [YawFilter] 3 → 1 candidates after Yaw filter (IMU Yaw=89.4°, offset=-155.7°)
+[global_localization_ros2.py-5] [WARN] [1786501312.692056460] [fast_lio_localization]: [ScanContext] Best fitness=0.3510 too low (< 0.5). Please use RViz 2D Pose Estimate.
+[global_localization_ros2.py-5] [INFO] [1786501312.692738725] [fast_lio_localization]:   Trying candidate #1/1 (ScanContext fitness=0.3510) with ICP...
+[global_localization_ros2.py-5] [INFO] [1786501312.732807247] [fast_lio_localization]: ICP elapsed: 0.04s | fitness=0.7265 | threshold=0.7
+[global_localization_ros2.py-5] [INFO] [1786501312.736754145] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.02, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.13, P:     0.10, Y:    -0.09 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     6.30, Y:   -19.89, Z:    -1.00 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.81, P:     1.19, Y:  -102.19 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501312.737546494] [fast_lio_localization]:   Candidate #1 accepted after ICP + validation.
+[global_localization_ros2.py-5] [INFO] [1786501312.738173814] [fast_lio_localization]: ✅ Auto relocalization succeeded! Localization locked.
+[global_localization_ros2.py-5]   Use RViz 2D Pose Estimate to re-localize if needed.
+[global_localization_ros2.py-5] [ERROR] [1786501313.496817148] [fast_lio_localization]: [MapBoundary] CRITICAL: fov_map_pts=5068 (< 30000). Robot may be outside map!
+[global_localization_ros2.py-5]   Consider stopping navigation and returning to mapped area.
+[global_localization_ros2.py-5] [INFO] [1786501313.523306000] [fast_lio_localization]: ICP elapsed: 0.03s | fitness=0.8591 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501313.527211361] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.02, Z:    -0.03 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.20, P:     0.19, Y:     0.03 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     4.11, Y:   -19.90, Z:    -0.89 (m)
+[global_localization_ros2.py-5]   Att -> R:    -7.29, P:    -3.23, Y:  -123.79 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501315.522215057] [fast_lio_localization]: ICP elapsed: 0.03s | fitness=0.9332 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501315.525516940] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.02, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.23, P:     0.10, Y:     0.05 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.57, Y:   -20.05, Z:    -0.92 (m)
+[global_localization_ros2.py-5]   Att -> R:    -7.73, P:    -3.22, Y:  -135.82 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501316.492678190] [fast_lio_localization]: [YesenseYaw] ✅ Yesense IMU data is normal(Latest data 0.0s ago, current Yaw=89.4°)
+[global_localization_ros2.py-5]   → RANSAC candidates will be filtered by Yaw to solve symmetric corner confusion
+[global_localization_ros2.py-5]   → Yaw calibration offset loaded: -155.7°
+[global_localization_ros2.py-5] [INFO] [1786501317.517385483] [fast_lio_localization]: ICP elapsed: 0.02s | fitness=0.9005 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501317.521373215] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.00, Y:    -0.00, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.17, P:     0.09, Y:     0.08 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.43, Y:   -18.79, Z:     0.05 (m)
+[global_localization_ros2.py-5]   Att -> R:   -14.11, P:   -10.51, Y:  -134.78 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [ERROR] [1786501319.496182569] [fast_lio_localization]: [MapBoundary] CRITICAL: fov_map_pts=5068 (< 30000). Robot may be outside map!
+[global_localization_ros2.py-5]   Consider stopping navigation and returning to mapped area.
+[global_localization_ros2.py-5] [INFO] [1786501319.527711898] [fast_lio_localization]: ICP elapsed: 0.03s | fitness=0.8741 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501319.531882996] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.00, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.22, P:     0.06, Y:     0.03 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.19, Y:   -18.04, Z:    -0.20 (m)
+[global_localization_ros2.py-5]   Att -> R:    -6.13, P:    -6.44, Y:  -141.07 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501321.512450999] [fast_lio_localization]: ICP elapsed: 0.02s | fitness=0.9652 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501321.515968345] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.00, Y:    -0.00, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.24, P:     0.07, Y:     0.15 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.80, Y:   -15.83, Z:    -0.69 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.13, P:    -0.63, Y:  -153.27 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501323.556012284] [fast_lio_localization]: ICP elapsed: 0.06s | fitness=0.9330 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501323.558337586] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.01, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.22, P:     0.13, Y:     0.19 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.71, Y:   -15.80, Z:    -0.74 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.57, P:    -0.73, Y:  -152.82 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [ERROR] [1786501325.496012546] [fast_lio_localization]: [MapBoundary] CRITICAL: fov_map_pts=5068 (< 30000). Robot may be outside map!
+[global_localization_ros2.py-5]   Consider stopping navigation and returning to mapped area.
+[global_localization_ros2.py-5] [INFO] [1786501325.531137882] [fast_lio_localization]: ICP elapsed: 0.04s | fitness=0.9224 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501325.533068386] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.17, P:     0.09, Y:    -0.04 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.88, Y:   -15.84, Z:    -0.48 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.31, P:    -2.91, Y:  -152.54 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501327.519253468] [fast_lio_localization]: ICP elapsed: 0.03s | fitness=0.9205 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501327.523001447] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.01, Z:    -0.03 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.19, P:     0.16, Y:     0.01 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -1.26, Y:   -15.70, Z:    -0.40 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.18, P:    -3.24, Y:  -154.56 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501329.517535929] [fast_lio_localization]: ICP elapsed: 0.02s | fitness=0.9171 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501329.521185761] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.00, Y:    -0.01, Z:    -0.03 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.21, P:     0.15, Y:     0.02 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -1.33, Y:   -15.70, Z:    -0.37 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.59, P:    -3.03, Y:  -153.53 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [ERROR] [1786501331.496495371] [fast_lio_localization]: [MapBoundary] CRITICAL: fov_map_pts=5068 (< 30000). Robot may be outside map!
+[global_localization_ros2.py-5]   Consider stopping navigation and returning to mapped area.
+[global_localization_ros2.py-5] [INFO] [1786501331.529297102] [fast_lio_localization]: ICP elapsed: 0.03s | fitness=0.9447 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501331.532874451] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.01, Y:    -0.01, Z:    -0.03 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.21, P:     0.18, Y:    -0.01 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.82, Y:   -15.81, Z:    -0.29 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.39, P:    -5.26, Y:  -152.65 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501333.515444781] [fast_lio_localization]: ICP elapsed: 0.02s | fitness=0.9227 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501333.517615677] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.01, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.13, P:     0.04, Y:    -0.03 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.89, Y:   -15.79, Z:    -0.35 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.95, P:    -4.10, Y:  -153.24 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501335.522240525] [fast_lio_localization]: ICP elapsed: 0.03s | fitness=0.9559 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501335.525798705] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.00, Y:    -0.01, Z:    -0.03 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.14, P:     0.19, Y:     0.16 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.13, Y:   -15.92, Z:    -0.28 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.62, P:    -5.12, Y:  -150.75 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [ERROR] [1786501337.496461363] [fast_lio_localization]: [MapBoundary] CRITICAL: fov_map_pts=5068 (< 30000). Robot may be outside map!
+[global_localization_ros2.py-5]   Consider stopping navigation and returning to mapped area.
+[global_localization_ros2.py-5] [INFO] [1786501337.526238311] [fast_lio_localization]: ICP elapsed: 0.03s | fitness=0.9123 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501337.531218913] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.02, Y:     0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.28, P:     0.18, Y:     0.14 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.89, Y:   -15.51, Z:    -0.23 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.94, P:    -4.93, Y:  -149.92 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501339.516328926] [fast_lio_localization]: ICP elapsed: 0.02s | fitness=0.8962 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501339.519493204] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.24, P:     0.14, Y:    -0.05 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -1.36, Y:   -15.52, Z:    -0.51 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.33, P:    -1.97, Y:  -151.20 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501341.525277652] [fast_lio_localization]: ICP elapsed: 0.03s | fitness=0.8964 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501341.527306207] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.01, Y:     0.00, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.15, P:     0.13, Y:     0.06 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -1.48, Y:   -15.60, Z:    -0.53 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.18, P:    -2.82, Y:  -152.43 (deg)
+[global_localization_ros2.py-5] =========================================================
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[fastlio_mapping-3] catch sig %d2
+[rviz2-4] [INFO] [1786501342.510962112] [rclcpp]: signal_handler(signum=2)
+[static_transform_publisher-2] [INFO] [1786501342.510968896] [rclcpp]: signal_handler(signum=2)
+[static_transform_publisher-1] [INFO] [1786501342.510975264] [rclcpp]: signal_handler(signum=2)
+[global_localization_ros2.py-5] [INFO] [1786501342.512609757] [fast_lio_localization]: [WarmStart] Shutdown cache written: /home/nvidia/Fast_LIO_Localization_ws/last_pose_cache.json
+[global_localization_ros2.py-5] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[INFO] [static_transform_publisher-2]: process has finished cleanly [pid 26969]
+[INFO] [static_transform_publisher-1]: process has finished cleanly [pid 26967]
+[fastlio_mapping-3] Rebuild thread terminated normally
+[INFO] [fastlio_mapping-3]: process has finished cleanly [pid 26971]
+[INFO] [rviz2-4]: process has finished cleanly [pid 27001]
+[INFO] [global_localization_ros2.py-5]: process has finished cleanly [pid 27017]
+nvidia@nvidia-desktop:~/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810$ ros2 launch fast_lio_loc lio_localization.launch.py map_pcd:=/home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810/maps/LOAM_twice/cloudGlobal.pcd use_sim_time:=false
+[INFO] [launch]: All log files can be found below /home/nvidia/.ros/log/2026-08-12-10-22-24-468574-nvidia-desktop-27135
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: [lio_localization] 先验地图: /home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810/maps/LOAM_twice/cloudGlobal.pcd
+[INFO] [launch.user]: [lio_localization] use_sim_time = false
+[INFO] [static_transform_publisher-1]: process started with pid [27136]
+[INFO] [static_transform_publisher-2]: process started with pid [27138]
+[INFO] [fastlio_mapping-3]: process started with pid [27140]
+[static_transform_publisher-2] [WARN] [1786501344.568574814] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-1] [WARN] [1786501344.568818087] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-2] [INFO] [1786501344.592228015] [static_tf_base_to_lidar]: Spinning until stopped - publishing transform
+[static_transform_publisher-2] translation: ('0.000000', '0.000000', '0.100000')
+[static_transform_publisher-2] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-2] from 'base_link' to 'livox_frame'
+[static_transform_publisher-1] [INFO] [1786501344.600013298] [static_tf_body_to_base]: Spinning until stopped - publishing transform
+[static_transform_publisher-1] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-1] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-1] from 'body' to 'base_link'
+[fastlio_mapping-3] [INFO] [1786501344.668863288] [fast_lio_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-3] Multi thread started 
+[fastlio_mapping-3] ~~~~/home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810/src/FAST_LIO_SLAM/FAST_LIO_ROS2/ file opened
+[fastlio_mapping-3] [INFO] [1786501344.678791370] [fast_lio_mapping]: Node init finished.
+[INFO] [rviz2-4]: process started with pid [27170]
+[fastlio_mapping-3] IMU Initial Done
+[fastlio_mapping-3] [WARN] [1786501346.178355589] [fast_lio_mapping]: No point, skip this scan!
+[fastlio_mapping-3] 
+[fastlio_mapping-3] [INFO] [1786501346.279223350] [fast_lio_mapping]: Initialize the map kdtree
+[rviz2-4] [INFO] [1786501346.437963573] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-4] [INFO] [1786501346.438249120] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-4] [INFO] [1786501346.497620293] [rviz2]: Stereo is NOT SUPPORTED
+[INFO] [launch.user]: [lio_localization] 启动全局 ICP 重定位节点...
+[INFO] [global_localization_ros2.py-5]: process started with pid [27187]
+[global_localization_ros2.py-5] /usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+[global_localization_ros2.py-5]   warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+[global_localization_ros2.py-5] [INFO] [1786501349.277775283] [fast_lio_localization]: [FileLog] Log saved to: /home/nvidia/Fast_LIO_Localization_ws/logs/localization_20260812_102229.log
+[global_localization_ros2.py-5] [INFO] [1786501349.289467239] [fast_lio_localization]: ✅ ScanContext Database loaded from /home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810/maps/LOAM_twice/sc_database_indoor_0812.pkl
+[global_localization_ros2.py-5] [INFO] [1786501349.304276176] [fast_lio_localization]: Loading map: /home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810/maps/LOAM_twice/cloudGlobal.pcd
+[global_localization_ros2.py-5] [INFO] [1786501350.304608030] [fast_lio_localization]: Map loaded: 5068 points (downsampled)
+[global_localization_ros2.py-5] [INFO] [1786501350.305215828] [fast_lio_localization]: ✅ FPFH precomputation removed. Using ScanContext instead.
+[global_localization_ros2.py-5] [INFO] [1786501350.305825291] [fast_lio_localization]: [WarmStart] Warm start disabled (enable_warm_start=false), directly using RANSAC for global relocalization
+[global_localization_ros2.py-5] [INFO] [1786501350.306370943] [fast_lio_localization]: [YawCalib] ✅ Manual Yaw offset set: -155.72°
+[global_localization_ros2.py-5]   → Yaw filtering will be active from first cold start, no need to wait for auto-calibration
+[global_localization_ros2.py-5] [INFO] [1786501350.306891475] [fast_lio_localization]: FastLIO Localization node started, waiting for initial pose /initialpose ...
+[global_localization_ros2.py-5] [INFO] [1786501350.307404102] [fast_lio_localization]:   If no /initialpose is sent, ICP will be performed directly with identity as initial value when the first frame arrives.
+[global_localization_ros2.py-5] [INFO] [1786501351.187348815] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786501351.187931204] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786501351.414122015] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.3671, 0.3214, 0.3212
+[global_localization_ros2.py-5] [INFO] [1786501351.415361806] [fast_lio_localization]: [YAW-DEBUG] Expected: -66.3°. Candidates: -144.0°, -174.0°, -102.0°
+[global_localization_ros2.py-5] [WARN] [1786501351.416243919] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-144.0° | expected=-66.3° | diff=77.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786501351.416966890] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-174.0° | expected=-66.3° | diff=107.7° > 45.0°
+[global_localization_ros2.py-5] [INFO] [1786501351.417591681] [fast_lio_localization]: [YawFilter] KEEP   candidate Yaw=-102.0° | expected=-66.3° | diff=35.7°
+[global_localization_ros2.py-5] [INFO] [1786501351.418120437] [fast_lio_localization]: [YawFilter] 3 → 1 candidates after Yaw filter (IMU Yaw=89.4°, offset=-155.7°)
+[global_localization_ros2.py-5] [WARN] [1786501351.420460044] [fast_lio_localization]: [ScanContext] Best fitness=0.3212 too low (< 0.5). Please use RViz 2D Pose Estimate.
+[global_localization_ros2.py-5] [INFO] [1786501351.421317612] [fast_lio_localization]:   Trying candidate #1/1 (ScanContext fitness=0.3212) with ICP...
+[global_localization_ros2.py-5] [INFO] [1786501351.446857573] [fast_lio_localization]: ICP elapsed: 0.02s | fitness=0.7015 | threshold=0.7
+[global_localization_ros2.py-5] [INFO] [1786501351.450328519] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.01, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.26, P:     0.06, Y:    -0.09 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     7.53, Y:   -19.39, Z:    -1.09 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.40, P:     1.44, Y:   -96.23 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501351.451215976] [fast_lio_localization]:   Candidate #1 accepted after ICP + validation.
+[global_localization_ros2.py-5] [INFO] [1786501351.451897154] [fast_lio_localization]: ✅ Auto relocalization succeeded! Localization locked.
+[global_localization_ros2.py-5]   Use RViz 2D Pose Estimate to re-localize if needed.
+[global_localization_ros2.py-5] [ERROR] [1786501352.308737492] [fast_lio_localization]: [MapBoundary] CRITICAL: fov_map_pts=5068 (< 30000). Robot may be outside map!
+[global_localization_ros2.py-5]   Consider stopping navigation and returning to mapped area.
+[global_localization_ros2.py-5] [INFO] [1786501352.341007561] [fast_lio_localization]: ICP elapsed: 0.03s | fitness=0.7380 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786501352.341976205] [fast_lio_localization]: ICP fitness=0.7380 < threshold 0.75, localization rejected
+[global_localization_ros2.py-5] [INFO] [1786501354.346925667] [fast_lio_localization]: ICP elapsed: 0.04s | fitness=0.7674 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501354.351986464] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.00, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.24, P:     0.08, Y:     0.03 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     5.51, Y:   -19.84, Z:    -1.04 (m)
+[global_localization_ros2.py-5]   Att -> R:    -6.09, P:    -0.94, Y:  -111.95 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501354.355350750] [fast_lio_localization]: [Tracking] ICP recovered after 1 failure(s).
+[global_localization_ros2.py-5] [INFO] [1786501355.305886417] [fast_lio_localization]: [YesenseYaw] ✅ Yesense IMU data is normal(Latest data 0.0s ago, current Yaw=89.4°)
+[global_localization_ros2.py-5]   → RANSAC candidates will be filtered by Yaw to solve symmetric corner confusion
+[global_localization_ros2.py-5]   → Yaw calibration offset loaded: -155.7°
+[global_localization_ros2.py-5] [INFO] [1786501356.336357622] [fast_lio_localization]: ICP elapsed: 0.03s | fitness=0.6629 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786501356.337276601] [fast_lio_localization]: ICP fitness=0.6629 < threshold 0.75, localization rejected
+[global_localization_ros2.py-5] [ERROR] [1786501358.310941790] [fast_lio_localization]: [MapBoundary] CRITICAL: fov_map_pts=5068 (< 30000). Robot may be outside map!
+[global_localization_ros2.py-5]   Consider stopping navigation and returning to mapped area.
+[global_localization_ros2.py-5] [INFO] [1786501358.336050185] [fast_lio_localization]: ICP elapsed: 0.03s | fitness=0.8892 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501358.338922580] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.00, Y:     0.00, Z:    -0.00 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.31, P:    -0.07, Y:    -0.15 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -1.30, Y:   -18.52, Z:    -0.11 (m)
+[global_localization_ros2.py-5]   Att -> R:    -4.25, P:    -6.26, Y:  -150.75 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501358.341390321] [fast_lio_localization]: [Tracking] ICP recovered after 1 failure(s).
+[global_localization_ros2.py-5] [INFO] [1786501360.335610840] [fast_lio_localization]: ICP elapsed: 0.03s | fitness=0.8675 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501360.337536416] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.01, Y:    -0.00, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.21, P:    -0.06, Y:    -0.08 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.11, Y:   -19.01, Z:     0.21 (m)
+[global_localization_ros2.py-5]   Att -> R:    -5.35, P:    -9.68, Y:  -144.06 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501362.326676392] [fast_lio_localization]: ICP elapsed: 0.02s | fitness=0.8843 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501362.331564927] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.02, Y:     0.01, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.28, P:    -0.03, Y:     0.04 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.30, Y:   -19.44, Z:    -0.83 (m)
+[global_localization_ros2.py-5]   Att -> R:    -5.86, P:    -2.06, Y:  -126.28 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [ERROR] [1786501364.309683755] [fast_lio_localization]: [MapBoundary] CRITICAL: fov_map_pts=5068 (< 30000). Robot may be outside map!
+[global_localization_ros2.py-5]   Consider stopping navigation and returning to mapped area.
+[global_localization_ros2.py-5] [INFO] [1786501364.347226889] [fast_lio_localization]: ICP elapsed: 0.04s | fitness=0.8479 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501364.351948697] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.01, Y:     0.01, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.20, P:     0.03, Y:     0.10 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.93, Y:   -19.61, Z:    -0.91 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.58, P:    -0.16, Y:  -127.67 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501366.341623638] [fast_lio_localization]: ICP elapsed: 0.03s | fitness=0.9328 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501366.346035740] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.02, Y:     0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.35, P:     0.11, Y:     0.06 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -1.63, Y:   -15.69, Z:     0.26 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.38, P:    -9.25, Y:  -155.72 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786501368.341840798] [fast_lio_localization]: ICP elapsed: 0.03s | fitness=0.9165 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501368.345898582] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.01, Y:     0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.26, P:    -0.01, Y:     0.11 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -1.57, Y:   -15.61, Z:     0.10 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.93, P:    -8.16, Y:  -155.61 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [ERROR] [1786501370.308348789] [fast_lio_localization]: [MapBoundary] CRITICAL: fov_map_pts=5068 (< 30000). Robot may be outside map!
+[global_localization_ros2.py-5]   Consider stopping navigation and returning to mapped area.
+[global_localization_ros2.py-5] [INFO] [1786501370.343208048] [fast_lio_localization]: ICP elapsed: 0.04s | fitness=0.9087 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786501370.347332875] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.02, Y:     0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.21, P:     0.03, Y:     0.09 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:    -1.44, Y:   -15.81, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.46, P:    -7.06, Y:  -153.67 (deg)
+[global_localization_ros2.py-5] =========================================================

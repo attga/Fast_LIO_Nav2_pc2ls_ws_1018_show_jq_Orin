@@ -1,0 +1,522 @@
+[controller_server-3] [INFO] [1785993434.579985681] [local_costmap.local_costmap]: start
+[pointcloud_to_laserscan_node-1] [INFO] [1785993434.599090438] [pointcloud_to_laserscan]: Got a subscriber to laserscan, starting pointcloud subscriber
+[controller_server-3] [WARN] [1785993434.681419265] [controller_server]: Parameter controller_server.verbose not found
+[controller_server-3] [INFO] [1785993434.684315027] [controller_server]: Optimizer reset
+[controller_server-3] [INFO] [1785993434.684780213] [MPPIController]: Activated MPPI Controller: FollowPath
+[controller_server-3] [INFO] [1785993434.684827222] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1785993434.791499046] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[lifecycle_manager-9] [INFO] [1785993434.791574695] [lifecycle_manager_navigation]: Activating planner_server
+[planner_server-4] [INFO] [1785993434.792015817] [planner_server]: Activating
+[planner_server-4] [INFO] [1785993434.792097866] [global_costmap.global_costmap]: Activating
+[planner_server-4] [INFO] [1785993434.792136842] [global_costmap.global_costmap]: Checking transform
+[planner_server-4] [INFO] [1785993434.792319563] [global_costmap.global_costmap]: start
+[planner_server-4] [INFO] [1785993436.043654814] [planner_server]: Activating plugin GridBased of type SmacPlanner2D
+[planner_server-4] [INFO] [1785993436.045517193] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1785993436.150991026] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[lifecycle_manager-9] [INFO] [1785993436.151111698] [lifecycle_manager_navigation]: Activating behavior_server
+[behavior_server-5] [INFO] [1785993436.151635894] [behavior_server]: Activating
+[behavior_server-5] [INFO] [1785993436.151702742] [behavior_server]: Activating spin
+[behavior_server-5] [INFO] [1785993436.151730710] [behavior_server]: Activating backup
+[behavior_server-5] [INFO] [1785993436.151750134] [behavior_server]: Activating drive_on_heading
+[behavior_server-5] [INFO] [1785993436.151766390] [behavior_server]: Activating wait
+[behavior_server-5] [INFO] [1785993436.151790007] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1785993436.258546343] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[lifecycle_manager-9] [INFO] [1785993436.258628327] [lifecycle_manager_navigation]: Activating bt_navigator
+[bt_navigator-6] [INFO] [1785993436.259101034] [bt_navigator]: Activating
+[bt_navigator-6] [INFO] [1785993436.345727807] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1785993436.452136493] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-9] [INFO] [1785993436.452224590] [lifecycle_manager_navigation]: Activating waypoint_follower
+[waypoint_follower-7] [INFO] [1785993436.452737873] [waypoint_follower]: Activating
+[waypoint_follower-7] [INFO] [1785993436.452819762] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1785993436.559812963] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[lifecycle_manager-9] [INFO] [1785993436.559897028] [lifecycle_manager_navigation]: Activating velocity_smoother
+[velocity_smoother-8] [INFO] [1785993436.560406503] [velocity_smoother]: Activating
+[velocity_smoother-8] [INFO] [1785993436.560519912] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1785993436.666961558] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[lifecycle_manager-9] [INFO] [1785993436.667055831] [lifecycle_manager_navigation]: Managed nodes are active
+[lifecycle_manager-9] [INFO] [1785993436.667078007] [lifecycle_manager_navigation]: Creating bond timer...
+[bt_navigator-6] [INFO] [1785993842.244650257] [bt_navigator]: Begin navigating from current location (1.96, 1.30) to (2.11, 4.92)
+[controller_server-3] [INFO] [1785993842.266218415] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [WARN] [1785993842.266424445] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded general_goal_checker . This warning will appear once.
+[controller_server-3] [INFO] [1785993842.269477485] [controller_server]: Optimizer reset
+[controller_server-3] [INFO] [1785993843.366598873] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993844.366590723] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993845.366595454] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993846.466591588] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993847.466593064] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993848.466591071] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993849.566599094] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993850.566592143] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993851.566595299] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993852.566588987] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993853.666598243] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993854.666590706] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993855.478235291] [controller_server]: Reached the goal!
+[bt_navigator-6] [INFO] [1785993855.515144039] [bt_navigator]: Goal succeeded
+[bt_navigator-6] [INFO] [1785993855.574260176] [bt_navigator]: Begin navigating from current location (1.90, 4.86) to (2.15, 7.42)
+[controller_server-3] [INFO] [1785993855.595061638] [controller_server]: Received a goal, begin computing control effort.
+[bt_navigator-6] [WARN] [1785993855.626678119] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785993856.695264891] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785993857.624746081] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785993857.695263857] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993858.695350524] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993859.795267010] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993860.795455071] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993861.795269859] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993862.795249392] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993863.896917466] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993864.895754508] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993865.007885060] [controller_server]: Reached the goal!
+[bt_navigator-6] [INFO] [1785993865.044662703] [bt_navigator]: Goal succeeded
+[bt_navigator-6] [INFO] [1785993865.065733836] [bt_navigator]: Begin navigating from current location (1.88, 7.37) to (2.19, 9.92)
+[controller_server-3] [INFO] [1785993865.086714250] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785993866.187863461] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993867.187863530] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993868.187869507] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993869.287859426] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785993869.916438608] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785993870.287857517] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993871.287861095] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993872.387864636] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993873.387857239] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785993873.840501726] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785993874.387860641] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993874.599722391] [controller_server]: Reached the goal!
+[bt_navigator-6] [INFO] [1785993874.636098869] [bt_navigator]: Goal succeeded
+[bt_navigator-6] [INFO] [1785993874.641390020] [bt_navigator]: Begin navigating from current location (1.96, 9.93) to (2.23, 12.42)
+[controller_server-3] [INFO] [1785993874.662293403] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785993875.762473763] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993876.762474663] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785993877.633685512] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785993877.762471799] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993878.862474152] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993879.862475400] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993880.862479137] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993881.962486457] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993882.962474710] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993883.878388790] [controller_server]: Reached the goal!
+[bt_navigator-6] [INFO] [1785993883.911791492] [bt_navigator]: Goal succeeded
+[bt_navigator-6] [INFO] [1785993888.967058379] [bt_navigator]: Begin navigating from current location (2.02, 12.31) to (2.19, 9.92)
+[controller_server-3] [INFO] [1785993888.987958066] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785993888.990204666] [controller_server]: Optimizer reset
+[controller_server-3] [INFO] [1785993890.088144480] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993891.088144651] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993892.088225855] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993893.188156011] [controller_server]: Passing new path to controller.
+[controller_server-3] [ERROR] [1785993893.988298499] [controller_server]: Failed to make progress
+[controller_server-3] [WARN] [1785993893.988464812] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785993894.007758186] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785993894.009911526] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785993894.211247703] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993895.211263745] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993896.211249268] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993897.311250336] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785993897.688620397] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785993898.311248420] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993899.311252926] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993900.411244983] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993901.411246768] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993902.411245165] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993903.411244282] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993904.511321793] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993905.511247366] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993906.511241005] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993906.523609038] [controller_server]: Reached the goal!
+[bt_navigator-6] [INFO] [1785993906.567485536] [bt_navigator]: Goal succeeded
+[bt_navigator-6] [INFO] [1785993906.581558534] [bt_navigator]: Begin navigating from current location (2.37, 10.02) to (2.15, 7.42)
+[controller_server-3] [INFO] [1785993906.602398362] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785993907.702576975] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993908.702584197] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993909.702673716] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993910.802569204] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993911.802574729] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993912.802570154] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993913.902580615] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993914.902583880] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993915.415162171] [controller_server]: Reached the goal!
+[bt_navigator-6] [INFO] [1785993915.451958617] [bt_navigator]: Goal succeeded
+[bt_navigator-6] [INFO] [1785993915.491675839] [bt_navigator]: Begin navigating from current location (2.31, 7.53) to (2.11, 4.92)
+[controller_server-3] [INFO] [1785993915.512516315] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785993916.613714270] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993917.618379937] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993918.613718707] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993919.713712352] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993920.713716650] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993921.713718282] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993922.813719169] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785993923.622078851] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785993923.813757295] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993924.031260247] [controller_server]: Reached the goal!
+[bt_navigator-6] [INFO] [1785993924.062199672] [bt_navigator]: Goal succeeded
+[bt_navigator-6] [INFO] [1785993924.069029292] [bt_navigator]: Begin navigating from current location (2.28, 5.08) to (2.07, 2.42)
+[controller_server-3] [INFO] [1785993924.090907510] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785993925.191103864] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993926.191103217] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993927.191112926] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785993927.829189499] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785993928.291100862] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993929.291106855] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993930.291100750] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993931.291104323] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993932.391107558] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993932.903138690] [controller_server]: Reached the goal!
+[bt_navigator-6] [INFO] [1785993932.939435192] [bt_navigator]: Goal succeeded
+[bt_navigator-6] [INFO] [1785993937.981098285] [bt_navigator]: Begin navigating from current location (2.24, 2.49) to (2.11, 4.92)
+[controller_server-3] [INFO] [1785993938.002316688] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785993938.011473393] [controller_server]: Optimizer reset
+[controller_server-3] [INFO] [1785993939.103174823] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993940.103173877] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993941.103178941] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993942.203180960] [controller_server]: Passing new path to controller.
+[controller_server-3] [ERROR] [1785993943.003276840] [controller_server]: Failed to make progress
+[controller_server-3] [WARN] [1785993943.003432219] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785993943.021834075] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785993943.022760363] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785993943.223155619] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993944.223175438] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993945.223181398] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993946.323175147] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993947.323174301] [controller_server]: Passing new path to controller.
+[controller_server-3] [ERROR] [1785993948.123275170] [controller_server]: Failed to make progress
+[controller_server-3] [WARN] [1785993948.123429621] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785993948.141779194] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-4] [INFO] [1785993948.143334555] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-3] [INFO] [1785993949.031920945] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785993949.036467401] [controller_server]: Optimizer reset
+[controller_server-3] [INFO] [1785993950.132539599] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993951.132389276] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993952.232395825] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993953.232355104] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993954.232407982] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993955.232390171] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993956.332393707] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993957.332396045] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993958.332393781] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993959.432432874] [controller_server]: Passing new path to controller.
+[controller_server-3] [ERROR] [1785993959.632496971] [controller_server]: Failed to make progress
+[controller_server-3] [WARN] [1785993959.632638142] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785993959.651562495] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785993959.657786165] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [WARN] [1785993959.758091946] [controller_server]: Control loop missed its desired rate of 10.0000Hz
+[controller_server-3] [INFO] [1785993960.457974650] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993961.457969796] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993962.457966090] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993963.557969229] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993964.557977098] [controller_server]: Passing new path to controller.
+[controller_server-3] [ERROR] [1785993964.758088232] [controller_server]: Failed to make progress
+[controller_server-3] [WARN] [1785993964.758253183] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-5] [INFO] [1785993964.772265796] [behavior_server]: Running spin
+[behavior_server-5] [INFO] [1785993964.772863605] [behavior_server]: Turning 1.57 for spin behavior.
+[bt_navigator-6] [WARN] [1785993967.812475998] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[behavior_server-5] [INFO] [1785993971.573254626] [behavior_server]: spin completed successfully
+[controller_server-3] [INFO] [1785993971.655787453] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785993971.657941737] [controller_server]: Optimizer reset
+[controller_server-3] [INFO] [1785993972.656022486] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993973.755999332] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993974.755997779] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993975.755998116] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993976.855996973] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993977.856035716] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993978.856000314] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993979.856008250] [controller_server]: Passing new path to controller.
+[controller_server-3] [ERROR] [1785993980.256253623] [controller_server]: Failed to make progress
+[controller_server-3] [WARN] [1785993980.256417710] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785993980.271696770] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785993980.272583073] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785993980.972750713] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785993981.852897985] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785993981.972825545] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993982.972761008] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993984.073331584] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993985.072754283] [controller_server]: Passing new path to controller.
+[controller_server-3] [ERROR] [1785993985.372846719] [controller_server]: Failed to make progress
+[controller_server-3] [WARN] [1785993985.372998646] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-5] [INFO] [1785993985.392178341] [behavior_server]: Running wait
+[behavior_server-5] [INFO] [1785993990.393886617] [behavior_server]: wait completed successfully
+[controller_server-3] [INFO] [1785993990.441938243] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785993990.445590847] [controller_server]: Optimizer reset
+[controller_server-3] [INFO] [1785993991.542266112] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993992.542255011] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993993.542253133] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993994.642264743] [controller_server]: Passing new path to controller.
+[controller_server-3] [ERROR] [1785993995.442331728] [controller_server]: Failed to make progress
+[controller_server-3] [WARN] [1785993995.442480742] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785993995.461605722] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785993995.462542343] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785993995.662710602] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993996.662710252] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993997.662707867] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785993997.852527161] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785993998.762714036] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785993999.762723025] [controller_server]: Passing new path to controller.
+[controller_server-3] [ERROR] [1785994000.562800645] [controller_server]: Failed to make progress
+[controller_server-3] [WARN] [1785994000.562958717] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-5] [INFO] [1785994000.582093941] [behavior_server]: Running backup
+[behavior_server-5] [INFO] [1785994000.582476143] [behavior_server]: DriveOnHeading: no acceleration or deceleration limits set
+[behavior_server-5] [INFO] [1785994007.782608389] [behavior_server]: backup completed successfully
+[controller_server-3] [INFO] [1785994007.850101953] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785994007.853756980] [controller_server]: Optimizer reset
+[controller_server-3] [INFO] [1785994008.951558588] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994009.951499184] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994010.951503765] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994012.051509486] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994013.051597343] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994014.051510095] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994015.151516981] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994016.151518355] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994017.151506365] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994018.153028959] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994019.251510308] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994020.251507572] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994021.251508225] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994022.351511435] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994023.351508795] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994024.352855729] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994025.351479266] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994026.451500862] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994027.451505167] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994028.451506079] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994029.551511156] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994030.551503311] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994031.551509379] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994032.551512744] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994033.651503639] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994034.651510803] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994035.651526409] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994036.751500275] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994037.751503067] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994038.751506150] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994039.852154877] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994040.851530315] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994041.851524599] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994042.951517854] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994043.951509339] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994044.951509712] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994045.951530128] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994047.051503620] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994048.051530318] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994049.051506625] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994050.152260557] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994051.151501370] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994052.151543150] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994053.251508741] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994054.251515469] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994055.252025289] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994056.251507322] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994057.351990319] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994058.351504116] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994059.351508287] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994060.451520867] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994061.451510847] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994062.451506383] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994063.551491556] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994064.551508671] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994065.551507567] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785994065.832933353] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785994066.551510218] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994067.651503907] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994068.651508759] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994069.651504694] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785994069.830195242] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[bt_navigator-6] [WARN] [1785994069.831670104] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785994070.751524429] [controller_server]: Passing new path to controller.
+[controller_server-3] [ERROR] [1785994071.251599996] [controller_server]: Failed to make progress
+[controller_server-3] [WARN] [1785994071.251775675] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785994071.271681856] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1785994071.272693110] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785994071.772863704] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994072.773118639] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994073.772856814] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994074.772847109] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994075.872867075] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994076.872858791] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994077.872862951] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994078.972856341] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994079.972821606] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994080.972855383] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994082.072861446] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994083.072830413] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994084.072864312] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994085.172865812] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785994085.800510700] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785994086.172863515] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994087.172875884] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994088.172859870] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994089.272863278] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994090.272866387] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994091.272857917] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994092.372858182] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994093.372862313] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994094.372861145] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994095.372853646] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994096.472862399] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994097.472858634] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994098.472857762] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994099.572855017] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994100.572861189] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994101.572860021] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994102.672857537] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994103.672858114] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994104.672858047] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994105.672833426] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994106.772860511] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994107.772859075] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994108.772855333] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785994109.832391127] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785994109.872936482] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994110.872859300] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994111.872862417] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994112.972856334] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994113.972863982] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994114.972859233] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785994115.803814068] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785994116.072866292] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994117.072861164] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994118.072864770] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994119.172862559] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785994119.796579153] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785994120.172953139] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994121.172866088] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994122.172859362] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994123.272859605] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994124.272865810] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994125.272864092] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785994125.816388631] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785994126.372861981] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994127.372955652] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994128.372886174] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994129.372863438] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994130.472862103] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994131.472859403] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994132.473033608] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994133.572920355] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994134.572855505] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994135.572857584] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785994135.624362434] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785994136.672866826] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994137.672905408] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785994137.812390928] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785994138.672860303] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785994139.624127240] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785994139.772901446] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994140.772859461] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994141.772947543] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994142.772864228] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994143.872874111] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994144.872867952] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994145.972858089] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994146.972878084] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994147.972864326] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994148.972857325] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994150.072864387] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994151.072865508] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994152.072847223] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994153.173072145] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994154.172868752] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994155.173027339] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994156.272864856] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994157.272858879] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994158.272867003] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994159.272984301] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994160.372944514] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994161.372865108] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994162.372868589] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994163.472901051] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785994163.844587704] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785994164.472829084] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994165.472968382] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994166.572865636] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994167.572857195] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994168.572858294] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994169.572861921] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994170.672859732] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994171.672859431] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994172.672865388] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994173.772845876] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994174.772859301] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994175.772864698] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994176.872901547] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994177.874817575] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994178.872863591] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994179.972863503] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994180.972864479] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994181.972987650] [controller_server]: Passing new path to controller.
+[controller_server-3] [INFO] [1785994183.072860529] [controller_server]: Passing new path to controller.
+[controller_server-3] [ERROR] [1785994183.372962748] [controller_server]: Failed to make progress
+[controller_server-3] [WARN] [1785994183.373161452] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1785994183.392829856] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-4] [INFO] [1785994183.393404751] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[bt_navigator-6] [WARN] [1785994183.816631157] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-3] [INFO] [1785994184.056677224] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [INFO] [1785994185.156951672] [controller_server]: Passing new path to controller.
+[bt_navigator-6] [WARN] [1785994185.627352296] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[lifecycle_manager-9] [INFO] [1785994186.053374140] [rclcpp]: signal_handler(signum=2)
+[lifecycle_manager-9] [INFO] [1785994186.053553804] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
+[waypoint_follower-7] [INFO] [1785994186.053379453] [rclcpp]: signal_handler(signum=2)
+[map_server-2] [INFO] [1785994186.053391134] [rclcpp]: signal_handler(signum=2)
+[map_server-2] [INFO] [1785994186.053550795] [map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)
+[map_server-2] [INFO] [1785994186.053676438] [map_server]: Deactivating
+[lifecycle_manager-9] [INFO] [1785994186.053633042] [lifecycle_manager_navigation]: Terminating bond timer...
+[waypoint_follower-7] [INFO] [1785994186.053968782] [waypoint_follower]: Running Nav2 LifecycleNode rcl preshutdown (waypoint_follower)
+[waypoint_follower-7] [INFO] [1785994186.054084376] [waypoint_follower]: Deactivating
+[waypoint_follower-7] [INFO] [1785994186.054110906] [waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.
+[waypoint_follower-7] [INFO] [1785994186.074448228] [waypoint_follower]: Cleaning up
+[map_server-2] [INFO] [1785994186.053705112] [map_server]: Destroying bond (map_server) to lifecycle manager.
+[map_server-2] [INFO] [1785994186.064594346] [map_server]: Cleaning up
+[map_server-2] [INFO] [1785994186.064960840] [map_server]: Destroying bond (map_server) to lifecycle manager.
+[pointcloud_to_laserscan_node-1] [INFO] [1785994186.054003665] [rclcpp]: signal_handler(signum=2)
+[planner_server-4] [INFO] [1785994186.055270236] [rclcpp]: signal_handler(signum=2)
+[planner_server-4] [INFO] [1785994186.055432201] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[planner_server-4] [INFO] [1785994186.055583254] [planner_server]: Deactivating
+[planner_server-4] [INFO] [1785994186.055648347] [global_costmap.global_costmap]: Deactivating
+[behavior_server-5] [INFO] [1785994186.057746475] [rclcpp]: signal_handler(signum=2)
+[behavior_server-5] [INFO] [1785994186.057883447] [behavior_server]: Running Nav2 LifecycleNode rcl preshutdown (behavior_server)
+[behavior_server-5] [INFO] [1785994186.058042692] [behavior_server]: Deactivating
+[behavior_server-5] [INFO] [1785994186.058092648] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[velocity_smoother-8] [INFO] [1785994186.076622906] [rclcpp]: signal_handler(signum=2)
+[velocity_smoother-8] [INFO] [1785994186.076870991] [velocity_smoother]: Running Nav2 LifecycleNode rcl preshutdown (velocity_smoother)
+[velocity_smoother-8] [INFO] [1785994186.076993465] [velocity_smoother]: Deactivating
+[velocity_smoother-8] [INFO] [1785994186.077045342] [velocity_smoother]: Destroying bond (velocity_smoother) to lifecycle manager.
+[controller_server-3] [INFO] [1785994186.077177545] [rclcpp]: signal_handler(signum=2)
+[controller_server-3] [INFO] [1785994186.077325365] [controller_server]: Running Nav2 LifecycleNode rcl preshutdown (controller_server)
+[controller_server-3] [INFO] [1785994186.077412893] [controller_server]: Deactivating
+[controller_server-3] [WARN] [1785994186.077437823] [controller_server]: [follow_path] [ActionServer] Requested to deactivate server but goal is still executing. Should check if action server is running before deactivating.
+[bt_navigator-6] [INFO] [1785994186.077647440] [rclcpp]: signal_handler(signum=2)
+[bt_navigator-6] [INFO] [1785994186.077791548] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[bt_navigator-6] [INFO] [1785994186.077918855] [bt_navigator]: Deactivating
+[bt_navigator-6] [WARN] [1785994186.077954634] [bt_navigator]: [navigate_to_pose] [ActionServer] Requested to deactivate server but goal is still executing. Should check if action server is running before deactivating.
+[waypoint_follower-7] [INFO] [1785994186.079567953] [waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.
+[map_server-2] [INFO] [1785994186.074302712] [map_server]: Destroying
+[behavior_server-5] [INFO] [1785994186.098585260] [behavior_server]: Cleaning up
+[bt_navigator-6] [ERROR] [1785994186.104085370] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for follow_path in node halt!
+[bt_navigator-6] [WARN] [1785994186.104243847] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+[bt_navigator-6] [INFO] [1785994186.104451160] [bt_navigator]: Goal canceled
+[bt_navigator-6] [WARN] [1785994186.104533951] [bt_navigator]: [navigate_to_pose] [ActionServer] Stopping the thread per request.
+[velocity_smoother-8] [INFO] [1785994186.107439827] [velocity_smoother]: Cleaning up
+[velocity_smoother-8] [INFO] [1785994186.107557853] [velocity_smoother]: Destroying bond (velocity_smoother) to lifecycle manager.
+[bt_navigator-6] [INFO] [1785994186.108268664] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[waypoint_follower-7] [INFO] [1785994186.119618288] [waypoint_follower]: Destroying
+[velocity_smoother-8] [INFO] [1785994186.122255213] [velocity_smoother]: Destroying
+[bt_navigator-6] [INFO] [1785994186.148808096] [bt_navigator]: Cleaning up
+[controller_server-3] [WARN] [1785994186.157063125] [controller_server]: [follow_path] [ActionServer] Stopping the thread per request.
+[controller_server-3] [INFO] [1785994186.157165949] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[controller_server-3] [INFO] [1785994186.157852791] [MPPIController]: Deactivated MPPI Controller: FollowPath
+[controller_server-3] [INFO] [1785994186.157939422] [local_costmap.local_costmap]: Deactivating
+[behavior_server-5] [INFO] [1785994186.187359458] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[controller_server-3] [INFO] [1785994186.241311246] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[controller_server-3] [INFO] [1785994186.251734073] [controller_server]: Cleaning up
+[controller_server-3] [INFO] [1785994186.251909031] [MPPIController]: Cleaned up MPPI Controller: FollowPath
+[controller_server-3] [INFO] [1785994186.252138619] [local_costmap.local_costmap]: Cleaning up
+[INFO] [pointcloud_to_laserscan_node-1]: process has finished cleanly [pid 6812]
+[behavior_server-5] [INFO] [1785994186.272895911] [behavior_server]: Destroying
+[lifecycle_manager-9] [INFO] [1785994186.304600843] [lifecycle_manager_navigation]: Destroying lifecycle_manager_navigation
+[controller_server-3] [INFO] [1785994186.329461648] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[controller_server-3] [INFO] [1785994186.348592468] [local_costmap.local_costmap]: Destroying
+[INFO] [map_server-2]: process has finished cleanly [pid 6814]
+[controller_server-3] [INFO] [1785994186.404093603] [controller_server]: Destroying
+[INFO] [waypoint_follower-7]: process has finished cleanly [pid 6824]
+[INFO] [velocity_smoother-8]: process has finished cleanly [pid 6826]
+[INFO] [lifecycle_manager-9]: process has finished cleanly [pid 6828]
+[bt_navigator-6] [INFO] [1785994186.513882683] [bt_navigator]: Completed Cleaning up
+[bt_navigator-6] [INFO] [1785994186.513996132] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.

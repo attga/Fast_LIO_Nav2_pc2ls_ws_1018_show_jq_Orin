@@ -1,0 +1,38 @@
+base_reference: livox_imu
+mounts:
+  livox_imu:
+    rpy:
+    - 0.0
+    - 0.0
+    - 0.0
+    xyz:
+    - 0.0
+    - 0.0
+    - 0.0
+  livox_lidar:
+    rpy:
+    - 0.0
+    - 0.0
+    - 0.0
+    xyz:
+    - -0.011
+    - -0.02329
+    - 0.04412
+  wheel:
+    rpy:
+    - 0.0
+    - 0.0
+    - 0.0
+    xyz:
+    - 0.0
+    - 0.0
+    - 0.0
+  yesense:
+    rpy:
+    - 0.0
+    - 0.0
+    - 0.0
+    xyz:
+    - 0.0
+    - 0.0
+    - 0.0

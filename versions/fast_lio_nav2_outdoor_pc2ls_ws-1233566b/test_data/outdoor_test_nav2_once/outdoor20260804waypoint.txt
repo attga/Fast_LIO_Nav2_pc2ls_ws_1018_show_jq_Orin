@@ -1,0 +1,53 @@
+nvidia@nvidia-desktop:~/Fast_LIO_Nav2_outdoor_ws/src/my_nav2_config/scripts$ python3 waypoint_patrol.py 
+[INFO] [1785821865.407009178] [waypoint_patrol]: 
+==============================================================
+  直线往返巡航 配置汇总
+  起点:      (2.070, 2.420), Yaw=89.08°
+  路径长度:  10.0 m
+  段数:      4 段（间距 2.50 m/段）
+  端点停留:  5.0 s
+  总航点数:  8（4 去程 + 4 返程）
+  最大循环:  无限
+==============================================================
+[INFO] [1785821865.407668943] [waypoint_patrol]:   WP-01/8 →去程 (2.110, 4.920)  Yaw=89.1°  d=2.5m  停留=0s
+[INFO] [1785821865.408189945] [waypoint_patrol]:   WP-02/8 →去程 (2.150, 7.419)  Yaw=89.1°  d=5.0m  停留=0s
+[INFO] [1785821865.408671360] [waypoint_patrol]:   WP-03/8 →去程 (2.190, 9.919)  Yaw=89.1°  d=7.5m  停留=0s
+[INFO] [1785821865.409164008] [waypoint_patrol]:   WP-04/8 →去程 (2.231, 12.419)  Yaw=89.1°  d=10.0m  停留=5s
+[INFO] [1785821865.409675793] [waypoint_patrol]:   WP-05/8 ←返程 (2.190, 9.919)  Yaw=-90.9°  d=10.0m  停留=0s
+[INFO] [1785821865.410153016] [waypoint_patrol]:   WP-06/8 ←返程 (2.150, 7.419)  Yaw=-90.9°  d=7.5m  停留=0s
+[INFO] [1785821865.410625182] [waypoint_patrol]:   WP-07/8 ←返程 (2.110, 4.920)  Yaw=-90.9°  d=5.0m  停留=0s
+[INFO] [1785821865.411096996] [waypoint_patrol]:   WP-08/8 ←返程 (2.070, 2.420)  Yaw=-90.9°  d=2.5m  停留=5s
+[INFO] [1785821865.411575083] [waypoint_patrol]: 等待 Nav2 激活（bt_navigator）...
+[INFO] [1785821866.425452673] [basic_navigator]: bt_navigator/get_state service not available, waiting...
+[INFO] [1785821869.431110817] [waypoint_patrol]: Nav2 已激活 ✔  开始直线往返巡航...
+[INFO] [1785821869.431746836] [waypoint_patrol]: 
+==================================================
+  第 #1 圈 (无限循环) 启动
+==================================================
+[INFO] [1785821869.432277246] [waypoint_patrol]: [WP-01/8 →去程] 导航至 (2.110, 4.920), Yaw=89.1° (尝试 1/2)
+[INFO] [1785821869.433498976] [basic_navigator]: Navigating to goal: 2.1101408478369983 4.919677721694324...
+[INFO] [1785821869.541022861] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 2.82 m
+[INFO] [1785821872.572082854] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 2.25 m
+[INFO] [1785821875.601581381] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 1.20 m
+[INFO] [1785821878.631923772] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821881.662608467] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821884.691602270] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821887.718225339] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821890.741123352] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821893.774125770] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821896.816667946] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821899.844925686] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821902.874997962] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821905.912170877] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821908.958654554] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821911.992833901] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[ERROR] [1785821912.503032004] [waypoint_patrol]: [WP-01/8 →去程] ❌ 失败
+[INFO] [1785821912.503584813] [waypoint_patrol]: [WP-01/8 →去程] 2s 后重试...
+[INFO] [1785821914.506502340] [waypoint_patrol]: [WP-01/8 →去程] 导航至 (2.110, 4.920), Yaw=89.1° (尝试 2/2)
+[INFO] [1785821914.507894602] [basic_navigator]: Navigating to goal: 2.1101408478369983 4.919677721694324...
+[INFO] [1785821915.017710864] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821918.063742916] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821921.091295728] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821924.123843664] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821927.164402821] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m
+[INFO] [1785821930.192626256] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.00 m

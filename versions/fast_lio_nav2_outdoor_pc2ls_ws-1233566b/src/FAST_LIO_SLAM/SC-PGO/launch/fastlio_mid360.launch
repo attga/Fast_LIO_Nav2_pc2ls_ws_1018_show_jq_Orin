@@ -1,0 +1,50 @@
+<launch>
+    <!-- SC-PGO Launch file for Livox Mid-360 + FAST-LIO2 integration -->
+    <!-- 说明：本 launch 仅启动 SC-PGO 回环优化节点，需与 mapping_mid360.launch 同时运行 -->
+
+    <!-- Mid-360 非重复扫描，伪扫描线数设为 4，与 mid360.yaml 一致 -->
+    <param name="scan_line" type="int" value="4" />
+
+    <!-- 去除过近距离点（与 mid360.yaml 中 blind 参数保持一致）-->
+    <param name="minimum_range" type="double" value="0.5"/>
+
+    <!-- A-LOAM 建图分辨率参数 -->
+    <param name="mapping_line_resolution" type="double" value="0.4"/>
+    <param name="mapping_plane_resolution" type="double" value="0.8"/>
+
+    <!-- 全局地图可视化降采样分辨率 -->
+    <param name="mapviz_filter_size" type="double" value="0.05"/>
+
+    <!-- 关键帧间距：每移动 0.5 米保存一个关键帧用于回环检测 -->
+    <param name="keyframe_meter_gap" type="double" value="0.5"/>
+
+    <!-- ScanContext 回环参数 -->
+    <!-- sc_dist_thres：相似度阈值，越小回环越严格；0.2~0.3 适合室外园区 -->
+    <param name="sc_dist_thres" type="double" value="0.25"/>
+    <!-- sc_max_radius：ScanContext 生成的极坐标矩阵最大半径(m)，Mid-360 有效约 40m -->
+    <param name="sc_max_radius" type="double" value="40.0"/>
+
+    <!-- 指定激光雷达类型（用于 SC-PGO 内部分支判断） -->
+    <param name="lidar_type" type="string" value="livox"/>
+
+    <!-- 话题重映射：将 FAST-LIO2 输出对接至 SC-PGO 输入 -->
+    <!-- FAST-LIO2 里程计输出话题 → SC-PGO 里程计订阅话题 -->
+    <remap from="/aft_mapped_to_init" to="/Odometry"/>
+    <!-- 机体坐标系下的局部点云 → SC-PGO 局部点云输入 -->
+    <remap from="/velodyne_cloud_registered_local" to="/cloud_registered_body"/>
+    <!-- 激光雷达坐标系点云 → ScanContext 使用（雷达自中心坐标性能更佳）-->
+    <remap from="/cloud_for_scancontext" to="/cloud_registered_lidar"/>
+
+    <!-- 建图数据保存路径：请将此路径修改为 Orin NX 上的实际目标目录 -->
+    <param name="save_directory" type="string" value="$(env HOME)/slam_maps/mid360/"/>  <!-- CHANGE THIS -->
+
+    <!-- 启动 SC-PGO 回环优化节点 -->
+    <node pkg="aloam_velodyne" type="alaserPGO" name="alaserPGO" output="screen" />
+
+    <!-- RViz 可视化（在 Orin NX 无头运行时可关闭，设 rvizscpgo:=false）-->
+    <arg name="rvizscpgo" default="true" />
+    <group if="$(arg rvizscpgo)">
+        <node launch-prefix="nice" pkg="rviz" type="rviz" name="rvizscpgo" args="-d $(find aloam_velodyne)/rviz_cfg/aloam_velodyne.rviz" />
+    </group>
+
+</launch>

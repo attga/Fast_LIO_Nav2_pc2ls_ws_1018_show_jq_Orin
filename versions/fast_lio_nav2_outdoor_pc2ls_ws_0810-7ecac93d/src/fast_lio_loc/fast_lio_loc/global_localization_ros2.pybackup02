@@ -1,0 +1,445 @@
+#!/usr/bin/env python3
+# coding=utf8
+"""
+FAST_LIO_LOCALIZATION - ROS2 适配版
+原始项目: https://github.com/HViktorTsoi/FAST_LIO_LOCALIZATION
+改写: 适配 ROS2 Humble / Python3 / open3d >= 0.13
+
+工作原理:
+  1. 加载先验 PCD 全局地图
+  2. 订阅 FAST-LIO2 的 /cloud_registered (已转换到 odom 系的当前帧点云)
+  3. 订阅 /Odometry (FAST-LIO2 输出的里程计)
+  4. 等待 /initialpose 消息确定搜索初始值（或默认 identity）
+  5. 多尺度 ICP：粗配准(scale=5) → 精配准(scale=1)
+  6. 若配准 fitness > 阈值，更新 T_map_to_odom 并广播 TF: map -> odom
+  7. 按固定频率持续执行全局定位
+"""
+
+from __future__ import annotations
+import copy
+import threading
+import time
+
+import numpy as np
+import open3d as o3d
+
+import rclpy
+from rclpy.node import Node
+from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy
+
+from geometry_msgs.msg import PoseWithCovarianceStamped, TransformStamped
+from nav_msgs.msg import Odometry
+from sensor_msgs.msg import PointCloud2
+import sensor_msgs_py.point_cloud2 as pc2
+
+from tf2_ros import TransformBroadcaster
+
+
+# ─────────────────────── 参数 ───────────────────────
+MAP_VOXEL_SIZE    = 0.4    # 地图体素降采样尺寸 (m)
+SCAN_VOXEL_SIZE   = 0.1    # 当前帧体素降采样尺寸 (m)
+FREQ_LOCALIZATION = 0.5    # 全局定位频率 (Hz)
+LOCALIZATION_TH   = 0.75   # ICP fitness 阈值（Livox 360°，适当放宽）
+FOV               = 6.28   # 视野角 (rad)，Livox Mid-360 全向=2π
+FOV_FAR           = 80.0   # 最远感知距离 (m)
+RANSAC_MIN_FITNESS  = 0.5   # RANSAC fitness 低于此值时初始值不可信，ICP 收敛到错误极值风险高
+RANSAC_MAX_RETRY    = 5     # RANSAC 最大重试次数（每次约 0.3ː s，共等待最多约 1.5 s）
+                            # 多次独立运行取最佳：5次尝试比单次成功率从 ~50% 提升至 ~97%
+RANSAC_GOOD_FITNESS = 0.85  # RANSAC 达到此 fitness 即停止重试（已足够好）
+
+
+def msg_to_array(pc_msg: PointCloud2) -> np.ndarray:
+    """PointCloud2 → Nx3 numpy array"""
+    pts = []
+    for p in pc2.read_points(pc_msg, skip_nans=True):
+        pts.append([p[0], p[1], p[2]])
+    if len(pts) == 0:
+        return np.zeros((0, 3), dtype=np.float32)
+    return np.array(pts, dtype=np.float32)
+
+
+def voxel_down_sample(pcd: o3d.geometry.PointCloud, voxel_size: float) -> o3d.geometry.PointCloud:
+    return pcd.voxel_down_sample(voxel_size)
+
+
+def registration_at_scale(pc_scan: o3d.geometry.PointCloud,
+                           pc_map:  o3d.geometry.PointCloud,
+                           initial: np.ndarray,
+                           scale:   float):
+    """多尺度 ICP 配准 (Point-to-Plane，对对称场景旋转歧义更鲁棒)
+
+    Point-to-Plane 相比 Point-to-Point 的优势：
+      - 利用法线方向约束旋转，在具有轴对称/平移对称结构的室内场景（走廊、矩形房间）
+        中可大幅降低 ICP 陷入 180° 错误极值的概率
+      - 通常收敛更快、精度更高（尤其对平面占主导的建筑环境）
+    """
+    scan_down = voxel_down_sample(pc_scan, SCAN_VOXEL_SIZE * scale)
+    map_down  = voxel_down_sample(pc_map,  MAP_VOXEL_SIZE  * scale)
+
+    # 估计法线（Point-to-Plane 必须，在降采样后的小点集上速度快）
+    normal_radius = max(MAP_VOXEL_SIZE, SCAN_VOXEL_SIZE) * scale * 2.0
+    normal_param  = o3d.geometry.KDTreeSearchParamHybrid(radius=normal_radius, max_nn=30)
+    scan_down.estimate_normals(normal_param)
+    map_down.estimate_normals(normal_param)
+
+    result = o3d.pipelines.registration.registration_icp(
+        scan_down,
+        map_down,
+        1.0 * scale,
+        initial,
+        o3d.pipelines.registration.TransformationEstimationPointToPlane(),
+        o3d.pipelines.registration.ICPConvergenceCriteria(max_iteration=30),
+    )
+    return result.transformation, result.fitness
+
+
+def inverse_se3(trans: np.ndarray) -> np.ndarray:
+    inv = np.eye(4)
+    inv[:3, :3] = trans[:3, :3].T
+    inv[:3, 3]  = -trans[:3, :3].T @ trans[:3, 3]
+    return inv
+
+
+def pose_msg_to_mat(pose_msg) -> np.ndarray:
+    """PoseWithCovarianceStamped.pose.pose → 4x4 变换矩阵"""
+    from scipy.spatial.transform import Rotation
+    p = pose_msg.pose.pose.position
+    q = pose_msg.pose.pose.orientation
+    T = np.eye(4)
+    T[:3, 3]  = [p.x, p.y, p.z]
+    T[:3, :3] = Rotation.from_quat([q.x, q.y, q.z, q.w]).as_matrix()
+    return T
+
+
+def odom_msg_to_mat(odom_msg: Odometry) -> np.ndarray:
+    from scipy.spatial.transform import Rotation
+    p = odom_msg.pose.pose.position
+    q = odom_msg.pose.pose.orientation
+    T = np.eye(4)
+    T[:3, 3]  = [p.x, p.y, p.z]
+    T[:3, :3] = Rotation.from_quat([q.x, q.y, q.z, q.w]).as_matrix()
+    return T
+
+
+class FastLIOLocalizationNode(Node):
+    def __init__(self):
+        super().__init__('fast_lio_localization')
+
+        # 参数
+        self.declare_parameter('map_pcd_path', '')
+        self.declare_parameter('localization_freq', FREQ_LOCALIZATION)
+        self.declare_parameter('fitness_threshold', LOCALIZATION_TH)
+        self.declare_parameter('map_voxel_size', MAP_VOXEL_SIZE)
+        self.declare_parameter('scan_voxel_size', SCAN_VOXEL_SIZE)
+        self.declare_parameter('fov_far', FOV_FAR)
+        self.declare_parameter('odom_frame', 'camera_init')  # FAST-LIO2 默认 odom 系
+
+        map_pcd_path       = self.get_parameter('map_pcd_path').value
+        self.freq          = self.get_parameter('localization_freq').value
+        self.fitness_th    = self.get_parameter('fitness_threshold').value
+        self.map_voxel    = self.get_parameter('map_voxel_size').value
+        self.scan_voxel   = self.get_parameter('scan_voxel_size').value
+        self.fov_far      = self.get_parameter('fov_far').value
+        self.odom_frame   = self.get_parameter('odom_frame').value
+
+        # 状态变量
+        self.global_map: o3d.geometry.PointCloud | None = None
+        self.global_map_down: o3d.geometry.PointCloud | None = None
+        self.global_map_fpfh = None
+        self.cur_scan:   o3d.geometry.PointCloud | None = None
+        self.cur_odom:   Odometry | None = None
+        self.T_map_to_odom = np.eye(4)
+        self.initialized = False
+        self.localization_locked = False   # True 后停止周期性 ICP，TF 保持固定，消除抖动
+        self._lock = threading.Lock()
+
+        # TF 广播 (使用 Static 彻底免疫 ROS2 时间戳不同步引发的丢弃问题)
+        from tf2_ros.static_transform_broadcaster import StaticTransformBroadcaster
+        self.tf_broadcaster = StaticTransformBroadcaster(self)
+
+        # 发布者
+        self.pub_submap = self.create_publisher(PointCloud2, '/submap', 1)
+
+        # 订阅者
+        sensor_qos = QoSProfile(
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            durability=DurabilityPolicy.VOLATILE,
+            depth=1,
+        )
+        self.sub_scan = self.create_subscription(
+            PointCloud2, '/cloud_registered',
+            self.cb_scan, sensor_qos)
+        self.sub_odom = self.create_subscription(
+            Odometry, '/Odometry',
+            self.cb_odom, sensor_qos)
+        self.sub_initial = self.create_subscription(
+            PoseWithCovarianceStamped, '/initialpose',
+            self.cb_initial_pose, 10)
+
+        # 加载地图
+        if not map_pcd_path:
+            self.get_logger().error('map_pcd_path 参数为空！请通过 --ros-args -p map_pcd_path:=<path> 传入')
+            return
+        self.get_logger().info(f'正在加载地图: {map_pcd_path}')
+        self._load_global_map(map_pcd_path)
+
+        # 定期全局定位定时器（等初始化完成后才有效）
+        period = 1.0 / self.freq
+        self.timer = self.create_timer(period, self.timer_localization)
+
+        self.get_logger().info('FastLIO Localization 节点已启动，等待初始位姿 /initialpose ...')
+        self.get_logger().info('  若不发送 /initialpose，将在首帧到来时以 identity 为初值直接 ICP 定位')
+
+    # ── 地图加载 ──────────────────────────────────
+    def _load_global_map(self, path: str):
+        pcd = o3d.io.read_point_cloud(path)
+        if len(pcd.points) == 0:
+            self.get_logger().error(f'地图为空或路径不正确: {path}')
+            return
+        pcd = voxel_down_sample(pcd, self.map_voxel)
+        self.global_map = pcd
+        self.get_logger().info(f'地图加载完成: {len(pcd.points)} 点（降采样后）')
+
+        # 预计算全局地图特征
+        self.get_logger().info('正在预计算全局地图的 FPFH 特征 (耗时约 1~2 秒)...')
+        voxel_size = self.map_voxel * 2.0
+        self.global_map_down = voxel_down_sample(pcd, voxel_size)
+        self.global_map_down.estimate_normals(o3d.geometry.KDTreeSearchParamHybrid(radius=voxel_size * 2, max_nn=30))
+        self.global_map_fpfh = o3d.pipelines.registration.compute_fpfh_feature(
+            self.global_map_down, o3d.geometry.KDTreeSearchParamHybrid(radius=voxel_size * 5, max_nn=100))
+        self.get_logger().info('✅ FPFH 特征预计算完成')
+
+    # ── 回调 ──────────────────────────────────────
+    def cb_odom(self, msg: Odometry):
+        with self._lock:
+            self.cur_odom = msg
+
+    def cb_scan(self, msg: PointCloud2):
+        pts = msg_to_array(msg)
+        if pts.shape[0] == 0:
+            return
+        pcd = o3d.geometry.PointCloud()
+        pcd.points = o3d.utility.Vector3dVector(pts[:, :3])
+        with self._lock:
+            self.cur_scan = pcd
+        # 若还没初始化，尝试全局特征匹配
+        if not self.initialized and self.global_map is not None:
+            self.get_logger().info(
+                f'收到点云帧，开始 RANSAC 全局重定位'
+                f'（最多重试 {RANSAC_MAX_RETRY} 次，每次约 0.3s）...')
+
+            # ── 多次独立运行 RANSAC，取 fitness 最高的结果 ──────────────
+            # 原理：RANSAC 是随机算法，每次结果不同。
+            # N 次独立尝试的成功率 = 1 - (1-p)^N
+            # 例：单次 p=0.5 → 5次后 P=1-(0.5)^5=96.9%
+            best_T       = np.eye(4)
+            best_fitness = 0.0
+            attempt      = 0
+            for attempt in range(1, RANSAC_MAX_RETRY + 1):
+                T_try, fit_try = self._global_registration_ransac(pcd)
+                tag = f'（当前最佳 {best_fitness:.4f}）' if attempt > 1 else ''
+                self.get_logger().info(
+                    f'  RANSAC 第 {attempt}/{RANSAC_MAX_RETRY} 次 | fitness={fit_try:.4f}{tag}')
+                if fit_try > best_fitness:
+                    best_fitness = fit_try
+                    best_T       = T_try
+                if best_fitness >= RANSAC_GOOD_FITNESS:
+                    self.get_logger().info(
+                        f'  ✅ 第 {attempt} 次 RANSAC 质量达标'
+                        f'（fitness={best_fitness:.4f} ≥ {RANSAC_GOOD_FITNESS}），提前停止重试')
+                    break
+
+            self.get_logger().info(
+                f'RANSAC 完成 | 最佳 fitness={best_fitness:.4f}（共尝试 {attempt} 次）')
+
+            if best_fitness < RANSAC_MIN_FITNESS:
+                self.get_logger().warn(
+                    f'⚠️  RANSAC 最佳 fitness={best_fitness:.4f} 仍过低（<{RANSAC_MIN_FITNESS}），'
+                    f'建议在 RViz 使用「2D Pose Estimate」手动指定初始位姿。')
+
+            # 以最优 RANSAC 结果为初值执行 Point-to-Plane ICP 精配准
+            success = self._global_localization(best_T)
+            if success:
+                self.initialized = True
+                self.localization_locked = True   # 🔒 锁定后停止周期重算，TF 稳定
+                self.get_logger().info(
+                    '✅ 零点击全自动重定位大成功！定位已锁定，彩色点云不再抖动。\n'
+                    '  如需重定位，请在 RViz 使用「2D Pose Estimate」重新给定初始位姿。')
+            else:
+                self.get_logger().warn(
+                    f'ICP 未收敛（RANSAC 最佳 fitness={best_fitness:.4f}），'
+                    '请在 RViz 使用「2D Pose Estimate」提供初值。')
+
+
+    def cb_initial_pose(self, msg: PoseWithCovarianceStamped):
+        self.get_logger().info('收到 /initialpose，执行全局重定位（Point-to-Plane ICP）...')
+        # 手动给定初始位姿时，先解锁允许重新定位
+        self.localization_locked = False
+        initial_T = pose_msg_to_mat(msg)
+        success = self._global_localization(initial_T)
+        if success:
+            self.initialized = True
+            self.localization_locked = True   # 🔒 重定位成功后再次锁定
+            self.get_logger().info('✅ 重定位成功！定位已锁定。')
+        else:
+            self.get_logger().warn('❌ 重定位未收敛，fitness 低于阈值，请调整初始位姿方向后重试')
+
+    # ── 定时全局定位 ──────────────────────────────
+    def timer_localization(self):
+        # 先验地图始终持续发布（供 RViz 显示白色地图点云）
+        if self.global_map is not None:
+            self._publish_submap()
+
+        if not self.initialized or self.global_map is None:
+            return
+
+        # 持续实时 ICP 校正（Point-to-Plane 模式，对旋转歧义更鲁棒）
+        # 每 2s 执行一次 scan-to-map ICP，更新 T_map_to_odom，持续校正里程计漂移
+        self._global_localization(self.T_map_to_odom)
+
+
+    def _publish_submap(self):
+        import std_msgs.msg
+        import builtin_interfaces.msg
+        pts = np.asarray(self.global_map.points)
+        header = std_msgs.msg.Header()
+        header.stamp = builtin_interfaces.msg.Time(sec=0, nanosec=0)
+        header.frame_id = 'map'
+        msg = pc2.create_cloud_xyz32(header, pts)
+        self.pub_submap.publish(msg)
+
+    # ── 核心：全局 ICP 定位 ───────────────────────
+    def _global_localization(self, pose_estimation: np.ndarray) -> bool:
+        with self._lock:
+            if self.cur_scan is None or self.cur_odom is None:
+                return False
+            scan = copy.copy(self.cur_scan)
+
+        self.get_logger().debug('执行 scan-to-map ICP 全局定位...')
+        tic = time.time()
+
+        # 裁剪 FOV 范围内的地图子集（加速 ICP）
+        submap = self._crop_map_in_fov(pose_estimation)
+        if len(submap.points) < 100:
+            self.get_logger().warn('FOV 内地图点过少，跳过本次定位')
+            return False
+
+        # 多尺度 ICP：粗 → 精
+        T_coarse, _ = registration_at_scale(scan, submap, pose_estimation, scale=5)
+        T_fine, fitness = registration_at_scale(scan, submap, T_coarse, scale=1)
+        toc = time.time()
+
+        self.get_logger().info(
+            f'ICP 耗时: {toc-tic:.2f}s | fitness={fitness:.4f} | 阈值={self.fitness_th}')
+
+        if fitness >= self.fitness_th:
+            with self._lock:
+                self.T_map_to_odom = T_fine
+            self._broadcast_map_to_odom(T_fine)
+            
+            # --- 打印位姿对比 ---
+            from scipy.spatial.transform import Rotation as R
+            
+            # FAST-LIO 里程计原始位姿 (相对 camera_init 起点)
+            T_odom_to_body = pose_msg_to_mat(self.cur_odom)
+            t_odom = T_odom_to_body[:3, 3]
+            e_odom = R.from_matrix(T_odom_to_body[:3, :3]).as_euler('xyz', degrees=True)
+            
+            # 定位算法计算到的全局位姿 (相对 map 先验地图起点)
+            T_map_to_body = self.T_map_to_odom @ T_odom_to_body
+            t_map = T_map_to_body[:3, 3]
+            e_map = R.from_matrix(T_map_to_body[:3, :3]).as_euler('xyz', degrees=True)
+            
+            self.get_logger().info(
+                f'\n===================== 姿态对比 =====================\n'
+                f'【原始轨迹】(FAST-LIO Local Odom, 相对开机起点):\n'
+                f'  位置 -> X: {t_odom[0]:8.2f}, Y: {t_odom[1]:8.2f}, Z: {t_odom[2]:8.2f} (m)\n'
+                f'  姿态 -> R: {e_odom[0]:8.2f}, P: {e_odom[1]:8.2f}, Y: {e_odom[2]:8.2f} (deg)\n'
+                f'【定位轨迹】(Global ICP Mapped, 相对全局地图起点):\n'
+                f'  位置 -> X: {t_map[0]:8.2f}, Y: {t_map[1]:8.2f}, Z: {t_map[2]:8.2f} (m)\n'
+                f'  姿态 -> R: {e_map[0]:8.2f}, P: {e_map[1]:8.2f}, Y: {e_map[2]:8.2f} (deg)\n'
+                f'===================================================='
+            )
+            return True
+        else:
+            self.get_logger().warn(
+                f'ICP fitness={fitness:.4f} < 阈值{self.fitness_th}，定位未接受')
+            return False
+
+    def _global_registration_ransac(self, source: o3d.geometry.PointCloud):
+        """FPFH + RANSAC 特征匹配，实现无初始位姿的 6DOF 全局重定位"""
+        voxel_size = self.map_voxel * 2.0
+        source_down = voxel_down_sample(source, voxel_size)
+        source_down.estimate_normals(o3d.geometry.KDTreeSearchParamHybrid(radius=voxel_size * 2, max_nn=30))
+        source_fpfh = o3d.pipelines.registration.compute_fpfh_feature(
+            source_down, o3d.geometry.KDTreeSearchParamHybrid(radius=voxel_size * 5, max_nn=100))
+        
+        distance_threshold = voxel_size * 1.5
+        result = o3d.pipelines.registration.registration_ransac_based_on_feature_matching(
+            source_down, self.global_map_down, source_fpfh, self.global_map_fpfh, True,
+            distance_threshold,
+            o3d.pipelines.registration.TransformationEstimationPointToPoint(False),
+            3, [
+                o3d.pipelines.registration.CorrespondenceCheckerBasedOnEdgeLength(0.9),
+                o3d.pipelines.registration.CorrespondenceCheckerBasedOnDistance(distance_threshold)
+            ], o3d.pipelines.registration.RANSACConvergenceCriteria(300000, 0.9999))
+        return result.transformation, result.fitness
+
+    def _crop_map_in_fov(self, T_map_to_odom: np.ndarray) -> o3d.geometry.PointCloud:
+        """从全局地图中裁剪当前 FOV 范围内的点云子集"""
+        with self._lock:
+            if self.cur_odom is None:
+                return self.global_map
+            T_odom_to_base = odom_msg_to_mat(self.cur_odom)
+
+        T_map_to_base = T_map_to_odom @ T_odom_to_base
+        T_base_to_map = inverse_se3(T_map_to_base)
+
+        map_pts = np.asarray(self.global_map.points)
+        map_pts_h = np.hstack([map_pts, np.ones((len(map_pts), 1))])
+        pts_in_base = (T_base_to_map @ map_pts_h.T).T
+
+        # 距离过滤
+        dist = np.linalg.norm(pts_in_base[:, :3], axis=1)
+        idx = dist < self.fov_far
+
+        submap = o3d.geometry.PointCloud()
+        submap.points = o3d.utility.Vector3dVector(map_pts[idx])
+        return submap
+
+    # ── TF 广播 ───────────────────────────────────
+    def _broadcast_map_to_odom(self, T: np.ndarray):
+        from scipy.spatial.transform import Rotation
+        t = TransformStamped()
+        with self._lock:
+            if self.cur_odom is not None:
+                t.header.stamp = self.cur_odom.header.stamp
+            else:
+                t.header.stamp = self.get_clock().now().to_msg()
+        t.header.frame_id = 'map'
+        t.child_frame_id  = self.odom_frame   # FAST-LIO2 的 odom 系
+        t.transform.translation.x = float(T[0, 3])
+        t.transform.translation.y = float(T[1, 3])
+        t.transform.translation.z = float(T[2, 3])
+        q = Rotation.from_matrix(np.copy(T[:3, :3])).as_quat()  # [x,y,z,w]
+        t.transform.rotation.x = float(q[0])
+        t.transform.rotation.y = float(q[1])
+        t.transform.rotation.z = float(q[2])
+        t.transform.rotation.w = float(q[3])
+        self.tf_broadcaster.sendTransform(t)
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = FastLIOLocalizationNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()

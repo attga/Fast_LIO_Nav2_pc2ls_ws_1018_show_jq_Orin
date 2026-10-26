@@ -1,0 +1,1 @@
+ros2 launch ml_bringup localization.launch.py   map_directory:=/home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0915_b2b_masker_reloc_jeck/src/ml_bringup/map   pose_file:=isam_poses.txt   use_sim_time:=false   enable_yesense:=true   rviz:=false   2>&1 | tee "20260916_1429.log"

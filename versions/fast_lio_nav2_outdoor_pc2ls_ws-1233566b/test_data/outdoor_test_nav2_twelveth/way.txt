@@ -1,0 +1,177 @@
+[INFO] [1785993836.648356985] [waypoint_patrol]: 
+==============================================================
+  直线往返巡航 配置汇总
+  起点:      (2.070, 2.420), Yaw=89.08°
+  路径长度:  10.0 m
+  段数:      4 段（间距 2.50 m/段）
+  端点停留:  5.0 s
+  总航点数:  8（4 去程 + 4 返程）
+  最大循环:  无限
+==============================================================
+[INFO] [1785993836.649021420] [waypoint_patrol]:   WP-01/8 →去程 (2.110, 4.920)  Yaw=89.1°  d=2.5m  停留=0s
+[INFO] [1785993836.649545200] [waypoint_patrol]:   WP-02/8 →去程 (2.150, 7.419)  Yaw=89.1°  d=5.0m  停留=0s
+[INFO] [1785993836.650027032] [waypoint_patrol]:   WP-03/8 →去程 (2.190, 9.919)  Yaw=89.1°  d=7.5m  停留=0s
+[INFO] [1785993836.650516928] [waypoint_patrol]:   WP-04/8 →去程 (2.231, 12.419)  Yaw=89.1°  d=10.0m  停留=5s
+[INFO] [1785993836.651027621] [waypoint_patrol]:   WP-05/8 ←返程 (2.190, 9.919)  Yaw=-90.9°  d=10.0m  停留=0s
+[INFO] [1785993836.651549417] [waypoint_patrol]:   WP-06/8 ←返程 (2.150, 7.419)  Yaw=-90.9°  d=7.5m  停留=0s
+[INFO] [1785993836.652046544] [waypoint_patrol]:   WP-07/8 ←返程 (2.110, 4.920)  Yaw=-90.9°  d=5.0m  停留=0s
+[INFO] [1785993836.652586738] [waypoint_patrol]:   WP-08/8 ←返程 (2.070, 2.420)  Yaw=-90.9°  d=2.5m  停留=5s
+[INFO] [1785993836.653080953] [waypoint_patrol]: 等待 Nav2 激活（bt_navigator）...
+[INFO] [1785993837.667295449] [basic_navigator]: bt_navigator/get_state service not available, waiting...
+[INFO] [1785993838.669621176] [basic_navigator]: bt_navigator/get_state service not available, waiting...
+[INFO] [1785993839.671888317] [basic_navigator]: bt_navigator/get_state service not available, waiting...
+[INFO] [1785993842.236973916] [waypoint_patrol]: Nav2 已激活 ✔  开始直线往返巡航...
+[INFO] [1785993842.237641857] [waypoint_patrol]: 
+==================================================
+  第 #1 圈 (无限循环) 启动
+==================================================
+[INFO] [1785993842.238201455] [waypoint_patrol]: [WP-01/8 →去程] 导航至 (2.110, 4.920), Yaw=89.1° (尝试 1/2)
+[INFO] [1785993842.239479325] [basic_navigator]: Navigating to goal: 2.1101408478369983 4.919677721694324...
+[INFO] [1785993842.347836553] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 3.62 m
+[INFO] [1785993845.373808498] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 2.87 m
+[INFO] [1785993848.399354028] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 2.01 m
+[INFO] [1785993851.426288975] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 1.13 m
+[INFO] [1785993854.461066917] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.35 m
+[INFO] [1785993855.571537214] [waypoint_patrol]: [WP-01/8 →去程] ✅ 到达
+[INFO] [1785993855.572157925] [waypoint_patrol]: [WP-02/8 →去程] 导航至 (2.150, 7.419), Yaw=89.1° (尝试 1/2)
+[INFO] [1785993855.573266552] [basic_navigator]: Navigating to goal: 2.1502816956739967 7.419355443388648...
+[INFO] [1785993857.493980262] [waypoint_patrol]: [WP-02/8 →去程] 剩余: 2.17 m
+[INFO] [1785993860.523560797] [waypoint_patrol]: [WP-02/8 →去程] 剩余: 1.25 m
+[INFO] [1785993863.547744054] [waypoint_patrol]: [WP-02/8 →去程] 剩余: 0.40 m
+[INFO] [1785993865.063019462] [waypoint_patrol]: [WP-02/8 →去程] ✅ 到达
+[INFO] [1785993865.063645472] [waypoint_patrol]: [WP-03/8 →去程] 导航至 (2.190, 9.919), Yaw=89.1° (尝试 1/2)
+[INFO] [1785993865.064802037] [basic_navigator]: Navigating to goal: 2.190422543510995 9.919033165082972...
+[INFO] [1785993866.581046609] [waypoint_patrol]: [WP-03/8 →去程] 剩余: 2.28 m
+[INFO] [1785993869.627019337] [waypoint_patrol]: [WP-03/8 →去程] 剩余: 1.37 m
+[INFO] [1785993872.661938658] [waypoint_patrol]: [WP-03/8 →去程] 剩余: 0.52 m
+[INFO] [1785993874.638509945] [waypoint_patrol]: [WP-03/8 →去程] ✅ 到达
+[INFO] [1785993874.639140450] [waypoint_patrol]: [WP-04/8 →去程] 导航至 (2.231, 12.419), Yaw=89.1° (尝试 1/2)
+[INFO] [1785993874.640357588] [basic_navigator]: Navigating to goal: 2.230563391347994 12.418710886777296...
+[INFO] [1785993875.753780108] [waypoint_patrol]: [WP-04/8 →去程] 剩余: 2.28 m
+[INFO] [1785993878.791764925] [waypoint_patrol]: [WP-04/8 →去程] 剩余: 1.40 m
+[INFO] [1785993881.837790309] [waypoint_patrol]: [WP-04/8 →去程] 剩余: 0.53 m
+[INFO] [1785993883.961623264] [waypoint_patrol]: [WP-04/8 →去程] ✅ 到达
+[INFO] [1785993883.962225621] [waypoint_patrol]: [WP-04/8 →去程] 🕐 端点停留 5 s...
+[INFO] [1785993888.964891238] [waypoint_patrol]: [WP-05/8 ←返程] 导航至 (2.190, 9.919), Yaw=-90.9° (尝试 1/2)
+[INFO] [1785993888.966191811] [basic_navigator]: Navigating to goal: 2.190422543510995 9.919033165082972...
+[INFO] [1785993889.070314107] [waypoint_patrol]: [WP-05/8 ←返程] 剩余: 2.42 m
+[INFO] [1785993892.102165776] [waypoint_patrol]: [WP-05/8 ←返程] 剩余: 2.58 m
+[INFO] [1785993895.130468627] [waypoint_patrol]: [WP-05/8 ←返程] 剩余: 2.63 m
+[INFO] [1785993898.160612668] [waypoint_patrol]: [WP-05/8 ←返程] 剩余: 2.51 m
+[INFO] [1785993901.188814428] [waypoint_patrol]: [WP-05/8 ←返程] 剩余: 1.78 m
+[INFO] [1785993904.239950047] [waypoint_patrol]: [WP-05/8 ←返程] 剩余: 0.69 m
+[INFO] [1785993906.578052534] [waypoint_patrol]: [WP-05/8 ←返程] ✅ 到达
+[INFO] [1785993906.578661477] [waypoint_patrol]: [WP-06/8 ←返程] 导航至 (2.150, 7.419), Yaw=-90.9° (尝试 1/2)
+[INFO] [1785993906.579861986] [basic_navigator]: Navigating to goal: 2.1502816956739967 7.419355443388648...
+[INFO] [1785993907.291993059] [waypoint_patrol]: [WP-06/8 ←返程] 剩余: 2.53 m
+[INFO] [1785993910.323869743] [waypoint_patrol]: [WP-06/8 ←返程] 剩余: 1.68 m
+[INFO] [1785993913.367808136] [waypoint_patrol]: [WP-06/8 ←返程] 剩余: 0.69 m
+[INFO] [1785993915.487408029] [waypoint_patrol]: [WP-06/8 ←返程] ✅ 到达
+[INFO] [1785993915.488029109] [waypoint_patrol]: [WP-07/8 ←返程] 导航至 (2.110, 4.920), Yaw=-90.9° (尝试 1/2)
+[INFO] [1785993915.490198041] [basic_navigator]: Navigating to goal: 2.1101408478369983 4.919677721694324...
+[INFO] [1785993916.403993314] [waypoint_patrol]: [WP-07/8 ←返程] 剩余: 2.47 m
+[INFO] [1785993919.463654209] [waypoint_patrol]: [WP-07/8 ←返程] 剩余: 1.62 m
+[INFO] [1785993922.498419837] [waypoint_patrol]: [WP-07/8 ←返程] 剩余: 0.58 m
+[INFO] [1785993924.065597520] [waypoint_patrol]: [WP-07/8 ←返程] ✅ 到达
+[INFO] [1785993924.066210062] [waypoint_patrol]: [WP-08/8 ←返程] 导航至 (2.070, 2.420), Yaw=-90.9° (尝试 1/2)
+[INFO] [1785993924.067539189] [basic_navigator]: Navigating to goal: 2.07 2.42...
+[INFO] [1785993925.587054531] [waypoint_patrol]: [WP-08/8 ←返程] 剩余: 2.37 m
+[INFO] [1785993928.620246464] [waypoint_patrol]: [WP-08/8 ←返程] 剩余: 1.48 m
+[INFO] [1785993931.653049023] [waypoint_patrol]: [WP-08/8 ←返程] 剩余: 0.46 m
+[INFO] [1785993932.969267911] [waypoint_patrol]: [WP-08/8 ←返程] ✅ 到达
+[INFO] [1785993932.969845255] [waypoint_patrol]: [WP-08/8 ←返程] 🕐 端点停留 5 s...
+[INFO] [1785993937.972942053] [waypoint_patrol]: 第 #1 圈完成 ✔
+[INFO] [1785993937.973563117] [waypoint_patrol]: 
+==================================================
+  第 #2 圈 (无限循环) 启动
+==================================================
+[INFO] [1785993937.974556127] [waypoint_patrol]: [WP-01/8 →去程] 导航至 (2.110, 4.920), Yaw=89.1° (尝试 1/2)
+[INFO] [1785993937.975857524] [basic_navigator]: Navigating to goal: 2.1101408478369983 4.919677721694324...
+[INFO] [1785993938.089468078] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 2.41 m
+[INFO] [1785993941.123590252] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 2.52 m
+[INFO] [1785993944.160755541] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 2.46 m
+[INFO] [1785993947.190357507] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 2.63 m
+[INFO] [1785993950.265741709] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 2.40 m
+[INFO] [1785993953.290817138] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 1.93 m
+[INFO] [1785993956.325762861] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 1.50 m
+[INFO] [1785993959.368035415] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 1.57 m
+[INFO] [1785993962.408887871] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 1.62 m
+[INFO] [1785993965.457918328] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 1.55 m
+[INFO] [1785993968.502150053] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 1.45 m
+[INFO] [1785993971.530627224] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 1.40 m
+[INFO] [1785993974.570084610] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 1.10 m
+[INFO] [1785993977.595754791] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 1.00 m
+[INFO] [1785993980.657560531] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 1.02 m
+[INFO] [1785993983.697113427] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.92 m
+[INFO] [1785993986.738478629] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.93 m
+[INFO] [1785993989.768604101] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.93 m
+[INFO] [1785993992.795205105] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.95 m
+[INFO] [1785993995.836252531] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.95 m
+[INFO] [1785993998.884549912] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.93 m
+[INFO] [1785994001.921041958] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.87 m
+[INFO] [1785994004.948503909] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.93 m
+[INFO] [1785994007.979928606] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.91 m
+[INFO] [1785994011.007536351] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.91 m
+[INFO] [1785994014.059990202] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.82 m
+[INFO] [1785994017.098019734] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.86 m
+[INFO] [1785994020.128270096] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.81 m
+[INFO] [1785994023.162285770] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.68 m
+[INFO] [1785994026.194092777] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.75 m
+[INFO] [1785994029.223209142] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.68 m
+[INFO] [1785994032.262733980] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.67 m
+[INFO] [1785994035.301685696] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.63 m
+[INFO] [1785994038.335638466] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.65 m
+[INFO] [1785994041.390042204] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.64 m
+[INFO] [1785994044.439599238] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.65 m
+[INFO] [1785994047.469158690] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.65 m
+[INFO] [1785994050.501057299] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.67 m
+[INFO] [1785994053.530152928] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.67 m
+[INFO] [1785994056.570323900] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.61 m
+[INFO] [1785994059.595011698] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.62 m
+[INFO] [1785994062.624000796] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.56 m
+[INFO] [1785994065.660466231] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.97 m
+[INFO] [1785994068.687040868] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.59 m
+[INFO] [1785994071.716682952] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.65 m
+[INFO] [1785994074.749037902] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.63 m
+[INFO] [1785994077.776770329] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.59 m
+[INFO] [1785994080.801357529] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.61 m
+[INFO] [1785994083.828691468] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.69 m
+[INFO] [1785994086.862229908] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.56 m
+[INFO] [1785994089.890668958] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.65 m
+[INFO] [1785994092.916209929] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.61 m
+[INFO] [1785994095.970216790] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.57 m
+[INFO] [1785994098.995993732] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.59 m
+[INFO] [1785994102.032317793] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.60 m
+[INFO] [1785994105.059341388] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.62 m
+[INFO] [1785994108.092261702] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.62 m
+[INFO] [1785994111.118947430] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.61 m
+[INFO] [1785994114.167755360] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.70 m
+[INFO] [1785994117.229999797] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.66 m
+[INFO] [1785994120.263733824] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.62 m
+[INFO] [1785994123.292387680] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.60 m
+[INFO] [1785994126.318937795] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.59 m
+[INFO] [1785994129.354891280] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.60 m
+[INFO] [1785994132.383033243] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.51 m
+[INFO] [1785994135.421300788] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.54 m
+[INFO] [1785994138.468603711] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.60 m
+[INFO] [1785994141.510891956] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.63 m
+[INFO] [1785994144.543384986] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.60 m
+[INFO] [1785994147.568576144] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.57 m
+[INFO] [1785994150.597132856] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.64 m
+[INFO] [1785994153.625017451] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.60 m
+[INFO] [1785994156.659897657] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.57 m
+[INFO] [1785994159.698638951] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.60 m
+[INFO] [1785994162.749116397] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.62 m
+[INFO] [1785994165.784089263] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.64 m
+[INFO] [1785994168.808738040] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.59 m
+[INFO] [1785994171.902232973] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.67 m
+[INFO] [1785994174.938904248] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.60 m
+[INFO] [1785994177.973725761] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.64 m
+[INFO] [1785994180.998547962] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.59 m
+[INFO] [1785994184.026910277] [waypoint_patrol]: [WP-01/8 →去程] 剩余: 0.59 m
+[ERROR] [1785994186.359675222] [waypoint_patrol]: [WP-01/8 →去程] ❌ 失败
+[INFO] [1785994186.361089804] [waypoint_patrol]: [WP-01/8 →去程] 2s 后重试...
+[INFO] [1785994188.364044723] [waypoint_patrol]: [WP-01/8 →去程] 导航至 (2.110, 4.920), Yaw=89.1° (尝试 2/2)
+[INFO] [1785994189.367030718] [basic_navigator]: 'NavigateToPose' action server not available, waiting...
+[INFO] [1785994190.369880841] [basic_navigator]: 'NavigateToPose' action server not available, waiting...
+[INFO] [1785994191.372415999] [basic_navigator]: 'NavigateToPose' action server not available, waiting...

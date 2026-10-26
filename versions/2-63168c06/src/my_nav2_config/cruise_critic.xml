@@ -1,0 +1,7 @@
+<library path="cruise_speed_critic">
+  <class name="mppi::critics::CruiseSpeedCritic"
+         type="mppi::critics::CruiseSpeedCritic"
+         base_class_type="mppi::critics::CriticFunction">
+    <description>Bounded cruise-speed preference on clear, straight local paths.</description>
+  </class>
+</library>

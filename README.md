@@ -485,3 +485,66 @@ ROS_LOG_DIR 或 ~/.ros/log 下的 FAST-LIO 调试目录
 ```
 
 各组件保留自己的许可证与第三方说明。本仓库未将全部内容重新许可为单一许可证，复用、分发、使用 SDK 或地图数据前，应分别核对授权范围。
+
+---
+
+<!-- pc-source-archive -->
+
+## 本机源码归档
+
+本仓库现统一保存 **24 个内容不同的历史快照**。按文件内容哈希去重后共有 **2180 个唯一文件**，约 **74.92 MB**；版本目录中的总文件引用数为 **12008**。
+
+扫描和归档原则：
+
+- 只收录本人工程、集成结果与明确改动过的工作目录；纯上游下载副本不作为独立项目上传；
+- 自动排除 `build/`、`install/`、日志、缓存、编辑器配置、录包、点云数据、模型权重和其他可再生成产物；
+- 每个版本放在 `versions/<版本目录>/`，并附带 `_SNAPSHOT_README.md`；
+- 原始目录保持不变；本仓库是归档副本，不表示所有历史版本均已重新编译或实车验证。
+
+技术栈：ROS 2 / C++ / Fast-LIO / Nav2 / PCL / Eigen / Livox / NDT  
+识别到的包/模块：`aloam_velodyne`, `autorccar_interfaces`, `chassis_driver`, `fast_lio`, `fast_lio_loc`, `lio_sam`, `livox_ros_driver2`, `ml_bringup`, `ml_icp_localization`, `ml_localization_manager`, `ml_ndt_localization`, `ml_relocalization`, `ml_scan_context`, `my_nav2_config`, `nmea_navsat_driver`, `robot_localization`, `sc_pgo`, `serial`, `small_gicp_relocalization`, `yesense_interface`, `yesense_std_ros2`  
+主要声明依赖：`Eigen`, `GTSAM`, `OpenCV`, `PCL`, `ament_cmake`, `ament_cmake_auto`, `ament_cmake_black`, `ament_cmake_clang_format`, `ament_cmake_clang_tidy`, `ament_cmake_copyright`, `ament_cmake_gtest`, `ament_cmake_pytest`, `ament_cmake_python`, `ament_cmake_xmllint`, `ament_copyright`, `ament_flake8`, `ament_index_python`, `ament_lint_auto`, `ament_lint_common`, `ament_pep257`, `angles`, `apr`, `autorccar_interfaces`, `boost`, `builtin_interfaces`, `catkin`, `chassis_driver`, `common_interfaces` 等 110 项
+
+### 版本索引
+
+| # | 版本 | 包/模块 | 源码文件 | 保留文件 | 重复位置 |
+|---:|---|---:|---:|---:|---:|
+| 1 | [2](versions/2-63168c06/) | 12 | 221 | 336 | 1 |
+| 2 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0915_ntegrated_chang_copy](versions/fast_lio_nav2_outdoor_pc2ls_ws_0915_ntegrated_chang_copy-ae295627/) | 7 | 140 | 492 | 0 |
+| 3 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0810](versions/fast_lio_nav2_outdoor_pc2ls_ws_0810-7ecac93d/) | 8 | 152 | 317 | 0 |
+| 4 | [Fast_LIO_Nav2_outdoor_pc2ls_ws](versions/fast_lio_nav2_outdoor_pc2ls_ws-1233566b/) | 9 | 153 | 370 | 0 |
+| 5 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0907_b2b](versions/fast_lio_nav2_outdoor_pc2ls_ws_0907_b2b-585f726b/) | 10 | 214 | 409 | 0 |
+| 6 | [Fast_LIO_Nav2_pc2ls_ws_1018_show_jq_Orin](versions/fast_lio_nav2_pc2ls_ws_1018_show_jq_orin-c7b79397/) | 12 | 221 | 341 | 0 |
+| 7 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0927_ntegrated_chang_reapir_ndt](versions/fast_lio_nav2_outdoor_pc2ls_ws_0927_ntegrated_chang_reapir_ndt-375cf9c8/) | 14 | 216 | 352 | 0 |
+| 8 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0915_ntegrated_chang_copy](versions/fast_lio_nav2_outdoor_pc2ls_ws_0915_ntegrated_chang_copy-9d65f575/) | 7 | 140 | 495 | 0 |
+| 9 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0915_ntegrated_chang](versions/fast_lio_nav2_outdoor_pc2ls_ws_0915_ntegrated_chang-83589496/) | 14 | 203 | 336 | 0 |
+| 10 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0915_ntegrated](versions/fast_lio_nav2_outdoor_pc2ls_ws_0915_ntegrated-ab8cb8f3/) | 14 | 198 | 327 | 0 |
+| 11 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0920_b2b_masker_lio](versions/fast_lio_nav2_outdoor_pc2ls_ws_0920_b2b_masker_lio-30965a70/) | 0 | 1 | 18 | 0 |
+| 12 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0917_b2b_masker_reloc_jeck](versions/fast_lio_nav2_outdoor_pc2ls_ws_0917_b2b_masker_reloc_jeck-6b6767c2/) | 14 | 184 | 312 | 0 |
+| 13 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0915_ntegrated_ok](versions/fast_lio_nav2_outdoor_pc2ls_ws_0915_ntegrated_ok-6865abf8/) | 14 | 198 | 327 | 0 |
+| 14 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0915_b2b_masker_reloc_jeck](versions/fast_lio_nav2_outdoor_pc2ls_ws_0915_b2b_masker_reloc_jeck-0862627e/) | 14 | 183 | 311 | 0 |
+| 15 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0915_b2b_masker_lio](versions/fast_lio_nav2_outdoor_pc2ls_ws_0915_b2b_masker_lio-2be2938e/) | 9 | 187 | 1183 | 0 |
+| 16 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0912_b2b_masker_lio_backGate](versions/fast_lio_nav2_outdoor_pc2ls_ws_0912_b2b_masker_lio_backgate-510f6539/) | 9 | 188 | 1161 | 0 |
+| 17 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0912_b2b_masker_lio](versions/fast_lio_nav2_outdoor_pc2ls_ws_0912_b2b_masker_lio-429f02e6/) | 9 | 189 | 1184 | 0 |
+| 18 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0912_20_b2b_masker_lio](versions/fast_lio_nav2_outdoor_pc2ls_ws_0912_20_b2b_masker_lio-038658d3/) | 9 | 189 | 1162 | 0 |
+| 19 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0910_b2b_masker_relocall](versions/fast_lio_nav2_outdoor_pc2ls_ws_0910_b2b_masker_relocall-8ddeaa06/) | 10 | 217 | 417 | 0 |
+| 20 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0910_b2b_masker_all](versions/fast_lio_nav2_outdoor_pc2ls_ws_0910_b2b_masker_all-4175b5e7/) | 10 | 215 | 411 | 0 |
+| 21 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0910_b2b_all](versions/fast_lio_nav2_outdoor_pc2ls_ws_0910_b2b_all-b23c96f3/) | 10 | 215 | 410 | 0 |
+| 22 | [Fast_LIO_Nav2_outdoor_pc2ls_ws_0909_b2b](versions/fast_lio_nav2_outdoor_pc2ls_ws_0909_b2b-51c6200b/) | 10 | 214 | 409 | 0 |
+| 23 | [Fast_LIO_Localization_ws](versions/fast_lio_localization_ws-74896732/) | 7 | 142 | 288 | 0 |
+| 24 | [2](versions/2-c8843608/) | 13 | 243 | 640 | 0 |
+
+### 通用构建入口
+
+```bash
+source /opt/ros/<ros2-distro>/setup.bash
+colcon build --symlink-install
+source install/setup.bash
+```
+
+### 部署注意事项
+
+- 历史快照可能分别使用 Fast-LIO、LIO-SAM、NDT、ICP、Scan Context 或 Cartographer 组件。
+- 地图、传感器标定、串口/CAN 接口及 launch 参数必须与目标车辆和现场数据匹配。
+- 版本目录可能保留原始第三方组件及其许可证；使用、修改和分发时应分别遵守相应条款。
+- 本次整理只验证了文件完整性与 Git 对象哈希，没有把“成功上传”当作“构建、仿真或硬件验证通过”。

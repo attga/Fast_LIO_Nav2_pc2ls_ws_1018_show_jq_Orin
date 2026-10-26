@@ -1,8 +1,20 @@
-**/build/
-**/install/
-**/log/
-**/logs/
-**/__pycache__/
-*.py[cod]
+# Build outputs and local state
+build/
+install/
+log/
+logs/
+.cache/
 .vscode/
 .idea/
+.vs/
+__pycache__/
+*.pyc
+*.pyo
+*.swp
+*.tmp
+*.log
+
+# ROS and sensor runtime data
+*.bag
+*.db3
+*.mcap

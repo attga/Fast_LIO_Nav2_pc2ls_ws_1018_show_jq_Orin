@@ -1,0 +1,8 @@
+controller_server:
+    controller_frequency: 5.0 ----3.0
+
+
+
+
+global_costmap:
+    observation_persistence: 0.0     # 持久化，依赖实时激光清除

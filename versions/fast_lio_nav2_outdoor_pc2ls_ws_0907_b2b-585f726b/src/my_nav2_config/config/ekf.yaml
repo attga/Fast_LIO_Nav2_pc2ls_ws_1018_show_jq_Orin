@@ -1,0 +1,98 @@
+### ekf.yaml — robot_localization EKF for Fast-LIO + Wheel Odometry Fusion
+#
+# TF tree managed by this node:
+#   camera_init ──(EKF, two_d_mode=true, Z/Roll/Pitch=0)──→ body
+#
+# Sensor inputs:
+#   odom0: /Odometry   — Fast-LIO 3D LiDAR-IMU odometry (absolute position + velocity)
+#   odom1: /wheel_odom — Wheel encoder odometry (velocity only, not position)
+#
+# Key effect: Eliminates Fast-LIO's Z-axis IMU drift before it reaches Nav2.
+#   - local_z drift from Fast-LIO is absorbed into the map→odom (ICP) correction.
+#   - Nav2 costmap sees obstacle heights anchored to Z=0, preventing max_obstacle_height
+#     filtering from silently dropping all laser scan data when drift exceeds 2.0m.
+# ------------------------------------------------------------------------------
+
+ekf_filter_node:
+  ros__parameters:
+
+    # --- Core frequency ---
+    frequency: 50.0             # EKF predict+publish rate (Hz). 50Hz = 20ms lag max.
+    sensor_timeout: 0.1         # Mark sensor stale after 100ms with no new data
+
+    # --- 2D mode: forces Z=0, Roll=0, Pitch=0 at every update ---
+    two_d_mode: true            # ← The core feature: eliminates Z-axis drift
+
+    # --- Frame IDs (must match Fast-LIO's frame names) ---
+    odom_frame:      camera_init   # Fast-LIO publishes /Odometry with frame_id=camera_init
+    base_link_frame: body          # Fast-LIO publishes /Odometry with child_frame_id=body
+    world_frame:     camera_init   # EKF operates in odom space (not map space)
+
+    # --- TF publication ---
+    publish_tf: true               # EKF is the sole publisher of camera_init→body TF
+                                   # (Fast-LIO's own TF broadcast is commented out)
+    publish_acceleration: false
+
+    # --- Reset on initial pose ---
+    reset_on_time_jump: true
+
+    # ==========================================================================
+    # Sensor 0: Fast-LIO /Odometry  (absolute pose + velocity, high precision)
+    # Frame: camera_init → body
+    # ==========================================================================
+    odom0: /Odometry
+    # State vector index:
+    # [x,  y,  z,    roll, pitch, yaw,   vx,  vy, vz,   vroll, vpitch, vyaw,  ax, ay, az]
+    odom0_config: [true,  true,  false,   # x, y — fuse absolute position; z — skip (two_d_mode handles)
+                   false, false, true,    # roll, pitch — skip (two_d_mode); yaw — fuse
+                   true,  false, false,   # vx — fuse; vy, vz — skip
+                   false, false, true,    # vroll, vpitch — skip; vyaw — fuse
+                   false, false, false]   # accelerations — not published by Fast-LIO
+
+    odom0_differential: false   # Use absolute position from Fast-LIO (not delta)
+    odom0_relative:     false   # Measurements are in the global odom frame
+    odom0_queue_size:   10
+    # Fast-LIO provides covariance from its Kalman filter — trust it
+    odom0_pose_rejection_threshold:  5.0
+    odom0_twist_rejection_threshold: 5.0
+
+    # ==========================================================================
+    # Sensor 1: /wheel_odom  (velocity only — dead-reckoning position is discarded)
+    # Frame: camera_init → body  (frame_id fixed in chassis_driver_node.cpp)
+    # Role: Provides low-slip velocity reference at low speeds, supplements Fast-LIO.
+    # ==========================================================================
+    odom1: /wheel_odom
+    # Only fuse forward velocity (vx) and yaw rate (vyaw).
+    # Position x/y are NOT used: wheel dead-reckoning drifts and starts at a different origin.
+    odom1_config: [false, false, false,   # x, y, z — do NOT fuse position (different origin)
+                   false, false, false,   # roll, pitch, yaw — do NOT fuse pose
+                   true,  false, false,   # vx — fuse forward velocity from wheel encoder
+                   false, false, true,    # vroll, vpitch — skip; vyaw — fuse angular rate
+                   false, false, false]   # accelerations — not available
+
+    odom1_differential: false
+    odom1_relative:     false
+    odom1_queue_size:   20
+    # Wheel odometry covariance is set in chassis_driver_node.cpp (ODOM_TWIST_VAR_VX/WZ)
+    odom1_twist_rejection_threshold: 3.0
+
+    # ==========================================================================
+    # Process noise — how much we trust the prediction model vs sensor updates
+    # Lower values = trust model more (smoother but slower to react)
+    # Higher values = trust sensors more (faster but noisier)
+    # ==========================================================================
+    process_noise_covariance: [0.05, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,    0.0,    0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                               0.0,  0.05, 0.0,  0.0,  0.0,  0.0,  0.0,    0.0,    0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                               0.0,  0.0,  0.06, 0.0,  0.0,  0.0,  0.0,    0.0,    0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                               0.0,  0.0,  0.0,  0.03, 0.0,  0.0,  0.0,    0.0,    0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                               0.0,  0.0,  0.0,  0.0,  0.03, 0.0,  0.0,    0.0,    0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.06, 0.0,    0.0,    0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.025,  0.0,    0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,    0.025,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,    0.0,    0.04, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,    0.0,    0.0,  0.01, 0.0,  0.0,  0.0,  0.0,  0.0,
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,    0.0,    0.0,  0.0,  0.01, 0.0,  0.0,  0.0,  0.0,
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,    0.0,    0.0,  0.0,  0.0,  0.02, 0.0,  0.0,  0.0,
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,    0.0,    0.0,  0.0,  0.0,  0.0,  0.01, 0.0,  0.0,
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,    0.0,    0.0,  0.0,  0.0,  0.0,  0.0,  0.01, 0.0,
+                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,    0.0,    0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.015]

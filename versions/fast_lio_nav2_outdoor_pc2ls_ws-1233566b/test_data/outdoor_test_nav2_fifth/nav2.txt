@@ -1,0 +1,1186 @@
+lifecycle_manager-8] [INFO] [1785906614.804990196] [lifecycle_manager_navigation]: Managed nodes are active
+[lifecycle_manager-8] [INFO] [1785906614.805013334] [lifecycle_manager_navigation]: Creating bond timer...
+[bt_navigator-5] [INFO] [1785906788.111365370] [bt_navigator]: Begin navigating from current location (1.83, 1.40) to (2.17, 3.53)
+[controller_server-2] [INFO] [1785906788.132689696] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906788.133726261] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded general_goal_checker . This warning will appear once.
+[controller_server-2] [INFO] [1785906788.142067649] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906789.183895683] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906789.737262475] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906789.789227407] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906789.836531461] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[bt_navigator-5] [WARN] [1785906789.888045074] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [WARN] [1785906789.955181983] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906790.024882413] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906790.065553035] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906790.103117099] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906790.143299889] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906790.233896743] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906791.233895411] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906791.719525818] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906791.758375928] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906791.797883256] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906791.838970600] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906791.947645232] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906792.014972794] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906792.070130355] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906792.109069235] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906792.151654155] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906792.194019545] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906792.283893242] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906793.283883125] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906793.750279286] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906793.789810320] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906793.962345621] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906794.016334989] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906794.062249415] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906794.100786060] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906794.139128230] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906794.333894884] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906795.383899670] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906795.699033751] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906795.753576099] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906795.792510232] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906796.058503931] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906796.114188284] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906796.153049034] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906796.190526194] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906796.383899177] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906797.433889286] [controller_server]: Passing new path to controller.
+[bt_navigator-5] [WARN] [1785906797.662381754] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [WARN] [1785906797.962641592] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906798.019089626] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906798.071636691] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906798.115487446] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906798.155556507] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [ERROR] [1785906798.155872747] [controller_server]: Failed to make progress
+[controller_server-2] [WARN] [1785906798.156107959] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906798.181960334] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-2] [INFO] [1785906798.183033252] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [INFO] [1785906798.433205740] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906799.483202999] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906799.683747239] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906799.981283498] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906800.023725025] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906800.064870005] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906800.103766104] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906800.142122016] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906800.533161223] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906801.533207156] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906801.713886463] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906801.766650615] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906801.808314434] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906801.846870865] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906801.900759745] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906801.969646946] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906802.022309971] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906802.064135811] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906802.109733487] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906802.148957052] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906802.186910986] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906802.583210265] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906803.583195008] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906803.765990808] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906803.807089920] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906803.848845736] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906803.886328507] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906803.997454866] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[planner_server-3] [WARN] [1785906804.592815545] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785906804.592977025] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.17, 3.53)
+[planner_server-3] [WARN] [1785906804.593028548] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785906804.611970358] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-2] [INFO] [1785906805.147538055] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906805.726956804] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906805.766539161] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906805.805984840] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906805.950810974] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906806.197534526] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906807.197516874] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906807.267949655] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906807.284079161] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906807.284280387] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906807.284382248] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906807.302155100] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-3] [INFO] [1785906807.302831261] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-2] [INFO] [1785906808.192374955] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [INFO] [1785906809.242570263] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906809.955293681] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906810.000629784] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906810.048561052] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906810.096053290] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906810.246213552] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906810.292556582] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906811.292566204] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906811.752197842] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906812.030680944] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906812.073170368] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906812.118891120] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906812.163530666] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906812.205242708] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906812.245896490] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906812.342560683] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906812.405528909] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906812.454511102] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906813.342548840] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906813.709689870] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906813.753899472] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906813.914431540] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906813.956276706] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906814.000794995] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906814.054812020] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906814.096887242] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906814.392553401] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906815.442580443] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906815.726469331] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906815.764493567] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906815.804681268] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906815.846237710] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906815.988771974] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906816.040627767] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906816.081254431] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906816.137023951] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906816.178362586] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906816.216875931] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906816.254433965] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906816.442558167] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906817.492633154] [controller_server]: Passing new path to controller.
+[bt_navigator-5] [WARN] [1785906817.663510738] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [WARN] [1785906817.743017384] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906818.028187828] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906818.089716949] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906818.126689413] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906818.164149325] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906818.204736366] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906818.245472790] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906818.492545513] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906819.542547256] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906819.720405701] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906819.761671972] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906819.801596514] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906819.842853921] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[bt_navigator-5] [WARN] [1785906819.883696523] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [WARN] [1785906819.970747782] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906820.039759950] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906820.081211347] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906820.136364533] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906820.177499851] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906820.216766565] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906820.256463125] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906820.295797779] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906820.592554234] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906821.600052699] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906821.716570885] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906821.763895109] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906821.805599668] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906821.845782841] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906821.994710221] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906822.050133876] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906822.642603422] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906823.642553955] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906823.709203271] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906823.750692006] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906823.967582122] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906824.027469572] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906824.081876179] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906824.121724095] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906824.159873145] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906824.197891372] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906824.692551871] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906825.728650193] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906825.728749653] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906825.765906461] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906825.801665888] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906825.900365228] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906825.956567277] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906825.995741718] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906826.742558570] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906827.143713192] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906827.193036246] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906827.252913185] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906827.724945997] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906827.766382366] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906827.766475907] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906827.806170143] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906827.847049302] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906827.997954861] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906828.798030919] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906829.737377262] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906829.782591440] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906829.828241222] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906829.828318186] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906829.872463544] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906829.925779360] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906830.011081964] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906830.861161891] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906831.748040021] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906831.785316180] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906831.823302324] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906831.863028585] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906831.911181330] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906831.979919575] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906832.044012540] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906832.099844658] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906832.140356009] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906832.176169279] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906832.213717289] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906832.961501577] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906832.961592909] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906834.012148842] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906834.012251791] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906835.012289719] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906835.676811681] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906835.740786034] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906835.781836027] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906835.822412974] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906835.865858698] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906835.996092025] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906836.054187726] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906836.054333269] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906836.099625735] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906836.143951082] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906836.185334881] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906836.231235248] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906836.273179649] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906836.313769106] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906836.564891843] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906836.612243063] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906837.112773151] [controller_server]: Passing new path to controller.
+[controller_server-2] [ERROR] [1785906837.412539823] [controller_server]: Failed to make progress
+[controller_server-2] [WARN] [1785906837.412696406] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906837.431932651] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-2] [INFO] [1785906837.434301404] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906837.536183764] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906837.690420107] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906837.749808346] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906837.789263794] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906837.919162402] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906837.993964143] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906838.149114633] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906838.149216974] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906838.195640784] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906839.144037249] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906839.724171518] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906839.762723047] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906839.805243565] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906839.854426255] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906839.943821097] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906840.050330478] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906840.200955422] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906841.250419480] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906841.401256457] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906841.451097541] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906841.503528027] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906842.015896645] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906842.265951465] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906842.467637882] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906843.315978975] [controller_server]: Passing new path to controller.
+[bt_navigator-5] [WARN] [1785906843.683433542] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [WARN] [1785906843.683770454] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906843.730344465] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906843.768302069] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906843.989177734] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906844.339272133] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906844.543497911] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906844.626508297] [controller_server]: Reached the goal!
+[bt_navigator-5] [INFO] [1785906844.661940211] [bt_navigator]: Goal succeeded
+[bt_navigator-5] [INFO] [1785906844.675177253] [bt_navigator]: Begin navigating from current location (2.18, 3.60) to (2.26, 4.63)
+[controller_server-2] [INFO] [1785906844.686009637] [controller_server]: Received a goal, begin computing control effort.
+[planner_server-3] [WARN] [1785906845.698089258] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785906845.699580336] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.26, 4.63)
+[planner_server-3] [WARN] [1785906845.700501724] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785906845.715793838] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-2] [WARN] [1785906845.726011280] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906845.778595137] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906845.814236275] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906845.850122577] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906845.975110683] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906846.037582494] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906846.187668705] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906847.187659062] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906847.715859386] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906847.760301926] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906847.798757753] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906847.999625578] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906848.249711514] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906848.355453607] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906848.404919837] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906848.459233719] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906848.500978562] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906848.552840937] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906848.740640040] [controller_server]: Reached the goal!
+[bt_navigator-5] [INFO] [1785906848.775613205] [bt_navigator]: Goal succeeded
+[bt_navigator-5] [INFO] [1785906848.780499482] [bt_navigator]: Begin navigating from current location (2.23, 4.16) to (2.36, 5.74)
+[controller_server-2] [INFO] [1785906848.802513926] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906849.734753083] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906849.778383389] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906849.824665018] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906849.920572595] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906849.920717626] [controller_server]: Passing new path to controller.
+[planner_server-3] [WARN] [1785906849.955682212] [global_costmap.global_costmap]: Sensor origin at (2.47, 4.94 -1.03) is out of map bounds (-96.34, -76.92, -0.80) to (38.18, 65.21, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906850.073050537] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906850.128532596] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906850.173255046] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906850.715978876] [local_costmap.local_costmap]: Sensor origin at (4.06, 0.30 -0.92) is out of map bounds (1.00, -2.65, -0.80) to (5.97, 2.33, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906850.805412543] [local_costmap.local_costmap]: Sensor origin at (4.01, 0.34 -0.94) is out of map bounds (1.50, -2.20, -0.80) to (6.47, 2.78, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [INFO] [1785906850.870651860] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906850.905486390] [local_costmap.local_costmap]: Sensor origin at (3.96, 0.31 -0.90) is out of map bounds (1.50, -2.20, -0.80) to (6.47, 2.78, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906851.004816202] [local_costmap.local_costmap]: Sensor origin at (3.96, 0.31 -0.90) is out of map bounds (1.50, -2.20, -0.80) to (6.47, 2.78, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906851.106494215] [local_costmap.local_costmap]: Sensor origin at (3.99, 0.26 -0.89) is out of map bounds (1.50, -2.20, -0.80) to (6.47, 2.78, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906851.211395611] [local_costmap.local_costmap]: Sensor origin at (3.97, 0.07 -1.11) is out of map bounds (1.45, -2.35, -0.80) to (6.42, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906851.309761948] [local_costmap.local_costmap]: Sensor origin at (4.09, 0.08 -1.04) is out of map bounds (1.50, -2.40, -0.80) to (6.47, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906851.409411418] [local_costmap.local_costmap]: Sensor origin at (4.13, 0.07 -0.92) is out of map bounds (1.60, -2.40, -0.80) to (6.58, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906851.514707552] [local_costmap.local_costmap]: Sensor origin at (4.13, 0.07 -0.92) is out of map bounds (1.60, -2.40, -0.80) to (6.58, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906851.605291444] [local_costmap.local_costmap]: Sensor origin at (4.13, 0.07 -0.92) is out of map bounds (1.60, -2.40, -0.80) to (6.58, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906851.740662780] [local_costmap.local_costmap]: Sensor origin at (4.13, 0.07 -0.92) is out of map bounds (1.60, -2.40, -0.80) to (6.58, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906851.740829380] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906851.781000990] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906851.816063689] [local_costmap.local_costmap]: Sensor origin at (4.13, 0.07 -0.92) is out of map bounds (1.60, -2.40, -0.80) to (6.58, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906851.909529061] [local_costmap.local_costmap]: Sensor origin at (4.14, 0.09 -0.91) is out of map bounds (1.65, -2.40, -0.80) to (6.62, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [INFO] [1785906851.920684240] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906852.013402632] [local_costmap.local_costmap]: Sensor origin at (4.22, 0.09 -0.89) is out of map bounds (1.70, -2.40, -0.80) to (6.68, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [INFO] [1785906852.013428905] [controller_server]: Reached the goal!
+[bt_navigator-5] [INFO] [1785906852.051847440] [bt_navigator]: Goal succeeded
+[bt_navigator-5] [INFO] [1785906852.062140849] [bt_navigator]: Begin navigating from current location (2.05, 5.43) to (2.45, 6.85)
+[controller_server-2] [WARN] [1785906852.085812613] [local_costmap.local_costmap]: Sensor origin at (4.22, 0.09 -0.89) is out of map bounds (1.70, -2.40, -0.80) to (6.68, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [INFO] [1785906852.092973620] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906852.185735018] [local_costmap.local_costmap]: Sensor origin at (4.24, 0.09 -0.88) is out of map bounds (1.70, -2.40, -0.80) to (6.68, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906852.285706801] [local_costmap.local_costmap]: Sensor origin at (4.24, 0.09 -0.88) is out of map bounds (1.70, -2.40, -0.80) to (6.68, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906852.385722139] [local_costmap.local_costmap]: Sensor origin at (4.25, 0.07 -0.91) is out of map bounds (1.75, -2.40, -0.80) to (6.73, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906852.485740260] [local_costmap.local_costmap]: Sensor origin at (4.28, 0.11 -0.92) is out of map bounds (1.75, -2.40, -0.80) to (6.73, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906852.585820784] [local_costmap.local_costmap]: Sensor origin at (4.35, 0.13 -0.92) is out of map bounds (1.85, -2.40, -0.80) to (6.83, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906852.688203977] [local_costmap.local_costmap]: Sensor origin at (4.37, 0.11 -0.96) is out of map bounds (1.85, -2.40, -0.80) to (6.83, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906852.785726173] [local_costmap.local_costmap]: Sensor origin at (4.37, 0.11 -0.96) is out of map bounds (1.85, -2.40, -0.80) to (6.83, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906852.885728486] [local_costmap.local_costmap]: Sensor origin at (4.47, 0.15 -0.94) is out of map bounds (1.95, -2.35, -0.80) to (6.93, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906852.985713454] [local_costmap.local_costmap]: Sensor origin at (4.47, 0.15 -0.94) is out of map bounds (1.95, -2.35, -0.80) to (6.93, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906853.085723891] [local_costmap.local_costmap]: Sensor origin at (4.47, 0.15 -0.94) is out of map bounds (1.95, -2.35, -0.80) to (6.93, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [INFO] [1785906853.143140527] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906853.185738422] [local_costmap.local_costmap]: Sensor origin at (4.48, 0.16 -0.91) is out of map bounds (1.95, -2.35, -0.80) to (6.93, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906853.285723449] [local_costmap.local_costmap]: Sensor origin at (4.49, 0.17 -0.89) is out of map bounds (2.00, -2.35, -0.80) to (6.98, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906853.385725116] [local_costmap.local_costmap]: Sensor origin at (4.50, 0.16 -0.84) is out of map bounds (2.00, -2.35, -0.80) to (6.98, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906853.489196098] [local_costmap.local_costmap]: Sensor origin at (4.50, 0.16 -0.84) is out of map bounds (2.00, -2.35, -0.80) to (6.98, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906853.545660210] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906853.587251882] [local_costmap.local_costmap]: Sensor origin at (4.50, 0.16 -0.84) is out of map bounds (2.00, -2.35, -0.80) to (6.98, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906853.685737990] [local_costmap.local_costmap]: Sensor origin at (4.50, 0.16 -0.84) is out of map bounds (2.00, -2.35, -0.80) to (6.98, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906853.754812420] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906853.794208438] [local_costmap.local_costmap]: Sensor origin at (4.56, 0.14 -0.86) is out of map bounds (2.05, -2.35, -0.80) to (7.03, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906853.794343388] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906853.885743469] [local_costmap.local_costmap]: Sensor origin at (4.63, 0.16 -0.93) is out of map bounds (2.10, -2.35, -0.80) to (7.08, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906853.985829172] [local_costmap.local_costmap]: Sensor origin at (4.63, 0.16 -0.93) is out of map bounds (2.10, -2.35, -0.80) to (7.08, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906854.074740333] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906854.124187346] [local_costmap.local_costmap]: Sensor origin at (4.67, 0.20 -0.93) is out of map bounds (2.15, -2.35, -0.80) to (7.12, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906854.124579141] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906854.163014120] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906854.203203932] [local_costmap.local_costmap]: Sensor origin at (4.67, 0.20 -0.93) is out of map bounds (2.15, -2.30, -0.80) to (7.12, 2.68, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906854.203846330] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906854.203931614] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906854.285721834] [local_costmap.local_costmap]: Sensor origin at (4.65, 0.16 -0.86) is out of map bounds (2.15, -2.30, -0.80) to (7.12, 2.68, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906854.385783787] [local_costmap.local_costmap]: Sensor origin at (4.65, 0.16 -0.86) is out of map bounds (2.15, -2.30, -0.80) to (7.12, 2.68, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906854.485742663] [local_costmap.local_costmap]: Sensor origin at (4.72, 0.19 -0.86) is out of map bounds (2.20, -2.30, -0.80) to (7.17, 2.68, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906854.585726244] [local_costmap.local_costmap]: Sensor origin at (4.72, 0.19 -0.86) is out of map bounds (2.20, -2.30, -0.80) to (7.17, 2.68, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906854.685739554] [local_costmap.local_costmap]: Sensor origin at (4.72, 0.19 -0.86) is out of map bounds (2.20, -2.30, -0.80) to (7.17, 2.68, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906854.885725725] [local_costmap.local_costmap]: Sensor origin at (4.88, 0.18 -0.87) is out of map bounds (2.35, -2.35, -0.80) to (7.32, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906854.985737724] [local_costmap.local_costmap]: Sensor origin at (4.88, 0.18 -0.87) is out of map bounds (2.35, -2.35, -0.80) to (7.32, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906855.085778871] [local_costmap.local_costmap]: Sensor origin at (4.88, 0.18 -0.87) is out of map bounds (2.35, -2.35, -0.80) to (7.32, 2.63, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906855.185725133] [local_costmap.local_costmap]: Sensor origin at (4.97, 0.25 -0.90) is out of map bounds (2.45, -2.25, -0.80) to (7.42, 2.73, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [INFO] [1785906855.193149064] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906855.285735942] [local_costmap.local_costmap]: Sensor origin at (5.07, 0.33 -0.83) is out of map bounds (2.55, -2.20, -0.80) to (7.53, 2.78, 3.08). The costmap cannot raytrace for it.
+[bt_navigator-5] [WARN] [1785906855.707584804] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [WARN] [1785906855.730397996] [local_costmap.local_costmap]: Sensor origin at (5.10, 0.25 -0.88) is out of map bounds (2.40, -2.30, -0.80) to (7.38, 2.68, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906855.730439534] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906855.772592284] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906855.814448765] [local_costmap.local_costmap]: Sensor origin at (5.10, 0.25 -0.88) is out of map bounds (2.60, -2.25, -0.80) to (7.58, 2.73, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906855.814648134] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906855.850976837] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906855.885727930] [local_costmap.local_costmap]: Sensor origin at (5.10, 0.25 -0.88) is out of map bounds (2.60, -2.25, -0.80) to (7.58, 2.73, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906856.023572214] [local_costmap.local_costmap]: Sensor origin at (5.22, 0.29 -0.83) is out of map bounds (2.70, -2.25, -0.80) to (7.68, 2.73, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906856.023897510] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906856.087433334] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906856.134109749] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906856.169758674] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906856.209921473] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906856.259167416] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906856.259267388] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906856.293918699] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906856.396575674] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906856.742156800] [controller_server]: Reached the goal!
+[bt_navigator-5] [INFO] [1785906856.772618315] [bt_navigator]: Goal succeeded
+[bt_navigator-5] [INFO] [1785906856.777515567] [bt_navigator]: Begin navigating from current location (2.05, 6.72) to (2.55, 7.96)
+[controller_server-2] [INFO] [1785906856.803316738] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906857.610884990] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906857.659667260] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[bt_navigator-5] [WARN] [1785906857.659790658] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [WARN] [1785906857.723661534] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906857.782850561] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906857.829456794] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906857.829536606] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906857.881481552] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906857.947135647] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906858.014162062] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906858.168580889] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906858.219685825] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906858.267280742] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906858.321081067] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906858.375582129] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906858.414744685] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906858.864247567] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906859.218564924] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906859.676127037] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906859.716987398] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906859.917432003] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906859.917543432] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906860.054761513] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906860.112360185] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906860.152790125] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906860.190866611] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906860.227395634] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906860.965912580] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906861.743383424] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906861.780888010] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906861.818874794] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[planner_server-3] [WARN] [1785906861.935871928] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785906861.936065985] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.55, 7.96)
+[planner_server-3] [WARN] [1785906861.936097538] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785906861.948101646] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-2] [WARN] [1785906861.987196802] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906862.060296506] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906862.138823085] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906862.233194429] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906863.238894409] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906863.838985709] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906863.947289916] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906864.016269489] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906864.080036275] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906864.147098156] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906864.297187009] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906865.347187522] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906865.737514076] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906865.780308563] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906865.822009911] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906865.861279179] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906865.902657088] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906865.947842149] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906866.074916840] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906866.165951724] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906866.366032114] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906867.366031821] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906867.677850562] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906867.735418365] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906867.777536976] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906867.991251584] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906868.081970157] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906868.432052532] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906869.432045483] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906869.701074325] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906869.751944374] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906869.792086667] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906869.839485741] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906869.885716185] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906870.029583434] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906870.094455052] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906870.494536424] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906871.494530271] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906871.702523553] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906871.755670086] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906871.995875724] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906872.545961084] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906873.595960580] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906873.735021248] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906873.775254417] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906873.815778960] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906873.854882413] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906873.988902242] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906874.038340599] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906874.090925851] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906874.142372939] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906874.181773205] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906874.221753336] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906874.260960921] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906874.300898971] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906874.595960492] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906875.645964403] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906875.750601918] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906875.981764540] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906876.045784934] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906876.089637495] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906876.129152674] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906876.168903544] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906876.210611431] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906876.250779855] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906876.645956703] [controller_server]: Passing new path to controller.
+[bt_navigator-5] [WARN] [1785906877.659658478] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [WARN] [1785906877.720987610] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906877.721082398] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906877.768096733] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906877.807293272] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906877.956831449] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906878.027815675] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906878.063204455] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906878.099225263] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906878.745959451] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906879.725069863] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906879.770407254] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906879.770554013] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906879.808051271] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906879.846958161] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906880.096412962] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906880.151842713] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906880.795963382] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906881.738221058] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906881.780271255] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906881.820131049] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906881.820218509] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906881.861191346] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906881.903310219] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[bt_navigator-5] [WARN] [1785906881.907758453] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [WARN] [1785906881.947850385] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906882.153608074] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906882.196230968] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906882.264001370] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906882.279547547] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906882.279683970] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906882.279777158] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906882.298107813] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-2] [INFO] [1785906882.302085146] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906882.441958851] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906882.842036329] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906883.732792197] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906883.772707350] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906883.812908372] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906883.853952824] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906883.895190246] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906883.895281514] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906883.947349954] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906884.045776173] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906884.892030365] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906885.547119590] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906885.597223073] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906885.644431064] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906885.729394620] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906885.772892780] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906885.812850172] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906885.853514091] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906885.893793322] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[bt_navigator-5] [WARN] [1785906885.901224698] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [WARN] [1785906885.999809382] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906886.000075506] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906886.151231714] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906886.850237580] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906886.950652487] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906886.950738571] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906887.253014591] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906887.731509287] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906887.772395485] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906887.825253840] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906887.879285528] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[bt_navigator-5] [WARN] [1785906887.891739691] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [WARN] [1785906887.931974627] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906887.998447357] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906887.999841916] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906888.063438322] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906889.013518946] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906889.713660266] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906889.870864280] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906889.929213086] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906889.978550094] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906890.031473311] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906890.031578404] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906890.077704129] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906890.118233730] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906891.063520268] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906891.724148778] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906891.772590126] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906891.968781834] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906892.019189830] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906892.073595539] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906892.073705304] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906892.126494398] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906892.166940536] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906892.186373058] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906892.203969625] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906892.204105055] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906892.204201795] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785906892.222854794] [behavior_server]: Running spin
+[behavior_server-4] [INFO] [1785906892.223146359] [behavior_server]: Turning 1.57 for spin behavior.
+[behavior_server-4] [WARN] [1785906892.323785731] [behavior_server]: Collision Ahead - Exiting Spin
+[behavior_server-4] [WARN] [1785906892.323854758] [behavior_server]: spin failed
+[behavior_server-4] [WARN] [1785906892.323876967] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785906892.352807708] [behavior_server]: Running wait
+[bt_navigator-5] [WARN] [1785906895.663682665] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[behavior_server-4] [INFO] [1785906897.353141909] [behavior_server]: wait completed successfully
+[controller_server-2] [INFO] [1785906897.402535288] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [INFO] [1785906897.411134777] [controller_server]: Optimizer reset
+[controller_server-2] [WARN] [1785906897.465887916] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906897.503551874] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906897.724161077] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906897.773424370] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906897.821367636] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906897.861511097] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906898.096454891] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906898.154549681] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906898.454621695] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906899.504629183] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906899.754114476] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906899.801390061] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906899.849446161] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[bt_navigator-5] [WARN] [1785906899.852424502] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [WARN] [1785906899.927569264] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906900.082179391] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906900.133574219] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906900.527653168] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906901.527645868] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906901.980872381] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906902.577648445] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906903.577648801] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906903.706517587] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906903.743314259] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906903.780604845] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906903.991946461] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[planner_server-3] [WARN] [1785906904.582861624] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785906904.583200883] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.55, 7.96)
+[planner_server-3] [WARN] [1785906904.583596461] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785906904.602165758] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-2] [INFO] [1785906905.142025725] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906905.760063459] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906905.797730310] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906906.081144712] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906906.137193036] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906906.191475754] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906906.192800375] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906906.240863628] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906906.281987717] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906906.318931608] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906906.358893921] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906906.396279886] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906907.192014290] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906907.713226444] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906907.761956898] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906907.800811746] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906907.975093112] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906908.016838258] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906908.061992034] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906908.104405240] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906908.146580369] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906908.242027977] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906909.242022169] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906909.757362950] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906909.799553638] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906909.972266707] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906910.021122365] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906910.070956446] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906910.116047936] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906910.159002238] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906910.196247753] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906910.292016545] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906911.292018124] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906911.767841476] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906911.817242581] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906911.855190942] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906912.007667544] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906912.056969811] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906912.101733481] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906912.145077426] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906912.342020130] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906913.392021569] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906913.709592929] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906913.756415045] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906913.795140242] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906914.062896479] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906914.412976763] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906915.412979738] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906915.753183089] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906915.791888684] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906915.833183047] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906915.873362927] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906915.912968159] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906916.024979111] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906916.083308694] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906916.124692407] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906916.164954661] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[planner_server-3] [WARN] [1785906916.413032781] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785906916.413133804] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.55, 7.96)
+[planner_server-3] [WARN] [1785906916.413155723] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785906916.432294335] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-2] [INFO] [1785906917.162983385] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906917.739808396] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906917.779876772] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [ERROR] [1785906917.780015330] [controller_server]: Failed to make progress
+[controller_server-2] [WARN] [1785906917.780074369] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906917.802250835] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-2] [INFO] [1785906917.803680034] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906917.967689974] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906918.167767056] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906919.004618843] [controller_server]: Reached the goal!
+[bt_navigator-5] [INFO] [1785906919.042052257] [bt_navigator]: Goal succeeded
+[bt_navigator-5] [INFO] [1785906919.050063042] [bt_navigator]: Begin navigating from current location (2.75, 7.70) to (2.64, 9.06)
+[controller_server-2] [INFO] [1785906919.071013387] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906919.683441351] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906919.734372365] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906919.772661225] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906920.042340222] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906920.142423057] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906920.485712823] [local_costmap.local_costmap]: Sensor origin at (6.60, -0.37 -0.81) is out of map bounds (4.15, -2.85, -0.80) to (9.12, 2.13, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [INFO] [1785906920.661349083] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906920.678820623] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906920.678964398] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906920.679099756] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906920.690670598] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-2] [INFO] [1785906920.691937815] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906920.812144480] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906921.162541327] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906921.480009017] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906921.494822863] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906921.496400765] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906921.496719066] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785906921.512040106] [behavior_server]: Running backup
+[behavior_server-4] [INFO] [1785906921.512340711] [behavior_server]: DriveOnHeading: no acceleration or deceleration limits set
+[behavior_server-4] [INFO] [1785906921.612519563] [behavior_server]: backup completed successfully
+[controller_server-2] [INFO] [1785906921.665188015] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906921.730362276] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906921.777334186] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906921.820560699] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906921.939527688] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906922.008417491] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906922.045495825] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906922.067755638] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906922.533739948] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906922.549952661] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906922.550099828] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906922.550305361] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906922.570635212] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-2] [INFO] [1785906922.571948285] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [INFO] [1785906922.722187870] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906922.740286386] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906922.755474951] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906922.756606490] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906922.757218579] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906922.770656667] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-3] [INFO] [1785906922.771715727] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-2] [INFO] [1785906923.111014190] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906923.720323487] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906924.047007547] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906924.081216133] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906924.118171505] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906924.162477229] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906924.316452762] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906924.562276059] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906925.211599334] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906925.263194203] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906925.923972440] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906926.211601702] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906927.261602828] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906927.730149247] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906927.774656336] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906928.062942754] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906928.261595600] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906929.311600042] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906930.006133949] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906930.072957256] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906930.323024926] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906931.373040106] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906932.051711276] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906932.108001971] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906932.164495063] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906932.212497837] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906932.252630157] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906932.288601718] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906932.333323371] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906932.380405641] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906932.423036306] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906933.423373766] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906933.722161267] [local_costmap.local_costmap]: Sensor origin at (6.60, 0.13 -0.84) is out of map bounds (4.10, -2.40, -0.80) to (9.07, 2.58, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906933.981943821] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906934.482023658] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906935.482033693] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906935.750494913] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906935.798443151] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906935.855113358] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906935.894273516] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906935.992192982] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906936.542269793] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906937.542270668] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906937.643391163] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906937.730387142] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906937.772944051] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906937.814722439] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906937.861119315] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906937.902403115] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906937.948505401] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[planner_server-3] [WARN] [1785906937.955764378] [global_costmap.global_costmap]: Sensor origin at (1.43, 7.80 -1.32) is out of map bounds (-96.34, -76.92, -0.80) to (38.18, 65.21, 3.08). The costmap cannot raytrace for it.
+[planner_server-3] [WARN] [1785906937.955951609] [global_costmap.global_costmap]: Sensor origin at (1.45, 7.81 -1.35) is out of map bounds (-96.34, -76.92, -0.80) to (38.18, 65.21, 3.08). The costmap cannot raytrace for it.
+[controller_server-2] [WARN] [1785906938.001816809] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906938.081221538] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906938.128375631] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906938.173033266] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906938.215978243] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906938.592551889] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906939.592268531] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906940.642269949] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906941.708071677] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906941.708801399] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906941.978307326] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906942.022848218] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906942.069414123] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906942.123685567] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906942.174204720] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906942.213406715] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906942.248928995] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906942.692272762] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906943.699971775] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906943.742279192] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906943.958170837] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906944.017968937] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906944.062570680] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906944.106363149] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906944.144909225] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906944.792272553] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906945.695797832] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906945.792281598] [controller_server]: Passing new path to controller.
+[bt_navigator-5] [WARN] [1785906945.905995861] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[bt_navigator-5] [WARN] [1785906945.918412793] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[bt_navigator-5] [WARN] [1785906945.920201867] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [WARN] [1785906945.981593797] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906946.043364930] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906946.843451202] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906947.725408420] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906947.777728722] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906947.818621584] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906947.857951770] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906947.858038777] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906947.896323946] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906948.145760283] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906948.893448613] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906949.702024153] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906949.758223069] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906949.944146420] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906949.944320594] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906949.995022300] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906950.054825519] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906950.096091551] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906950.943444996] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906951.748363991] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[bt_navigator-5] [WARN] [1785906951.899747656] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [INFO] [1785906951.993706346] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906952.085159210] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906952.125339597] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906952.165311442] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906952.201004881] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906953.043445671] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906953.701291398] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906953.750929653] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906953.952299235] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906954.000435868] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906954.064794171] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906954.064892378] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906954.122897120] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906954.166579163] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906954.202932929] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906954.256328418] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906954.294513246] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906955.093447655] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906955.697856905] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906955.764278087] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906955.824637191] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906955.868333961] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906955.911622349] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906956.143441598] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906956.464332452] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906956.481228164] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906956.481379043] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906956.481474979] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906956.502074478] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-2] [INFO] [1785906956.503086665] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906956.624487289] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[planner_server-3] [WARN] [1785906957.103437391] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785906957.104848551] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.64, 9.06)
+[planner_server-3] [WARN] [1785906957.109778956] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785906957.130623961] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-2] [INFO] [1785906957.146702497] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906957.163509380] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906957.163648803] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906957.163812386] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[bt_navigator-5] [ERROR] [1785906957.203394216] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for compute_path_to_pose in node halt!
+[behavior_server-4] [INFO] [1785906957.204054021] [behavior_server]: Running spin
+[behavior_server-4] [INFO] [1785906957.204193796] [behavior_server]: Turning 1.57 for spin behavior.
+[bt_navigator-5] [WARN] [1785906957.204456418] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[behavior_server-4] [WARN] [1785906957.304637946] [behavior_server]: Collision Ahead - Exiting Spin
+[behavior_server-4] [WARN] [1785906957.304708570] [behavior_server]: spin failed
+[behavior_server-4] [WARN] [1785906957.304729274] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785906957.330008687] [behavior_server]: Running wait
+[bt_navigator-5] [WARN] [1785906957.896010336] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[bt_navigator-5] [WARN] [1785906961.655689463] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[behavior_server-4] [INFO] [1785906962.330257343] [behavior_server]: wait completed successfully
+[controller_server-2] [INFO] [1785906962.375289033] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [INFO] [1785906962.381327148] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906962.644351627] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906962.660653118] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906962.660805981] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906962.660997020] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906962.674881850] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-2] [INFO] [1785906962.675936597] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906962.740228740] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906962.784531826] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906962.827274887] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906962.980511279] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906963.426232810] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906963.737885169] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906963.783630559] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906963.927874439] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906964.033589158] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[bt_navigator-5] [WARN] [1785906964.066831378] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [WARN] [1785906964.082752267] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906964.138863826] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906964.184175496] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906964.228330468] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906964.476223445] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906965.476241691] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906965.695642572] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906965.746993776] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906965.787548577] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906965.829515789] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906966.029747764] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906966.076550802] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906966.128032732] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[planner_server-3] [WARN] [1785906966.476106616] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785906966.476203895] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.64, 9.06)
+[planner_server-3] [WARN] [1785906966.476661909] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785906966.495200680] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-2] [WARN] [1785906966.530699925] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906966.643896607] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906966.659562014] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906966.659733598] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906966.659872221] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[bt_navigator-5] [ERROR] [1785906966.695554217] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for compute_path_to_pose in node halt!
+[behavior_server-4] [INFO] [1785906966.696118311] [behavior_server]: Running backup
+[behavior_server-4] [WARN] [1785906966.696493669] [behavior_server]: Collision Ahead - Exiting DriveOnHeading
+[behavior_server-4] [WARN] [1785906966.696529125] [behavior_server]: backup failed
+[behavior_server-4] [WARN] [1785906966.696546309] [behavior_server]: [backup] [ActionServer] Aborting handle.
+[bt_navigator-5] [WARN] [1785906966.697772160] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [INFO] [1785906966.709500943] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-3] [INFO] [1785906966.710151148] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-2] [INFO] [1785906967.108511271] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906967.461329603] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906967.509786241] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906967.565757761] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906967.622545278] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906967.675189611] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906967.759550010] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906968.037331079] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906968.090343611] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906968.156279485] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906968.213753183] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906968.306368730] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906968.532726258] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906968.548999507] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906968.549154130] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906968.549370994] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906968.568213769] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-2] [INFO] [1785906968.570079586] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [INFO] [1785906968.788147705] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906968.804768185] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906968.804916313] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906968.805279351] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785906968.818445733] [behavior_server]: Running spin
+[behavior_server-4] [INFO] [1785906968.818678884] [behavior_server]: Turning 1.57 for spin behavior.
+[behavior_server-4] [WARN] [1785906970.319092253] [behavior_server]: Collision Ahead - Exiting Spin
+[behavior_server-4] [WARN] [1785906970.319169629] [behavior_server]: spin failed
+[behavior_server-4] [WARN] [1785906970.319190748] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785906970.349212370] [behavior_server]: Running wait
+[behavior_server-4] [INFO] [1785906975.349446159] [behavior_server]: wait completed successfully
+[controller_server-2] [INFO] [1785906975.398534116] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [INFO] [1785906975.405556144] [controller_server]: Optimizer reset
+[controller_server-2] [WARN] [1785906975.456227264] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906975.504929782] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906975.555530022] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906975.604321084] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906975.655037036] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906975.748089028] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906975.796626139] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906975.849444421] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906976.030728487] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906976.123942955] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906976.424033571] [controller_server]: Passing new path to controller.
+[planner_server-3] [WARN] [1785906977.430189738] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785906977.431198216] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.64, 9.06)
+[planner_server-3] [WARN] [1785906977.431859622] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785906977.448600603] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-2] [WARN] [1785906977.738896151] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906977.783794820] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906977.826116664] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906978.048490216] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906978.114746024] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906978.170256226] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906978.170353282] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906978.216887858] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906978.255541077] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906978.292900219] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906978.330507712] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906979.174019689] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906979.729805981] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906979.778071055] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906979.925554913] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906979.997324798] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906980.100798177] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906980.201274315] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906980.351223245] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906980.550950116] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906981.250878422] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906981.729634784] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906981.774121543] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906981.815921876] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906981.871892805] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906981.909581818] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906981.953086948] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906982.011689777] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906982.054574273] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906982.250874007] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906983.300871406] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785906983.372133972] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906983.389132023] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906983.389286711] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906983.389497079] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906983.408210871] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-2] [INFO] [1785906983.409598484] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906983.534441631] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906983.749212144] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906983.793887780] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906983.840266453] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906983.936214161] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906984.038983815] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906984.087613915] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906984.154228594] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906984.171840086] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906984.171987478] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906984.172267734] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785906984.188501788] [behavior_server]: Running backup
+[behavior_server-4] [WARN] [1785906984.188971804] [behavior_server]: Collision Ahead - Exiting DriveOnHeading
+[behavior_server-4] [WARN] [1785906984.189010076] [behavior_server]: backup failed
+[behavior_server-4] [WARN] [1785906984.189027995] [behavior_server]: [backup] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906984.218331534] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-3] [INFO] [1785906984.219809579] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[bt_navigator-5] [WARN] [1785906984.228493278] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [INFO] [1785906985.098492022] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906985.707379824] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906985.756039562] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906986.053446120] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906986.073021230] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906986.090272856] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906986.090456696] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906986.090896887] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906986.109373855] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-2] [INFO] [1785906986.115712247] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [INFO] [1785906986.195910639] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906986.254329028] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906986.474048168] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906986.491105586] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906986.492578704] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906986.493662127] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[bt_navigator-5] [WARN] [1785906986.517902415] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+[bt_navigator-5] [ERROR] [1785906986.518202959] [bt_navigator]: Goal failed
+[bt_navigator-5] [INFO] [1785906988.566407931] [bt_navigator]: Begin navigating from current location (2.05, 9.57) to (2.64, 9.06)
+[controller_server-2] [INFO] [1785906988.587292037] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [INFO] [1785906988.593797663] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906989.056346095] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906989.073090464] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906989.073239424] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906989.073347904] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906989.086971092] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-2] [INFO] [1785906989.088679218] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906989.233008947] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906989.252863041] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906989.269581618] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906989.269719122] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906989.269813458] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785906989.287414243] [behavior_server]: Running spin
+[behavior_server-4] [INFO] [1785906989.287531139] [behavior_server]: Turning 1.57 for spin behavior.
+[behavior_server-4] [WARN] [1785906989.387999978] [behavior_server]: Collision Ahead - Exiting Spin
+[behavior_server-4] [WARN] [1785906989.388072810] [behavior_server]: spin failed
+[behavior_server-4] [WARN] [1785906989.388192714] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785906989.417183056] [behavior_server]: Running wait
+[bt_navigator-5] [WARN] [1785906991.868166830] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[behavior_server-4] [INFO] [1785906994.417435053] [behavior_server]: wait completed successfully
+[planner_server-3] [WARN] [1785906994.447405319] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785906994.447530759] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.64, 9.06)
+[planner_server-3] [WARN] [1785906994.447557511] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785906994.466880387] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-2] [INFO] [1785906995.097225675] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [INFO] [1785906995.104218346] [controller_server]: Optimizer reset
+[controller_server-2] [WARN] [1785906995.249682591] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906995.300846235] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906995.352915735] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906995.373284021] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906995.390302964] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906995.390455412] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906995.390690644] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906995.406857299] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-2] [INFO] [1785906995.407738706] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906995.528591721] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906995.751622936] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906995.813282963] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906995.865457007] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906995.919716651] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906995.985284101] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906996.176992750] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906996.232607249] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906996.232695025] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785906996.282153619] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906996.327342774] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906996.372791256] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906996.417886523] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906996.470942206] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906996.518362272] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906996.561836002] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906996.604794885] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906996.648452167] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906996.691271274] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785906997.006274043] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906997.023607806] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906997.023774750] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906997.024080542] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785906997.037087713] [behavior_server]: Running backup
+[behavior_server-4] [WARN] [1785906998.537715231] [behavior_server]: Collision Ahead - Exiting DriveOnHeading
+[behavior_server-4] [WARN] [1785906998.537797695] [behavior_server]: backup failed
+[behavior_server-4] [WARN] [1785906998.537817919] [behavior_server]: [backup] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906998.566939656] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-3] [INFO] [1785906998.567478792] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-2] [INFO] [1785906999.107344001] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [INFO] [1785906999.113571844] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906999.227244183] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785906999.244429951] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785906999.244575679] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785906999.244721567] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785906999.256918468] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-2] [INFO] [1785906999.257803237] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785906999.328572964] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906999.369794295] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906999.411654634] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906999.663287706] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906999.720595092] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906999.761338054] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906999.912599050] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785906999.977646983] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785907000.039717160] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785907000.083241825] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785907000.132218013] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785907000.173996438] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785907000.174083990] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785907000.215022189] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785907001.031111177] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785907001.047008436] [controller_server]: Optimizer reset
+[controller_server-2] [ERROR] [1785907001.047149013] [controller_server]: Optimizer fail to compute path
+[controller_server-2] [WARN] [1785907001.047248597] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785907001.067403075] [behavior_server]: Running spin
+[behavior_server-4] [INFO] [1785907001.068820420] [behavior_server]: Turning 1.57 for spin behavior.
+[behavior_server-4] [WARN] [1785907001.269270738] [behavior_server]: Collision Ahead - Exiting Spin
+[behavior_server-4] [WARN] [1785907001.269346226] [behavior_server]: spin failed
+[behavior_server-4] [WARN] [1785907001.269364338] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785907001.297146534] [behavior_server]: Running wait
+[bt_navigator-5] [WARN] [1785907001.873582814] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[lifecycle_manager-8] [INFO] [1785907005.115241590] [rclcpp]: signal_handler(signum=2)
+[lifecycle_manager-8] [INFO] [1785907005.115452918] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
+[planner_server-3] [INFO] [1785907005.115241846] [rclcpp]: signal_handler(signum=2)
+[map_server-1] [INFO] [1785907005.115242102] [rclcpp]: signal_handler(signum=2)
+[behavior_server-4] [INFO] [1785907005.115351382] [rclcpp]: signal_handler(signum=2)
+[bt_navigator-5] [INFO] [1785907005.115378934] [rclcpp]: signal_handler(signum=2)
+[bt_navigator-5] [INFO] [1785907005.115497974] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[bt_navigator-5] [INFO] [1785907005.115608886] [bt_navigator]: Deactivating
+[bt_navigator-5] [WARN] [1785907005.115636022] [bt_navigator]: [navigate_to_pose] [ActionServer] Requested to deactivate server but goal is still executing. Should check if action server is running before deactivating.

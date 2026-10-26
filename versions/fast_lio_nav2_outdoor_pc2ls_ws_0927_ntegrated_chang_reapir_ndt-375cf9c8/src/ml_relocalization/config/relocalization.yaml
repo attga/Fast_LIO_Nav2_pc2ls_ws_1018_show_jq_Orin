@@ -1,0 +1,28 @@
+alaserRelocalizer:
+  ros__parameters:
+    start_on_launch: true  # 独立启动默认值；正式入口 localization.launch.py 强制设为 false。
+    base_frame: base_link  # 输入点云与输出位姿的机器人参考点。
+    matching_frame: base_link  # 独立旧接口兼容；正式入口覆盖为 livox_imu_link。
+    pose_file: isam_poses.txt  # 优化后的 T_map_body 位姿文件；启动参数可覆盖文件名。
+    sc_dist_thres: 0.50  # Scan Context 描述子距离门限，无量纲。
+    sc_ds_size: 0.4  # 体素尺寸，单位 m。
+    yaw_diff_sign: -1.0  # SC 航向初值的符号系数。
+    submap_halfwidth: 10  # 前后关键帧索引半宽，不是米。
+    submap_min_points: 1000  # 配准体素滤波前的最少子图点数。
+    registration_voxel_size: 0.4  # 配准体素尺寸，单位 m。
+    relocalization_position_variance: 0.5  # 输出 xyz 方差，单位 m²。
+    relocalization_orientation_variance: 0.05  # 输出 rpy 方差，单位 rad²。
+    # 固定 Autoware NDT 基线；不沿用 ICP fitness 数值。
+    ndt.resolution: 2.0
+    ndt.step_size: 0.1
+    ndt.transformation_epsilon: 0.01
+    ndt.max_iterations: 30
+    ndt.threads: 2
+    ndt.likelihood_threshold: 2.3
+    inlier_fraction_threshold: 0.4  # 完整扫描距离子图 <1 m 的比例。
+    max_translation_correction: 5.0  # 相对 SC 初值的位置修正上限，单位 m。
+    max_yaw_correction_deg: 30.0  # 单位度。
+    confirm_frames: 2  # 一致的有效结果数；拒绝的匹配不会清空已有计数。
+    confirm_position_thresh: 2.0  # 单位 m。
+    confirm_yaw_thresh_deg: 15.0  # 单位度。
+    debug_publish_clouds: false

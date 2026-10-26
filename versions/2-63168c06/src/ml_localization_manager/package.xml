@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ml_localization_manager</name>
+  <version>0.0.0</version>
+  <description>
+    Startup localization handoff: validate Scan Context results, initialize the
+    Global EKF through set_pose, confirm EKF output, then release registration tracking.
+    Monitors registration health after startup without publishing TF or repeating initialization.
+  </description>
+  <maintainer email="jackie@example.com">jackie</maintainer>
+  <license>BSD</license>
+
+  <test_depend>ament_cmake_gtest</test_depend>
+  <test_depend>rclpy</test_depend>
+  <test_depend>ament_index_python</test_depend>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>diagnostic_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>robot_localization</depend>
+  <depend>eigen</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

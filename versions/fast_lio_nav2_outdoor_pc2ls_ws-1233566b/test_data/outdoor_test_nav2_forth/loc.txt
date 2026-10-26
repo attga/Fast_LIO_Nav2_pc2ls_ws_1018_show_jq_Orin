@@ -1,0 +1,9 @@
+
+ [INFO] [1785827760.355976510] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[controller_server-2] [ERROR] [1785827760.356490990] [controller_server]: Caught exception in callback for transition 10
+[controller_server-2] [ERROR] [1785827760.356611986] [controller_server]: Original error: parameter 'progress_checker.movement_time_allowance' has invalid type: Wrong parameter type, parameter {progress_checker.movement_time_allowance} is of type {double}, setting it to {integer} is not allowed.
+[controller_server-2] [WARN] [1785827760.356652883] [controller_server]: Error occurred while doing error handling.
+[controller_server-2] [FATAL] [1785827760.356673620] [controller_server]: Lifecycle node controller_server does not have error state implemented
+[lifecycle_manager-8] [ERROR] [1785827760.357265831] [lifecycle_manager_navigation]: Failed to change state for node: controller_server
+[lifecycle_manager-8] [ERROR] [1785827760.357315688] [lifecycle_manager_navigation]: Failed to bring up all requested nodes. Aborting bringup.
+

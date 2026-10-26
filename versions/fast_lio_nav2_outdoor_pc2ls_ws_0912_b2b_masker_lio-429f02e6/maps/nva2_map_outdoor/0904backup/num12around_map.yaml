@@ -1,0 +1,10 @@
+image: num12around_map.pgm
+resolution: 0.05
+origin:
+- -97.83212280273438
+- -81.10626983642578
+- 0.0
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.25
+mode: trinary

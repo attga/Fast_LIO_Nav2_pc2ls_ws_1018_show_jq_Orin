@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+"""Compatibility entry point; all relocalization code lives in ml_relocalization."""
+import os
+import sys
+from ament_index_python.packages import get_package_prefix
+
+executable = os.path.join(get_package_prefix('ml_relocalization'), 'lib',
+                          'ml_relocalization', 'relocalization_node')
+os.execv(executable, [executable, *sys.argv[1:]])

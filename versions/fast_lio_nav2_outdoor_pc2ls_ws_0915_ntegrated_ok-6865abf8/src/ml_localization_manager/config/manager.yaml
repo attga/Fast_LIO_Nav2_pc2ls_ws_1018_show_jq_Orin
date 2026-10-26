@@ -1,0 +1,19 @@
+ml_localization_manager:
+  ros__parameters:
+    # 兼容配置标记：仅支持 set_pose 和 startup_only=true，其他值拒绝启动。
+    injection_method: set_pose
+    set_pose_service: /global/set_pose
+    startup_only: true
+    # 初始化完成后监控 ICP 状态心跳；使用 ROS 时间，单位秒。
+    icp_status_timeout: 3.0
+    planar_recovery: true  # 初始化位姿保留 x/y/yaw，z/roll/pitch 置零；位置确认只比较 XY。
+    global_odom_topic: /global_odometry/filter
+    # 时间容差，单位 s：重定位与 Local 历史对齐、未来时间容差及交接里程计新鲜度。
+    reloc_sync_tolerance: 0.2
+    max_reloc_age: 1.5  # 接受重定位结果的最大年龄，使用 ROS 时间，单位 s。
+    recovery_position_tolerance: 0.5  # 位置误差上限由0.15m放宽至0.50m (源码默认推荐值)，防止初始交接时误杀
+    recovery_yaw_tolerance_deg: 5.0   # 航向误差上限由2.0度放宽至5.0度 (源码默认推荐值)
+    recovery_timeout: 30.0            # 从接受重定位到 EKF/ICP 完成交接的总超时由15s延长至30s
+    # 留出完整搜索时间，避免频繁触发导致 SC 确认计数重置。
+    reloc_request_interval: 3.0       # 由30.0s深度优化为3.0s，被拒后迅速重试，消除30秒死寂等待与人工误杀
+    reloc_timeout: 30.0               # 单次重定位尝试窗口调整为30s

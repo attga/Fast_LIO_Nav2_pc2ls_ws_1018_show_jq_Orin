@@ -1,0 +1,346 @@
+nvidia@nvidia-desktop:~/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810$ ros2 launch fast_lio_loc lio_localization.launch.py map_pcd:=/home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810/maps/LOAM_outdoor/GlobalMap.pcd use_sim_time:=false 
+[INFO] [launch]: All log files can be found below /home/nvidia/.ros/log/2026-08-11-16-57-46-773068-nvidia-desktop-21824
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: [lio_localization] 先验地图: /home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810/maps/LOAM_outdoor/GlobalMap.pcd
+[INFO] [launch.user]: [lio_localization] use_sim_time = false
+[INFO] [static_transform_publisher-1]: process started with pid [21825]
+[INFO] [static_transform_publisher-2]: process started with pid [21827]
+[INFO] [fastlio_mapping-3]: process started with pid [21829]
+[static_transform_publisher-1] [WARN] [1786438666.875638993] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-2] [WARN] [1786438666.875665363] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-1] [INFO] [1786438666.898378857] [static_tf_body_to_base]: Spinning until stopped - publishing transform
+[static_transform_publisher-1] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-1] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-1] from 'body' to 'base_link'
+[static_transform_publisher-2] [INFO] [1786438666.905982856] [static_tf_base_to_lidar]: Spinning until stopped - publishing transform
+[static_transform_publisher-2] translation: ('0.000000', '0.000000', '0.100000')
+[static_transform_publisher-2] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-2] from 'base_link' to 'livox_frame'
+[fastlio_mapping-3] [INFO] [1786438666.997303115] [fast_lio_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-3] Multi thread started 
+[fastlio_mapping-3] ~~~~/home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810/src/FAST_LIO_SLAM/FAST_LIO_ROS2/ file opened
+[fastlio_mapping-3] [INFO] [1786438667.020198287] [fast_lio_mapping]: Node init finished.
+[fastlio_mapping-3] IMU Initial Done
+[fastlio_mapping-3] [WARN] [1786438667.149715308] [fast_lio_mapping]: No point, skip this scan!
+[fastlio_mapping-3] 
+[fastlio_mapping-3] [INFO] [1786438667.250924604] [fast_lio_mapping]: Initialize the map kdtree
+[INFO] [rviz2-4]: process started with pid [21859]
+[rviz2-4] [INFO] [1786438668.409750509] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-4] [INFO] [1786438668.410055691] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-4] [INFO] [1786438668.441087035] [rviz2]: Stereo is NOT SUPPORTED
+[INFO] [launch.user]: [lio_localization] 启动全局 ICP 重定位节点...
+[INFO] [global_localization_ros2.py-5]: process started with pid [21875]
+[global_localization_ros2.py-5] /usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+[global_localization_ros2.py-5]   warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+[global_localization_ros2.py-5] [INFO] [1786438671.639143466] [fast_lio_localization]: [FileLog] Log saved to: /home/nvidia/Fast_LIO_Localization_ws/logs/localization_20260811_165751.log
+[global_localization_ros2.py-5] [INFO] [1786438671.662947542] [fast_lio_localization]: ✅ ScanContext Database loaded from /home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810/maps/LOAM_outdoor/GlobalMap_sc_db.pkl
+[global_localization_ros2.py-5] [INFO] [1786438671.679046334] [fast_lio_localization]: Loading map: /home/nvidia/Fast_LIO_Nav2_outdoor_pc2ls_ws_0810/maps/LOAM_outdoor/GlobalMap.pcd
+[global_localization_ros2.py-5] [INFO] [1786438672.858012807] [fast_lio_localization]: Map loaded: 116449 points (downsampled)
+[global_localization_ros2.py-5] [INFO] [1786438672.858615777] [fast_lio_localization]: ✅ FPFH precomputation removed. Using ScanContext instead.
+[global_localization_ros2.py-5] [INFO] [1786438672.859241149] [fast_lio_localization]: [WarmStart] Warm start disabled (enable_warm_start=false), directly using RANSAC for global relocalization
+[global_localization_ros2.py-5] [INFO] [1786438672.859785009] [fast_lio_localization]: [YawCalib] ✅ Manual Yaw offset set: -38.00°
+[global_localization_ros2.py-5]   → Yaw filtering will be active from first cold start, no need to wait for auto-calibration
+[global_localization_ros2.py-5] [INFO] [1786438672.860288193] [fast_lio_localization]: FastLIO Localization node started, waiting for initial pose /initialpose ...
+[global_localization_ros2.py-5] [INFO] [1786438672.860781809] [fast_lio_localization]:   If no /initialpose is sent, ICP will be performed directly with identity as initial value when the first frame arrives.
+[global_localization_ros2.py-5] [INFO] [1786438672.869655266] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438672.870848853] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438673.184514706] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2969, 0.2761, 0.2539
+[global_localization_ros2.py-5] [WARN] [1786438673.187001471] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=126.7° | diff=126.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438673.187825294] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=6.0° | expected=126.7° | diff=120.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438673.190134763] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-84.0° | expected=126.7° | diff=149.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438673.190779785] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786438673.193786312] [fast_lio_localization]:   Yaw filter rejected all candidates (1/5). Waiting for next frame...
+[global_localization_ros2.py-5] [INFO] [1786438673.204172905] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438673.204769986] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438673.513999009] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2997, 0.2758, 0.2720
+[global_localization_ros2.py-5] [WARN] [1786438673.515201908] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-144.0° | expected=126.7° | diff=89.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438673.517263257] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-84.0° | expected=126.7° | diff=149.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438673.518049189] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=126.7° | diff=126.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438673.519707619] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786438673.520548468] [fast_lio_localization]:   Yaw filter rejected all candidates (2/5). Waiting for next frame...
+[global_localization_ros2.py-5] [INFO] [1786438673.530028638] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438673.530614678] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438673.857215762] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2820, 0.2783, 0.2506
+[global_localization_ros2.py-5] [WARN] [1786438673.860949111] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=126.7° | diff=126.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438673.864677467] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=126.7° | diff=126.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438673.866646040] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-102.0° | expected=126.7° | diff=131.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438673.867351867] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786438673.870295061] [fast_lio_localization]:   Yaw filter rejected all candidates (3/5). Waiting for next frame...
+[global_localization_ros2.py-5] [INFO] [1786438673.880783583] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438673.882427741] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438674.250307356] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2735, 0.2632, 0.2296
+[global_localization_ros2.py-5] [WARN] [1786438674.253875697] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=6.0° | expected=126.7° | diff=120.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438674.254709568] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-84.0° | expected=126.7° | diff=149.3° > 45.0°
+[global_localization_ros2.py-5] [INFO] [1786438674.257054240] [fast_lio_localization]: [YawFilter] KEEP   candidate Yaw=96.0° | expected=126.7° | diff=30.7°
+[global_localization_ros2.py-5] [INFO] [1786438674.257587987] [fast_lio_localization]: [YawFilter] 3 → 1 candidates after Yaw filter (IMU Yaw=164.7°, offset=-38.0°)
+[global_localization_ros2.py-5] [WARN] [1786438674.259758978] [fast_lio_localization]: [ScanContext] Best fitness=0.2296 too low (< 0.5). Please use RViz 2D Pose Estimate.
+[global_localization_ros2.py-5] [INFO] [1786438674.262062270] [fast_lio_localization]:   Trying candidate #1/1 (ScanContext fitness=0.2296) with ICP...
+[global_localization_ros2.py-5] [INFO] [1786438674.607178893] [fast_lio_localization]: ICP elapsed: 0.34s | fitness=0.6297 | threshold=0.7
+[global_localization_ros2.py-5] [WARN] [1786438674.608102982] [fast_lio_localization]: ICP fitness=0.6297 < threshold 0.7, localization rejected
+[global_localization_ros2.py-5] [WARN] [1786438674.609989466] [fast_lio_localization]:   Candidate #1 rejected (ICP or validation failed).
+[global_localization_ros2.py-5] [WARN] [1786438674.610740033] [fast_lio_localization]: All 1 RANSAC candidates failed ICP/validation. Please use RViz 2D Pose Estimate.
+[global_localization_ros2.py-5] [INFO] [1786438674.619080317] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438674.619683255] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438674.959642170] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2649, 0.2599, 0.2578
+[global_localization_ros2.py-5] [WARN] [1786438674.962190413] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=126.7° | diff=126.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438674.964024924] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-84.0° | expected=126.7° | diff=149.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438674.964760098] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=78.0° | expected=126.7° | diff=48.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438674.966623540] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786438674.967392798] [fast_lio_localization]:   Yaw filter rejected all candidates (4/5). Waiting for next frame...
+[global_localization_ros2.py-5] [INFO] [1786438675.026720825] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438675.027342453] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438675.424310041] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2928, 0.2907, 0.2469
+[global_localization_ros2.py-5] [WARN] [1786438675.426646936] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=126.7° | diff=126.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438675.427479047] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=126.7° | diff=126.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438675.429664216] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-84.0° | expected=126.7° | diff=149.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438675.431932528] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786438675.433843590] [fast_lio_localization]:   Yaw filter rejected all candidates (5/5). Waiting for next frame...
+[global_localization_ros2.py-5] [WARN] [1786438675.434695447] [fast_lio_localization]: [GlobalSearchFallback] Yaw filter failed 5 times consecutively!
+[global_localization_ros2.py-5]   Activating global search mode: Yaw filter BYPASSED.
+[global_localization_ros2.py-5]   Will retry without Yaw constraint on next frame.
+[global_localization_ros2.py-5]   Tip: Check yaw_map_offset_deg is correct for this location.
+[global_localization_ros2.py-5] [INFO] [1786438675.442426328] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [WARN] [1786438675.444645995] [fast_lio_localization]: [GlobalSearchFallback] Global search mode active: Yaw filter=BYPASSED
+[global_localization_ros2.py-5]   Reason: Yaw filter rejected all candidates 5 times.
+[global_localization_ros2.py-5] [INFO] [1786438675.446349134] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438675.714557541] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2939, 0.2898, 0.2502
+[global_localization_ros2.py-5] [WARN] [1786438675.716401812] [fast_lio_localization]: [GlobalSearchFallback] Yaw filter BYPASSED -- proceeding directly to ICP validation
+[global_localization_ros2.py-5] [WARN] [1786438675.717135706] [fast_lio_localization]: [ScanContext] Best fitness=0.2939 too low (< 0.5). Please use RViz 2D Pose Estimate.
+[global_localization_ros2.py-5] [INFO] [1786438675.717775511] [fast_lio_localization]:   Trying candidate #1/3 (ScanContext fitness=0.2939) with ICP...
+[global_localization_ros2.py-5] [INFO] [1786438676.170262221] [fast_lio_localization]: ICP elapsed: 0.45s | fitness=0.8811 | threshold=0.7
+[global_localization_ros2.py-5] [WARN] [1786438676.173898534] [fast_lio_localization]: [IMUCheck] REJECTED: Roll diff=25.3deg > 15.0deg (ICP=25.3 vs IMU=0.0), fitness=0.8811
+[global_localization_ros2.py-5] [WARN] [1786438676.174764857] [fast_lio_localization]:   Candidate #1 rejected (ICP or validation failed).
+[global_localization_ros2.py-5] [INFO] [1786438676.175908934] [fast_lio_localization]:   Trying candidate #2/3 (ScanContext fitness=0.2898) with ICP...
+[global_localization_ros2.py-5] [INFO] [1786438676.607309399] [fast_lio_localization]: ICP elapsed: 0.43s | fitness=0.8844 | threshold=0.7
+[global_localization_ros2.py-5] [WARN] [1786438676.609769121] [fast_lio_localization]: [IMUCheck] REJECTED: Roll diff=23.2deg > 15.0deg (ICP=23.2 vs IMU=0.0), fitness=0.8844
+[global_localization_ros2.py-5] [WARN] [1786438676.614306193] [fast_lio_localization]:   Candidate #2 rejected (ICP or validation failed).
+[global_localization_ros2.py-5] [INFO] [1786438676.615114366] [fast_lio_localization]:   Trying candidate #3/3 (ScanContext fitness=0.2502) with ICP...
+[global_localization_ros2.py-5] [INFO] [1786438676.989993550] [fast_lio_localization]: ICP elapsed: 0.37s | fitness=0.4367 | threshold=0.7
+[global_localization_ros2.py-5] [WARN] [1786438676.991731987] [fast_lio_localization]: ICP fitness=0.4367 < threshold 0.7, localization rejected
+[global_localization_ros2.py-5] [WARN] [1786438676.993904770] [fast_lio_localization]:   Candidate #3 rejected (ICP or validation failed).
+[global_localization_ros2.py-5] [WARN] [1786438676.994610277] [fast_lio_localization]: All 3 RANSAC candidates failed ICP/validation. Please use RViz 2D Pose Estimate.
+[global_localization_ros2.py-5] [INFO] [1786438677.005167729] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438677.005784300] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438677.264579439] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2878, 0.2529, 0.2323
+[global_localization_ros2.py-5] [WARN] [1786438677.267202920] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=126.7° | diff=126.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438677.268010293] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-108.0° | expected=126.7° | diff=125.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438677.270043574] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-72.0° | expected=126.7° | diff=161.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438677.271800509] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786438677.273491998] [fast_lio_localization]:   Yaw filter rejected all candidates (1/5). Waiting for next frame...
+[global_localization_ros2.py-5] [INFO] [1786438677.280495639] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438677.283752684] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438677.511682940] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2889, 0.2782, 0.2549
+[global_localization_ros2.py-5] [WARN] [1786438677.513803461] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=6.0° | expected=126.7° | diff=120.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438677.514696218] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=6.0° | expected=126.7° | diff=120.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438677.515442561] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-78.0° | expected=126.7° | diff=155.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438677.517275567] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786438677.518129824] [fast_lio_localization]:   Yaw filter rejected all candidates (2/5). Waiting for next frame...
+[global_localization_ros2.py-5] [INFO] [1786438677.575356923] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438677.577317174] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438677.714998570] [fast_lio_localization]: [YesenseYaw] ✅ Yesense IMU data is normal(Latest data 0.0s ago, current Yaw=164.7°)
+[global_localization_ros2.py-5]   → RANSAC candidates will be filtered by Yaw to solve symmetric corner confusion
+[global_localization_ros2.py-5]   → Yaw calibration offset loaded: -38.0°
+[global_localization_ros2.py-5] [INFO] [1786438677.858199050] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2814, 0.2689, 0.2518
+[global_localization_ros2.py-5] [WARN] [1786438677.860642291] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=6.0° | expected=126.7° | diff=120.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438677.861430333] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-84.0° | expected=126.7° | diff=149.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438677.864338162] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-78.0° | expected=126.7° | diff=155.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438677.864979823] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786438677.867485949] [fast_lio_localization]:   Yaw filter rejected all candidates (3/5). Waiting for next frame...
+[global_localization_ros2.py-5] [INFO] [1786438677.879229144] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438677.879815568] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438678.172588915] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2991, 0.2575, 0.2383
+[global_localization_ros2.py-5] [WARN] [1786438678.175004504] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=126.7° | diff=126.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438678.176711322] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-78.0° | expected=126.7° | diff=155.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438678.177449312] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-66.0° | expected=126.7° | diff=167.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438678.178061082] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786438678.179975760] [fast_lio_localization]:   Yaw filter rejected all candidates (4/5). Waiting for next frame...
+[global_localization_ros2.py-5] [INFO] [1786438678.187817239] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438678.192493619] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438678.484968294] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2862, 0.2858, 0.2651
+[global_localization_ros2.py-5] [WARN] [1786438678.487534009] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=6.0° | expected=126.7° | diff=120.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438678.489490355] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=126.7° | diff=126.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438678.490276637] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-78.0° | expected=126.7° | diff=155.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438678.492083465] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786438678.493821325] [fast_lio_localization]:   Yaw filter rejected all candidates (5/5). Waiting for next frame...
+[global_localization_ros2.py-5] [WARN] [1786438678.494606968] [fast_lio_localization]: [GlobalSearchFallback] Yaw filter failed 5 times consecutively!
+[global_localization_ros2.py-5]   Activating global search mode: Yaw filter BYPASSED.
+[global_localization_ros2.py-5]   Will retry without Yaw constraint on next frame.
+[global_localization_ros2.py-5]   Tip: Check yaw_map_offset_deg is correct for this location.
+[global_localization_ros2.py-5] [INFO] [1786438678.504953197] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [WARN] [1786438678.506731478] [fast_lio_localization]: [GlobalSearchFallback] Global search mode active: Yaw filter=BYPASSED
+[global_localization_ros2.py-5]   Reason: Yaw filter rejected all candidates 5 times.
+[global_localization_ros2.py-5] [INFO] [1786438678.507646924] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438678.788124590] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2922, 0.2913, 0.2796
+[global_localization_ros2.py-5] [WARN] [1786438678.789948571] [fast_lio_localization]: [GlobalSearchFallback] Yaw filter BYPASSED -- proceeding directly to ICP validation
+[global_localization_ros2.py-5] [WARN] [1786438678.792760262] [fast_lio_localization]: [ScanContext] Best fitness=0.2922 too low (< 0.5). Please use RViz 2D Pose Estimate.
+[global_localization_ros2.py-5] [INFO] [1786438678.794528077] [fast_lio_localization]:   Trying candidate #1/3 (ScanContext fitness=0.2922) with ICP...
+[global_localization_ros2.py-5] [INFO] [1786438679.170505364] [fast_lio_localization]: ICP elapsed: 0.37s | fitness=0.9309 | threshold=0.7
+[global_localization_ros2.py-5] [INFO] [1786438679.174536146] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.02, Y:    -0.02, Z:    -0.00 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.21, P:    -0.06, Y:     0.01 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:   -64.91, Y:    20.42, Z:     0.84 (m)
+[global_localization_ros2.py-5]   Att -> R:     9.47, P:     2.34, Y:    -5.96 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786438679.175275032] [fast_lio_localization]:   Candidate #1 accepted after ICP + validation.
+[global_localization_ros2.py-5] [INFO] [1786438679.177405761] [fast_lio_localization]: ✅ Auto relocalization succeeded! Localization locked.
+[global_localization_ros2.py-5]   Use RViz 2D Pose Estimate to re-localize if needed.
+[global_localization_ros2.py-5] [INFO] [1786438679.732543013] [fast_lio_localization]: ICP elapsed: 0.55s | fitness=0.8952 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786438679.735228579] [fast_lio_localization]: [IMUCheck] REJECTED: Roll diff=22.6deg > 15.0deg (ICP=22.6 vs IMU=0.0), fitness=0.8952
+[global_localization_ros2.py-5] [INFO] [1786438681.402546568] [fast_lio_localization]: ICP elapsed: 0.54s | fitness=0.9182 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786438681.405157118] [fast_lio_localization]: [IMUCheck] REJECTED: Roll diff=29.1deg > 15.0deg (ICP=29.1 vs IMU=0.0), fitness=0.9182
+[global_localization_ros2.py-5] [INFO] [1786438683.463725391] [fast_lio_localization]: ICP elapsed: 0.60s | fitness=0.9044 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786438683.465282626] [fast_lio_localization]: [IMUCheck] REJECTED: Roll diff=25.5deg > 15.0deg (ICP=25.5 vs IMU=0.0), fitness=0.9044
+[global_localization_ros2.py-5] [INFO] [1786438685.392375447] [fast_lio_localization]: ICP elapsed: 0.53s | fitness=0.9005 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786438685.395664203] [fast_lio_localization]: [IMUCheck] REJECTED: Roll diff=18.5deg > 15.0deg (ICP=18.5 vs IMU=0.0), fitness=0.9005
+[global_localization_ros2.py-5] [INFO] [1786438687.465522128] [fast_lio_localization]: ICP elapsed: 0.60s | fitness=0.9228 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786438687.468260112] [fast_lio_localization]: [IMUCheck] REJECTED: Roll diff=24.7deg > 15.0deg (ICP=24.7 vs IMU=0.0), fitness=0.9228
+[global_localization_ros2.py-5] [INFO] [1786438689.480644401] [fast_lio_localization]: ICP elapsed: 0.62s | fitness=0.9274 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786438689.485063884] [fast_lio_localization]: [IMUCheck] REJECTED: Roll diff=23.8deg > 15.0deg (ICP=23.8 vs IMU=0.0), fitness=0.9274
+[global_localization_ros2.py-5] [INFO] [1786438691.448944483] [fast_lio_localization]: ICP elapsed: 0.58s | fitness=0.9057 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786438691.454494437] [fast_lio_localization]: [IMUCheck] REJECTED: Roll diff=24.6deg > 15.0deg (ICP=24.6 vs IMU=0.0), fitness=0.9057
+[global_localization_ros2.py-5] [INFO] [1786438693.408987168] [fast_lio_localization]: ICP elapsed: 0.55s | fitness=0.8937 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786438693.413054392] [fast_lio_localization]: [IMUCheck] REJECTED: Roll diff=27.4deg > 15.0deg (ICP=27.4 vs IMU=0.0), fitness=0.8937
+[global_localization_ros2.py-5] [WARN] [1786438693.415090997] [fast_lio_localization]: [TrackingFail] ICP failed 8 consecutive times!
+[global_localization_ros2.py-5]   → Unlocking localization, next scan will trigger ScanContext re-localization.
+[global_localization_ros2.py-5] [INFO] [1786438693.422297391] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438693.422889510] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438693.740971722] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2945, 0.2867, 0.2535
+[global_localization_ros2.py-5] [WARN] [1786438693.744796139] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=6.0° | expected=126.8° | diff=120.8° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438693.745658811] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=126.8° | diff=126.8° > 45.0°
+[global_localization_ros2.py-5] [INFO] [1786438693.746404672] [fast_lio_localization]: [YawFilter] KEEP   candidate Yaw=150.0° | expected=126.8° | diff=23.2°
+[global_localization_ros2.py-5] [INFO] [1786438693.746979509] [fast_lio_localization]: [YawFilter] 3 → 1 candidates after Yaw filter (IMU Yaw=164.8°, offset=-38.0°)
+[global_localization_ros2.py-5] [WARN] [1786438693.749097305] [fast_lio_localization]: [ScanContext] Best fitness=0.2535 too low (< 0.5). Please use RViz 2D Pose Estimate.
+[global_localization_ros2.py-5] [INFO] [1786438693.750929891] [fast_lio_localization]:   Trying candidate #1/1 (ScanContext fitness=0.2535) with ICP...
+[global_localization_ros2.py-5] [INFO] [1786438694.135365290] [fast_lio_localization]: ICP elapsed: 0.38s | fitness=0.6959 | threshold=0.7
+[global_localization_ros2.py-5] [WARN] [1786438694.136483441] [fast_lio_localization]: ICP fitness=0.6959 < threshold 0.7, localization rejected
+[global_localization_ros2.py-5] [WARN] [1786438694.138349662] [fast_lio_localization]:   Candidate #1 rejected (ICP or validation failed).
+[global_localization_ros2.py-5] [WARN] [1786438694.139072000] [fast_lio_localization]: All 1 RANSAC candidates failed ICP/validation. Please use RViz 2D Pose Estimate.
+[global_localization_ros2.py-5] [INFO] [1786438694.154829743] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438694.155730594] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438694.449201205] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2903, 0.2610, 0.2500
+[global_localization_ros2.py-5] [WARN] [1786438694.452551658] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=6.0° | expected=126.7° | diff=120.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438694.455613317] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-66.0° | expected=126.7° | diff=167.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438694.456433617] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-60.0° | expected=126.7° | diff=173.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438694.457027016] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786438694.458836687] [fast_lio_localization]:   Yaw filter rejected all candidates (1/5). Waiting for next frame...
+[global_localization_ros2.py-5] [INFO] [1786438694.467567669] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438694.468876237] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438694.854955685] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.3156, 0.2873, 0.2598
+[global_localization_ros2.py-5] [WARN] [1786438694.856168917] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=6.0° | expected=126.7° | diff=120.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438694.856918139] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=6.0° | expected=126.7° | diff=120.7° > 45.0°
+[global_localization_ros2.py-5] [INFO] [1786438694.859001595] [fast_lio_localization]: [YawFilter] KEEP   candidate Yaw=96.0° | expected=126.7° | diff=30.7°
+[global_localization_ros2.py-5] [INFO] [1786438694.860303315] [fast_lio_localization]: [YawFilter] 3 → 1 candidates after Yaw filter (IMU Yaw=164.7°, offset=-38.0°)
+[global_localization_ros2.py-5] [WARN] [1786438694.861316177] [fast_lio_localization]: [ScanContext] Best fitness=0.2598 too low (< 0.5). Please use RViz 2D Pose Estimate.
+[global_localization_ros2.py-5] [INFO] [1786438694.865067499] [fast_lio_localization]:   Trying candidate #1/1 (ScanContext fitness=0.2598) with ICP...
+[global_localization_ros2.py-5] [INFO] [1786438695.162086797] [fast_lio_localization]: ICP elapsed: 0.29s | fitness=0.7143 | threshold=0.7
+[global_localization_ros2.py-5] [WARN] [1786438695.165528363] [fast_lio_localization]: [SanityCheck] REJECTED: Roll=-119.6deg exceeds 30.0deg (flipped solution suspected), fitness=0.7143
+[global_localization_ros2.py-5] [WARN] [1786438695.168135227] [fast_lio_localization]:   Candidate #1 rejected (ICP or validation failed).
+[global_localization_ros2.py-5] [WARN] [1786438695.168863806] [fast_lio_localization]: All 1 RANSAC candidates failed ICP/validation. Please use RViz 2D Pose Estimate.
+[global_localization_ros2.py-5] [INFO] [1786438695.181055105] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438695.181849963] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438695.525166050] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.3057, 0.2800, 0.2541
+[global_localization_ros2.py-5] [WARN] [1786438695.527649831] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=6.0° | expected=126.7° | diff=120.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438695.528408557] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=126.7° | diff=126.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438695.529141521] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-78.0° | expected=126.7° | diff=155.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438695.531193486] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786438695.532036764] [fast_lio_localization]:   Yaw filter rejected all candidates (2/5). Waiting for next frame...
+[global_localization_ros2.py-5] [INFO] [1786438695.539924050] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438695.541817729] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438695.849139363] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2999, 0.2970, 0.2768
+[global_localization_ros2.py-5] [WARN] [1786438695.852071121] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=6.0° | expected=126.7° | diff=120.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438695.856003228] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=126.7° | diff=126.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438695.857885481] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-84.0° | expected=126.7° | diff=149.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438695.858496674] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786438695.859311661] [fast_lio_localization]:   Yaw filter rejected all candidates (3/5). Waiting for next frame...
+[global_localization_ros2.py-5] [INFO] [1786438695.868650761] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438695.869223038] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438696.247983474] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2788, 0.2766, 0.2542
+[global_localization_ros2.py-5] [WARN] [1786438696.249238118] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=6.0° | expected=126.7° | diff=120.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438696.251272993] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=126.7° | diff=126.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438696.253178608] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-84.0° | expected=126.7° | diff=149.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438696.254127784] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786438696.255644435] [fast_lio_localization]:   Yaw filter rejected all candidates (4/5). Waiting for next frame...
+[global_localization_ros2.py-5] [INFO] [1786438696.267798930] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [INFO] [1786438696.268343812] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438696.633845152] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2979, 0.2851, 0.2573
+[global_localization_ros2.py-5] [WARN] [1786438696.636139603] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=126.7° | diff=126.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438696.638020928] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=6.0° | expected=126.7° | diff=120.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438696.638825706] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-84.0° | expected=126.7° | diff=149.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1786438696.640455072] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1786438696.641247433] [fast_lio_localization]:   Yaw filter rejected all candidates (5/5). Waiting for next frame...
+[global_localization_ros2.py-5] [WARN] [1786438696.643237984] [fast_lio_localization]: [GlobalSearchFallback] Yaw filter failed 5 times consecutively!
+[global_localization_ros2.py-5]   Activating global search mode: Yaw filter BYPASSED.
+[global_localization_ros2.py-5]   Will retry without Yaw constraint on next frame.
+[global_localization_ros2.py-5]   Tip: Check yaw_map_offset_deg is correct for this location.
+[global_localization_ros2.py-5] [INFO] [1786438696.652267711] [fast_lio_localization]: Received point cloud frame, starting ScanContext global relocalization...
+[global_localization_ros2.py-5] [WARN] [1786438696.652921627] [fast_lio_localization]: [GlobalSearchFallback] Global search mode active: Yaw filter=BYPASSED
+[global_localization_ros2.py-5]   Reason: Yaw filter rejected all candidates 5 times.
+[global_localization_ros2.py-5] [INFO] [1786438696.653630716] [fast_lio_localization]: [ScanContext] Querying database...
+[global_localization_ros2.py-5] [INFO] [1786438696.999578161] [fast_lio_localization]: [ScanContext] Top-3 candidates found: 0.2678, 0.2448, 0.2237
+[global_localization_ros2.py-5] [WARN] [1786438697.002775991] [fast_lio_localization]: [GlobalSearchFallback] Yaw filter BYPASSED -- proceeding directly to ICP validation
+[global_localization_ros2.py-5] [WARN] [1786438697.005949531] [fast_lio_localization]: [ScanContext] Best fitness=0.2678 too low (< 0.5). Please use RViz 2D Pose Estimate.
+[global_localization_ros2.py-5] [INFO] [1786438697.009057688] [fast_lio_localization]:   Trying candidate #1/3 (ScanContext fitness=0.2678) with ICP...
+[global_localization_ros2.py-5] [INFO] [1786438697.438219603] [fast_lio_localization]: ICP elapsed: 0.42s | fitness=0.7395 | threshold=0.7
+[global_localization_ros2.py-5] [INFO] [1786438697.441317680] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.02, Y:     0.01, Z:     0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.24, P:    -0.08, Y:    -0.05 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:   -74.26, Y:    19.43, Z:     1.10 (m)
+[global_localization_ros2.py-5]   Att -> R:    10.62, P:     0.00, Y:    -6.31 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786438697.447642421] [fast_lio_localization]:   Candidate #1 accepted after ICP + validation.
+[global_localization_ros2.py-5] [INFO] [1786438697.448711863] [fast_lio_localization]: ✅ Auto relocalization succeeded! Localization locked.
+[global_localization_ros2.py-5]   Use RViz 2D Pose Estimate to re-localize if needed.
+[global_localization_ros2.py-5] [INFO] [1786438697.988202120] [fast_lio_localization]: ICP elapsed: 0.53s | fitness=0.7076 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786438697.989174178] [fast_lio_localization]: ICP fitness=0.7076 < threshold 0.75, localization rejected
+[global_localization_ros2.py-5] [INFO] [1786438699.445775968] [fast_lio_localization]: ICP elapsed: 0.58s | fitness=0.7369 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786438699.446818368] [fast_lio_localization]: ICP fitness=0.7369 < threshold 0.75, localization rejected
+[global_localization_ros2.py-5] [INFO] [1786438701.475905778] [fast_lio_localization]: ICP elapsed: 0.61s | fitness=0.7161 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786438701.477994480] [fast_lio_localization]: ICP fitness=0.7161 < threshold 0.75, localization rejected
+[global_localization_ros2.py-5] [INFO] [1786438703.435339892] [fast_lio_localization]: ICP elapsed: 0.57s | fitness=0.7154 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786438703.436264008] [fast_lio_localization]: ICP fitness=0.7154 < threshold 0.75, localization rejected
+[global_localization_ros2.py-5] [INFO] [1786438705.419299649] [fast_lio_localization]: ICP elapsed: 0.56s | fitness=0.7566 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786438705.421899276] [fast_lio_localization]: [IMUCheck] REJECTED: Roll diff=22.6deg > 15.0deg (ICP=22.6 vs IMU=0.0), fitness=0.7566
+[global_localization_ros2.py-5] [INFO] [1786438707.404107400] [fast_lio_localization]: ICP elapsed: 0.54s | fitness=0.9418 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786438707.408639938] [fast_lio_localization]: [IMUCheck] REJECTED: Roll diff=22.5deg > 15.0deg (ICP=22.5 vs IMU=0.0), fitness=0.9418
+[global_localization_ros2.py-5] [INFO] [1786438709.422138799] [fast_lio_localization]: ICP elapsed: 0.56s | fitness=0.9095 | threshold=0.75
+[global_localization_ros2.py-5] [WARN] [1786438709.425078616] [fast_lio_localization]: [IMUCheck] REJECTED: Roll diff=25.3deg > 15.0deg (ICP=25.3 vs IMU=0.0), fitness=0.9095
+[global_localization_ros2.py-5] [INFO] [1786438711.476687170] [fast_lio_localization]: ICP elapsed: 0.61s | fitness=0.8941 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786438711.481789868] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.00, Y:    -0.03, Z:    -0.04 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.27, P:    -0.08, Y:    -0.04 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:   -70.53, Y:     7.91, Z:     1.86 (m)
+[global_localization_ros2.py-5]   Att -> R:    -4.26, P:    -1.37, Y:   -33.22 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1786438711.484276491] [fast_lio_localization]: [Tracking] ICP recovered after 7 failure(s).
+[global_localization_ros2.py-5] [INFO] [1786438713.450228979] [fast_lio_localization]: ICP elapsed: 0.59s | fitness=0.8820 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1786438713.454937624] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.02, Y:    -0.03, Z:    -0.04 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.35, P:    -0.15, Y:    -0.06 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:   -70.78, Y:     8.60, Z:     1.82 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.58, P:    -2.70, Y:   -28.27 (deg)
+[global_localization_ros2.py-5] =========================================================
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[fastlio_mapping-3] catch sig %d2
+[rviz2-4] [INFO] [1786438715.307292819] [rclcpp]: signal_handler(signum=2)
+[static_transform_publisher-1] [INFO] [1786438715.307303412] [rclcpp]: signal_handler(signum=2)
+[static_transform_publisher-2] [INFO] [1786438715.307373274] [rclcpp]: signal_handler(signum=2)
+[global_localization_ros2.py-5] [INFO] [1786438715.408815245] [fast_lio_localization]: [WarmStart] Shutdown cache written: /home/nvidia/Fast_LIO_Localization_ws/last_pose_cache.json
+[global_localization_ros2.py-5] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[INFO] [static_transform_publisher-1]: process has finished cleanly [pid 21825]
+[INFO] [static_transform_publisher-2]: process has finished cleanly [pid 21827]
+[fastlio_mapping-3] Rebuild thread terminated normally
+[INFO] [fastlio_mapping-3]: process has finished cleanly [pid 21829]
+[global_localization_ros2.py-5] [INFO] [1786438715.486769970] [fast_lio_localization]: ICP elapsed: 0.63s | fitness=0.9055 | threshold=0.75
+[global_localization_ros2.py-5] The following exception was never retrieved: cannot use Destroyable because destruction was requested

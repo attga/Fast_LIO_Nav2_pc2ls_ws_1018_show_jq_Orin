@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ml_relocalization</name>
+  <version>0.1.0</version>
+  <description>Standalone Scan Context relocalization with keyframe maps and ICP verification.</description>
+  <maintainer email="jackie@example.com">jackie</maintainer>
+  <license>BSD</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>ml_scan_context</depend>
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>pcl_conversions</depend>
+  <depend>libpcl-all-dev</depend>
+  <exec_depend>ros2launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

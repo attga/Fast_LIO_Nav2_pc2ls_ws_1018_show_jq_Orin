@@ -1,0 +1,131 @@
+MID360 定位启动命令（本机 ROS 2 Jazzy）
+=====================================
+当前默认：Local 位姿差分 + ICP → Global；SC 候选距离门限 0.50。
+一次只启动一套链路。硬件驱动不由本 launch 启动。
+每次回放、倒带或换地图，都先关闭上一轮定位和 bag。
+
+一、首次构建 / 更新源码后构建
+---------------------------
+source /opt/ros/jazzy/setup.bash
+source /home/jackie/Desktop/ws_livox/install/setup.bash
+cd /home/jackie/Desktop/fast_lio_slam_ws
+
+colcon build \
+  --symlink-install \
+  --executor sequential \
+  --packages-select \
+    fast_lio \
+    ml_scan_context \
+    ml_relocalization \
+    ml_icp_localization \
+    ml_localization_manager \
+    sc_pgo \
+    ml_bringup \
+  --cmake-args \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DBUILD_TESTING=OFF
+
+二、终端 1：bag0908 定位 + RViz
+-------------------------------
+source /opt/ros/jazzy/setup.bash
+source /home/jackie/Desktop/ws_livox/install/setup.bash
+source /home/jackie/Desktop/fast_lio_slam_ws/install/setup.bash
+
+export ROS_LOG_DIR="/home/jackie/Desktop/fast_lio_slam_ws/log/localization_$(date +%Y%m%d_%H%M%S)"
+mkdir -p "$ROS_LOG_DIR"
+
+ros2 launch ml_bringup localization.launch.py \
+  map_directory:=/home/jackie/Desktop/fast_lio_slam_ws/map \
+  pose_file:=isam_poses.txt \
+  use_sim_time:=true \
+  enable_yesense:=true \
+  rviz:=true \
+  2>&1 | tee "$ROS_LOG_DIR/console.log"
+
+FAST-LIO 状态日志自动放入同一个 ROS_LOG_DIR 下的 fast_lio_时间 子目录。
+不再从源码 fast_lio/Log 复制日志。
+
+三、终端 2：播放 bag0908，rate 1.0
+---------------------------------
+source /opt/ros/jazzy/setup.bash
+source /home/jackie/Desktop/ws_livox/install/setup.bash
+source /home/jackie/Desktop/fast_lio_slam_ws/install/setup.bash
+
+ros2 bag play /home/jackie/Desktop/rubu/bags/bag0908 \
+  --rate 1.0 \
+  --clock \
+  --topics \
+    /livox/lidar \
+    /livox/imu \
+    /imu/data_raw \
+    /wheel_odom
+
+四、改测 bag0909
+----------------
+先关闭上一次 bag 和 launch。
+终端 1 仍用上面的正式启动命令，但将 enable_yesense:=true 改为 enable_yesense:=false。
+bag0909 没有 /imu/data_raw；终端 2 改用：
+
+ros2 bag play /home/jackie/Desktop/rubu/bags/bag0909 \
+  --rate 1.0 \
+  --clock \
+  --topics \
+    /livox/lidar \
+    /livox/imu \
+    /wheel_odom
+
+五、终端 3：查看启动交接 / 定位状态
+----------------------------------
+source /opt/ros/jazzy/setup.bash
+source /home/jackie/Desktop/ws_livox/install/setup.bash
+source /home/jackie/Desktop/fast_lio_slam_ws/install/setup.bash
+
+ros2 topic echo /ml_localization/manager_state
+
+看到 NORMAL_TRACKING startup_complete=1 后，Ctrl+C 退出 echo，再查看：
+
+ros2 topic echo /ml_localization/status
+
+需要看前端和 EKF 输出时，每次运行一个命令：
+
+ros2 topic hz /lidar_odometry
+
+ros2 topic hz /local_odometry/filter
+
+ros2 topic hz /global_odometry/filter
+
+ros2 run tf2_ros tf2_echo map base_link
+
+六、独立启动 RViz（主 launch 需 rviz:=false，避免重复窗口）
+---------------------------------------------------------
+ros2 launch ml_bringup rviz.launch.py \
+  use_sim_time:=true
+
+七、实车启动
+-------------
+先 source 上述环境；启动 Livox、wheel 和 Yesense 驱动，确认对应 topic 正常。
+机器人尽量静止等待初始化。使用正式入口，use_sim_time:=false，不启动 bag：
+
+ros2 launch ml_bringup localization.launch.py \
+  map_directory:=/home/jackie/Desktop/fast_lio_slam_ws/map \
+  pose_file:=isam_poses.txt \
+  use_sim_time:=false \
+  enable_yesense:=true \
+  rviz:=true
+
+停止顺序：先停 bag/传感器输入，再 Ctrl+C 退出 launch。
+安装 TF 默认为经确认的单位阵近似；更换机器人后按 docs/DEPLOYMENT.md 配置。
+
+八、改测 bag0831
+----------------
+先关闭上一轮 bag 和 launch，重新执行终端 1 的正式启动命令。
+终端 2 使用相同 source 命令后播放：
+
+ros2 bag play /home/jackie/Desktop/rubu/bags/bag0831 \
+  --rate 1.0 \
+  --clock \
+  --topics \
+    /livox/lidar \
+    /livox/imu \
+    /imu/data_raw \
+    /wheel_odom

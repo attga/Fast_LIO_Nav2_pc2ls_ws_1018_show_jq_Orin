@@ -1,0 +1,17 @@
+/**:
+  ros__parameters:
+    imu0: /imu/measurements
+    # 给 Local 和 Global EKF 加载：融合独立 IMU 角速度，暂不融合加速度。
+    # 状态选择顺序：位置 / 姿态 / 线速度 / 角速度 / 加速度，各组三轴。
+    imu0_config: [false, false, false,
+                  false, false, false,
+                  false, false, false,
+                  true, true, true,
+                  false, false, false]
+    imu0_differential: false
+    imu0_relative: false
+    imu0_queue_size: 50
+    # 保留去重力设置，仅在将来启用加速度融合时生效。
+    imu0_remove_gravitational_acceleration: true
+    gravitational_acceleration: 9.80665
+    # 保持 two_d_mode=true，约束 z、横滚、俯仰及其导数。

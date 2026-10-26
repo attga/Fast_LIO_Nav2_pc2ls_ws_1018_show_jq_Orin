@@ -1,0 +1,2070 @@
+nvidia@nvidia-desktop:~/Fast_LIO_Nav2_outdoor_ws$ ros2 launch fast_lio_loc lio_localization.launch.py map_pcd:=/home/nvidia/Fast_LIO_Nav2_outdoor_ws/maps/LOAM_outdoor/GlobalMap.pcd use_sim_time:=false
+[INFO] [launch]: All log files can be found below /home/nvidia/.ros/log/2026-08-05-14-53-18-158474-nvidia-desktop-17256
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: [lio_localization] 先验地图: /home/nvidia/Fast_LIO_Nav2_outdoor_ws/maps/LOAM_outdoor/GlobalMap.pcd
+[INFO] [launch.user]: [lio_localization] use_sim_time = false
+[INFO] [static_transform_publisher-1]: process started with pid [17257]
+[INFO] [static_transform_publisher-2]: process started with pid [17259]
+[INFO] [fastlio_mapping-3]: process started with pid [17261]
+[static_transform_publisher-1] [WARN] [1785912798.258343742] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-2] [WARN] [1785912798.258448258] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-1] [INFO] [1785912798.279653152] [static_tf_body_to_base]: Spinning until stopped - publishing transform
+[static_transform_publisher-1] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-1] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-1] from 'body' to 'base_link'
+[static_transform_publisher-2] [INFO] [1785912798.286220462] [static_tf_base_to_lidar]: Spinning until stopped - publishing transform
+[static_transform_publisher-2] translation: ('0.000000', '0.000000', '0.100000')
+[static_transform_publisher-2] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-2] from 'base_link' to 'livox_frame'
+[fastlio_mapping-3] [INFO] [1785912798.356111340] [fast_lio_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-3] Multi thread started 
+[fastlio_mapping-3] ~~~~/home/nvidia/Fast_LIO_Nav2_outdoor_ws/src/FAST_LIO_SLAM/FAST_LIO_ROS2/ file opened
+[fastlio_mapping-3] [INFO] [1785912798.367930647] [fast_lio_mapping]: Node init finished.
+[INFO] [rviz2-4]: process started with pid [17291]
+[rviz2-4] [INFO] [1785912799.816300338] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-4] [INFO] [1785912799.816599805] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[fastlio_mapping-3] IMU Initial Done
+[fastlio_mapping-3] [WARN] [1785912799.846537367] [fast_lio_mapping]: No point, skip this scan!
+[fastlio_mapping-3] 
+[rviz2-4] [INFO] [1785912799.848713157] [rviz2]: Stereo is NOT SUPPORTED
+[fastlio_mapping-3] [INFO] [1785912799.917558142] [fast_lio_mapping]: Initialize the map kdtree
+[INFO] [launch.user]: [lio_localization] 启动全局 ICP 重定位节点...
+[INFO] [global_localization_ros2.py-5]: process started with pid [17308]
+[global_localization_ros2.py-5] [INFO] [1785912802.855039022] [fast_lio_localization]: [FileLog] Log saved to: /home/nvidia/Fast_LIO_Localization_ws/logs/localization_20260805_145322.log
+[global_localization_ros2.py-5] [INFO] [1785912802.875195847] [fast_lio_localization]: Loading map: /home/nvidia/Fast_LIO_Nav2_outdoor_ws/maps/LOAM_outdoor/GlobalMap.pcd
+[global_localization_ros2.py-5] [INFO] [1785912804.019377452] [fast_lio_localization]: Map loaded: 116449 points (downsampled)
+[global_localization_ros2.py-5] [INFO] [1785912804.019991714] [fast_lio_localization]: Precomputing FPFH features for global map (takes ~1-2 seconds)...
+[global_localization_ros2.py-5] [INFO] [1785912804.620956631] [fast_lio_localization]: ✅ FPFH features precomputed successfully
+[global_localization_ros2.py-5] [INFO] [1785912804.621662161] [fast_lio_localization]: [WarmStart] Warm start disabled (enable_warm_start=false), directly using RANSAC for global relocalization
+[global_localization_ros2.py-5] [INFO] [1785912804.622204805] [fast_lio_localization]: [YawCalib] ✅ Manual Yaw offset set: -38.00°
+[global_localization_ros2.py-5]   → Yaw filtering will be active from first cold start, no need to wait for auto-calibration
+[global_localization_ros2.py-5] [INFO] [1785912804.622683094] [fast_lio_localization]: FastLIO Localization node started, waiting for initial pose /initialpose ...
+[global_localization_ros2.py-5] [INFO] [1785912804.623173288] [fast_lio_localization]:   If no /initialpose is sent, ICP will be performed directly with identity as initial value when the first frame arrives.
+[global_localization_ros2.py-5] [INFO] [1785912804.630153476] [fast_lio_localization]: [IMUGate] Waiting for first Yesense IMU frame before RANSAC (1.8s elapsed / 20s timeout). Yaw filter must be ready to prevent false-positive localizations.
+[global_localization_ros2.py-5] [INFO] [1785912804.649758696] [fast_lio_localization]: Received point cloud frame, starting RANSAC global relocalization(Max retries 5, ~0.3s each)...
+[global_localization_ros2.py-5] /usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+[global_localization_ros2.py-5]   warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+[global_localization_ros2.py-5] [INFO] [1785912806.311147597] [fast_lio_localization]:   RANSAC 1/5 | fitness=0.7855
+[global_localization_ros2.py-5] [INFO] [1785912807.769597195] [fast_lio_localization]:   RANSAC 2/5 | fitness=0.7686 | best_so_far=0.7855
+[global_localization_ros2.py-5] [INFO] [1785912808.877023163] [fast_lio_localization]: [YesenseYaw] ✅ Yesense IMU data is normal(Latest data 0.0s ago, current Yaw=160.4°)
+[global_localization_ros2.py-5]   → RANSAC candidates will be filtered by Yaw to solve symmetric corner confusion
+[global_localization_ros2.py-5]   → Yaw calibration offset loaded: -38.0°
+[global_localization_ros2.py-5] [INFO] [1785912809.239924948] [fast_lio_localization]:   RANSAC 3/5 | fitness=0.7872 | best_so_far=0.7872
+[global_localization_ros2.py-5] [INFO] [1785912810.734793394] [fast_lio_localization]:   RANSAC 4/5 | fitness=0.8057 | best_so_far=0.8057
+[global_localization_ros2.py-5] [INFO] [1785912812.198929176] [fast_lio_localization]:   RANSAC 5/5 | fitness=0.7889 | best_so_far=0.8057
+[global_localization_ros2.py-5] [INFO] [1785912812.199798007] [fast_lio_localization]: RANSAC done | 5 attempts | Top-3 candidates: 0.8057, 0.7889, 0.7872
+[global_localization_ros2.py-5] [WARN] [1785912812.200910687] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=65.0° | expected=122.4° | diff=57.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912812.205582120] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=122.4° | diff=122.4° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912812.210166542] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=33.1° | expected=122.4° | diff=89.3° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912812.210822853] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1785912812.214752979] [fast_lio_localization]:   → All candidates in this frame rejected, skipping ICP, waiting 0.1s for next frame...
+[global_localization_ros2.py-5] [INFO] [1785912812.230947292] [fast_lio_localization]: Received point cloud frame, starting RANSAC global relocalization(Max retries 5, ~0.3s each)...
+[global_localization_ros2.py-5] [INFO] [1785912813.609331206] [fast_lio_localization]:   RANSAC 1/5 | fitness=0.8031
+[global_localization_ros2.py-5] [INFO] [1785912815.019394471] [fast_lio_localization]:   RANSAC 2/5 | fitness=0.8031 | best_so_far=0.8031
+[global_localization_ros2.py-5] [INFO] [1785912816.439491888] [fast_lio_localization]:   RANSAC 3/5 | fitness=0.7860 | best_so_far=0.8031
+[global_localization_ros2.py-5] [INFO] [1785912817.844517944] [fast_lio_localization]:   RANSAC 4/5 | fitness=0.7911 | best_so_far=0.8031
+[global_localization_ros2.py-5] [INFO] [1785912819.334160270] [fast_lio_localization]:   RANSAC 5/5 | fitness=0.7038 | best_so_far=0.8031
+[global_localization_ros2.py-5] [INFO] [1785912819.335018285] [fast_lio_localization]: RANSAC done | 5 attempts | Top-3 candidates: 0.8031, 0.8031, 0.7911
+[global_localization_ros2.py-5] [WARN] [1785912819.338078300] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-124.2° | expected=122.4° | diff=113.4° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912819.339517424] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-124.2° | expected=122.4° | diff=113.4° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912819.340519636] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=0.0° | expected=122.4° | diff=122.4° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912819.341119882] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1785912819.341986537] [fast_lio_localization]:   → All candidates in this frame rejected, skipping ICP, waiting 0.1s for next frame...
+[global_localization_ros2.py-5] [INFO] [1785912819.357547579] [fast_lio_localization]: Received point cloud frame, starting RANSAC global relocalization(Max retries 5, ~0.3s each)...
+[global_localization_ros2.py-5] [INFO] [1785912820.714102952] [fast_lio_localization]:   RANSAC 1/5 | fitness=0.8194
+[global_localization_ros2.py-5] [INFO] [1785912822.130788976] [fast_lio_localization]:   RANSAC 2/5 | fitness=0.7956 | best_so_far=0.8194
+[global_localization_ros2.py-5] [INFO] [1785912823.593803263] [fast_lio_localization]:   RANSAC 3/5 | fitness=0.8007 | best_so_far=0.8194
+[global_localization_ros2.py-5] [INFO] [1785912825.010912371] [fast_lio_localization]:   RANSAC 4/5 | fitness=0.7871 | best_so_far=0.8194
+[global_localization_ros2.py-5] [INFO] [1785912826.430592194] [fast_lio_localization]:   RANSAC 5/5 | fitness=0.8262 | best_so_far=0.8262
+[global_localization_ros2.py-5] [INFO] [1785912826.435832575] [fast_lio_localization]: RANSAC done | 5 attempts | Top-3 candidates: 0.8262, 0.8194, 0.8007
+[global_localization_ros2.py-5] [WARN] [1785912826.440016822] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-133.0° | expected=122.4° | diff=104.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912826.441087485] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-128.8° | expected=122.4° | diff=108.8° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912826.444434390] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-49.6° | expected=122.4° | diff=172.0° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912826.445102734] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1785912826.449162880] [fast_lio_localization]:   → All candidates in this frame rejected, skipping ICP, waiting 0.1s for next frame...
+[global_localization_ros2.py-5] [INFO] [1785912826.460062698] [fast_lio_localization]: Received point cloud frame, starting RANSAC global relocalization(Max retries 5, ~0.3s each)...
+[global_localization_ros2.py-5] [INFO] [1785912827.949204740] [fast_lio_localization]:   RANSAC 1/5 | fitness=0.8090
+[global_localization_ros2.py-5] [INFO] [1785912829.364933825] [fast_lio_localization]:   RANSAC 2/5 | fitness=0.7882 | best_so_far=0.8090
+[global_localization_ros2.py-5] [INFO] [1785912830.804705441] [fast_lio_localization]:   RANSAC 3/5 | fitness=0.7882 | best_so_far=0.8090
+[global_localization_ros2.py-5] [INFO] [1785912832.189977070] [fast_lio_localization]:   RANSAC 4/5 | fitness=0.7934 | best_so_far=0.8090
+[global_localization_ros2.py-5] [INFO] [1785912833.618746621] [fast_lio_localization]:   RANSAC 5/5 | fitness=0.7917 | best_so_far=0.8090
+[global_localization_ros2.py-5] [INFO] [1785912833.619601724] [fast_lio_localization]: RANSAC done | 5 attempts | Top-3 candidates: 0.8090, 0.7934, 0.7917
+[global_localization_ros2.py-5] [WARN] [1785912833.620699524] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-119.4° | expected=122.4° | diff=118.2° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912833.621455935] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-44.3° | expected=122.4° | diff=166.7° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912833.624285669] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-44.7° | expected=122.4° | diff=167.0° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912833.624936029] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1785912833.625719545] [fast_lio_localization]:   → All candidates in this frame rejected, skipping ICP, waiting 0.1s for next frame...
+[global_localization_ros2.py-5] [INFO] [1785912833.640649940] [fast_lio_localization]: Received point cloud frame, starting RANSAC global relocalization(Max retries 5, ~0.3s each)...
+[global_localization_ros2.py-5] [INFO] [1785912835.179154492] [fast_lio_localization]:   RANSAC 1/5 | fitness=0.8047
+[global_localization_ros2.py-5] [INFO] [1785912836.619020536] [fast_lio_localization]:   RANSAC 2/5 | fitness=0.7529 | best_so_far=0.8047
+[global_localization_ros2.py-5] [INFO] [1785912838.091153984] [fast_lio_localization]:   RANSAC 3/5 | fitness=0.7563 | best_so_far=0.8047
+[global_localization_ros2.py-5] [INFO] [1785912839.689065700] [fast_lio_localization]:   RANSAC 4/5 | fitness=0.7496 | best_so_far=0.8047
+[global_localization_ros2.py-5] [INFO] [1785912841.195255574] [fast_lio_localization]:   RANSAC 5/5 | fitness=0.8397 | best_so_far=0.8397
+[global_localization_ros2.py-5] [INFO] [1785912841.197880181] [fast_lio_localization]: RANSAC done | 5 attempts | Top-3 candidates: 0.8397, 0.8047, 0.7563
+[global_localization_ros2.py-5] [WARN] [1785912841.199057983] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=74.6° | expected=122.4° | diff=47.8° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912841.199858652] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=68.8° | expected=122.4° | diff=53.6° > 45.0°
+[global_localization_ros2.py-5] [INFO] [1785912841.200507572] [fast_lio_localization]: [YawFilter] KEEP   candidate Yaw=122.6° | expected=122.4° | diff=0.2°
+[global_localization_ros2.py-5] [INFO] [1785912841.201021926] [fast_lio_localization]: [YawFilter] 3 → 1 candidates after Yaw filter (IMU Yaw=160.4°, offset=-38.0°)
+[global_localization_ros2.py-5] [INFO] [1785912841.202704771] [fast_lio_localization]:   Trying candidate #1/1 (RANSAC fitness=0.7563) with ICP...
+[global_localization_ros2.py-5] [INFO] [1785912841.701026860] [fast_lio_localization]: ICP elapsed: 0.50s | fitness=0.8124 | threshold=0.95
+[global_localization_ros2.py-5] [WARN] [1785912841.703604009] [fast_lio_localization]: ICP fitness=0.8124 < threshold 0.95, localization rejected
+[global_localization_ros2.py-5] [WARN] [1785912841.704390245] [fast_lio_localization]:   Candidate #1 rejected (ICP or validation failed).
+[global_localization_ros2.py-5] [WARN] [1785912841.705087231] [fast_lio_localization]: All 1 RANSAC candidates failed ICP/validation. Please use RViz 2D Pose Estimate.
+[global_localization_ros2.py-5] [INFO] [1785912841.714977892] [fast_lio_localization]: Received point cloud frame, starting RANSAC global relocalization(Max retries 5, ~0.3s each)...
+[global_localization_ros2.py-5] [INFO] [1785912843.139204740] [fast_lio_localization]:   RANSAC 1/5 | fitness=0.8152
+[global_localization_ros2.py-5] [INFO] [1785912844.560665119] [fast_lio_localization]:   RANSAC 2/5 | fitness=0.8355 | best_so_far=0.8355
+[global_localization_ros2.py-5] [INFO] [1785912846.003382999] [fast_lio_localization]:   RANSAC 3/5 | fitness=0.7800 | best_so_far=0.8355
+[global_localization_ros2.py-5] [INFO] [1785912847.440079573] [fast_lio_localization]:   RANSAC 4/5 | fitness=0.8355 | best_so_far=0.8355
+[global_localization_ros2.py-5] [INFO] [1785912848.860449443] [fast_lio_localization]:   RANSAC 5/5 | fitness=0.8447 | best_so_far=0.8447
+[global_localization_ros2.py-5] [INFO] [1785912848.861395494] [fast_lio_localization]: RANSAC done | 5 attempts | Top-3 candidates: 0.8447, 0.8355, 0.8355
+[global_localization_ros2.py-5] [WARN] [1785912848.867104948] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-99.8° | expected=122.4° | diff=137.9° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912848.870293127] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=33.2° | expected=122.4° | diff=89.1° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912848.871447152] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=33.2° | expected=122.4° | diff=89.1° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912848.873752580] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1785912848.875717931] [fast_lio_localization]:   → All candidates in this frame rejected, skipping ICP, waiting 0.1s for next frame...
+[global_localization_ros2.py-5] [INFO] [1785912848.894836189] [fast_lio_localization]: Received point cloud frame, starting RANSAC global relocalization(Max retries 5, ~0.3s each)...
+[global_localization_ros2.py-5] [INFO] [1785912850.284392977] [fast_lio_localization]:   RANSAC 1/5 | fitness=0.8316
+[global_localization_ros2.py-5] [INFO] [1785912851.641847518] [fast_lio_localization]:   RANSAC 2/5 | fitness=0.8280 | best_so_far=0.8316
+[global_localization_ros2.py-5] [INFO] [1785912853.024388882] [fast_lio_localization]:   RANSAC 3/5 | fitness=0.8262 | best_so_far=0.8316
+[global_localization_ros2.py-5] [INFO] [1785912854.380672113] [fast_lio_localization]:   RANSAC 4/5 | fitness=0.8280 | best_so_far=0.8316
+[global_localization_ros2.py-5] [INFO] [1785912855.754077881] [fast_lio_localization]:   RANSAC 5/5 | fitness=0.8121 | best_so_far=0.8316
+[global_localization_ros2.py-5] [INFO] [1785912855.755056892] [fast_lio_localization]: RANSAC done | 5 attempts | Top-3 candidates: 0.8316, 0.8280, 0.8280
+[global_localization_ros2.py-5] [WARN] [1785912855.756319242] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-139.3° | expected=122.4° | diff=98.4° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912855.759173201] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-104.4° | expected=122.4° | diff=133.2° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912855.760063153] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-116.0° | expected=122.4° | diff=121.6° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912855.760669031] [fast_lio_localization]: [YawFilter] ⚠️ All RANSAC candidates rejected by Yaw filter! (Possible symmetric corner confusion). Waiting for next frame.
+[global_localization_ros2.py-5] [WARN] [1785912855.761435875] [fast_lio_localization]:   → All candidates in this frame rejected, skipping ICP, waiting 0.1s for next frame...
+[global_localization_ros2.py-5] [INFO] [1785912855.775917549] [fast_lio_localization]: Received point cloud frame, starting RANSAC global relocalization(Max retries 5, ~0.3s each)...
+[global_localization_ros2.py-5] [INFO] [1785912857.124882658] [fast_lio_localization]:   RANSAC 1/5 | fitness=0.8587
+[global_localization_ros2.py-5] [INFO] [1785912858.534769227] [fast_lio_localization]:   RANSAC 2/5 | fitness=0.8587 | best_so_far=0.8587
+[global_localization_ros2.py-5] [INFO] [1785912859.949982612] [fast_lio_localization]:   RANSAC 3/5 | fitness=0.8370 | best_so_far=0.8587
+[global_localization_ros2.py-5] [INFO] [1785912859.950839987] [fast_lio_localization]:   Early stop: top fitness=0.8587 >= 0.85 with 3 candidates
+[global_localization_ros2.py-5] [INFO] [1785912859.952340169] [fast_lio_localization]: RANSAC done | 3 attempts | Top-3 candidates: 0.8587, 0.8587, 0.8370
+[global_localization_ros2.py-5] [WARN] [1785912859.954854468] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-115.6° | expected=122.4° | diff=122.0° > 45.0°
+[global_localization_ros2.py-5] [WARN] [1785912859.955612767] [fast_lio_localization]: [YawFilter] REJECT candidate Yaw=-115.6° | expected=122.4° | diff=122.0° > 45.0°
+[global_localization_ros2.py-5] [INFO] [1785912859.956255510] [fast_lio_localization]: [YawFilter] KEEP   candidate Yaw=89.3° | expected=122.4° | diff=33.1°
+[global_localization_ros2.py-5] [INFO] [1785912859.958669709] [fast_lio_localization]: [YawFilter] 3 → 1 candidates after Yaw filter (IMU Yaw=160.4°, offset=-38.0°)
+[global_localization_ros2.py-5] [INFO] [1785912859.959432393] [fast_lio_localization]:   Trying candidate #1/1 (RANSAC fitness=0.8370) with ICP...
+[global_localization_ros2.py-5] [INFO] [1785912860.300791689] [fast_lio_localization]: ICP elapsed: 0.34s | fitness=0.9980 | threshold=0.95
+[global_localization_ros2.py-5] [INFO] [1785912860.304900702] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.02, Y:    -0.02, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.24, P:     0.05, Y:    -0.08 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.93, Y:     1.03, Z:    -0.44 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.37, P:    -2.21, Y:    79.48 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912860.305679930] [fast_lio_localization]:   Candidate #1 accepted after ICP + validation.
+[global_localization_ros2.py-5] [INFO] [1785912860.306299760] [fast_lio_localization]: ✅ Auto relocalization succeeded! Localization locked.
+[global_localization_ros2.py-5]   Use RViz 2D Pose Estimate to re-localize if needed.
+[global_localization_ros2.py-5] [INFO] [1785912860.663810968] [fast_lio_localization]: ICP elapsed: 0.35s | fitness=0.9980 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912860.668467584] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.00, Y:    -0.03, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.21, P:     0.02, Y:    -0.10 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.94, Y:     1.02, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.39, P:    -2.26, Y:    79.44 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912861.008154660] [fast_lio_localization]: ICP elapsed: 0.33s | fitness=0.9980 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912861.010053225] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.01, Y:    -0.01, Z:     0.00 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.24, P:     0.02, Y:    -0.07 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.92, Y:     1.01, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.37, P:    -2.26, Y:    79.47 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912862.949402899] [fast_lio_localization]: ICP elapsed: 0.33s | fitness=1.0000 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912862.954722067] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.02, Z:    -0.00 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.20, P:     0.00, Y:    -0.04 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     1.01, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.39, P:    -2.23, Y:    79.38 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912864.995843444] [fast_lio_localization]: ICP elapsed: 0.37s | fitness=0.9946 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912865.001832844] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.02, Z:    -0.00 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.25, P:     0.04, Y:    -0.03 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     1.00, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.38, P:    -2.24, Y:    79.34 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912866.979571034] [fast_lio_localization]: ICP elapsed: 0.35s | fitness=0.9959 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912866.983637517] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.00, Y:    -0.02, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.17, P:     0.01, Y:    -0.08 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     0.99, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.35, P:    -2.25, Y:    79.27 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912868.960101546] [fast_lio_localization]: ICP elapsed: 0.34s | fitness=0.9979 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912868.964268288] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.02, Y:    -0.01, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.23, P:     0.04, Y:    -0.09 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     1.02, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.36, P:    -2.25, Y:    79.38 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912870.955814363] [fast_lio_localization]: ICP elapsed: 0.33s | fitness=0.9939 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912870.959421085] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.00, Y:    -0.01, Z:    -0.00 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.22, P:     0.02, Y:    -0.05 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     1.01, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.31, P:    -2.28, Y:    79.47 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912872.973981491] [fast_lio_localization]: ICP elapsed: 0.35s | fitness=0.9972 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912872.975971515] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.00, Y:    -0.01, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.23, P:     0.02, Y:    -0.09 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     1.01, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.25, P:    -2.23, Y:    79.37 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912874.961518231] [fast_lio_localization]: ICP elapsed: 0.34s | fitness=0.9948 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912874.965797841] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.03, Y:    -0.03, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.28, P:     0.02, Y:    -0.03 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.92, Y:     1.05, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.19, P:    -2.19, Y:    79.58 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912876.956545030] [fast_lio_localization]: ICP elapsed: 0.33s | fitness=0.9926 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912876.960190793] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.00, Y:    -0.01, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.23, P:     0.01, Y:    -0.11 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     0.99, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.38, P:    -2.30, Y:    79.26 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912878.984794401] [fast_lio_localization]: ICP elapsed: 0.36s | fitness=0.9968 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912878.988962711] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.00, Y:    -0.01, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.25, P:     0.01, Y:    -0.09 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     0.98, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.41, P:    -2.28, Y:    79.34 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912880.984190632] [fast_lio_localization]: ICP elapsed: 0.36s | fitness=0.9921 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912880.986083052] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.00, Y:    -0.00, Z:    -0.00 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.22, P:    -0.00, Y:    -0.06 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.89, Y:     0.99, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.33, P:    -2.27, Y:    79.40 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912883.029634473] [fast_lio_localization]: ICP elapsed: 0.40s | fitness=0.9979 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912883.035858698] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.01, Z:    -0.00 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.22, P:     0.00, Y:    -0.10 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     0.99, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.40, P:    -2.26, Y:    79.41 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912885.108196914] [fast_lio_localization]: ICP elapsed: 0.48s | fitness=0.9990 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912885.116401306] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.02, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.27, P:     0.03, Y:    -0.07 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.92, Y:     1.00, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.26, P:    -2.25, Y:    79.42 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912887.028925979] [fast_lio_localization]: ICP elapsed: 0.40s | fitness=0.9970 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912887.031073128] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.01, Z:    -0.00 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.22, P:     0.03, Y:    -0.04 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     1.01, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.20, P:    -2.17, Y:    79.38 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912888.999798994] [fast_lio_localization]: ICP elapsed: 0.37s | fitness=0.9970 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912889.002179271] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.01, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.22, P:     0.06, Y:    -0.07 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     0.98, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.31, P:    -2.21, Y:    79.40 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912890.974781722] [fast_lio_localization]: ICP elapsed: 0.35s | fitness=0.9969 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912890.978443198] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.00, Y:    -0.01, Z:    -0.00 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.23, P:     0.05, Y:    -0.10 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     1.01, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.34, P:    -2.26, Y:    79.53 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912893.019790461] [fast_lio_localization]: ICP elapsed: 0.40s | fitness=0.9991 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912893.024278110] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.02, Z:    -0.00 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.27, P:     0.04, Y:    -0.09 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     0.98, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.44, P:    -2.24, Y:    79.37 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912894.956579421] [fast_lio_localization]: ICP elapsed: 0.33s | fitness=0.9970 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912894.961101121] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.06, Y:    -0.01, Z:     0.00 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.20, P:     0.01, Y:    -0.04 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     1.07, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.37, P:    -2.28, Y:    79.38 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912896.966526634] [fast_lio_localization]: ICP elapsed: 0.34s | fitness=0.9990 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912896.970764675] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.28, Y:     0.06, Z:    -0.06 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.13, P:    -0.13, Y:    -0.16 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.88, Y:     1.04, Z:    -0.47 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.61, P:    -2.58, Y:    79.39 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912898.950148319] [fast_lio_localization]: ICP elapsed: 0.32s | fitness=0.9952 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912898.954208593] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.01, Y:    -0.01, Z:     0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.20, P:    -0.05, Y:    -0.07 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     1.05, Z:    -0.39 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.42, P:    -2.39, Y:    79.52 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912900.994654244] [fast_lio_localization]: ICP elapsed: 0.37s | fitness=0.9991 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912901.000337361] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.33, Y:    -0.08, Z:     0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.19, P:    -0.02, Y:    -0.03 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.92, Y:     0.66, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.37, P:    -2.28, Y:    79.43 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912903.059013075] [fast_lio_localization]: ICP elapsed: 0.43s | fitness=0.9971 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912903.062351339] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.60, Y:    -0.16, Z:     0.00 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.16, P:    -0.06, Y:    -0.13 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.89, Y:     1.38, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.34, P:    -2.36, Y:    79.65 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912905.005192056] [fast_lio_localization]: ICP elapsed: 0.38s | fitness=0.9953 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912905.008718968] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.08, Y:     0.01, Z:    -0.03 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.17, P:    -0.04, Y:    -0.10 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.89, Y:     1.07, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.35, P:    -2.32, Y:    79.47 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912906.979939874] [fast_lio_localization]: ICP elapsed: 0.36s | fitness=0.9970 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912906.984475077] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.03, Y:    -0.00, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.19, P:    -0.01, Y:    -0.06 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     0.96, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.34, P:    -2.19, Y:    79.50 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912909.020116768] [fast_lio_localization]: ICP elapsed: 0.38s | fitness=0.9943 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912909.024737542] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.02, Y:    -0.01, Z:    -0.03 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.17, P:    -0.04, Y:    -0.08 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     1.01, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.35, P:    -2.24, Y:    79.44 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912911.004353434] [fast_lio_localization]: ICP elapsed: 0.38s | fitness=0.9971 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912911.008586130] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.14, P:    -0.05, Y:    -0.07 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     1.01, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.38, P:    -2.19, Y:    79.51 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912913.024219478] [fast_lio_localization]: ICP elapsed: 0.40s | fitness=0.9981 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912913.028877086] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.03, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.13, P:    -0.07, Y:    -0.07 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     0.99, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.30, P:    -2.30, Y:    79.48 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912915.015531370] [fast_lio_localization]: ICP elapsed: 0.39s | fitness=0.9961 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912915.019815236] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.00, Z:    -0.03 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.09, P:    -0.07, Y:    -0.11 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     1.01, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.44, P:    -2.22, Y:    79.43 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912917.025500859] [fast_lio_localization]: ICP elapsed: 0.39s | fitness=0.9981 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912917.030061984] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.04, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.20, P:    -0.04, Y:    -0.06 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     1.10, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.35, P:    -2.24, Y:    79.38 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912919.004826266] [fast_lio_localization]: ICP elapsed: 0.38s | fitness=0.9962 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912919.009278490] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.02, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.20, P:    -0.06, Y:    -0.14 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     1.04, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.43, P:    -2.33, Y:    79.46 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912921.004367182] [fast_lio_localization]: ICP elapsed: 0.38s | fitness=0.9980 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912921.008173783] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.04, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.19, P:    -0.07, Y:    -0.06 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.92, Y:     1.00, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.40, P:    -2.28, Y:    79.54 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912922.974706755] [fast_lio_localization]: ICP elapsed: 0.35s | fitness=0.9960 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912922.976772589] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.01, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.22, P:    -0.03, Y:    -0.09 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.89, Y:     0.96, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.36, P:    -2.30, Y:    79.41 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912924.989414997] [fast_lio_localization]: ICP elapsed: 0.37s | fitness=0.9950 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912924.994408009] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.05, Y:     0.00, Z:    -0.03 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.21, P:    -0.06, Y:    -0.17 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     1.02, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.32, P:    -2.28, Y:    79.39 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912927.010607342] [fast_lio_localization]: ICP elapsed: 0.38s | fitness=0.9943 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912927.016153558] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.04, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.22, P:    -0.06, Y:    -0.07 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     1.03, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.52, P:    -2.30, Y:    79.49 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912928.987928150] [fast_lio_localization]: ICP elapsed: 0.36s | fitness=0.9971 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912928.994547493] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.03, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.16, P:    -0.07, Y:    -0.15 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     1.00, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.35, P:    -2.23, Y:    79.32 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912931.050892043] [fast_lio_localization]: ICP elapsed: 0.43s | fitness=0.9962 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912931.057298066] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.06, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.15, P:    -0.07, Y:    -0.09 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     1.08, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.37, P:    -2.31, Y:    79.41 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912933.006694695] [fast_lio_localization]: ICP elapsed: 0.38s | fitness=0.9971 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912933.010847869] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.06, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.20, P:    -0.07, Y:    -0.13 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     1.03, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.32, P:    -2.23, Y:    79.43 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912934.989627667] [fast_lio_localization]: ICP elapsed: 0.37s | fitness=0.9961 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912934.994446176] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.00, Y:    -0.01, Z:    -0.03 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.26, P:    -0.05, Y:    -0.11 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     0.98, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.26, P:    -2.24, Y:    79.48 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912937.009806874] [fast_lio_localization]: ICP elapsed: 0.39s | fitness=0.9970 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912937.015211644] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.03, Y:    -0.00, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.19, P:    -0.09, Y:    -0.13 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     0.99, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.27, P:    -2.27, Y:    79.43 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912939.009764997] [fast_lio_localization]: ICP elapsed: 0.38s | fitness=0.9923 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912939.015316877] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.02, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.24, P:    -0.01, Y:    -0.13 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     1.06, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.36, P:    -2.21, Y:    79.45 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912940.982158317] [fast_lio_localization]: ICP elapsed: 0.36s | fitness=0.9990 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912940.984208407] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.03, Y:    -0.02, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.22, P:    -0.03, Y:    -0.11 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     0.99, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.37, P:    -2.26, Y:    79.49 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912942.994355309] [fast_lio_localization]: ICP elapsed: 0.37s | fitness=0.9980 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912942.998770060] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.02, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.21, P:    -0.08, Y:    -0.16 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.92, Y:     1.03, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.43, P:    -2.34, Y:    79.43 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912945.029766958] [fast_lio_localization]: ICP elapsed: 0.40s | fitness=0.9970 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912945.033216010] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.02, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.25, P:     0.00, Y:    -0.10 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     1.01, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.23, P:    -2.09, Y:    79.46 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912946.994938154] [fast_lio_localization]: ICP elapsed: 0.37s | fitness=0.9980 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912946.999616466] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.02, Y:    -0.02, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.16, P:    -0.06, Y:    -0.15 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     0.98, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.42, P:    -2.28, Y:    79.43 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912948.985217484] [fast_lio_localization]: ICP elapsed: 0.36s | fitness=0.9949 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912948.990021369] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.04, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.24, P:    -0.06, Y:    -0.21 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.92, Y:     1.04, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.38, P:    -2.31, Y:    79.29 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912951.000206438] [fast_lio_localization]: ICP elapsed: 0.38s | fitness=0.9990 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912951.008665527] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.00, Y:    -0.02, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.25, P:    -0.03, Y:    -0.14 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     1.00, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.30, P:    -2.20, Y:    79.38 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912952.982660073] [fast_lio_localization]: ICP elapsed: 0.36s | fitness=0.9990 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912952.991724399] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.03, Y:     0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.09, P:    -0.08, Y:    -0.11 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.87, Y:     1.05, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.51, P:    -2.31, Y:    79.47 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912954.980341902] [fast_lio_localization]: ICP elapsed: 0.36s | fitness=0.9980 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912954.985349314] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.02, Y:    -0.02, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.16, P:    -0.05, Y:    -0.18 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.93, Y:     1.03, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.38, P:    -2.25, Y:    79.36 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912957.005258950] [fast_lio_localization]: ICP elapsed: 0.37s | fitness=0.9980 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912957.009800010] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.03, Y:    -0.00, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.23, P:    -0.06, Y:    -0.09 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     1.01, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.26, P:    -2.25, Y:    79.45 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912959.030035766] [fast_lio_localization]: ICP elapsed: 0.40s | fitness=0.9980 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912959.035132366] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.00, Y:    -0.02, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.23, P:    -0.06, Y:    -0.06 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     0.95, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.29, P:    -2.27, Y:    79.36 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912961.009691275] [fast_lio_localization]: ICP elapsed: 0.38s | fitness=0.9970 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912961.015294900] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    -0.06, Y:    -0.01, Z:    -0.03 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.21, P:    -0.09, Y:    -0.11 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.88, Y:     0.92, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.28, P:    -2.27, Y:    79.47 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912963.002105416] [fast_lio_localization]: ICP elapsed: 0.38s | fitness=0.9980 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912963.004341049] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.00, Y:    -0.04, Z:     0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.23, P:    -0.04, Y:    -0.14 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.94, Y:     0.98, Z:    -0.40 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.37, P:    -2.23, Y:    79.47 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912965.016955499] [fast_lio_localization]: ICP elapsed: 0.39s | fitness=0.9980 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912965.022002913] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.04, Y:    -0.00, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.25, P:    -0.06, Y:    -0.19 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     1.05, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.24, P:    -2.19, Y:    79.47 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912966.986515789] [fast_lio_localization]: ICP elapsed: 0.36s | fitness=0.9958 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912966.991088977] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.01, Y:    -0.02, Z:    -0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.21, P:    -0.08, Y:    -0.04 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     1.01, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.49, P:    -2.35, Y:    79.46 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912968.999794834] [fast_lio_localization]: ICP elapsed: 0.37s | fitness=0.9960 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912969.003216942] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.02, Y:    -0.00, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.29, P:    -0.04, Y:    -0.06 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.89, Y:     1.02, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.35, P:    -2.23, Y:    79.48 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912971.216648858] [fast_lio_localization]: ICP elapsed: 0.58s | fitness=0.9980 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912971.220057845] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.05, Y:    -0.00, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.21, P:    -0.08, Y:    -0.08 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.90, Y:     0.99, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.47, P:    -2.32, Y:    79.53 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912973.109214399] [fast_lio_localization]: ICP elapsed: 0.48s | fitness=0.9980 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912973.111642294] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.03, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.20, P:    -0.07, Y:    -0.03 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     1.03, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.34, P:    -2.33, Y:    79.48 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912975.052959348] [fast_lio_localization]: ICP elapsed: 0.42s | fitness=0.9980 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912975.058752101] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.07, Y:    -0.01, Z:    -0.02 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.05, P:    -0.11, Y:     0.49 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.91, Y:     1.07, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.64, P:    -2.39, Y:    80.09 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912977.033454420] [fast_lio_localization]: ICP elapsed: 0.41s | fitness=0.9966 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912977.040334219] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.50, Y:     0.04, Z:    -0.04 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.32, P:     0.35, Y:     2.73 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.95, Y:     1.44, Z:    -0.44 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.12, P:    -1.88, Y:    82.29 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912979.082082598] [fast_lio_localization]: ICP elapsed: 0.46s | fitness=0.9978 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912979.087958522] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.04, Y:     0.14, Z:     0.01 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.58, P:    -1.01, Y:     5.58 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.94, Y:     2.18, Z:    -0.34 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.04, P:    -3.75, Y:    85.13 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912981.052804128] [fast_lio_localization]: ICP elapsed: 0.43s | fitness=0.9966 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912981.055772011] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.11, Y:     0.08, Z:    -0.05 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.80, P:    -1.08, Y:     7.74 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.01, Y:     2.23, Z:    -0.40 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.19, P:    -3.73, Y:    87.10 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912983.061334218] [fast_lio_localization]: ICP elapsed: 0.44s | fitness=0.9989 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912983.063863525] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.96, Y:     1.74, Z:    -1.47 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.05, P:    -2.45, Y:     2.29 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     0.74, Y:     4.59, Z:    -1.68 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.29, P:    -5.30, Y:    81.85 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912985.111698196] [fast_lio_localization]: ICP elapsed: 0.49s | fitness=0.9944 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912985.114129483] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     4.36, Y:     1.69, Z:    -1.40 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.94, P:    -2.66, Y:    -6.69 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.85, Y:     3.78, Z:    -0.39 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.06, P:    -2.43, Y:    77.12 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912987.041700493] [fast_lio_localization]: ICP elapsed: 0.41s | fitness=0.9989 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912987.047410106] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     4.56, Y:     1.71, Z:    -1.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.46, P:    -2.35, Y:   -21.73 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.83, Y:     3.92, Z:    -0.39 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.50, P:    -1.36, Y:    62.17 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912989.163840810] [fast_lio_localization]: ICP elapsed: 0.54s | fitness=0.9957 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912989.166344900] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     5.25, Y:     1.50, Z:    -1.47 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.01, P:    -1.94, Y:   -25.27 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.14, Y:     4.62, Z:    -0.46 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.25, P:    -0.49, Y:    58.67 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912991.172640084] [fast_lio_localization]: ICP elapsed: 0.55s | fitness=0.9977 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912991.181691994] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     6.39, Y:     0.71, Z:    -1.18 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.52, P:    -5.82, Y:   -21.71 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.61, Y:     5.64, Z:    -1.36 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.46, P:    -6.62, Y:    61.05 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912993.127796112] [fast_lio_localization]: ICP elapsed: 0.50s | fitness=0.9916 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912993.132904743] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     6.23, Y:     0.75, Z:    -1.03 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.71, P:    -4.78, Y:   -18.31 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.31, Y:     4.99, Z:    -0.50 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.65, P:     0.09, Y:    61.13 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912995.031793239] [fast_lio_localization]: ICP elapsed: 0.41s | fitness=0.9919 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912995.037117367] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     6.46, Y:     0.73, Z:    -0.92 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.31, P:    -2.38, Y:   -18.84 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.46, Y:     5.25, Z:    -0.31 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.64, P:     1.71, Y:    60.61 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912997.092385379] [fast_lio_localization]: ICP elapsed: 0.47s | fitness=0.9925 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912997.096111241] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     4.84, Y:     0.03, Z:    -0.05 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.58, P:     1.58, Y:   -13.49 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.86, Y:     5.74, Z:     0.93 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.29, P:     2.44, Y:    66.63 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785912999.212581166] [fast_lio_localization]: ICP elapsed: 0.59s | fitness=0.9974 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785912999.219016725] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     5.18, Y:    -0.04, Z:    -0.17 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.20, P:     0.23, Y:    -2.20 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.82, Y:     5.91, Z:    -0.44 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.63, P:    -2.13, Y:    77.12 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913001.131184764] [fast_lio_localization]: ICP elapsed: 0.50s | fitness=0.9980 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913001.133416429] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     5.27, Y:     0.29, Z:    -1.66 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.60, P:    -2.80, Y:    13.55 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.98, Y:     6.38, Z:    -0.59 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.56, P:    -0.25, Y:    88.89 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913003.132530668] [fast_lio_localization]: ICP elapsed: 0.51s | fitness=0.9938 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913003.138177175] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     6.46, Y:     0.38, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:    -7.42, P:    -1.32, Y:    17.43 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.68, Y:     7.75, Z:    -0.16 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.67, P:    -6.39, Y:    95.75 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913005.102097377] [fast_lio_localization]: ICP elapsed: 0.48s | fitness=0.9845 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913005.112364403] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     6.30, Y:     0.36, Z:    -0.33 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.53, P:     0.78, Y:    25.19 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.77, Y:     7.51, Z:    -0.38 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.86, P:    -3.20, Y:   103.92 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913007.131234388] [fast_lio_localization]: ICP elapsed: 0.51s | fitness=0.9790 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913007.133517158] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     6.31, Y:    -0.06, Z:    -0.26 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.73, P:     1.86, Y:    31.54 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.33, Y:     7.07, Z:    -0.36 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.67, P:    -4.26, Y:   111.11 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913009.087465477] [fast_lio_localization]: ICP elapsed: 0.46s | fitness=0.9865 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913009.092253873] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     6.16, Y:     0.19, Z:    -0.31 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.76, P:     0.77, Y:    41.02 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.84, Y:     7.03, Z:    -0.45 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.38, P:    -4.25, Y:   120.49 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913011.151983341] [fast_lio_localization]: ICP elapsed: 0.53s | fitness=0.9839 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913011.158477303] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     5.85, Y:     0.59, Z:    -0.39 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.90, P:     2.78, Y:    57.57 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.54, Y:     6.89, Z:    -0.59 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.02, P:    -3.73, Y:   137.40 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913013.142836024] [fast_lio_localization]: ICP elapsed: 0.52s | fitness=0.9954 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913013.147957456] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     6.18, Y:    -0.07, Z:    -0.28 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.92, P:     0.85, Y:   112.75 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.32, Y:     6.97, Z:    -0.45 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.97, P:    -5.70, Y:  -163.98 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913015.147532914] [fast_lio_localization]: ICP elapsed: 0.52s | fitness=0.9841 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913015.152212602] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     6.21, Y:     0.03, Z:    -0.27 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.71, P:    -1.03, Y:   112.98 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.02, Y:     7.01, Z:    -0.44 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.30, P:    -4.89, Y:  -167.37 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913017.162605824] [fast_lio_localization]: ICP elapsed: 0.54s | fitness=0.9911 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913017.167673430] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     6.30, Y:     0.09, Z:    -0.22 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.95, P:     2.09, Y:   113.21 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.02, Y:     7.17, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.45, P:    -2.82, Y:  -167.31 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913019.143129776] [fast_lio_localization]: ICP elapsed: 0.52s | fitness=0.9928 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913019.151845545] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     5.75, Y:     0.33, Z:    -0.34 (m)
+[global_localization_ros2.py-5]   Att -> R:     5.54, P:    -3.27, Y:   122.24 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.63, Y:     6.66, Z:    -0.54 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.64, P:    -5.97, Y:  -157.93 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913021.097189029] [fast_lio_localization]: ICP elapsed: 0.47s | fitness=0.9963 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913021.102210394] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     6.04, Y:     0.72, Z:    -0.21 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.39, P:    -3.54, Y:   122.67 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.41, Y:     7.23, Z:    -0.06 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.52, P:    -4.35, Y:  -157.75 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913023.070266405] [fast_lio_localization]: ICP elapsed: 0.44s | fitness=0.9931 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913023.073816900] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     5.84, Y:     0.78, Z:    -0.36 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.29, P:    -2.40, Y:   109.26 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.27, Y:     7.04, Z:    -0.32 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.18, P:    -6.90, Y:  -170.35 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913025.041716776] [fast_lio_localization]: ICP elapsed: 0.42s | fitness=0.9954 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913025.046279148] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     5.75, Y:     0.55, Z:    -0.34 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.83, P:    -1.55, Y:    82.80 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.31, Y:     7.04, Z:    -0.33 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.91, P:    -6.65, Y:   162.41 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913027.103234802] [fast_lio_localization]: ICP elapsed: 0.47s | fitness=0.9988 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913027.113374751] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     5.62, Y:     0.83, Z:    -0.45 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.85, P:     0.83, Y:    66.35 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.24, Y:     6.69, Z:    -0.28 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.60, P:    -5.36, Y:   146.19 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913029.017171675] [fast_lio_localization]: ICP elapsed: 0.39s | fitness=0.9918 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913029.024426976] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     5.32, Y:     0.47, Z:    -0.35 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.02, P:     0.68, Y:    38.92 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.34, Y:     6.27, Z:    -0.47 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.67, P:    -4.96, Y:   118.48 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913031.060717210] [fast_lio_localization]: ICP elapsed: 0.44s | fitness=0.9943 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913031.062825573] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     5.70, Y:     0.86, Z:    -0.23 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.10, P:    -0.30, Y:    16.20 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.89, Y:     6.73, Z:    -0.34 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.81, P:    -3.40, Y:    96.16 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913033.232991150] [fast_lio_localization]: ICP elapsed: 0.61s | fitness=0.9930 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913033.235077817] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     5.94, Y:     0.79, Z:    -0.07 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.06, P:     7.08, Y:    10.77 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.33, Y:     6.96, Z:    -0.20 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.25, P:     4.76, Y:    90.62 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913035.127541527] [fast_lio_localization]: ICP elapsed: 0.50s | fitness=0.9921 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913035.132653967] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:     8.85, Y:     2.54, Z:    -0.61 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.16, P:     0.41, Y:     9.26 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.58, Y:     9.58, Z:    -0.57 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.53, P:    -1.14, Y:    85.52 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913037.097398356] [fast_lio_localization]: ICP elapsed: 0.47s | fitness=0.9938 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913037.099985873] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    12.05, Y:     3.38, Z:    -0.65 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.74, P:     1.11, Y:     1.85 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.96, Y:     8.24, Z:    -0.46 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.35, P:    -1.94, Y:    79.14 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913039.087222653] [fast_lio_localization]: ICP elapsed: 0.46s | fitness=0.9844 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913039.089269255] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    12.16, Y:     3.33, Z:    -0.67 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.14, P:     0.90, Y:   -12.07 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.86, Y:     8.46, Z:    -0.40 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.33, P:    -0.74, Y:    64.89 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913041.072676231] [fast_lio_localization]: ICP elapsed: 0.44s | fitness=0.9942 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913041.079874282] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    12.80, Y:     3.21, Z:    -0.63 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.12, P:     1.12, Y:   -13.11 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.30, Y:     9.01, Z:    -0.39 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.02, P:    -1.05, Y:    64.31 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913043.213975061] [fast_lio_localization]: ICP elapsed: 0.59s | fitness=0.9976 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913043.223002778] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    13.38, Y:     2.68, Z:    -1.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     7.57, P:   -13.00, Y:   -11.46 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.55, Y:     9.45, Z:    -0.31 (m)
+[global_localization_ros2.py-5]   Att -> R:     6.65, P:    -1.79, Y:    64.03 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913045.092663738] [fast_lio_localization]: ICP elapsed: 0.47s | fitness=0.9851 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913045.097007990] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    13.45, Y:     2.84, Z:    -1.24 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.39, P:    -8.64, Y:     2.49 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.43, Y:     9.74, Z:    -0.31 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.35, P:    -2.10, Y:    78.39 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913047.097181041] [fast_lio_localization]: ICP elapsed: 0.47s | fitness=0.9755 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913047.103611337] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    13.57, Y:     2.61, Z:    -1.46 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.31, P:    -9.16, Y:    24.43 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.72, Y:     9.80, Z:    -0.62 (m)
+[global_localization_ros2.py-5]   Att -> R:     7.97, P:    -3.11, Y:   100.37 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913049.082721447] [fast_lio_localization]: ICP elapsed: 0.46s | fitness=0.9924 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913049.090465489] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    14.42, Y:     3.17, Z:    -1.05 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.74, P:   -12.41, Y:    30.14 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.34, Y:    10.63, Z:    -0.11 (m)
+[global_localization_ros2.py-5]   Att -> R:     5.29, P:    -3.90, Y:   104.58 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913051.157503912] [fast_lio_localization]: ICP elapsed: 0.53s | fitness=0.9865 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913051.161512249] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    14.76, Y:     3.35, Z:    -0.93 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.03, P:   -13.72, Y:    24.19 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.25, Y:    11.09, Z:    -0.21 (m)
+[global_localization_ros2.py-5]   Att -> R:     6.03, P:    -7.41, Y:    98.73 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913053.146791294] [fast_lio_localization]: ICP elapsed: 0.52s | fitness=0.9897 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913053.152121633] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.07, Y:     3.64, Z:    -0.96 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.08, P:   -13.13, Y:    20.27 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.16, Y:    11.36, Z:    -0.20 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.92, P:    -5.82, Y:    95.55 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913055.017710159] [fast_lio_localization]: ICP elapsed: 0.39s | fitness=0.9802 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913055.020023805] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.36, Y:     3.76, Z:    -0.66 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.45, P:    -9.02, Y:    13.04 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.02, Y:    11.89, Z:    -0.26 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.86, P:    -1.96, Y:    88.62 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913057.047935295] [fast_lio_localization]: ICP elapsed: 0.42s | fitness=0.9843 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913057.050046518] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    14.94, Y:     3.32, Z:    -0.51 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.34, P:     8.73, Y:    -2.41 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.89, Y:    11.48, Z:    -0.20 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.28, P:     4.94, Y:    77.82 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913059.010797433] [fast_lio_localization]: ICP elapsed: 0.39s | fitness=0.9865 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913059.012981837] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.73, Y:     3.62, Z:    -0.74 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.57, P:     8.94, Y:    -7.86 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.77, Y:    13.01, Z:    -0.34 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.32, P:    -1.06, Y:    75.42 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913061.021295565] [fast_lio_localization]: ICP elapsed: 0.40s | fitness=0.9791 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913061.026289729] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.84, Y:     3.44, Z:    -0.74 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.44, P:     8.13, Y:    -5.00 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.99, Y:    12.90, Z:    -0.38 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.63, P:    -1.31, Y:    78.01 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913063.045024471] [fast_lio_localization]: ICP elapsed: 0.42s | fitness=0.9744 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913063.050660182] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.07, Y:     3.34, Z:    -0.73 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.96, P:     8.41, Y:    -4.79 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.31, Y:    13.10, Z:    -0.33 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.96, P:    -1.29, Y:    78.42 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913065.043903788] [fast_lio_localization]: ICP elapsed: 0.42s | fitness=0.9869 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913065.046946117] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.97, Y:     3.41, Z:    -0.75 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.21, P:     8.25, Y:    -6.17 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.98, Y:    13.03, Z:    -0.33 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.36, P:    -1.36, Y:    76.97 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913067.112255625] [fast_lio_localization]: ICP elapsed: 0.49s | fitness=0.9855 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913067.114425184] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.83, Y:     3.52, Z:    -0.74 (m)
+[global_localization_ros2.py-5]   Att -> R:    -4.85, P:     7.33, Y:   -20.86 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.99, Y:    12.99, Z:    -0.36 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.52, P:    -0.57, Y:    62.56 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913069.035418554] [fast_lio_localization]: ICP elapsed: 0.41s | fitness=0.9924 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913069.037617744] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.69, Y:     3.77, Z:    -0.70 (m)
+[global_localization_ros2.py-5]   Att -> R:    -7.97, P:     4.84, Y:   -43.13 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.79, Y:    12.80, Z:    -0.33 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.55, P:     0.90, Y:    40.36 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913071.046735453] [fast_lio_localization]: ICP elapsed: 0.42s | fitness=0.9829 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913071.049486273] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.83, Y:     3.75, Z:    -0.74 (m)
+[global_localization_ros2.py-5]   Att -> R:    -9.55, P:     1.55, Y:   -59.23 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.81, Y:    12.93, Z:    -0.36 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.59, P:     0.87, Y:    23.76 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913073.051112022] [fast_lio_localization]: ICP elapsed: 0.42s | fitness=0.9854 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913073.055710238] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.85, Y:     3.79, Z:    -0.75 (m)
+[global_localization_ros2.py-5]   Att -> R:    -9.98, P:    -1.91, Y:   -76.25 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.72, Y:    12.92, Z:    -0.35 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.92, P:     0.94, Y:     6.27 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913075.075071865] [fast_lio_localization]: ICP elapsed: 0.45s | fitness=0.9922 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913075.081443463] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.80, Y:     3.63, Z:    -0.72 (m)
+[global_localization_ros2.py-5]   Att -> R:    -9.83, P:    -4.58, Y:   -92.01 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.84, Y:    12.83, Z:    -0.34 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.04, P:     1.12, Y:    -9.86 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913077.050123498] [fast_lio_localization]: ICP elapsed: 0.43s | fitness=0.9908 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913077.054070825] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.77, Y:     3.54, Z:    -0.69 (m)
+[global_localization_ros2.py-5]   Att -> R:    -9.50, P:    -6.30, Y:  -102.83 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.94, Y:    12.87, Z:    -0.32 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.06, P:     1.21, Y:   -20.09 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913079.061283076] [fast_lio_localization]: ICP elapsed: 0.44s | fitness=0.9955 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913079.071657940] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.85, Y:     2.66, Z:    -0.69 (m)
+[global_localization_ros2.py-5]   Att -> R:    -8.18, P:    -8.67, Y:  -109.98 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.81, Y:    12.89, Z:    -0.39 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.82, P:    -0.08, Y:   -27.79 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913081.043323793] [fast_lio_localization]: ICP elapsed: 0.42s | fitness=0.9878 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913081.049442796] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.93, Y:     2.83, Z:    -0.72 (m)
+[global_localization_ros2.py-5]   Att -> R:    -7.73, P:    -9.19, Y:  -120.95 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.84, Y:    13.04, Z:    -0.40 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.75, P:     0.43, Y:   -38.05 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913083.108918092] [fast_lio_localization]: ICP elapsed: 0.48s | fitness=0.9927 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913083.114902669] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.93, Y:     2.90, Z:    -0.73 (m)
+[global_localization_ros2.py-5]   Att -> R:    -6.14, P:   -10.74, Y:  -131.09 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.67, Y:    12.96, Z:    -0.38 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.87, P:    -0.34, Y:   -48.87 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913085.159262153] [fast_lio_localization]: ICP elapsed: 0.53s | fitness=0.9885 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913085.163179629] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.96, Y:     2.90, Z:    -0.73 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.41, P:   -12.34, Y:  -146.16 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.64, Y:    12.99, Z:    -0.39 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.93, P:    -1.39, Y:   -63.69 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913087.047420817] [fast_lio_localization]: ICP elapsed: 0.42s | fitness=0.9841 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913087.049677194] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.20, Y:     2.97, Z:    -0.75 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.22, P:   -12.76, Y:  -163.33 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.62, Y:    13.33, Z:    -0.37 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.49, P:    -1.52, Y:   -80.20 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913089.056201576] [fast_lio_localization]: ICP elapsed: 0.43s | fitness=0.9908 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913089.060300007] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.97, Y:     2.85, Z:    -0.69 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.04, P:   -12.99, Y:  -173.50 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.67, Y:    12.96, Z:    -0.35 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.88, P:    -2.51, Y:   -90.07 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913091.024783807] [fast_lio_localization]: ICP elapsed: 0.40s | fitness=0.9886 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913091.028814722] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.97, Y:     2.88, Z:    -0.74 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.17, P:   -13.22, Y:  -173.51 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.60, Y:    12.91, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.81, P:    -2.90, Y:   -90.26 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913093.010604783] [fast_lio_localization]: ICP elapsed: 0.38s | fitness=0.9886 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913093.014396922] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.90, Y:     2.82, Z:    -0.72 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.58, P:   -13.15, Y:  -173.50 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.71, Y:    12.88, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.84, P:    -2.69, Y:   -89.92 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913095.134762182] [fast_lio_localization]: ICP elapsed: 0.51s | fitness=0.9889 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913095.142455323] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.94, Y:     2.82, Z:    -0.74 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.77, P:   -13.14, Y:  -175.97 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.73, Y:    12.94, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.59, P:    -2.82, Y:   -92.59 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913097.070510089] [fast_lio_localization]: ICP elapsed: 0.45s | fitness=0.9770 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913097.074961762] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.93, Y:     2.77, Z:    -0.70 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.55, P:   -12.72, Y:   178.34 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.69, Y:    12.96, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.98, P:    -3.18, Y:   -97.92 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913099.033890883] [fast_lio_localization]: ICP elapsed: 0.41s | fitness=0.9801 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913099.036895433] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.92, Y:     2.78, Z:    -0.72 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.15, P:   -12.26, Y:   172.12 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.76, Y:    12.91, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.56, P:    -3.06, Y:  -104.29 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913101.058956361] [fast_lio_localization]: ICP elapsed: 0.43s | fitness=0.9880 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913101.061927024] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.74, Y:     2.74, Z:    -0.68 (m)
+[global_localization_ros2.py-5]   Att -> R:     7.65, P:   -11.91, Y:   157.92 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.78, Y:    12.81, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.60, P:    -4.77, Y:  -117.74 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913103.109430840] [fast_lio_localization]: ICP elapsed: 0.48s | fitness=0.9913 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913103.118448748] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    18.06, Y:     3.32, Z:    -1.33 (m)
+[global_localization_ros2.py-5]   Att -> R:     5.47, P:     0.19, Y:   139.98 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.04, Y:    12.89, Z:    -0.39 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.16, P:    -2.96, Y:  -136.65 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913105.025007579] [fast_lio_localization]: ICP elapsed: 0.40s | fitness=0.9959 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913105.028443926] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    17.45, Y:     3.50, Z:    -1.26 (m)
+[global_localization_ros2.py-5]   Att -> R:     5.47, P:    -1.93, Y:   140.96 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.26, Y:    11.98, Z:    -0.39 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.03, P:    -5.50, Y:  -136.98 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913107.030025387] [fast_lio_localization]: ICP elapsed: 0.41s | fitness=0.9945 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913107.040443417] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    17.02, Y:     3.47, Z:    -1.20 (m)
+[global_localization_ros2.py-5]   Att -> R:     6.58, P:    -4.46, Y:   159.39 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.18, Y:    11.68, Z:    -0.39 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.98, P:    -4.31, Y:  -118.22 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913109.132715631] [fast_lio_localization]: ICP elapsed: 0.51s | fitness=0.9867 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913109.143967784] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    17.04, Y:     3.57, Z:    -1.19 (m)
+[global_localization_ros2.py-5]   Att -> R:     5.17, P:    -4.45, Y:   165.60 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.19, Y:    11.63, Z:    -0.30 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.23, P:    -4.29, Y:  -112.25 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913111.133385197] [fast_lio_localization]: ICP elapsed: 0.50s | fitness=0.9848 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913111.138912077] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.94, Y:     3.80, Z:    -1.19 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.52, P:    -5.80, Y:   177.58 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.94, Y:    11.58, Z:    -0.28 (m)
+[global_localization_ros2.py-5]   Att -> R:    -4.14, P:    -3.68, Y:  -100.81 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913113.057359276] [fast_lio_localization]: ICP elapsed: 0.43s | fitness=0.9900 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913113.060923750] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    17.00, Y:     3.79, Z:    -1.25 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.04, P:    -5.96, Y:  -167.23 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.93, Y:    11.73, Z:    -0.36 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.53, P:    -1.75, Y:   -85.94 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913115.093218753] [fast_lio_localization]: ICP elapsed: 0.47s | fitness=0.9914 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913115.098902399] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.69, Y:     3.73, Z:    -1.25 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.24, P:    -7.03, Y:  -152.83 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     1.94, Y:    11.22, Z:    -0.38 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.89, P:    -1.25, Y:   -71.33 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913117.167265173] [fast_lio_localization]: ICP elapsed: 0.54s | fitness=0.9906 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913117.171651705] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.48, Y:     3.53, Z:    -1.15 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.36, P:    -6.34, Y:  -145.82 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.08, Y:    11.08, Z:    -0.29 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.40, P:    -0.71, Y:   -63.88 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913119.208572002] [fast_lio_localization]: ICP elapsed: 0.58s | fitness=0.9913 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913119.218366799] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.39, Y:     3.30, Z:    -1.14 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.34, P:    -6.35, Y:  -135.81 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.27, Y:    10.98, Z:    -0.35 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.85, P:     0.40, Y:   -54.39 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913121.127737675] [fast_lio_localization]: ICP elapsed: 0.50s | fitness=0.9906 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913121.133075350] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.39, Y:     3.31, Z:    -1.22 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.05, P:    -6.45, Y:  -124.57 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.35, Y:    10.99, Z:    -0.45 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.52, P:     0.59, Y:   -43.13 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913123.232084279] [fast_lio_localization]: ICP elapsed: 0.61s | fitness=0.9975 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913123.238665153] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.26, Y:     3.19, Z:    -1.18 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.04, P:    -6.73, Y:  -114.17 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.43, Y:    10.73, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.51, P:     1.02, Y:   -33.27 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913125.212128446] [fast_lio_localization]: ICP elapsed: 0.59s | fitness=0.9960 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913125.218721001] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.41, Y:     2.20, Z:    -1.08 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.04, P:    -6.83, Y:  -110.49 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.64, Y:    10.83, Z:    -0.38 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.75, P:     0.39, Y:   -30.42 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913127.181482333] [fast_lio_localization]: ICP elapsed: 0.56s | fitness=0.9936 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913127.190964859] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.15, Y:     3.22, Z:    -1.14 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.82, P:    -5.90, Y:   -99.28 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.44, Y:    10.78, Z:    -0.40 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.04, P:     1.16, Y:   -18.09 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913129.129555179] [fast_lio_localization]: ICP elapsed: 0.50s | fitness=0.9891 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913129.147484198] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.17, Y:     2.67, Z:    -1.15 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.66, P:    -5.79, Y:   -92.77 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.95, Y:    10.68, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.76, P:     1.05, Y:   -11.64 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913131.197086524] [fast_lio_localization]: ICP elapsed: 0.57s | fitness=0.9930 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913131.202455852] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.25, Y:     2.76, Z:    -1.18 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.17, P:    -5.18, Y:   -88.85 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.39, Y:    10.78, Z:    -0.45 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.44, P:     2.53, Y:    -8.80 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913133.225411092] [fast_lio_localization]: ICP elapsed: 0.59s | fitness=0.9932 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913133.233750198] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.96, Y:     2.48, Z:    -1.18 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.61, P:    -5.55, Y:   -69.92 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.01, Y:    10.35, Z:    -0.49 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.03, P:    -0.29, Y:    10.50 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913135.039469798] [fast_lio_localization]: ICP elapsed: 0.42s | fitness=0.9869 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913135.041560143] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.23, Y:     2.37, Z:    -1.16 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.97, P:    -4.19, Y:   -59.04 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.82, Y:    10.54, Z:    -0.47 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.78, P:     0.41, Y:    21.00 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913137.076247066] [fast_lio_localization]: ICP elapsed: 0.45s | fitness=0.9921 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913137.081188280] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.20, Y:     2.52, Z:    -1.13 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.21, P:    -3.73, Y:   -59.19 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.53, Y:    10.57, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.87, P:     1.64, Y:    21.83 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913139.149664248] [fast_lio_localization]: ICP elapsed: 0.52s | fitness=0.9884 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913139.156418216] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.23, Y:     2.39, Z:    -1.10 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.37, P:    -3.62, Y:   -58.89 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.64, Y:    10.62, Z:    -0.36 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.27, P:     1.31, Y:    21.46 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913141.145655763] [fast_lio_localization]: ICP elapsed: 0.52s | fitness=0.9814 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913141.159280404] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.23, Y:     2.56, Z:    -1.10 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.44, P:    -3.61, Y:   -61.61 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.77, Y:    10.60, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.12, P:     0.54, Y:    18.59 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913143.186490562] [fast_lio_localization]: ICP elapsed: 0.56s | fitness=0.9840 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913143.196738236] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.33, Y:     2.40, Z:    -1.13 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.73, P:    -7.18, Y:   -92.60 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.52, Y:    10.76, Z:    -0.38 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.90, P:     1.26, Y:   -12.64 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913145.125820066] [fast_lio_localization]: ICP elapsed: 0.50s | fitness=0.9836 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913145.136307639] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.58, Y:     2.07, Z:    -1.10 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.60, P:    -4.95, Y:   -79.39 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.59, Y:    10.99, Z:    -0.36 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.97, P:    -0.80, Y:     2.97 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913147.121914017] [fast_lio_localization]: ICP elapsed: 0.49s | fitness=0.9908 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913147.126955970] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.18, Y:     2.77, Z:    -1.15 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.97, P:    -3.04, Y:   -67.02 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.29, Y:    10.63, Z:    -0.39 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.10, P:     2.49, Y:    13.33 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913149.110712418] [fast_lio_localization]: ICP elapsed: 0.49s | fitness=0.9912 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913149.123086445] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.49, Y:     1.97, Z:    -1.08 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.65, P:    -4.46, Y:   -56.08 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.16, Y:    10.84, Z:    -0.39 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.03, P:    -0.26, Y:    25.08 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913151.160410307] [fast_lio_localization]: ICP elapsed: 0.53s | fitness=0.9971 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913151.164622522] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.58, Y:     2.65, Z:    -1.06 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.48, P:    -5.20, Y:   -91.13 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.51, Y:    10.96, Z:    -0.33 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.01, P:     1.95, Y:   -10.72 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913153.174215539] [fast_lio_localization]: ICP elapsed: 0.55s | fitness=0.9869 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913153.180775026] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.56, Y:     2.22, Z:    -1.14 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.07, P:    -6.40, Y:  -113.51 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.40, Y:    11.01, Z:    -0.38 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.52, P:    -0.34, Y:   -31.74 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913155.050735656] [fast_lio_localization]: ICP elapsed: 0.43s | fitness=0.9926 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913155.056600185] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.35, Y:     1.45, Z:    -1.02 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.91, P:    -5.60, Y:   -68.79 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.82, Y:    10.90, Z:    -0.38 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.21, P:     1.56, Y:    12.21 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913157.154785517] [fast_lio_localization]: ICP elapsed: 0.53s | fitness=0.9909 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913157.159653400] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.44, Y:     2.71, Z:    -1.21 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.38, P:    -4.31, Y:   -74.44 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.81, Y:    11.04, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.46, P:     1.25, Y:     7.55 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913159.151196601] [fast_lio_localization]: ICP elapsed: 0.53s | fitness=0.9844 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913159.160633047] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.27, Y:     2.52, Z:    -1.16 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.99, P:    -3.33, Y:   -68.47 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.96, Y:    10.73, Z:    -0.44 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.70, P:     1.84, Y:    12.94 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913161.117747022] [fast_lio_localization]: ICP elapsed: 0.49s | fitness=0.9897 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913161.124777671] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.35, Y:     2.63, Z:    -1.20 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.23, P:    -3.80, Y:   -69.87 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.81, Y:    10.89, Z:    -0.46 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.58, P:     1.11, Y:    11.56 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913163.141358995] [fast_lio_localization]: ICP elapsed: 0.52s | fitness=0.9877 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913163.144023092] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.35, Y:     2.63, Z:    -1.16 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.43, P:    -4.85, Y:   -71.43 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.90, Y:    10.74, Z:    -0.36 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.53, P:    -0.23, Y:     9.92 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913165.113754994] [fast_lio_localization]: ICP elapsed: 0.49s | fitness=0.9836 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913165.116404820] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.28, Y:     2.60, Z:    -1.16 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.61, P:    -4.15, Y:   -73.34 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.91, Y:    10.79, Z:    -0.40 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.56, P:     1.19, Y:     7.81 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913167.095536843] [fast_lio_localization]: ICP elapsed: 0.47s | fitness=0.9846 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913167.105384678] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.25, Y:     2.65, Z:    -1.13 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.14, P:    -5.09, Y:   -68.86 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.82, Y:    10.77, Z:    -0.38 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.38, P:     0.67, Y:    12.59 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913169.114144041] [fast_lio_localization]: ICP elapsed: 0.49s | fitness=0.9912 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913169.129736705] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.45, Y:     2.68, Z:    -1.13 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.37, P:    -4.83, Y:   -84.17 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.81, Y:    10.82, Z:    -0.40 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.38, P:     0.74, Y:    -3.75 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913171.162386564] [fast_lio_localization]: ICP elapsed: 0.54s | fitness=0.9756 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913171.169242663] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.34, Y:     2.58, Z:    -1.18 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.23, P:    -5.40, Y:  -102.05 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.91, Y:    10.75, Z:    -0.44 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.14, P:     1.28, Y:   -21.05 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913173.118898283] [fast_lio_localization]: ICP elapsed: 0.49s | fitness=0.9938 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913173.123445924] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.27, Y:     2.54, Z:    -1.13 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.27, P:    -6.16, Y:  -126.39 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.60, Y:    10.74, Z:    -0.34 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.90, P:    -0.33, Y:   -46.11 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913175.075893649] [fast_lio_localization]: ICP elapsed: 0.45s | fitness=0.9924 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913175.079111624] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.57, Y:     2.63, Z:    -1.10 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.08, P:    -6.81, Y:  -132.06 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.89, Y:    11.04, Z:    -0.40 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.37, P:    -0.09, Y:   -50.08 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913177.131171564] [fast_lio_localization]: ICP elapsed: 0.51s | fitness=0.9851 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913177.138588199] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.62, Y:     2.46, Z:    -1.06 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.59, P:    -6.45, Y:  -140.28 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.33, Y:    11.07, Z:    -0.30 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.12, P:    -1.31, Y:   -59.84 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913179.062907776] [fast_lio_localization]: ICP elapsed: 0.44s | fitness=0.9908 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913179.067079747] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.93, Y:     2.80, Z:    -1.28 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.66, P:    -8.23, Y:  -164.65 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.36, Y:    11.36, Z:    -0.53 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.39, P:    -4.10, Y:   -83.05 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913181.222425705] [fast_lio_localization]: ICP elapsed: 0.59s | fitness=0.9922 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913181.228407174] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.41, Y:     2.57, Z:    -1.16 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.24, P:    -5.19, Y:  -166.25 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.04, Y:    10.86, Z:    -0.48 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.44, P:    -1.47, Y:   -84.17 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913183.095225981] [fast_lio_localization]: ICP elapsed: 0.47s | fitness=0.9938 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913183.101121949] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.30, Y:     2.89, Z:    -1.33 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.86, P:    -4.79, Y:  -161.70 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.91, Y:    10.87, Z:    -0.71 (m)
+[global_localization_ros2.py-5]   Att -> R:    -0.95, P:     1.66, Y:   -80.52 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913185.088191763] [fast_lio_localization]: ICP elapsed: 0.46s | fitness=0.9952 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913185.093336228] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.26, Y:     2.28, Z:    -1.18 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.20, P:    -6.11, Y:  -162.19 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.96, Y:    10.47, Z:    -0.49 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.68, P:    -1.58, Y:   -81.38 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913187.181480213] [fast_lio_localization]: ICP elapsed: 0.56s | fitness=0.9917 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913187.183502953] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.27, Y:     2.25, Z:    -1.11 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.08, P:    -5.51, Y:  -163.08 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.93, Y:    10.68, Z:    -0.46 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.17, P:    -1.52, Y:   -81.74 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913189.222070405] [fast_lio_localization]: ICP elapsed: 0.59s | fitness=0.9888 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913189.229516551] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.26, Y:     2.39, Z:    -1.04 (m)
+[global_localization_ros2.py-5]   Att -> R:     5.53, P:    -6.14, Y:  -162.99 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.10, Y:    10.73, Z:    -0.40 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.21, P:    -1.62, Y:   -81.91 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913191.239911086] [fast_lio_localization]: ICP elapsed: 0.60s | fitness=0.9888 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913191.242363451] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.25, Y:     2.36, Z:    -1.18 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.29, P:    -5.99, Y:  -163.26 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.09, Y:    10.67, Z:    -0.52 (m)
+[global_localization_ros2.py-5]   Att -> R:    -4.42, P:    -1.70, Y:   -82.17 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913193.095035081] [fast_lio_localization]: ICP elapsed: 0.47s | fitness=0.9883 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913193.102006264] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.11, Y:     2.55, Z:    -1.12 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.62, P:    -6.48, Y:  -163.40 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.90, Y:    10.58, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.82, P:    -2.04, Y:   -82.09 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913195.174982229] [fast_lio_localization]: ICP elapsed: 0.55s | fitness=0.9875 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913195.180009805] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.24, Y:     2.43, Z:    -1.13 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.53, P:    -6.12, Y:  -162.30 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.93, Y:    10.75, Z:    -0.45 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.99, P:    -1.62, Y:   -80.74 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913197.121591889] [fast_lio_localization]: ICP elapsed: 0.49s | fitness=0.9935 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913197.129804745] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.22, Y:     2.47, Z:    -1.18 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.40, P:    -6.18, Y:  -162.63 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.02, Y:    10.70, Z:    -0.46 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.12, P:    -1.98, Y:   -81.13 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913199.140077103] [fast_lio_localization]: ICP elapsed: 0.51s | fitness=0.9889 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913199.146401455] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.20, Y:     2.47, Z:    -1.12 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.13, P:    -6.36, Y:  -162.95 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.22, Y:    10.81, Z:    -0.42 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.18, P:    -1.78, Y:   -80.66 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913201.213981470] [fast_lio_localization]: ICP elapsed: 0.58s | fitness=0.9905 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913201.221684195] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.07, Y:     2.73, Z:    -1.12 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.96, P:    -6.12, Y:  -163.26 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.64, Y:    10.59, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.82, P:    -1.57, Y:   -82.11 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913203.142415041] [fast_lio_localization]: ICP elapsed: 0.52s | fitness=0.9901 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913203.146003577] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.26, Y:     2.36, Z:    -1.08 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.75, P:    -6.23, Y:  -162.74 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.97, Y:    10.71, Z:    -0.47 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.85, P:    -1.83, Y:   -81.42 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913205.159556116] [fast_lio_localization]: ICP elapsed: 0.53s | fitness=0.9880 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913205.164540594] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.10, Y:     2.44, Z:    -1.06 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.64, P:    -6.29, Y:  -163.06 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.08, Y:    10.53, Z:    -0.32 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.26, P:    -2.21, Y:   -81.81 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913207.227682857] [fast_lio_localization]: ICP elapsed: 0.60s | fitness=0.9957 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913207.231847960] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.21, Y:     2.51, Z:    -1.05 (m)
+[global_localization_ros2.py-5]   Att -> R:     5.43, P:    -6.29, Y:  -162.89 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.99, Y:    10.73, Z:    -0.22 (m)
+[global_localization_ros2.py-5]   Att -> R:     1.38, P:    -2.06, Y:   -81.80 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913209.175234491] [fast_lio_localization]: ICP elapsed: 0.55s | fitness=1.0000 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913209.182128725] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.15, Y:     2.70, Z:    -1.21 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.16, P:    -6.20, Y:  -162.37 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.63, Y:    10.70, Z:    -0.46 (m)
+[global_localization_ros2.py-5]   Att -> R:    -4.26, P:    -1.24, Y:   -80.71 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913211.129001697] [fast_lio_localization]: ICP elapsed: 0.50s | fitness=0.9939 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913211.134309627] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.16, Y:     2.62, Z:    -1.18 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.73, P:    -5.76, Y:  -162.93 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.76, Y:    10.71, Z:    -0.57 (m)
+[global_localization_ros2.py-5]   Att -> R:    -4.42, P:    -1.21, Y:   -81.59 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913213.074284759] [fast_lio_localization]: ICP elapsed: 0.45s | fitness=1.0000 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913213.076797448] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.18, Y:     2.43, Z:    -0.99 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.22, P:    -6.13, Y:  -163.51 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.04, Y:    10.75, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.90, P:    -1.13, Y:   -81.35 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913215.061119462] [fast_lio_localization]: ICP elapsed: 0.43s | fitness=0.9976 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913215.065313303] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.15, Y:     2.54, Z:    -1.18 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.45, P:    -6.04, Y:  -163.54 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.28, Y:    10.70, Z:    -0.40 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.51, P:    -1.70, Y:   -82.00 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913217.109179825] [fast_lio_localization]: ICP elapsed: 0.48s | fitness=1.0000 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913217.113983287] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.35, Y:     2.86, Z:    -1.13 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.73, P:    -5.37, Y:  -162.78 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.60, Y:    10.95, Z:    -0.45 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.09, P:    -1.03, Y:   -80.82 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913219.163418997] [fast_lio_localization]: ICP elapsed: 0.54s | fitness=1.0000 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913219.167166031] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.23, Y:     2.06, Z:    -0.73 (m)
+[global_localization_ros2.py-5]   Att -> R:     7.56, P:    -6.66, Y:  -163.67 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.30, Y:    10.87, Z:    -0.18 (m)
+[global_localization_ros2.py-5]   Att -> R:     0.46, P:    -1.11, Y:   -81.38 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913221.053240336] [fast_lio_localization]: ICP elapsed: 0.43s | fitness=0.9979 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913221.056421653] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.31, Y:     2.73, Z:    -1.15 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.53, P:    -5.84, Y:  -162.24 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     3.18, Y:    10.75, Z:    -0.41 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.64, P:    -1.49, Y:   -81.27 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913223.041052804] [fast_lio_localization]: ICP elapsed: 0.42s | fitness=1.0000 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913223.044460838] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.27, Y:     2.07, Z:    -1.04 (m)
+[global_localization_ros2.py-5]   Att -> R:     4.75, P:    -6.15, Y:  -162.27 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.81, Y:    10.67, Z:    -0.39 (m)
+[global_localization_ros2.py-5]   Att -> R:    -1.91, P:    -1.43, Y:   -80.29 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913225.043396389] [fast_lio_localization]: ICP elapsed: 0.42s | fitness=1.0000 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913225.048763972] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.27, Y:     2.89, Z:    -1.13 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.94, P:    -5.35, Y:  -162.40 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.89, Y:    10.81, Z:    -0.37 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.42, P:    -1.22, Y:   -80.82 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913227.110171227] [fast_lio_localization]: ICP elapsed: 0.48s | fitness=0.9866 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913227.118211339] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    16.29, Y:     2.51, Z:    -1.20 (m)
+[global_localization_ros2.py-5]   Att -> R:     3.16, P:    -6.21, Y:  -162.53 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.83, Y:    10.70, Z:    -0.44 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.19, P:    -1.89, Y:   -81.21 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913229.198900631] [fast_lio_localization]: ICP elapsed: 0.57s | fitness=0.9918 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913229.203914974] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.43, Y:     2.83, Z:    -0.89 (m)
+[global_localization_ros2.py-5]   Att -> R:    -4.36, P:    -6.99, Y:   149.04 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.99, Y:    10.08, Z:    -0.11 (m)
+[global_localization_ros2.py-5]   Att -> R:   -11.71, P:    -7.86, Y:  -129.52 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913231.208124499] [fast_lio_localization]: ICP elapsed: 0.58s | fitness=0.9953 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913231.211178302] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.33, Y:     2.15, Z:    -0.94 (m)
+[global_localization_ros2.py-5]   Att -> R:     6.76, P:    -0.47, Y:   154.52 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.76, Y:    10.37, Z:    -0.12 (m)
+[global_localization_ros2.py-5]   Att -> R:     2.38, P:     0.08, Y:  -116.72 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913233.187311884] [fast_lio_localization]: ICP elapsed: 0.56s | fitness=0.9973 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913233.192394292] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.34, Y:     2.53, Z:    -1.14 (m)
+[global_localization_ros2.py-5]   Att -> R:     5.69, P:    -0.31, Y:   155.20 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.59, Y:    10.54, Z:    -0.46 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.25, P:    -3.20, Y:  -115.97 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913235.074411772] [fast_lio_localization]: ICP elapsed: 0.45s | fitness=0.9918 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913235.081847228] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.21, Y:     2.55, Z:    -1.06 (m)
+[global_localization_ros2.py-5]   Att -> R:     7.39, P:     0.26, Y:   155.14 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.59, Y:    10.34, Z:    -0.51 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.41, P:    -3.79, Y:  -116.08 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913237.068148828] [fast_lio_localization]: ICP elapsed: 0.44s | fitness=0.9916 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913237.072709263] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.31, Y:     2.50, Z:    -0.94 (m)
+[global_localization_ros2.py-5]   Att -> R:     7.06, P:    -0.46, Y:   155.26 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.61, Y:    10.45, Z:    -0.39 (m)
+[global_localization_ros2.py-5]   Att -> R:    -3.56, P:    -4.26, Y:  -115.68 (deg)
+[global_localization_ros2.py-5] =========================================================
+[global_localization_ros2.py-5] [INFO] [1785913239.012080303] [fast_lio_localization]: ICP elapsed: 0.39s | fitness=0.9986 | threshold=0.75
+[global_localization_ros2.py-5] [INFO] [1785913239.014030574] [fast_lio_localization]: 
+[global_localization_ros2.py-5] ==================== Pose Comparison ====================
+[global_localization_ros2.py-5] [Local Odom] (FAST-LIO, relative to boot origin):
+[global_localization_ros2.py-5]   Pos -> X:    15.26, Y:     2.51, Z:    -0.98 (m)
+[global_localization_ros2.py-5]   Att -> R:     7.61, P:     0.43, Y:   155.54 (deg)
+[global_localization_ros2.py-5] [Global ICP] (relative to map origin):
+[global_localization_ros2.py-5]   Pos -> X:     2.66, Y:    10.35, Z:    -0.43 (m)
+[global_localization_ros2.py-5]   Att -> R:    -2.51, P:    -3.36, Y:  -115.52 (deg)
+[global_localization_ros2.py-5] =========================================================

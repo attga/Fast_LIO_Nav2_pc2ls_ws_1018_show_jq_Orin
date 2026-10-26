@@ -1,0 +1,15 @@
+ml_localization_manager:
+  ros__parameters:
+    injection_method: set_pose
+    set_pose_service: /global/set_pose
+    startup_only: true
+    planar_recovery: true
+    global_odom_topic: /global_odometry/filter
+    reloc_sync_tolerance: 0.2
+    max_reloc_age: 1.5
+    recovery_position_tolerance: 0.15
+    recovery_yaw_tolerance_deg: 2.0
+    recovery_timeout: 15.0
+    # 留出完整搜索时间，避免频繁触发导致 SC 确认计数重置。
+    reloc_request_interval: 120.0
+    reloc_timeout: 120.0

@@ -1,0 +1,150 @@
+0915 + qq 候选工作区：构建、验证与启动（2026-09-23）
+=================================================
+以下在目标 Linux 机器执行。尚未在本机执行 ROS 编译/回放。
+先将整个候选目录复制到目标机，打开新终端并 cd 到该目录。
+交付目录只有 map_jeck/ 和 src/；以下命令在包含这两个目录的工作区根目录执行。
+
+日常启动（2026-09-24 新增）
+---------------------------
+# 先停止之前手动启动的底盘、Livox、Yesense、定位和 Nav2，避免重复节点。
+# 首次复制这次更新后，在原来可以运行 ros2 的终端中执行一次：
+source install/setup.bash
+colcon build --symlink-install --executor sequential \
+  --packages-select fast_lio my_nav2_config ml_bringup \
+  --cmake-clean-cache
+# 若整个工作区尚未构建，先按下面的构建章节完成全量构建及驱动部署。
+
+# 终端 1：底盘 + MID360s + Yesense + 定位（不含 Nav2）
+bash src/start_robot.sh
+# 需要定位 RViz 时：bash src/start_robot.sh rviz:=true
+# C++、mid360.yaml、定位入口默认均为 +90 度，不依赖脚本传角度。
+# 雷达恢复原安装朝向时：bash src/start_robot.sh lidar_mount_yaw:=0.0
+# 此次需重新编译上列三个包，不能只同步 launch。启动日志应出现：
+# MID360 IMU -> base_link mounting yaw: 1.570796327 rad
+# 脚本加载本工作区 install/setup.bash；地图路径按脚本位置计算，与终端当前目录无关。
+# 按 Ctrl+C 统一退出本终端启动的节点；子进程非零退出也会触发整组关闭。
+# 这不是硬件就绪检测：无雷达数据、串口未连接等仍需查看节点日志。
+# can0、雷达 IP、IMU 串口与权限沿用原车设置，不自动改网络、不执行 sudo。
+
+# 终端 2：先确认定位初始化完成，再单独启动 Nav2
+source install/setup.bash
+ros2 topic echo /ml_localization/manager_state
+# 看到 startup_complete=1 后，Ctrl+C 退出 echo，再执行：
+bash src/start_nav2.sh
+# Nav2 使用 map_jeck/map.yaml 和 keepout_mask.yaml 的绝对路径。
+# 此脚本不会发送目标或启动巡航。停止整套系统时，先退出 Nav2，再退出终端 1。
+# 使用 bash 调用无需 chmod +x；新脚本是 Linux LF 换行，复制时请保留。
+# 安装角只修正 FAST-LIO 输出的车体点云、车体姿态/轨迹（及可选 TF）。
+# 保留雷达与内置 IMU 的出厂外参、旧地图/航点、Yesense 安装参数；没有新增平移标定。
+# 核验：静止时车前约 2 m 的物体在 base_link 下应位于 +X；车左侧应位于 +Y。
+# 旧安装录制的 bag 必须显式传 lidar_mount_yaw:=0.0。
+# 新安装录制的 bag 使用默认 +90 度即可。
+
+1. 环境与依赖
+-------------
+source /opt/ros/jazzy/setup.bash
+# 使用目标机现有、已验证的 Livox 驱动工作区；将路径改为实际路径：
+source /实际路径/ws_livox/install/setup.bash
+ros2 pkg prefix livox_ros_driver2
+
+# 定位包需要 diagnostic_msgs、ament_cmake_gtest、Eigen、PCL、robot_localization 等。
+# 保留原 0915 的 GTSAM/sc_pgo 依赖。目标机缺依赖时按 rosdep 输出安装。
+
+2. 构建与自动测试（不启动车辆）
+----------------------------
+colcon build --symlink-install --executor sequential \
+  --packages-select chassis_driver fast_lio ml_scan_context ml_relocalization \
+    ml_icp_localization ml_localization_manager sc_pgo ml_bringup my_nav2_config \
+  --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
+source install/setup.bash
+colcon test --executor sequential \
+  --packages-select ml_relocalization ml_icp_localization ml_localization_manager \
+  --event-handlers console_direct+ --return-code-on-test-failure
+colcon test-result --verbose
+
+# 构建时生成标准的 build/、install/、log/，交付包不包含这些产物。
+# 上述命令构建底盘、定位/建图模块及 my_nav2_config 配置包；Livox、Yesense 和 Nav2 运行库沿用原部署。
+# 包内测试包括 ICP 参数、SC 确认/输入校验和 Manager 核心。
+# 构建失败时不要继续启动；检查日志并补齐目标机依赖。
+# imu_measurements.py 现在显式按 755 权限复制安装，即使使用 --symlink-install。
+# 修改该脚本后需重新构建 ml_bringup。旧交付版出现 executable not found 时：
+# chmod +x src/ml_bringup/scripts/imu_measurements.py
+# colcon build --symlink-install --packages-select ml_bringup --cmake-clean-cache
+# source install/setup.bash
+# ros2 pkg executables ml_bringup
+# 应列出 ml_bringup imu_measurements.py；然后再启动定位。
+
+3. Manager ROS 服务交接检查（独立测试域，不与车辆节点共用）
+---------------------------------------------------------
+source install/setup.bash
+# 自行选择未使用的 ROS_DOMAIN_ID，在该终端执行：
+export ROS_DOMAIN_ID=119
+python3 src/ml_localization_manager/test/check_handoff.py \
+  --output "$PWD/log/handoff_$(date +%Y%m%d_%H%M%S)"
+# 测试会自行启动 Manager 和模拟输入/服务。
+# 运行结束关闭此终端，实车/回放用新的终端并选择原部署域。
+
+4. 定位回放：默认 0915 数值，qq 新代码
+-------------------------------------
+source /opt/ros/jazzy/setup.bash
+source /实际路径/ws_livox/install/setup.bash
+source install/setup.bash
+export ROS_LOG_DIR="$PWD/log/replay_$(date +%Y%m%d_%H%M%S)"
+mkdir -p "$ROS_LOG_DIR"
+ros2 launch ml_bringup localization.launch.py \
+  map_directory:="$PWD/src/ml_bringup/map" \
+  use_sim_time:=true enable_yesense:=true rviz:=true lidar_mount_yaw:=0.0
+
+# 第二个终端 source 同样的 ROS/驱动/候选环境后播放：
+ros2 bag play /实际路径/bag --clock --rate 1.0 \
+  --topics /livox/lidar /livox/imu /wheel_odom /imu/data_raw
+# bag 不含 /imu/data_raw 时，launch 改为 enable_yesense:=false。
+# 倒带、换 bag 或换配置时停止整套链路后重启。
+
+5. 对照 qq 原门限（停止上一轮后执行）
+-----------------------------------
+ros2 launch ml_bringup localization.launch.py \
+  map_directory:="$PWD/src/ml_bringup/map" \
+  icp_config:="$PWD/src/ml_icp_localization/config/localization_qq.yaml" \
+  relocalization_config:="$PWD/src/ml_relocalization/config/relocalization_qq.yaml" \
+  use_sim_time:=true enable_yesense:=true rviz:=true lidar_mount_yaw:=0.0
+
+6. 检查实际输出
+---------------
+ros2 topic echo /ml_localization/manager_state
+ros2 topic echo /ml_localization/status_diagnostic
+ros2 topic hz /lidar_odometry
+ros2 topic hz /local_odometry/filter
+ros2 topic hz /global_odometry/filter
+ros2 run tf2_ros tf2_echo map base_link
+# 以上命令分别运行；观察 startup_complete=1 后再评估持续定位。
+
+7. 实车验收
+-----------
+# 完成编译、服务交接和回放验收后，在候选环境中启动原部署的硬件驱动。
+# 正式入口保持不变，use_sim_time:=false；不同时播放 bag。
+ros2 launch ml_bringup localization.launch.py \
+  map_directory:="$PWD/src/ml_bringup/map" \
+  use_sim_time:=false enable_yesense:=true rviz:=true \
+  lidar_mount_yaw:=1.5707963267948966
+# Nav2、底盘、map_jeck 的启动与场地参数仍按原部署配置。
+# Nav2 前进上限现为 0.8 m/s，地图/路径预测范围已配套修改；实车稳定性和制动仍待验收。
+
+8. Nav2 与多航点巡航更新
+------------------------
+# 在包含 map_jeck/ 和 src/ 的工作区根目录执行；先停止旧 Nav2 和旧巡航脚本。
+# my_nav2_config 现包含 CruiseSpeedCritic C++ 插件，不能只复制 YAML。
+# 如新插件构建依赖缺失，先执行（在已 source ROS 的终端）：
+# rosdep install --from-paths src/my_nav2_config --ignore-src -r -y
+colcon build --symlink-install --packages-select my_nav2_config
+source install/setup.bash
+ros2 launch my_nav2_config nav2_bringup.launch.py \
+  map:="$PWD/map_jeck/map.yaml" mask:="$PWD/map_jeck/keepout_mask.yaml"
+# 另一终端 source 同一工作区后，从工作区根目录运行原巡航入口：
+python3 src/my_nav2_config/scripts/waypoint_through_poses_buinding2building.py
+# 当前静态地图配套的去回程各 203 点，原点号保留；wp202/wp203 折返已去掉。
+# 该巡航默认循环运行，沿用原行为。使用外部航点时，不会自动应用本脚本的点位修改。
+# 先低速检查航点切换、转弯和障碍响应，再分阶段验证 0.6/0.7/0.8 m/s。
+# Nav2 启动日志应有 "Critic loaded : mppi::critics::CruiseSpeedCritic"。
+# CruiseSpeedCritic 为空旷近直线路段增加 0.8m/s 速度偏好，不是固定速度覆盖。
+# 对照时可修改 FollowPath.CruiseSpeedCritic.enabled=false，然后重启 Nav2。

@@ -1,0 +1,11 @@
+/**:
+  ros__parameters:
+    port: "/dev/usb_serial_4"
+    baud: 115200
+    frame_id: "gnss_link"
+
+    useRMC: false
+    use_GNSS_time: false
+
+    epe_quality0: 1000000
+    epe_quality1: 2.0

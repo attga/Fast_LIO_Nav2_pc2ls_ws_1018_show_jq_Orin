@@ -1,0 +1,142 @@
+/**:
+  ros__parameters:
+
+    # Topics
+    pointCloudTopic: "livox/lidar"                   # Point cloud data
+    imuTopic: "livox/imu"                         # IMU data
+    odomTopic: "odometry/imu"                    # IMU pre-preintegration odometry, same frequency as IMU
+    gpsTopic: "odometry/gpsz"                    # GPS odometry topic from navsat, see module_navsat.launch file
+
+    # Frames
+    lidarFrame: "livox_frame"
+    baselinkFrame: "base_link"
+    odometryFrame: "odom"
+    mapFrame: "map"
+
+    # GPS Settings
+    useImuHeadingInitialization: false           # if using GPS data, set to "true"
+    useGpsElevation: false                       # if GPS elevation is bad, set to "false"
+    gpsCovThreshold: 2.0                         # m^2, threshold for using GPS data
+    poseCovThreshold: 25.0                       # m^2, threshold for using GPS data
+
+    # Export settings
+    savePCD: true                               # https://github.com/TixiaoShan/LIO-SAM/issues/3
+    savePCDDirectory: ""                        # Leave empty for auto-detection in package directory
+
+    # Sensor Settings
+    sensor: livox                               # lidar sensor type, either 'velodyne', 'ouster' or 'livox'
+    N_SCAN: 4                                   # number of lidar channels (i.e., Velodyne/Ouster: 16, 32, 64, 128, Livox Horizon: 6)
+    Horizon_SCAN: 6000                            # lidar horizontal resolution (Velodyne:1800, Ouster:512,1024,2048, Livox Horizon: 4000)
+    downsampleRate: 1                            # default: 1. Downsample your data if too many
+    # points. i.e., 16 = 64 / 4, 16 = 16 / 1
+    # lidarMinRange: 2.0                           # default: 1.0, minimum lidar range to be used
+    lidarMinRange: 0.5                          # default: 1.0, minimum lidar range to be used
+    lidarMaxRange: 70.0                          # MID360 effective range: 70m (expanded from 40m for better features)
+
+    # IMU Settings
+    imuAccNoise: 3.9939570888238808e-03
+    imuGyrNoise: 1.5636343949698187e-03
+    imuAccBiasN: 2.0e-03                      # was 6.4e-05: near-zero bias random-walk locked the accel
+                                              # bias, so the Mid360's mg-level bias (8mg~0.08m/s^2 = ~4.7deg
+                                              # equivalent tilt) could not be absorbed -> read as pitch drift
+    imuGyrBiasN: 5.0e-04                      # was 3.6e-05
+
+    imuGravity: 9.80511
+    imuRPYWeight: 0.5                         # was 0.01/0.02: far too weak. scan-to-map roll/pitch is
+                                              # degenerate here and drifts (pose.txt: pitch ran to -5.8deg,
+                                              # Z climbed 14m). imuConverter now supplies a true gravity
+                                              # ref, so weight roll/pitch strongly toward it to hold level.
+
+    extrinsicTrans:  [ 0.011,  0.02329,  -0.04412 ] # lidar2Imu
+    # extrinsicTrans:  [ 0.0,  0.0,  0.0 ] # lidar2Imu
+    extrinsicRot:    [1.0,  0.0,  0.0,
+                       0.0,  1.0,  0.0,
+                       0.0,  0.0, 1.0 ]
+    extrinsicRPY: [1.0, 0.0, 0.0,
+                  0.0, 1.0, 0.0,
+                  0.0, 0.0, 1.0]
+
+
+
+
+    # LOAM feature threshold
+    edgeThreshold: 1.0
+    surfThreshold: 0.1
+    edgeFeatureMinValidNum: 10
+    surfFeatureMinValidNum: 100
+
+    # voxel filter paprams
+    odometrySurfLeafSize: 0.2                     # default: 0.4 - outdoor, 0.2 - indoor
+    mappingCornerLeafSize: 0.1                    # default: 0.2 - outdoor, 0.1 - indoor
+    mappingSurfLeafSize: 0.2                      # default: 0.4 - outdoor, 0.2 - indoor
+
+    # robot motion constraint (in case you are using a 2D robot)
+    z_tollerance: 1000.0                          # meters
+    rotation_tollerance: 1000.0                   # radians
+
+    # CPU Params
+    numberOfCores: 4                              # number of cores for mapping optimization
+    mappingProcessInterval: 0.15                  # seconds, regulate mapping frequency (keep 0.15 for MID360 10Hz scan)
+
+    # Surrounding map
+    surroundingkeyframeAddingDistThreshold: 2.0   # meters, regulate keyframe adding threshold (increased 1→2 to reduce redundant keyframes)
+    surroundingkeyframeAddingAngleThreshold: 0.2  # radians, regulate keyframe adding threshold
+    surroundingKeyframeDensity: 2.0               # meters, downsample surrounding keyframe poses
+    surroundingKeyframeSearchRadius: 80.0         # meters, within n meters scan-to-map optimization (increased 50→80 for better map coverage)
+    # (when loop closure disabled)
+
+    # Loop closure
+    loopClosureEnableFlag: true
+    loopClosureFrequency: 2.0                     # Hz, regulate loop closure constraint add frequency (increased 1→2 for faster correction)
+    surroundingKeyframeSize: 50                   # submap size (when loop closure enabled)
+    historyKeyframeSearchRadius: 20.0             # meters, key frame that is within n meters from
+    # current pose will be considerd for loop closure (increased 15→20 for wider RS loop search)
+    historyKeyframeSearchTimeDiff: 30.0           # seconds, key frame that is n seconds older will be
+    # considered for loop closure
+    historyKeyframeSearchNum: 30                  # number of history key frames will be fused into a
+    # submap for loop closure (increased 25→30 for richer ICP target cloud)
+    historyKeyframeFitnessScore: 0.25             # icp threshold, tightened 0.3→0.25 to reject bad loops
+
+    # Visualization
+    globalMapVisualizationSearchRadius: 1000.0    # meters, global map visualization radius
+    globalMapVisualizationPoseDensity: 10.0       # meters, global map visualization keyframe density
+    globalMapVisualizationLeafSize: 1.0           # meters, global map visualization cloud density
+
+    # Relocalization Settings
+    mapDataDir: ""                               # path to map files (sharp_cloud_map.pcd, flat_cloud_map.pcd, SCDs/, pose.txt). Leave empty for auto-detection in package data/
+    scDistThres: 0.15                            # Scan Context distance threshold for loop closure (tightened 0.18→0.15 for stricter matching)
+    scNumCandidates: 10                          # Number of nearest neighbor candidates queried from SC tree
+    scNumRing: 20                                # SC number of range rings
+    scNumSector: 60                              # SC number of azimuth sectors
+    scMaxRadius: 80.0                            # SC maximum search radius in meters
+    scLidarHeight: 2.0                            # MUST equal SCManager::LIDAR_HEIGHT (Scancontext.h, =2.0) that
+                                                  # built the SCD database, else query/database descriptors mismatch
+                                                  # and SC place recognition fails. 2.0 (not 0.53) keeps ground
+                                                  # returns (>0) distinct from empty bins (=0). Re-map after changing.
+    autoRelocOnce: true                          # Whether to only relocalize once on startup
+    submapHalfSize: 80.0                         # Half size (m) of local submap. 80 covers lidarMaxRange(70)+margin,
+                                                 # keeps the local KD-tree small (faster NN/build) and avoids the
+                                                 # VoxelGrid int-index overflow. Do NOT set below ~lidarMaxRange.
+    submapUpdateThresh: 30.0                     # Distance threshold (meters) to submap boundary for triggering submap re-cropping
+    localOdomRate: 100.0                         # local_lidar_odom publish rate (Hz) via IMU extrapolation between
+                                                 # the ~10Hz lidar frames; 100 is smooth and light on Jetson NX.
+                                                 # Global odom(lidar_odom) & TF stay at lidar rate (~10Hz).
+
+    # Relocalization performance (lower these on weak hardware to speed up scanMatch; slight accuracy trade-off)
+    relocMaxCornerPts: 1000                      # 很弱的设备→ 500;算力充裕→ 2000+ 提精度                 # max corner points used per scanMatch frame (uniform stride cap)
+    relocMaxSurfPts: 2000                        # 很弱的设备→ 1000;算力充裕→ 4000+ # max planar points used per scanMatch frame (uniform stride cap)
+
+    # Relocalization 局部里程计速度（标准 LIO-SAM：GTSAM IMU 预积分因子图，见 imuPreintegration.cpp）
+    # 噪声模型 sigma（默认=移植前硬编码值；调大→更信任 IMU/更平滑，调小→更信任 scanMatch 位姿观测）
+    relocImuPriorPoseSigma: 0.01                 # 首帧/重置时位姿先验 sigma [rad,rad,rad,m,m,m]
+    relocImuPriorVelSigma: 10000.0               # 速度先验 sigma [m/s]（大值=弱先验，让观测主导）
+    relocImuPriorBiasSigma: 0.1                  # IMU 零偏先验 sigma（放宽 1e-3→0.1：让加计零偏吸收 Mid-360 mg 级残差，
+                                                 # 使静止时线速度→≈0；若仍偏大可再调到 0.2~0.3）
+    relocImuCorrectRotSigma: 0.05                # scanMatch 位姿观测旋转 sigma [rad]
+    relocImuCorrectTransSigma: 0.1               # scanMatch 位姿观测平移 sigma [m]
+    relocImuIntegrationSigma: 1.0e-4             # 预积分积分误差 sigma
+    # 失败检测门限（超出则重置预积分，防发散）
+    relocImuMaxVelocity: 30.0                    # 速度上限 [m/s]
+    relocImuMaxBias: 1.0                         # 零偏上限（accel/gyro 各自 norm）
+    # 定位鲁棒性门限
+    relocMaxTranslationJump: 5.0                 # scanMatch 单帧平移跳变上限 [m]，超出回退到 IMU 预测位姿

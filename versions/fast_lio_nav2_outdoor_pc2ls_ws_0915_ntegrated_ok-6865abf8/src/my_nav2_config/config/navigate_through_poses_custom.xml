@@ -1,0 +1,41 @@
+<!--
+  Customized Behavior Tree for NavigateThroughPoses
+  Removed Spin and BackUp recovery behaviors for safe crowd navigation.
+  Only uses Wait and ClearCostmap.
+-->
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <RecoveryNode number_of_retries="6" name="NavigateRecovery">
+      <PipelineSequence name="NavigateWithReplanning">
+        <RateController hz="1.0">
+          <RecoveryNode number_of_retries="1" name="ComputePathThroughPoses">
+            <ReactiveSequence>
+              <!-- 航点通常间隔约 2.4m；接近到 1m 后再移除，避免 3.5m 半径提前跳过转弯点。 -->
+              <RemovePassedGoals input_goals="{goals}" output_goals="{goals}" radius="1.0"/>
+              <ComputePathThroughPoses goals="{goals}" path="{path}" planner_id="GridBased"/>
+            </ReactiveSequence>
+            <!-- <ClearEntireCostmap name="ClearGlobalCostmap-Context" service_name="global_costmap/clear_entirely_global_costmap"/> -->
+            <Wait wait_duration="1"/>
+          </RecoveryNode>
+        </RateController>
+        <RecoveryNode number_of_retries="1" name="FollowPath">
+          <FollowPath path="{path}" controller_id="FollowPath"/>
+          <!-- <ClearEntireCostmap name="ClearLocalCostmap-Context" service_name="local_costmap/clear_entirely_local_costmap"/> -->
+          <Wait wait_duration="0.5"/>
+        </RecoveryNode>
+      </PipelineSequence>
+      
+      <ReactiveFallback name="RecoveryFallback">
+        <GoalUpdated/>
+        <RoundRobin name="RecoveryActions">
+          <Sequence name="ClearingActions">
+            <ClearEntireCostmap name="ClearLocalCostmap-Subtree" service_name="local_costmap/clear_entirely_local_costmap"/>
+            <ClearEntireCostmap name="ClearGlobalCostmap-Subtree" service_name="global_costmap/clear_entirely_global_costmap"/>
+          </Sequence>
+          <!-- 原本这里的 Spin 和 BackUp 已被删除，只保留原地等待 5 秒 -->
+          <Wait wait_duration="1"/>
+        </RoundRobin>
+      </ReactiveFallback>
+    </RecoveryNode>
+  </BehaviorTree>
+</root>

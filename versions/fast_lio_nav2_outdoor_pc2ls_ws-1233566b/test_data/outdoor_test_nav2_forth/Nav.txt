@@ -1,0 +1,234 @@
+[lifecycle_manager-8] [INFO] [1785828633.058092393] [lifecycle_manager_navigation]: Creating bond timer...
+[bt_navigator-5] [INFO] [1785828653.719055206] [bt_navigator]: Begin navigating from current location (2.10, 2.21) to (2.17, 3.53)
+[controller_server-2] [INFO] [1785828653.740274441] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785828653.740399693] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded general_goal_checker . This warning will appear once.
+[controller_server-2] [INFO] [1785828653.748642772] [controller_server]: Optimizer reset
+[controller_server-2] [INFO] [1785828654.791103435] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785828654.860316901] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828654.902736395] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828655.079057975] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828655.125660834] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828655.165851777] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828655.201357835] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785828655.840550592] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785828656.835922557] [controller_server]: Reached the goal!
+[controller_server-2] [INFO] [1785828656.836208870] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [INFO] [1785828656.874116444] [controller_server]: Reached the goal!
+[bt_navigator-5] [INFO] [1785828656.909558244] [bt_navigator]: Goal succeeded
+[bt_navigator-5] [INFO] [1785828656.955567804] [bt_navigator]: Begin navigating from current location (2.10, 3.17) to (2.26, 4.63)
+[controller_server-2] [INFO] [1785828656.981703868] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [INFO] [1785828658.032057807] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785828659.045469033] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828659.092189016] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785828659.092301340] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785828660.082080326] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785828660.618607769] [controller_server]: Reached the goal!
+[bt_navigator-5] [INFO] [1785828660.655932701] [bt_navigator]: Goal succeeded
+[bt_navigator-5] [INFO] [1785828660.660313352] [bt_navigator]: Begin navigating from current location (2.09, 4.33) to (2.36, 5.74)
+[controller_server-2] [INFO] [1785828660.681217601] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785828661.038406921] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828661.087161912] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785828661.731397486] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785828662.781399382] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785828662.844537583] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828662.890271166] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828663.056734032] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828663.107905389] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828663.147043370] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828663.189311723] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785828663.781394694] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785828664.019226807] [controller_server]: Reached the goal!
+[bt_navigator-5] [INFO] [1785828664.050696800] [bt_navigator]: Goal succeeded
+[bt_navigator-5] [INFO] [1785828664.114223782] [bt_navigator]: Begin navigating from current location (2.13, 5.46) to (2.45, 6.85)
+[controller_server-2] [INFO] [1785828664.135050077] [controller_server]: Received a goal, begin computing control effort.
+[bt_navigator-5] [WARN] [1785828664.766056878] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[controller_server-2] [WARN] [1785828664.836535953] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828665.062527465] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828665.110981711] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828665.158249359] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828665.198829178] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785828665.198917053] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785828665.236884918] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785828666.235332308] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785828666.848465389] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828667.073027767] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828667.146371862] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785828667.241974168] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785828667.433233439] [controller_server]: Reached the goal!
+[bt_navigator-5] [INFO] [1785828667.464685352] [bt_navigator]: Goal succeeded
+[bt_navigator-5] [INFO] [1785828667.560548562] [bt_navigator]: Begin navigating from current location (2.15, 6.54) to (2.55, 7.96)
+[controller_server-2] [INFO] [1785828667.581353512] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [INFO] [1785828668.631535414] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785828668.841825306] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828669.064801266] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828669.123471357] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828669.167775199] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828669.210203142] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828669.247567883] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828669.284204313] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785828669.681537245] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785828670.681543630] [controller_server]: Passing new path to controller.
+[controller_server-2] [INFO] [1785828670.828813373] [controller_server]: Reached the goal!
+[bt_navigator-5] [INFO] [1785828670.860940891] [bt_navigator]: Goal succeeded
+[bt_navigator-5] [INFO] [1785828670.865003645] [bt_navigator]: Begin navigating from current location (2.17, 7.58) to (2.64, 9.06)
+[controller_server-2] [INFO] [1785828670.885899926] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-2] [WARN] [1785828671.116830571] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828671.167009896] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828671.207460815] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828671.245237793] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785828671.936338091] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785828672.840334540] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828673.003041670] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785828673.004182283] [controller_server]: Passing new path to controller.
+[controller_server-2] [WARN] [1785828673.049790134] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [WARN] [1785828673.095622921] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[controller_server-2] [INFO] [1785828673.923071110] [controller_server]: Reached the goal!
+[bt_navigator-5] [INFO] [1785828673.955395179] [bt_navigator]: Goal succeeded
+[bt_navigator-5] [INFO] [1785828673.959935291] [bt_navigator]: Begin navigating from current location (2.09, 8.59) to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828675.295942417] [planner_server]: GridBased: failed to create plan, exceeded maximum iterations.
+[planner_server-3] [WARN] [1785828675.296091574] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828675.296130135] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785828675.310511873] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[bt_navigator-5] [WARN] [1785828675.331199411] [bt_navigator_navigate_to_pose_rclcpp_node]: Node timed out while executing service call to global_costmap/clear_entirely_global_costmap.
+[controller_server-2] [INFO] [1785828675.331557566] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-3] [INFO] [1785828675.335059246] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [WARN] [1785828676.922573352] [planner_server]: GridBased: failed to create plan, exceeded maximum iterations.
+[planner_server-3] [WARN] [1785828676.923992565] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828676.924778190] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785828676.946289659] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[bt_navigator-5] [WARN] [1785828676.951527809] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[bt_navigator-5] [WARN] [1785828676.966904427] [bt_navigator_navigate_to_pose_rclcpp_node]: Node timed out while executing service call to global_costmap/clear_entirely_global_costmap.
+[behavior_server-4] [INFO] [1785828676.973648033] [behavior_server]: Running spin
+[behavior_server-4] [INFO] [1785828676.975183442] [behavior_server]: Turning 1.57 for spin behavior.
+[behavior_server-4] [INFO] [1785828679.379091786] [behavior_server]: spin completed successfully
+[planner_server-3] [WARN] [1785828680.933894323] [planner_server]: GridBased: failed to create plan, exceeded maximum iterations.
+[planner_server-3] [WARN] [1785828680.934065689] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828680.934101914] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785828680.950682729] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[bt_navigator-5] [WARN] [1785828680.971282361] [bt_navigator_navigate_to_pose_rclcpp_node]: Node timed out while executing service call to global_costmap/clear_entirely_global_costmap.
+[behavior_server-4] [INFO] [1785828680.973004304] [behavior_server]: Running wait
+[behavior_server-4] [INFO] [1785828685.973311918] [behavior_server]: wait completed successfully
+[planner_server-3] [WARN] [1785828687.348573446] [planner_server]: GridBased: failed to create plan, exceeded maximum iterations.
+[planner_server-3] [WARN] [1785828687.349399456] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828687.349492579] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785828687.360365725] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[bt_navigator-5] [WARN] [1785828687.381223125] [bt_navigator_navigate_to_pose_rclcpp_node]: Node timed out while executing service call to global_costmap/clear_entirely_global_costmap.
+[behavior_server-4] [INFO] [1785828687.382914315] [behavior_server]: Running backup
+[behavior_server-4] [INFO] [1785828687.383250037] [behavior_server]: DriveOnHeading: no acceleration or deceleration limits set
+[behavior_server-4] [INFO] [1785828693.483419376] [behavior_server]: backup completed successfully
+[planner_server-3] [WARN] [1785828693.522450602] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785828693.522561134] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828693.522593295] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785828693.540396678] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [WARN] [1785828694.621346983] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785828694.621496428] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828694.621531949] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785828694.640418246] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-3] [INFO] [1785828694.641587275] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [WARN] [1785828695.613542912] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785828695.613686789] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828695.613721958] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785828695.630414425] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [WARN] [1785828696.622118178] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785828696.622222150] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828696.622250822] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785828696.640686385] [behavior_server]: Running spin
+[behavior_server-4] [INFO] [1785828696.640870711] [behavior_server]: Turning 1.57 for spin behavior.
+[behavior_server-4] [INFO] [1785828699.041249472] [behavior_server]: spin completed successfully
+[planner_server-3] [WARN] [1785828699.071546244] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785828699.071657448] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828699.071683241] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785828699.090520768] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [WARN] [1785828699.621385759] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785828699.621473730] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828699.621502851] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[bt_navigator-5] [WARN] [1785828699.650111825] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+[bt_navigator-5] [ERROR] [1785828699.650392090] [bt_navigator]: Goal failed
+[bt_navigator-5] [INFO] [1785828701.657999600] [bt_navigator]: Begin navigating from current location (2.37, 8.96) to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828701.658762504] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785828701.658830794] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828701.658858251] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785828701.678563806] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [WARN] [1785828702.630228461] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785828702.630330353] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828702.630360465] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785828702.648780668] [behavior_server]: Running wait
+[bt_navigator-5] [WARN] [1785828706.977995952] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[bt_navigator-5] [WARN] [1785828706.978193686] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[behavior_server-4] [INFO] [1785828707.649064925] [behavior_server]: wait completed successfully
+[planner_server-3] [WARN] [1785828707.679255998] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785828707.679360737] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828707.679395266] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785828707.698692489] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [WARN] [1785828708.621702216] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785828708.621828812] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828708.621858861] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785828708.639663780] [behavior_server]: Running backup
+[bt_navigator-5] [WARN] [1785828709.429506805] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[behavior_server-4] [INFO] [1785828714.940158827] [behavior_server]: backup completed successfully
+[planner_server-3] [WARN] [1785828714.969053154] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785828714.969143621] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828714.969170630] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785828714.988917434] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [WARN] [1785828715.633228692] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785828715.633328344] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828715.633361561] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[controller_server-2] [INFO] [1785828715.648517467] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-3] [INFO] [1785828715.649181392] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [WARN] [1785828716.639695444] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785828716.639793911] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828716.639821912] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785828716.658571821] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [WARN] [1785828717.629097525] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[planner_server-3] [WARN] [1785828717.629197560] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828717.629230361] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785828717.648859658] [behavior_server]: Running spin
+[behavior_server-4] [INFO] [1785828717.649029743] [behavior_server]: Turning 1.57 for spin behavior.
+[bt_navigator-5] [WARN] [1785828721.018123465] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[bt_navigator-5] [WARN] [1785828721.031620598] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[bt_navigator-5] [WARN] [1785828725.002506913] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded!
+[behavior_server-4] [WARN] [1785828727.649309679] [behavior_server]: Exceeded time allowance before reaching the Spin goal - Exiting Spin
+[behavior_server-4] [WARN] [1785828727.649397394] [behavior_server]: spin failed
+[behavior_server-4] [WARN] [1785828727.649420435] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785828727.668865406] [behavior_server]: Running wait
+[behavior_server-4] [INFO] [1785828732.669115010] [behavior_server]: wait completed successfully
+[planner_server-3] [WARN] [1785828732.699055099] [planner_server]: GridBased: failed to create plan, no valid path found.
+[planner_server-3] [WARN] [1785828732.699168799] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828732.699198400] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1785828732.718434692] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [WARN] [1785828734.867244041] [planner_server]: GridBased: failed to create plan, exceeded maximum iterations.
+[planner_server-3] [WARN] [1785828734.867379150] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (2.74, 10.17)
+[planner_server-3] [WARN] [1785828734.867418447] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1785828734.878885244] [behavior_server]: Running backup
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[waypoint_follower-6] [INFO] [1785828742.641222982] [rclcpp]: signal_handler(signum=2)
+[waypoint_follower-6] [INFO] [1785828742.641496975] [waypoint_follower]: Running Nav2 LifecycleNode rcl preshutdown (waypoint_follower)
+[waypoint_follower-6] [INFO] [1785828742.641590866] [waypoint_follower]: Deactivating
+[waypoint_follower-6] [INFO] [1785828742.641650548] [waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.
+[controller_server-2] [INFO] [1785828742.641223398] [rclcpp]: signal_handler(signum=2)
+[controller_server-2] [INFO] [1785828742.641452558] [controller_server]: Running Nav2 LifecycleNode rcl preshutdown (controller_server)
+[controller_server-2] [INFO] [1785828742.641553489] [controller_server]: Deactivating
+[controller_server-2] [INFO] [1785828742.641611155] [MPPIController]: Deactivated MPPI Controller: FollowPath
+[controller_server-2] [INFO] [1785828742.641646708] [local_costmap.local_costmap]: Deactivating
+[behavior_server-4] [INFO] [1785828742.641266408] [rclcpp]: signal_handler(signum=2)
+[behavior_server-4] [INFO] [1785828742.641402412] [behavior_server]: Running Nav2 LifecycleNode rcl preshutdown (behavior_server)
+[behavior_server-4] [INFO] [1785828742.641500399] [behavior_server]: Deactivating
+[behavior_server-4] [WARN] [1785828742.641528528] [behavior_server]: [backup] [ActionServer] Requested to deactivate server but goal is still executing. Should check if action server is running before deactivating.
+[map_server-1] [INFO] [1785828742.641272296] [rclcpp]: signal_handler(signum=2)
+[map_server-1] [INFO] [1785828742.641942877] [map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)
+[map_server-1] [INFO] [1785828742.642226118] [map_server]: Deactivating
+[map_server-1] [INFO] [1785828742.642258823] [map_server]: Destroying bond (map_server) to lifecycle manager.
+[velocity_smoother-7] [INFO] [1785828742.641576338] [rclcpp]: signal_handler(signum=2)
+[velocity_smoother-7] [INFO] [1785828742.641721846] [velocity_smoother]: Running Nav2 LifecycleNode rcl preshutdown (velocity_smoother)
+[velocity_smoother-7] [INFO] [1785828742.641813945] [velocity_smoother]: Deactivating
+[velocity_smoother-7] [INFO] [1785828742.641855515] [velocity_smoother]: Destroying bond (velocity_smoother) to lifecycle manager.
+[bt_navigator-5] [INFO] [1785828742.641726134] [rclcpp]: signal_handler(signum=2)
+[bt_navigator-5] [INFO] [1785828742.641829018] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[bt_navigator-5] [INFO] [1785828742.641910140] [bt_navigator]: Deactivating
+[bt_navigator-5] [WARN] [1785828742.641933437] [bt_navigator]: [navigate_to_pose] [ActionServer] Requested to deactivate server but goal is still executing. Should check if action server is running before deactivating.
+[planner_server-3] [INFO] [1785828742.642172389] [rclcpp]: signal_handler(signum=2)
+[planner_server-3] [INFO] [1785828742.642517840] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[planner_server-3] [INFO] [1785828742.642626867] [planner_server]: Deactivating
+[planner_server-3] [INFO] [1785828742.642674645] [global_costmap.global_costmap]: Deactivating
+[lifecycle_manager-8] [INFO] [1785828742.645677396] [rclcpp]: signal_handler(signum=2)
+[lifecycle_manager-8] [INFO] [1785828742.645844153] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
