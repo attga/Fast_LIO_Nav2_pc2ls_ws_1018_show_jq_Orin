@@ -1,0 +1,33 @@
+alaserRelocalizer:
+  ros__parameters:
+    start_on_launch: true
+    base_frame: base_link
+    matching_frame: livox_imu_link
+    pose_file: isam_poses.txt
+    descriptor.backend: polar
+    descriptor.database_file: ''
+    descriptor.frame_convention: livox_imu
+    descriptor.top_k: 5
+    descriptor.maximum_distance: 0.5
+    descriptor.threads: 6
+    sc_dist_thres: 0.5
+    sc_ds_size: 0.4
+    yaw_diff_sign: -1.0
+    submap_halfwidth: 10
+    submap_min_points: 1000
+    registration_voxel_size: 0.4
+    relocalization_position_variance: 0.5
+    relocalization_orientation_variance: 0.05
+    ndt.resolution: 2.0
+    ndt.step_size: 0.1
+    ndt.transformation_epsilon: 0.01
+    ndt.max_iterations: 30
+    ndt.threads: 2
+    ndt.likelihood_threshold: 2.3
+    inlier_fraction_threshold: 0.4
+    max_translation_correction: 5.0
+    max_yaw_correction_deg: 30.0
+    confirm_frames: 2
+    confirm_position_thresh: 2.0
+    confirm_yaw_thresh_deg: 15.0
+    debug_publish_clouds: false

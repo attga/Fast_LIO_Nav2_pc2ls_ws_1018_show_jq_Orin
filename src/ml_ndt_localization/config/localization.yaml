@@ -1,0 +1,37 @@
+ml_ndt_localization_node:
+  ros__parameters:
+    # 输入为 base_link 点云，初值为扫描时刻 TF 查询得到的 T_map_base。
+    input_cloud_topic: /cloud_registered_body
+    map_frame: map
+    base_frame: base_link
+    registration_rate: 2.0
+    registration_threads: 2
+    voxel_size: 0.4  # 扫描与常驻地图的降采样尺度，m。
+
+    # 固定实验 baseline；上游使用 KDTREE，无正则化、无线搜索。
+    ndt.resolution: 2.0  # NDT 概率体素分辨率，m；不同于输入降采样。
+    ndt.step_size: 0.1
+    ndt.transformation_epsilon: 0.01
+    ndt.max_iterations: 30
+
+    likelihood_threshold: 2.3  # 最近体素似然 NVTL 下限，越大越好。
+    inlier_fraction_threshold: 0.4  # 完整扫描中最近地图点距离 <1 m 的比例。
+    max_translation_jump: 2.0  # 结果相对初值的三维平移上限，m。
+    max_yaw_jump: 15.0  # 结果相对初值的航向差上限，度。
+
+    # MULTI_NDT_SCORE：周围6个位置重评分，估计 map 系 XY 分布方差；不改变配准位姿。
+    covariance.dynamic_xy: true
+    covariance.temperature: 0.05  # 上游评分 softmax 温度，越大越分散；不是方差。
+    # XY 分布方差加位置底噪；z 与三个角度仍采用固定方差。
+    # 沿用旧输出底噪，尚未完成实车协方差标定。
+    position_stddev: 0.3  # m。
+    orientation_stddev: 0.05  # rad。
+
+    enter_lost_on_failure: true
+    pause_on_lost: false  # LOST 仍尝试新扫描，质量通过后恢复。
+    max_consecutive_failures: 40
+    submap_size: 300.0  # XY 窗口完整边长，m；不裁剪 z。
+    submap_update_margin: 100.0  # 到任一边界的距离 <=100 m 时重建窗口。
+    tf_wait_timeout: 1.0  # 单调时钟，s；不计入配准失败次数。
+    scan_timeout: 2.0  # ROS 时间，s。
+    wait_for_initialization: true  # Manager 确认 Global EKF 后调用 start_tracking。

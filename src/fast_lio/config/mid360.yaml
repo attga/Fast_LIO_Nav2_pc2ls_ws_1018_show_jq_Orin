@@ -1,0 +1,33 @@
+# 正式入口 localization.launch.py 强制关闭 TF 发布（publish.tf_publish_en=false），
+# 开启机体系点云输出，关闭 PCD 保存和运行位姿日志，并设置独立日志目录。
+# 正式入口还设置 output.imu_frame=livox_imu_link，按 URDF 安装关系转换底盘输出。
+# 独立运行默认 output.imu_frame=output.base_frame=base_link，保留原建图语义。
+# 上述启动行为由 launch 设置，不能仅凭此传感器配置判断。
+# 参考 hku-mars/FAST_LIO 的 config/mid360.yaml，并按本 ROS2 移植版适配。
+laserMapping:
+  ros__parameters:
+    common.lid_topic: /livox/lidar
+    common.imu_topic: /livox/imu
+    common.time_sync_en: false
+    preprocess.lidar_type: 1
+    preprocess.scan_line: 4
+    # 本移植版使用水平半径平方，且仅作用于 z<2 m 的点；0.5 对应
+    # 约 0.707 m 的水平近场过滤范围，与上游 0.5 m 径向盲区含义不同。
+    preprocess.blind: 0.04
+    feature_extract_enable: false
+    # 保留现有点云密度与迭代次数，以兼容当前地图和 ICP 配置。
+    point_filter_num: 1
+    max_iteration: 5
+    filter_size_surf: 0.5
+    filter_size_map: 0.5
+    cube_side_length: 1000.0
+    mapping.acc_cov: 0.1
+    mapping.gyr_cov: 0.1
+    mapping.b_acc_cov: 0.0001
+    mapping.b_gyr_cov: 0.0001
+    mapping.fov_degree: 360.0
+    mapping.det_range: 100.0
+    mapping.extrinsic_est_en: false
+    # T_IMU_LiDAR 将雷达坐标转换到内置 IMU 坐标系；平移单位 m。
+    mapping.extrinsic_T: [-0.011, -0.02329, 0.04412]
+    mapping.extrinsic_R: [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]

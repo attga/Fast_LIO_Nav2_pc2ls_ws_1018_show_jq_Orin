@@ -1,0 +1,36 @@
+map1012 定位 + Nav2 操作命令（在工作区根目录执行）
+
+1. 构建
+source /opt/ros/humble/setup.bash
+export LIVOX_SDK_ROOT=/path/to/Livox-SDK2/install
+MAKEFLAGS=-j2 CMAKE_BUILD_PARALLEL_LEVEL=2 colcon build --symlink-install --executor sequential --packages-up-to ml_bringup my_nav2_config chassis_driver yesense_std_ros2 --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DLIVOX_LIDAR_SDK_LIBRARY="$LIVOX_SDK_ROOT/lib/liblivox_lidar_sdk_shared.so" -DLIVOX_LIDAR_SDK_INCLUDE_DIR="$LIVOX_SDK_ROOT/include"
+source install/setup.bash
+
+2. 终端一：底盘、MID360s、Yesense、Polar/NDT 定位和双 EKF
+bash src/start_robot.sh
+# 不启用 Yesense 时：bash src/start_robot.sh enable_yesense:=false
+# 只接外部驱动时：bash src/start_robot.sh start_drivers:=false enable_yesense:=false
+# 定位 RViz：bash src/start_robot.sh rviz:=true
+
+3. 定位检查（另一终端）
+source install/setup.bash
+ros2 topic echo /ml_localization/manager_state
+ros2 topic hz /lidar_odometry
+ros2 topic hz /cloud_registered_body
+ros2 topic hz /local_odometry/filter
+ros2 topic hz /global_odometry/filter
+ros2 run tf2_ros tf2_echo map base_link
+# 一次性输入检查：bash src/check_inputs.sh
+# 等待 startup_complete=1，再启动 Nav2。
+
+4. 终端二：Nav2
+source install/setup.bash
+bash src/start_nav2.sh
+# 当前 map_jeck 缺少禁行区掩膜，脚本会禁用 KeepoutFilter。
+# 若已提供与 map.yaml 同源、同坐标系的掩膜，可设 USE_KEEPOUT=true。
+ros2 topic hz /scan
+
+5. 巡航目标（确认地图、航点与 map1012 对齐并完成实车检查后）
+python3 src/my_nav2_config/scripts/waypoint_through_poses_buinding2building.py
+
+回放定位：直接启动 ros2 launch ml_bringup localization.launch.py，设置 map_directory:=绝对路径、robot_mounts_file:=绝对路径、manager_config:=绝对路径、relocalization_config:=绝对路径、use_sim_time:=true、enable_yesense:=false，另终端使用 ros2 bag play --clock。回放时不要启动硬件包装入口。
